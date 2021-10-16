@@ -29,9 +29,12 @@ with datadog_api_client.v1.ApiClient(configuration) as api_client:
         account_specific_namespace_rules={
             &quot;key&quot;: True,
         },
+        cspm_resource_collection_enabled=True,
         excluded_regions=[&quot;us-east-1&quot;,&quot;us-west-2&quot;],
         filter_tags=[&quot;&lt;KEY&gt;:&lt;VALUE&gt;&quot;],
         host_tags=[&quot;&lt;KEY&gt;:&lt;VALUE&gt;&quot;],
+        metrics_collection_enabled=False,
+        resource_collection_enabled=True,
         role_name=&quot;DatadogAWSIntegrationRole&quot;,
         secret_access_key=&quot;secret_access_key_example&quot;,
     ) # AWSAccount | AWS Request Object

@@ -2096,6 +2096,46 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.datadoghq.com/api/v1/SunburstWidgetDefinition/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/SunburstWidgetDefinitionType/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/SunburstWidgetLegend/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/SunburstWidgetLegendInlineAutomatic/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/SunburstWidgetLegendInlineAutomaticType/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/SunburstWidgetLegendTable/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/SunburstWidgetLegendTableType/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/SunburstWidgetRequest/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.datadoghq.com/api/v1/SyntheticsAPIStep/</loc>
          <lastmod>2020-02-02</lastmod>
          <changefreq>daily</changefreq>

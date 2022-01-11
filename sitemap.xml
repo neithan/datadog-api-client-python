@@ -1446,6 +1446,36 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.datadoghq.com/api/v1/MonthlyUsageAttributionBody/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/MonthlyUsageAttributionMetadata/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/MonthlyUsageAttributionPagination/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/MonthlyUsageAttributionResponse/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/MonthlyUsageAttributionSupportedMetrics/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/MonthlyUsageAttributionValues/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.datadoghq.com/api/v1/NoteWidgetDefinition/</loc>
          <lastmod>2020-02-02</lastmod>
          <changefreq>daily</changefreq>

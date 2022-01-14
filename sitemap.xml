@@ -2296,6 +2296,36 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.datadoghq.com/api/v1/SyntheticsBasicAuthNTLM/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/SyntheticsBasicAuthNTLMType/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/SyntheticsBasicAuthSigv4/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/SyntheticsBasicAuthSigv4Type/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/SyntheticsBasicAuthWeb/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/SyntheticsBasicAuthWebType/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.datadoghq.com/api/v1/SyntheticsBatchDetails/</loc>
          <lastmod>2020-02-02</lastmod>
          <changefreq>daily</changefreq>
@@ -2667,6 +2697,11 @@
     </url>
     <url>
          <loc>https://docs.datadoghq.com/api/v1/SyntheticsTestRequestCertificateItem/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/SyntheticsTestRequestProxy/</loc>
          <lastmod>2020-02-02</lastmod>
          <changefreq>daily</changefreq>
     </url>

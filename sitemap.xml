@@ -2256,6 +2256,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.datadoghq.com/api/v1/SyntheticsApiTestFailureCode/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/SyntheticsApiTestResultFailure/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.datadoghq.com/api/v1/SyntheticsAssertion/</loc>
          <lastmod>2020-02-02</lastmod>
          <changefreq>daily</changefreq>
@@ -2361,7 +2371,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.datadoghq.com/api/v1/SyntheticsBrowserTestFailureCode/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.datadoghq.com/api/v1/SyntheticsBrowserTestResultData/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/SyntheticsBrowserTestResultFailure/</loc>
          <lastmod>2020-02-02</lastmod>
          <changefreq>daily</changefreq>
     </url>

@@ -1336,6 +1336,46 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.datadoghq.com/api/v1/MonitorFormulaAndFunctionEventAggregation/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/MonitorFormulaAndFunctionEventQueryDefinition/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/MonitorFormulaAndFunctionEventQueryDefinitionCompute/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/MonitorFormulaAndFunctionEventQueryDefinitionSearch/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/MonitorFormulaAndFunctionEventQueryGroupBy/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/MonitorFormulaAndFunctionEventQueryGroupBySort/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/MonitorFormulaAndFunctionEventsDataSource/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.datadoghq.com/api/v1/MonitorFormulaAndFunctionQueryDefinition/</loc>
+         <lastmod>2020-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.datadoghq.com/api/v1/MonitorGroupSearchResponse/</loc>
          <lastmod>2020-02-02</lastmod>
          <changefreq>daily</changefreq>

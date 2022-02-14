@@ -467,7 +467,7 @@
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.funnel_source" class="md-nav__link">funnel_source</a>
         </li>
-        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.funnel_steps" class="md-nav__link">funnel_steps</a>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.funnel_step" class="md-nav__link">funnel_step</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.funnel_widget_definition" class="md-nav__link">funnel_widget_definition</a>
         </li>
@@ -1980,7 +1980,7 @@
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.funnel_source" class="md-nav__link">funnel_source</a>
         </li>
-        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.funnel_steps" class="md-nav__link">funnel_steps</a>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.funnel_step" class="md-nav__link">funnel_step</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.funnel_widget_definition" class="md-nav__link">funnel_widget_definition</a>
         </li>
@@ -6167,7 +6167,7 @@ Ref: <a class="reference external" href="https://openapi-generator.tech">https:/
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="datadog_api_client.v1.model.funnel_query.FunnelQuery.openapi_types">
-<span class="sig-name descname"><span class="pre">openapi_types</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'data_source':</span> <span class="pre">(&lt;class</span> <span class="pre">'datadog_api_client.v1.model.funnel_source.FunnelSource'&gt;,),</span> <span class="pre">'query_string':</span> <span class="pre">(&lt;class</span> <span class="pre">'str'&gt;,),</span> <span class="pre">'steps':</span> <span class="pre">(&lt;class</span> <span class="pre">'datadog_api_client.v1.model.funnel_steps.FunnelSteps'&gt;,)}</span></em><a class="headerlink" href="#datadog_api_client.v1.model.funnel_query.FunnelQuery.openapi_types" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">openapi_types</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'data_source':</span> <span class="pre">(&lt;class</span> <span class="pre">'datadog_api_client.v1.model.funnel_source.FunnelSource'&gt;,),</span> <span class="pre">'query_string':</span> <span class="pre">(&lt;class</span> <span class="pre">'str'&gt;,),</span> <span class="pre">'steps':</span> <span class="pre">([&lt;class</span> <span class="pre">'datadog_api_client.v1.model.funnel_step.FunnelStep'&gt;],)}</span></em><a class="headerlink" href="#datadog_api_client.v1.model.funnel_query.FunnelQuery.openapi_types" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="datadog_api_client.v1.model.funnel_query.FunnelQuery.read_only_vars">
@@ -6229,22 +6229,30 @@ Ref: <a class="reference external" href="https://openapi-generator.tech">https:/
 <dd></dd></dl>
 </dd></dl>
 </section>
-<section id="module-datadog_api_client.v1.model.funnel_steps">
-<span id="funnel-steps"></span><h2 id="module-datadog_api_client.v1.model.funnel_steps">funnel_steps<a class="headerlink" href="#module-datadog_api_client.v1.model.funnel_steps" title="Permalink to this headline">¶</a></h2>
+<section id="module-datadog_api_client.v1.model.funnel_step">
+<span id="funnel-step"></span><h2 id="module-datadog_api_client.v1.model.funnel_step">funnel_step<a class="headerlink" href="#module-datadog_api_client.v1.model.funnel_step" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="datadog_api_client.v1.model.funnel_steps.FunnelSteps">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FunnelSteps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.funnel_steps.FunnelSteps" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="datadog_api_client.v1.html#datadog_api_client.v1.model_utils.ModelSimple" title="datadog_api_client.v1.model_utils.ModelSimple"><code class="xref py py-class docutils literal notranslate"><span class="pre">datadog_api_client.v1.model_utils.ModelSimple</span></code></a></p>
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.funnel_step.FunnelStep">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FunnelStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.funnel_step.FunnelStep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.v1.html#datadog_api_client.v1.model_utils.ModelNormal" title="datadog_api_client.v1.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">datadog_api_client.v1.model_utils.ModelNormal</span></code></a></p>
 <p>NOTE: This class is auto generated by OpenAPI Generator.
 Ref: <a class="reference external" href="https://openapi-generator.tech">https://openapi-generator.tech</a></p>
 <p>Do not edit the class manually.</p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="datadog_api_client.v1.model.funnel_steps.FunnelSteps.openapi_types">
-<span class="sig-name descname"><span class="pre">openapi_types</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'value':</span> <span class="pre">([&lt;class</span> <span class="pre">'dict'&gt;],)}</span></em><a class="headerlink" href="#datadog_api_client.v1.model.funnel_steps.FunnelSteps.openapi_types" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.funnel_step.FunnelStep.attribute_map">
+<span class="sig-name descname"><span class="pre">attribute_map</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'facet':</span> <span class="pre">'facet',</span> <span class="pre">'value':</span> <span class="pre">'value'}</span></em><a class="headerlink" href="#datadog_api_client.v1.model.funnel_step.FunnelStep.attribute_map" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="datadog_api_client.v1.model.funnel_steps.FunnelSteps.validations">
-<span class="sig-name descname"><span class="pre">validations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#datadog_api_client.v1.model.funnel_steps.FunnelSteps.validations" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.funnel_step.FunnelStep.openapi_types">
+<span class="sig-name descname"><span class="pre">openapi_types</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'facet':</span> <span class="pre">(&lt;class</span> <span class="pre">'str'&gt;,),</span> <span class="pre">'value':</span> <span class="pre">(&lt;class</span> <span class="pre">'str'&gt;,)}</span></em><a class="headerlink" href="#datadog_api_client.v1.model.funnel_step.FunnelStep.openapi_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.funnel_step.FunnelStep.read_only_vars">
+<span class="sig-name descname"><span class="pre">read_only_vars</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#datadog_api_client.v1.model.funnel_step.FunnelStep.read_only_vars" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.funnel_step.FunnelStep.validations">
+<span class="sig-name descname"><span class="pre">validations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#datadog_api_client.v1.model.funnel_step.FunnelStep.validations" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 </dd></dl>
 </section>

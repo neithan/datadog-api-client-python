@@ -1706,6 +1706,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>incident_id</strong> (<em>str</em>) – The UUID of the incident.</p></li>
 <li><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_update_request.IncidentUpdateRequest" title="datadog_api_client.v2.model.incident_update_request.IncidentUpdateRequest"><em>IncidentUpdateRequest</em></a>) – Incident Payload.</p></li>
+<li><p><strong>include</strong> (<em>[</em><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_related_object.IncidentRelatedObject" title="datadog_api_client.v2.model.incident_related_object.IncidentRelatedObject"><em>IncidentRelatedObject</em></a><em>]</em><em>, </em><em>optional</em>) – Specifies which types of related objects should be included in the response.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object

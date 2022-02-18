@@ -794,6 +794,10 @@
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.metrics_and_metric_tag_configurations_response" class="md-nav__link">metrics_and_metric_tag_configurations_response</a>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.nullable_relationship_to_user" class="md-nav__link">nullable_relationship_to_user</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.nullable_relationship_to_user_data" class="md-nav__link">nullable_relationship_to_user_data</a>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.organization" class="md-nav__link">organization</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.organization_attributes" class="md-nav__link">organization_attributes</a>
@@ -1624,6 +1628,10 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.metrics_and_metric_tag_configurations" class="md-nav__link">metrics_and_metric_tag_configurations</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.metrics_and_metric_tag_configurations_response" class="md-nav__link">metrics_and_metric_tag_configurations_response</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.nullable_relationship_to_user" class="md-nav__link">nullable_relationship_to_user</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.nullable_relationship_to_user_data" class="md-nav__link">nullable_relationship_to_user_data</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.organization" class="md-nav__link">organization</a>
         </li>
@@ -4110,11 +4118,11 @@ Ref: <a class="reference external" href="https://openapi-generator.tech">https:/
 <p>Do not edit the class manually.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="datadog_api_client.v2.model.incident_create_relationships.IncidentCreateRelationships.attribute_map">
-<span class="sig-name descname"><span class="pre">attribute_map</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'commander':</span> <span class="pre">'commander'}</span></em><a class="headerlink" href="#datadog_api_client.v2.model.incident_create_relationships.IncidentCreateRelationships.attribute_map" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">attribute_map</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'commander_user':</span> <span class="pre">'commander_user'}</span></em><a class="headerlink" href="#datadog_api_client.v2.model.incident_create_relationships.IncidentCreateRelationships.attribute_map" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="datadog_api_client.v2.model.incident_create_relationships.IncidentCreateRelationships.openapi_types">
-<span class="sig-name descname"><span class="pre">openapi_types</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'commander':</span> <span class="pre">(&lt;class</span> <span class="pre">'datadog_api_client.v2.model.relationship_to_user.RelationshipToUser'&gt;,)}</span></em><a class="headerlink" href="#datadog_api_client.v2.model.incident_create_relationships.IncidentCreateRelationships.openapi_types" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">openapi_types</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'commander_user':</span> <span class="pre">(&lt;class</span> <span class="pre">'datadog_api_client.v2.model.nullable_relationship_to_user.NullableRelationshipToUser'&gt;,)}</span></em><a class="headerlink" href="#datadog_api_client.v2.model.incident_create_relationships.IncidentCreateRelationships.openapi_types" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="datadog_api_client.v2.model.incident_create_relationships.IncidentCreateRelationships.read_only_vars">
@@ -4577,7 +4585,7 @@ Ref: <a class="reference external" href="https://openapi-generator.tech">https:/
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="datadog_api_client.v2.model.incident_response_relationships.IncidentResponseRelationships.openapi_types">
-<span class="sig-name descname"><span class="pre">openapi_types</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'commander_user':</span> <span class="pre">(&lt;class</span> <span class="pre">'datadog_api_client.v2.model.relationship_to_user.RelationshipToUser'&gt;,),</span> <span class="pre">'created_by_user':</span> <span class="pre">(&lt;class</span> <span class="pre">'datadog_api_client.v2.model.relationship_to_user.RelationshipToUser'&gt;,),</span> <span class="pre">'integrations':</span> <span class="pre">(&lt;class</span> <span class="pre">'datadog_api_client.v2.model.relationship_to_incident_integration_metadatas.RelationshipToIncidentIntegrationMetadatas'&gt;,),</span> <span class="pre">'last_modified_by_user':</span> <span class="pre">(&lt;class</span> <span class="pre">'datadog_api_client.v2.model.relationship_to_user.RelationshipToUser'&gt;,),</span> <span class="pre">'postmortem':</span> <span class="pre">(&lt;class</span> <span class="pre">'datadog_api_client.v2.model.relationship_to_incident_postmortem.RelationshipToIncidentPostmortem'&gt;,)}</span></em><a class="headerlink" href="#datadog_api_client.v2.model.incident_response_relationships.IncidentResponseRelationships.openapi_types" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">openapi_types</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'commander_user':</span> <span class="pre">(&lt;class</span> <span class="pre">'datadog_api_client.v2.model.nullable_relationship_to_user.NullableRelationshipToUser'&gt;,),</span> <span class="pre">'created_by_user':</span> <span class="pre">(&lt;class</span> <span class="pre">'datadog_api_client.v2.model.relationship_to_user.RelationshipToUser'&gt;,),</span> <span class="pre">'integrations':</span> <span class="pre">(&lt;class</span> <span class="pre">'datadog_api_client.v2.model.relationship_to_incident_integration_metadatas.RelationshipToIncidentIntegrationMetadatas'&gt;,),</span> <span class="pre">'last_modified_by_user':</span> <span class="pre">(&lt;class</span> <span class="pre">'datadog_api_client.v2.model.relationship_to_user.RelationshipToUser'&gt;,),</span> <span class="pre">'postmortem':</span> <span class="pre">(&lt;class</span> <span class="pre">'datadog_api_client.v2.model.relationship_to_incident_postmortem.RelationshipToIncidentPostmortem'&gt;,)}</span></em><a class="headerlink" href="#datadog_api_client.v2.model.incident_response_relationships.IncidentResponseRelationships.openapi_types" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="datadog_api_client.v2.model.incident_response_relationships.IncidentResponseRelationships.read_only_vars">
@@ -5543,11 +5551,11 @@ Ref: <a class="reference external" href="https://openapi-generator.tech">https:/
 <p>Do not edit the class manually.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="datadog_api_client.v2.model.incident_update_relationships.IncidentUpdateRelationships.attribute_map">
-<span class="sig-name descname"><span class="pre">attribute_map</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'commander_user':</span> <span class="pre">'commander_user',</span> <span class="pre">'created_by_user':</span> <span class="pre">'created_by_user',</span> <span class="pre">'integrations':</span> <span class="pre">'integrations',</span> <span class="pre">'last_modified_by_user':</span> <span class="pre">'last_modified_by_user',</span> <span class="pre">'postmortem':</span> <span class="pre">'postmortem'}</span></em><a class="headerlink" href="#datadog_api_client.v2.model.incident_update_relationships.IncidentUpdateRelationships.attribute_map" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">attribute_map</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'commander_user':</span> <span class="pre">'commander_user',</span> <span class="pre">'integrations':</span> <span class="pre">'integrations',</span> <span class="pre">'postmortem':</span> <span class="pre">'postmortem'}</span></em><a class="headerlink" href="#datadog_api_client.v2.model.incident_update_relationships.IncidentUpdateRelationships.attribute_map" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="datadog_api_client.v2.model.incident_update_relationships.IncidentUpdateRelationships.openapi_types">
-<span class="sig-name descname"><span class="pre">openapi_types</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'commander_user':</span> <span class="pre">(&lt;class</span> <span class="pre">'datadog_api_client.v2.model.relationship_to_user.RelationshipToUser'&gt;,),</span> <span class="pre">'created_by_user':</span> <span class="pre">(&lt;class</span> <span class="pre">'datadog_api_client.v2.model.relationship_to_user.RelationshipToUser'&gt;,),</span> <span class="pre">'integrations':</span> <span class="pre">(&lt;class</span> <span class="pre">'datadog_api_client.v2.model.relationship_to_incident_integration_metadatas.RelationshipToIncidentIntegrationMetadatas'&gt;,),</span> <span class="pre">'last_modified_by_user':</span> <span class="pre">(&lt;class</span> <span class="pre">'datadog_api_client.v2.model.relationship_to_user.RelationshipToUser'&gt;,),</span> <span class="pre">'postmortem':</span> <span class="pre">(&lt;class</span> <span class="pre">'datadog_api_client.v2.model.relationship_to_incident_postmortem.RelationshipToIncidentPostmortem'&gt;,)}</span></em><a class="headerlink" href="#datadog_api_client.v2.model.incident_update_relationships.IncidentUpdateRelationships.openapi_types" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">openapi_types</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'commander_user':</span> <span class="pre">(&lt;class</span> <span class="pre">'datadog_api_client.v2.model.nullable_relationship_to_user.NullableRelationshipToUser'&gt;,),</span> <span class="pre">'integrations':</span> <span class="pre">(&lt;class</span> <span class="pre">'datadog_api_client.v2.model.relationship_to_incident_integration_metadatas.RelationshipToIncidentIntegrationMetadatas'&gt;,),</span> <span class="pre">'postmortem':</span> <span class="pre">(&lt;class</span> <span class="pre">'datadog_api_client.v2.model.relationship_to_incident_postmortem.RelationshipToIncidentPostmortem'&gt;,)}</span></em><a class="headerlink" href="#datadog_api_client.v2.model.incident_update_relationships.IncidentUpdateRelationships.openapi_types" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="datadog_api_client.v2.model.incident_update_relationships.IncidentUpdateRelationships.read_only_vars">
@@ -8894,6 +8902,68 @@ Ref: <a class="reference external" href="https://openapi-generator.tech">https:/
 <dl class="py function">
 <dt class="sig sig-object py" id="datadog_api_client.v2.model.metrics_and_metric_tag_configurations_response.lazy_import">
 <span class="sig-name descname"><span class="pre">lazy_import</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.metrics_and_metric_tag_configurations_response.lazy_import" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.model.nullable_relationship_to_user">
+<span id="nullable-relationship-to-user"></span><h2 id="module-datadog_api_client.v2.model.nullable_relationship_to_user">nullable_relationship_to_user<a class="headerlink" href="#module-datadog_api_client.v2.model.nullable_relationship_to_user" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.nullable_relationship_to_user.NullableRelationshipToUser">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NullableRelationshipToUser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.nullable_relationship_to_user.NullableRelationshipToUser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.v2.html#datadog_api_client.v2.model_utils.ModelNormal" title="datadog_api_client.v2.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">datadog_api_client.v2.model_utils.ModelNormal</span></code></a></p>
+<p>NOTE: This class is auto generated by OpenAPI Generator.
+Ref: <a class="reference external" href="https://openapi-generator.tech">https://openapi-generator.tech</a></p>
+<p>Do not edit the class manually.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.nullable_relationship_to_user.NullableRelationshipToUser.attribute_map">
+<span class="sig-name descname"><span class="pre">attribute_map</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'data':</span> <span class="pre">'data'}</span></em><a class="headerlink" href="#datadog_api_client.v2.model.nullable_relationship_to_user.NullableRelationshipToUser.attribute_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.nullable_relationship_to_user.NullableRelationshipToUser.openapi_types">
+<span class="sig-name descname"><span class="pre">openapi_types</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'data':</span> <span class="pre">(&lt;class</span> <span class="pre">'datadog_api_client.v2.model.nullable_relationship_to_user_data.NullableRelationshipToUserData'&gt;,)}</span></em><a class="headerlink" href="#datadog_api_client.v2.model.nullable_relationship_to_user.NullableRelationshipToUser.openapi_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.nullable_relationship_to_user.NullableRelationshipToUser.read_only_vars">
+<span class="sig-name descname"><span class="pre">read_only_vars</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#datadog_api_client.v2.model.nullable_relationship_to_user.NullableRelationshipToUser.read_only_vars" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.nullable_relationship_to_user.NullableRelationshipToUser.validations">
+<span class="sig-name descname"><span class="pre">validations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#datadog_api_client.v2.model.nullable_relationship_to_user.NullableRelationshipToUser.validations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+</dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.nullable_relationship_to_user.lazy_import">
+<span class="sig-name descname"><span class="pre">lazy_import</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.nullable_relationship_to_user.lazy_import" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.model.nullable_relationship_to_user_data">
+<span id="nullable-relationship-to-user-data"></span><h2 id="module-datadog_api_client.v2.model.nullable_relationship_to_user_data">nullable_relationship_to_user_data<a class="headerlink" href="#module-datadog_api_client.v2.model.nullable_relationship_to_user_data" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.nullable_relationship_to_user_data.NullableRelationshipToUserData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NullableRelationshipToUserData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.nullable_relationship_to_user_data.NullableRelationshipToUserData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.v2.html#datadog_api_client.v2.model_utils.ModelNormal" title="datadog_api_client.v2.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">datadog_api_client.v2.model_utils.ModelNormal</span></code></a></p>
+<p>NOTE: This class is auto generated by OpenAPI Generator.
+Ref: <a class="reference external" href="https://openapi-generator.tech">https://openapi-generator.tech</a></p>
+<p>Do not edit the class manually.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.nullable_relationship_to_user_data.NullableRelationshipToUserData.attribute_map">
+<span class="sig-name descname"><span class="pre">attribute_map</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'id':</span> <span class="pre">'id',</span> <span class="pre">'type':</span> <span class="pre">'type'}</span></em><a class="headerlink" href="#datadog_api_client.v2.model.nullable_relationship_to_user_data.NullableRelationshipToUserData.attribute_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.nullable_relationship_to_user_data.NullableRelationshipToUserData.openapi_types">
+<span class="sig-name descname"><span class="pre">openapi_types</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'id':</span> <span class="pre">(&lt;class</span> <span class="pre">'str'&gt;,),</span> <span class="pre">'type':</span> <span class="pre">(&lt;class</span> <span class="pre">'datadog_api_client.v2.model.users_type.UsersType'&gt;,)}</span></em><a class="headerlink" href="#datadog_api_client.v2.model.nullable_relationship_to_user_data.NullableRelationshipToUserData.openapi_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.nullable_relationship_to_user_data.NullableRelationshipToUserData.read_only_vars">
+<span class="sig-name descname"><span class="pre">read_only_vars</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#datadog_api_client.v2.model.nullable_relationship_to_user_data.NullableRelationshipToUserData.read_only_vars" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.nullable_relationship_to_user_data.NullableRelationshipToUserData.validations">
+<span class="sig-name descname"><span class="pre">validations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#datadog_api_client.v2.model.nullable_relationship_to_user_data.NullableRelationshipToUserData.validations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+</dd></dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.nullable_relationship_to_user_data.lazy_import">
+<span class="sig-name descname"><span class="pre">lazy_import</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.nullable_relationship_to_user_data.lazy_import" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 </section>
 <section id="module-datadog_api_client.v2.model.organization">

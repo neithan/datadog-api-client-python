@@ -58,7 +58,7 @@ jobs:
               sha: master.object.sha,
             });
 
-            const { data: commit } = await github.rest.repos.createOrUpdateFileContents({
+            await github.rest.repos.createOrUpdateFileContents({
               owner: context.repo.owner,
               repo: context.repo.repo,
               message: "Update CHANGELOG",

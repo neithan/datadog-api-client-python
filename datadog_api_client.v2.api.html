@@ -266,6 +266,8 @@
   <ul class="md-nav__list" data-md-scrollfix="">
         <li class="md-nav__item"><a href="#datadog-api-client-v2-api--page-root" class="md-nav__link">datadog_api_client.v2.api</a><nav class="md-nav">
               <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.audit_api" class="md-nav__link">audit_api</a>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.auth_n_mappings_api" class="md-nav__link">auth_n_mappings_api</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.cloud_workload_security_api" class="md-nav__link">cloud_workload_security_api</a>
@@ -379,6 +381,8 @@
   <ul class="md-nav__list" data-md-scrollfix="">
         <li class="md-nav__item"><a href="#datadog-api-client-v2-api--page-root" class="md-nav__link">datadog_api_client.v2.api</a><nav class="md-nav">
               <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.audit_api" class="md-nav__link">audit_api</a>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.auth_n_mappings_api" class="md-nav__link">auth_n_mappings_api</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.cloud_workload_security_api" class="md-nav__link">cloud_workload_security_api</a>
@@ -431,6 +435,104 @@
             
   <section id="datadog-api-client-v2-api">
 <h1 id="datadog-api-client-v2-api--page-root">datadog_api_client.v2.api<a class="headerlink" href="#datadog-api-client-v2-api--page-root" title="Permalink to this headline">¶</a></h1>
+<section id="module-datadog_api_client.v2.api.audit_api">
+<span id="audit-api"></span><h2 id="module-datadog_api_client.v2.api.audit_api">audit_api<a class="headerlink" href="#module-datadog_api_client.v2.api.audit_api" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.audit_api.AuditApi">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AuditApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.audit_api.AuditApi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.audit_api.AuditApi.list_audit_logs">
+<span class="sig-name descname"><span class="pre">list_audit_logs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.audit_api.AuditApi.list_audit_logs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of Audit Logs events.</p>
+<p>List endpoint returns events that match a Audit Logs search query.
+[Results are paginated][1].</p>
+<p>Use this endpoint to see your latest Audit Logs events.</p>
+<p>[1]: <a class="reference external" href="https://docs.datadoghq.com/logs/guide/collect-multiple-logs-with-pagination">https://docs.datadoghq.com/logs/guide/collect-multiple-logs-with-pagination</a></p>
+<p>This method makes a synchronous HTTP request by default. To make an
+asynchronous HTTP request, please pass async_req=True.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">list_audit_logs</span><span class="p">(</span><span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">thread</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter_query</strong> (<em>str</em><em>, </em><em>optional</em>) – Search query following Audit Logs syntax.</p></li>
+<li><p><strong>filter_from</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Minimum timestamp for requested events.</p></li>
+<li><p><strong>filter_to</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Maximum timestamp for requested events.</p></li>
+<li><p><strong>sort</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.audit_logs_sort.AuditLogsSort" title="datadog_api_client.v2.model.audit_logs_sort.AuditLogsSort"><em>AuditLogsSort</em></a><em>, </em><em>optional</em>) – Order of events in results.</p></li>
+<li><p><strong>page_cursor</strong> (<em>str</em><em>, </em><em>optional</em>) – List following results with a cursor provided in the previous query.</p></li>
+<li><p><strong>page_limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum number of events in the response.</p></li>
+<li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
+code and headers. Default is True.</p></li>
+<li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
+will be returned without reading/decoding response data.
+Default is True.</p></li>
+<li><p><strong>_request_timeout</strong> (<em>float/tuple</em>) – Timeout setting for this request. If one
+number provided, it will be total request timeout. It can also be a
+pair (tuple) of (connection, read) timeouts.  Default is None.</p></li>
+<li><p><strong>_check_input_type</strong> (<em>bool</em>) – Specifies if type checking should be done one
+the data sent to the server. Default is True.</p></li>
+<li><p><strong>_check_return_type</strong> (<em>bool</em>) – Specifies if type checking should be done
+one the data received from the server. Default is True.</p></li>
+<li><p><strong>_host_index</strong> (<em>int/None</em>) – Specifies the index of the server that we want to
+use. Default is read from the configuration.</p></li>
+<li><p><strong>async_req</strong> (<em>bool</em>) – Execute request asynchronously.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>If the method is called asynchronously, returns the request thread.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.audit_logs_events_response.AuditLogsEventsResponse" title="datadog_api_client.v2.model.audit_logs_events_response.AuditLogsEventsResponse">AuditLogsEventsResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.audit_api.AuditApi.search_audit_logs">
+<span class="sig-name descname"><span class="pre">search_audit_logs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.audit_api.AuditApi.search_audit_logs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search Audit Logs events.</p>
+<p>List endpoint returns Audit Logs events that match an Audit search query.
+[Results are paginated][1].</p>
+<p>Use this endpoint to build complex Audit Logs events filtering and search.</p>
+<p>[1]: <a class="reference external" href="https://docs.datadoghq.com/logs/guide/collect-multiple-logs-with-pagination">https://docs.datadoghq.com/logs/guide/collect-multiple-logs-with-pagination</a></p>
+<p>This method makes a synchronous HTTP request by default. To make an
+asynchronous HTTP request, please pass async_req=True.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">search_audit_logs</span><span class="p">(</span><span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">thread</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
+code and headers. Default is True.</p></li>
+<li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
+will be returned without reading/decoding response data.
+Default is True.</p></li>
+<li><p><strong>_request_timeout</strong> (<em>float/tuple</em>) – Timeout setting for this request. If one
+number provided, it will be total request timeout. It can also be a
+pair (tuple) of (connection, read) timeouts.  Default is None.</p></li>
+<li><p><strong>_check_input_type</strong> (<em>bool</em>) – Specifies if type checking should be done one
+the data sent to the server. Default is True.</p></li>
+<li><p><strong>_check_return_type</strong> (<em>bool</em>) – Specifies if type checking should be done
+one the data received from the server. Default is True.</p></li>
+<li><p><strong>_host_index</strong> (<em>int/None</em>) – Specifies the index of the server that we want to
+use. Default is read from the configuration.</p></li>
+<li><p><strong>async_req</strong> (<em>bool</em>) – Execute request asynchronously.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>If the method is called asynchronously, returns the request thread.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.audit_logs_events_response.AuditLogsEventsResponse" title="datadog_api_client.v2.model.audit_logs_events_response.AuditLogsEventsResponse">AuditLogsEventsResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+</dd></dl>
+</section>
 <section id="module-datadog_api_client.v2.api.auth_n_mappings_api">
 <span id="auth-n-mappings-api"></span><h2 id="module-datadog_api_client.v2.api.auth_n_mappings_api">auth_n_mappings_api<a class="headerlink" href="#module-datadog_api_client.v2.api.auth_n_mappings_api" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">

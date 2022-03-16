@@ -3700,7 +3700,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>role_id</strong> (<em>str</em>) – The ID of the role.</p></li>
+<li><p><strong>role_id</strong> (<em>str</em>) – The unique identifier of the role.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
@@ -3740,7 +3740,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>role_id</strong> (<em>str</em>) – The ID of the role.</p></li>
+<li><p><strong>role_id</strong> (<em>str</em>) – The unique identifier of the role.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
@@ -3780,7 +3780,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>role_id</strong> (<em>str</em>) – The ID of the role.</p></li>
+<li><p><strong>role_id</strong> (<em>str</em>) – The unique identifier of the role.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
@@ -3859,7 +3859,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>role_id</strong> (<em>str</em>) – The ID of the role.</p></li>
+<li><p><strong>role_id</strong> (<em>str</em>) – The unique identifier of the role.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
@@ -3899,7 +3899,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>role_id</strong> (<em>str</em>) – The ID of the role.</p></li>
+<li><p><strong>role_id</strong> (<em>str</em>) – The unique identifier of the role.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
@@ -3978,7 +3978,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>role_id</strong> (<em>str</em>) – The ID of the role.</p></li>
+<li><p><strong>role_id</strong> (<em>str</em>) – The unique identifier of the role.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
@@ -4018,7 +4018,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>role_id</strong> (<em>str</em>) – The ID of the role.</p></li>
+<li><p><strong>role_id</strong> (<em>str</em>) – The unique identifier of the role.</p></li>
 <li><p><strong>page_size</strong> (<em>int</em><em>, </em><em>optional</em>) – Size for a given page.</p></li>
 <li><p><strong>page_number</strong> (<em>int</em><em>, </em><em>optional</em>) – Specific page number to return.</p></li>
 <li><p><strong>sort</strong> (<em>str</em><em>, </em><em>optional</em>) – User attribute to order results by. Sort order is <strong>ascending</strong> by default.
@@ -4054,7 +4054,7 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.roles_api.RolesApi.list_roles">
 <span class="sig-name descname"><span class="pre">list_roles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.roles_api.RolesApi.list_roles" title="Permalink to this definition">¶</a></dt>
 <dd><p>List roles.</p>
-<p>Returns all roles, including their names and IDs.</p>
+<p>Returns all roles, including their names and their unique identifiers.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">list_roles</span><span class="p">(</span><span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -4109,7 +4109,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>role_id</strong> (<em>str</em>) – The ID of the role.</p></li>
+<li><p><strong>role_id</strong> (<em>str</em>) – The unique identifier of the role.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
@@ -4149,7 +4149,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>role_id</strong> (<em>str</em>) – The ID of the role.</p></li>
+<li><p><strong>role_id</strong> (<em>str</em>) – The unique identifier of the role.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
@@ -4189,7 +4189,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>role_id</strong> (<em>str</em>) – The ID of the role.</p></li>
+<li><p><strong>role_id</strong> (<em>str</em>) – The unique identifier of the role.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object

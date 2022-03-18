@@ -4168,6 +4168,7 @@ use. Default is read from the configuration.</p></li>
 <li><p>watchdog: <cite>event alert</cite></p></li>
 <li><p>event-v2: <cite>event-v2 alert</cite></p></li>
 <li><p>audit: <cite>audit alert</cite></p></li>
+<li><p>error-tracking: <cite>error-tracking alert</cite></p></li>
 </ul>
 <p>#### Query Types</p>
 <p><strong>Metric Alert Query</strong></p>
@@ -4287,6 +4288,17 @@ It is only available via the API and isn’t visible or editable in the Datadog 
 <li><p><strong>`#`</strong> an integer or decimal number used to set the threshold.</p></li>
 </ul>
 <p><strong>NOTE</strong> Only available in closed beta on US1, EU, US3 and US5.</p>
+<p><strong>Error Tracking Alert Query</strong></p>
+<p>Example(RUM): <cite>error-tracking-rum(query).rollup(rollup_method[, measure]).last(time_window) operator #</cite>
+Example(APM Traces): <cite>error-tracking-traces(query).rollup(rollup_method[, measure]).last(time_window) operator #</cite></p>
+<ul class="simple">
+<li><p><strong>`query`</strong> The search query - following the [Log search syntax](<a class="reference external" href="https://docs.datadoghq.com/logs/search_syntax/">https://docs.datadoghq.com/logs/search_syntax/</a>).</p></li>
+<li><p><strong>`rollup_method`</strong> The stats roll-up method - supports <cite>count</cite>, <cite>avg</cite>, and <cite>cardinality</cite>.</p></li>
+<li><p><strong>`measure`</strong> For <cite>avg</cite> and cardinality <cite>rollup_method</cite> - specify the measure or the facet name you want to use.</p></li>
+<li><p><strong>`time_window`</strong> #m (between 1 and 2880), #h (between 1 and 48).</p></li>
+<li><p><strong>`operator`</strong> <cite>&lt;</cite>, <cite>&lt;=</cite>, <cite>&gt;</cite>, <cite>&gt;=</cite>, <cite>==</cite>, or <cite>!=</cite>.</p></li>
+<li><p><strong>`#`</strong> an integer or decimal number used to set the threshold.</p></li>
+</ul>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">create_monitor</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>

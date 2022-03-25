@@ -268,7 +268,7 @@
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.audit_api" class="md-nav__link">audit_api</a>
         </li>
-        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.auth_n_mappings_api" class="md-nav__link">auth_n_mappings_api</a>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.authn_mappings_api" class="md-nav__link">authn_mappings_api</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.cloud_workload_security_api" class="md-nav__link">cloud_workload_security_api</a>
         </li>
@@ -383,7 +383,7 @@
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.audit_api" class="md-nav__link">audit_api</a>
         </li>
-        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.auth_n_mappings_api" class="md-nav__link">auth_n_mappings_api</a>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.authn_mappings_api" class="md-nav__link">authn_mappings_api</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.cloud_workload_security_api" class="md-nav__link">cloud_workload_security_api</a>
         </li>
@@ -533,20 +533,20 @@ use. Default is read from the configuration.</p></li>
 </dd></dl>
 </dd></dl>
 </section>
-<section id="module-datadog_api_client.v2.api.auth_n_mappings_api">
-<span id="auth-n-mappings-api"></span><h2 id="module-datadog_api_client.v2.api.auth_n_mappings_api">auth_n_mappings_api<a class="headerlink" href="#module-datadog_api_client.v2.api.auth_n_mappings_api" title="Permalink to this headline">¶</a></h2>
+<section id="module-datadog_api_client.v2.api.authn_mappings_api">
+<span id="authn-mappings-api"></span><h2 id="module-datadog_api_client.v2.api.authn_mappings_api">authn_mappings_api<a class="headerlink" href="#module-datadog_api_client.v2.api.authn_mappings_api" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="datadog_api_client.v2.api.auth_n_mappings_api.AuthNMappingsApi">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AuthNMappingsApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.auth_n_mappings_api.AuthNMappingsApi" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.authn_mappings_api.AuthNMappingsApi">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AuthNMappingsApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.authn_mappings_api.AuthNMappingsApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
-<dt class="sig sig-object py" id="datadog_api_client.v2.api.auth_n_mappings_api.AuthNMappingsApi.create_auth_n_mapping">
-<span class="sig-name descname"><span class="pre">create_auth_n_mapping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.auth_n_mappings_api.AuthNMappingsApi.create_auth_n_mapping" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.authn_mappings_api.AuthNMappingsApi.create_authn_mapping">
+<span class="sig-name descname"><span class="pre">create_authn_mapping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.authn_mappings_api.AuthNMappingsApi.create_authn_mapping" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create an AuthN Mapping.</p>
 <p>Create an AuthN Mapping.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">create_auth_n_mapping</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">create_authn_mapping</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">thread</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -574,18 +574,18 @@ use. Default is read from the configuration.</p></li>
 <dd class="field-even"><p>If the method is called asynchronously, returns the request thread.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.auth_n_mapping_response.AuthNMappingResponse" title="datadog_api_client.v2.model.auth_n_mapping_response.AuthNMappingResponse">AuthNMappingResponse</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.authn_mapping_response.AuthNMappingResponse" title="datadog_api_client.v2.model.authn_mapping_response.AuthNMappingResponse">AuthNMappingResponse</a></p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="datadog_api_client.v2.api.auth_n_mappings_api.AuthNMappingsApi.delete_auth_n_mapping">
-<span class="sig-name descname"><span class="pre">delete_auth_n_mapping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">authn_mapping_id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.auth_n_mappings_api.AuthNMappingsApi.delete_auth_n_mapping" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.authn_mappings_api.AuthNMappingsApi.delete_authn_mapping">
+<span class="sig-name descname"><span class="pre">delete_authn_mapping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">authn_mapping_id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.authn_mappings_api.AuthNMappingsApi.delete_authn_mapping" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete an AuthN Mapping.</p>
 <p>Delete an AuthN Mapping specified by AuthN Mapping UUID.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">delete_auth_n_mapping</span><span class="p">(</span><span class="n">authn_mapping_id</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">delete_authn_mapping</span><span class="p">(</span><span class="n">authn_mapping_id</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">thread</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -619,13 +619,13 @@ use. Default is read from the configuration.</p></li>
 </dl>
 </dd></dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="datadog_api_client.v2.api.auth_n_mappings_api.AuthNMappingsApi.get_auth_n_mapping">
-<span class="sig-name descname"><span class="pre">get_auth_n_mapping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">authn_mapping_id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.auth_n_mappings_api.AuthNMappingsApi.get_auth_n_mapping" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.authn_mappings_api.AuthNMappingsApi.get_authn_mapping">
+<span class="sig-name descname"><span class="pre">get_authn_mapping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">authn_mapping_id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.authn_mappings_api.AuthNMappingsApi.get_authn_mapping" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an AuthN Mapping by UUID.</p>
 <p>Get an AuthN Mapping specified by the AuthN Mapping UUID.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_auth_n_mapping</span><span class="p">(</span><span class="n">authn_mapping_id</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_authn_mapping</span><span class="p">(</span><span class="n">authn_mapping_id</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">thread</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -654,18 +654,18 @@ use. Default is read from the configuration.</p></li>
 <dd class="field-even"><p>If the method is called asynchronously, returns the request thread.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.auth_n_mapping_response.AuthNMappingResponse" title="datadog_api_client.v2.model.auth_n_mapping_response.AuthNMappingResponse">AuthNMappingResponse</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.authn_mapping_response.AuthNMappingResponse" title="datadog_api_client.v2.model.authn_mapping_response.AuthNMappingResponse">AuthNMappingResponse</a></p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="datadog_api_client.v2.api.auth_n_mappings_api.AuthNMappingsApi.list_auth_n_mappings">
-<span class="sig-name descname"><span class="pre">list_auth_n_mappings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.auth_n_mappings_api.AuthNMappingsApi.list_auth_n_mappings" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.authn_mappings_api.AuthNMappingsApi.list_authn_mappings">
+<span class="sig-name descname"><span class="pre">list_authn_mappings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.authn_mappings_api.AuthNMappingsApi.list_authn_mappings" title="Permalink to this definition">¶</a></dt>
 <dd><p>List all AuthN Mappings.</p>
 <p>List all AuthN Mappings in the org.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">list_auth_n_mappings</span><span class="p">(</span><span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">list_authn_mappings</span><span class="p">(</span><span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">thread</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -674,7 +674,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>page_size</strong> (<em>int</em><em>, </em><em>optional</em>) – Size for a given page.</p></li>
 <li><p><strong>page_number</strong> (<em>int</em><em>, </em><em>optional</em>) – Specific page number to return.</p></li>
-<li><p><strong>sort</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.auth_n_mappings_sort.AuthNMappingsSort" title="datadog_api_client.v2.model.auth_n_mappings_sort.AuthNMappingsSort"><em>AuthNMappingsSort</em></a><em>, </em><em>optional</em>) – Sort AuthN Mappings depending on the given field.</p></li>
+<li><p><strong>sort</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.authn_mappings_sort.AuthNMappingsSort" title="datadog_api_client.v2.model.authn_mappings_sort.AuthNMappingsSort"><em>AuthNMappingsSort</em></a><em>, </em><em>optional</em>) – Sort AuthN Mappings depending on the given field.</p></li>
 <li><p><strong>include</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Include additional information in the response.</p></li>
 <li><p><strong>filter</strong> (<em>str</em><em>, </em><em>optional</em>) – Filter all mappings by the given string.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
@@ -698,18 +698,18 @@ use. Default is read from the configuration.</p></li>
 <dd class="field-even"><p>If the method is called asynchronously, returns the request thread.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.auth_n_mappings_response.AuthNMappingsResponse" title="datadog_api_client.v2.model.auth_n_mappings_response.AuthNMappingsResponse">AuthNMappingsResponse</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.authn_mappings_response.AuthNMappingsResponse" title="datadog_api_client.v2.model.authn_mappings_response.AuthNMappingsResponse">AuthNMappingsResponse</a></p>
 </dd>
 </dl>
 </dd></dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="datadog_api_client.v2.api.auth_n_mappings_api.AuthNMappingsApi.update_auth_n_mapping">
-<span class="sig-name descname"><span class="pre">update_auth_n_mapping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">authn_mapping_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.auth_n_mappings_api.AuthNMappingsApi.update_auth_n_mapping" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.authn_mappings_api.AuthNMappingsApi.update_authn_mapping">
+<span class="sig-name descname"><span class="pre">update_authn_mapping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">authn_mapping_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.authn_mappings_api.AuthNMappingsApi.update_authn_mapping" title="Permalink to this definition">¶</a></dt>
 <dd><p>Edit an AuthN Mapping.</p>
 <p>Edit an AuthN Mapping.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">update_auth_n_mapping</span><span class="p">(</span><span class="n">authn_mapping_id</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">update_authn_mapping</span><span class="p">(</span><span class="n">authn_mapping_id</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">thread</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -738,7 +738,7 @@ use. Default is read from the configuration.</p></li>
 <dd class="field-even"><p>If the method is called asynchronously, returns the request thread.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.auth_n_mapping_response.AuthNMappingResponse" title="datadog_api_client.v2.model.auth_n_mapping_response.AuthNMappingResponse">AuthNMappingResponse</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.authn_mapping_response.AuthNMappingResponse" title="datadog_api_client.v2.model.authn_mapping_response.AuthNMappingResponse">AuthNMappingResponse</a></p>
 </dd>
 </dl>
 </dd></dl>

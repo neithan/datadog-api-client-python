@@ -4224,6 +4224,45 @@ use. Default is read from the configuration.</p></li>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RUMApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.rum_api.RUMApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.rum_api.RUMApi.aggregate_rum_events">
+<span class="sig-name descname"><span class="pre">aggregate_rum_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.rum_api.RUMApi.aggregate_rum_events" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aggregate RUM events.</p>
+<p>The API endpoint to aggregate RUM events into buckets of computed metrics and timeseries.</p>
+<p>This method makes a synchronous HTTP request by default. To make an
+asynchronous HTTP request, please pass async_req=True.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">aggregate_rum_events</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">thread</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
+code and headers. Default is True.</p></li>
+<li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
+will be returned without reading/decoding response data.
+Default is True.</p></li>
+<li><p><strong>_request_timeout</strong> (<em>float/tuple</em>) – Timeout setting for this request. If one
+number provided, it will be total request timeout. It can also be a
+pair (tuple) of (connection, read) timeouts.  Default is None.</p></li>
+<li><p><strong>_check_input_type</strong> (<em>bool</em>) – Specifies if type checking should be done one
+the data sent to the server. Default is True.</p></li>
+<li><p><strong>_check_return_type</strong> (<em>bool</em>) – Specifies if type checking should be done
+one the data received from the server. Default is True.</p></li>
+<li><p><strong>_host_index</strong> (<em>int/None</em>) – Specifies the index of the server that we want to
+use. Default is read from the configuration.</p></li>
+<li><p><strong>async_req</strong> (<em>bool</em>) – Execute request asynchronously.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>If the method is called asynchronously, returns the request thread.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_analytics_aggregate_response.RUMAnalyticsAggregateResponse" title="datadog_api_client.v2.model.rum_analytics_aggregate_response.RUMAnalyticsAggregateResponse">RUMAnalyticsAggregateResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.rum_api.RUMApi.list_rum_events">
 <span class="sig-name descname"><span class="pre">list_rum_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.rum_api.RUMApi.list_rum_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a list of RUM events.</p>
@@ -4273,7 +4312,7 @@ use. Default is read from the configuration.</p></li>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.rum_api.RUMApi.search_rum_events">
-<span class="sig-name descname"><span class="pre">search_rum_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.rum_api.RUMApi.search_rum_events" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">search_rum_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.rum_api.RUMApi.search_rum_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Search RUM events.</p>
 <p>List endpoint returns RUM events that match a RUM search query.
 [Results are paginated][1].</p>
@@ -4281,7 +4320,7 @@ use. Default is read from the configuration.</p></li>
 <p>[1]: <a class="reference external" href="https://docs.datadoghq.com/logs/guide/collect-multiple-logs-with-pagination">https://docs.datadoghq.com/logs/guide/collect-multiple-logs-with-pagination</a></p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">search_rum_events</span><span class="p">(</span><span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">search_rum_events</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">thread</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
 </pre></div>
 </div>

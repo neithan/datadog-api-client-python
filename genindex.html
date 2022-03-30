@@ -388,6 +388,8 @@
 </li>
       <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.logs_api.LogsApi.aggregate_logs">aggregate_logs() (LogsApi method)</a>
 </li>
+      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.rum_api.RUMApi.aggregate_rum_events">aggregate_rum_events() (RUMApi method)</a>
+</li>
       <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.alert_graph_widget_definition.AlertGraphWidgetDefinition">AlertGraphWidgetDefinition (class in datadog_api_client.v1.model.alert_graph_widget_definition)</a>
 </li>
       <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.alert_graph_widget_definition_type.AlertGraphWidgetDefinitionType">AlertGraphWidgetDefinitionType (class in datadog_api_client.v1.model.alert_graph_widget_definition_type)</a>
@@ -647,11 +649,19 @@
 </li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.roles_type.RolesType.allowed_values">(RolesType attribute)</a>
 </li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregate_sort_type.RUMAggregateSortType.allowed_values">(RUMAggregateSortType attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregation_function.RUMAggregationFunction.allowed_values">(RUMAggregationFunction attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_compute_type.RUMComputeType.allowed_values">(RUMComputeType attribute)</a>
+</li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_event_type.RUMEventType.allowed_values">(RUMEventType attribute)</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_response_status.RUMResponseStatus.allowed_values">(RUMResponseStatus attribute)</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_sort.RUMSort.allowed_values">(RUMSort attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_sort_order.RUMSortOrder.allowed_values">(RUMSortOrder attribute)</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.saml_assertion_attributes_type.SAMLAssertionAttributesType.allowed_values">(SAMLAssertionAttributesType attribute)</a>
 </li>
@@ -1969,11 +1979,29 @@
 </li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.role_update_response_data.RoleUpdateResponseData.attribute_map">(RoleUpdateResponseData attribute)</a>
 </li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregate_bucket_value_timeseries_point.RUMAggregateBucketValueTimeseriesPoint.attribute_map">(RUMAggregateBucketValueTimeseriesPoint attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregate_request.RUMAggregateRequest.attribute_map">(RUMAggregateRequest attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregate_sort.RUMAggregateSort.attribute_map">(RUMAggregateSort attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregation_buckets_response.RUMAggregationBucketsResponse.attribute_map">(RUMAggregationBucketsResponse attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_analytics_aggregate_response.RUMAnalyticsAggregateResponse.attribute_map">(RUMAnalyticsAggregateResponse attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_bucket_response.RUMBucketResponse.attribute_map">(RUMBucketResponse attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_compute.RUMCompute.attribute_map">(RUMCompute attribute)</a>
+</li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_event.RUMEvent.attribute_map">(RUMEvent attribute)</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_event_attributes.RUMEventAttributes.attribute_map">(RUMEventAttributes attribute)</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_events_response.RUMEventsResponse.attribute_map">(RUMEventsResponse attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_group_by.RUMGroupBy.attribute_map">(RUMGroupBy attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_group_by_histogram.RUMGroupByHistogram.attribute_map">(RUMGroupByHistogram attribute)</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_query_filter.RUMQueryFilter.attribute_map">(RUMQueryFilter attribute)</a>
 </li>
@@ -7151,8 +7179,6 @@
         <li><a href="datadog_api_client.v1.model.html#module-datadog_api_client.v1.model.tree_map_widget_request">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     datadog_api_client.v1.model.usage_analyzed_logs_hour
 
@@ -7216,6 +7242,8 @@
         <li><a href="datadog_api_client.v1.model.html#module-datadog_api_client.v1.model.usage_attribution_sort">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     datadog_api_client.v1.model.usage_attribution_supported_metrics
 
@@ -10591,6 +10619,90 @@
 </li>
       </ul></li>
       <li>
+    datadog_api_client.v2.model.rum_aggregate_bucket_value
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_aggregate_bucket_value">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.rum_aggregate_bucket_value_timeseries
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_aggregate_bucket_value_timeseries">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.rum_aggregate_bucket_value_timeseries_point
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_aggregate_bucket_value_timeseries_point">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.rum_aggregate_request
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_aggregate_request">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.rum_aggregate_sort
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_aggregate_sort">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.rum_aggregate_sort_type
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_aggregate_sort_type">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.rum_aggregation_buckets_response
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_aggregation_buckets_response">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.rum_aggregation_function
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_aggregation_function">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.rum_analytics_aggregate_response
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_analytics_aggregate_response">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.rum_bucket_response
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_bucket_response">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.rum_compute
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_compute">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.rum_compute_type
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_compute_type">module</a>
+</li>
+      </ul></li>
+      <li>
     datadog_api_client.v2.model.rum_event
 
       <ul>
@@ -10616,6 +10728,34 @@
 
       <ul>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_events_response">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.rum_group_by
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_group_by">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.rum_group_by_histogram
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_group_by_histogram">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.rum_group_by_missing
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_group_by_missing">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.rum_group_by_total
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_group_by_total">module</a>
 </li>
       </ul></li>
       <li>
@@ -10679,6 +10819,13 @@
 
       <ul>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_sort">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.rum_sort_order
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_sort_order">module</a>
 </li>
       </ul></li>
       <li>
@@ -13088,9 +13235,27 @@
 </li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.roles_response.lazy_import">(in module datadog_api_client.v2.model.roles_response)</a>
 </li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregate_bucket_value.lazy_import">(in module datadog_api_client.v2.model.rum_aggregate_bucket_value)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregate_bucket_value_timeseries.lazy_import">(in module datadog_api_client.v2.model.rum_aggregate_bucket_value_timeseries)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregate_request.lazy_import">(in module datadog_api_client.v2.model.rum_aggregate_request)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregate_sort.lazy_import">(in module datadog_api_client.v2.model.rum_aggregate_sort)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregation_buckets_response.lazy_import">(in module datadog_api_client.v2.model.rum_aggregation_buckets_response)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_analytics_aggregate_response.lazy_import">(in module datadog_api_client.v2.model.rum_analytics_aggregate_response)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_bucket_response.lazy_import">(in module datadog_api_client.v2.model.rum_bucket_response)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_compute.lazy_import">(in module datadog_api_client.v2.model.rum_compute)</a>
+</li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_event.lazy_import">(in module datadog_api_client.v2.model.rum_event)</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_events_response.lazy_import">(in module datadog_api_client.v2.model.rum_events_response)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_group_by.lazy_import">(in module datadog_api_client.v2.model.rum_group_by)</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_response_metadata.lazy_import">(in module datadog_api_client.v2.model.rum_response_metadata)</a>
 </li>
@@ -15919,6 +16084,30 @@
 </li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.roles_type">datadog_api_client.v2.model.roles_type</a>
 </li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_aggregate_bucket_value">datadog_api_client.v2.model.rum_aggregate_bucket_value</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_aggregate_bucket_value_timeseries">datadog_api_client.v2.model.rum_aggregate_bucket_value_timeseries</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_aggregate_bucket_value_timeseries_point">datadog_api_client.v2.model.rum_aggregate_bucket_value_timeseries_point</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_aggregate_request">datadog_api_client.v2.model.rum_aggregate_request</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_aggregate_sort">datadog_api_client.v2.model.rum_aggregate_sort</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_aggregate_sort_type">datadog_api_client.v2.model.rum_aggregate_sort_type</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_aggregation_buckets_response">datadog_api_client.v2.model.rum_aggregation_buckets_response</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_aggregation_function">datadog_api_client.v2.model.rum_aggregation_function</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_analytics_aggregate_response">datadog_api_client.v2.model.rum_analytics_aggregate_response</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_bucket_response">datadog_api_client.v2.model.rum_bucket_response</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_compute">datadog_api_client.v2.model.rum_compute</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_compute_type">datadog_api_client.v2.model.rum_compute_type</a>
+</li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_event">datadog_api_client.v2.model.rum_event</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_event_attributes">datadog_api_client.v2.model.rum_event_attributes</a>
@@ -15926,6 +16115,14 @@
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_event_type">datadog_api_client.v2.model.rum_event_type</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_events_response">datadog_api_client.v2.model.rum_events_response</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_group_by">datadog_api_client.v2.model.rum_group_by</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_group_by_histogram">datadog_api_client.v2.model.rum_group_by_histogram</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_group_by_missing">datadog_api_client.v2.model.rum_group_by_missing</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_group_by_total">datadog_api_client.v2.model.rum_group_by_total</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_query_filter">datadog_api_client.v2.model.rum_query_filter</a>
 </li>
@@ -15944,6 +16141,8 @@
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_search_events_request">datadog_api_client.v2.model.rum_search_events_request</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_sort">datadog_api_client.v2.model.rum_sort</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_sort_order">datadog_api_client.v2.model.rum_sort_order</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.rum_warning">datadog_api_client.v2.model.rum_warning</a>
 </li>
@@ -17561,6 +17760,28 @@
 </li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.role_update_response_data.RoleUpdateResponseData.openapi_types">(RoleUpdateResponseData attribute)</a>
 </li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregate_bucket_value_timeseries.RUMAggregateBucketValueTimeseries.openapi_types">(RUMAggregateBucketValueTimeseries attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregate_bucket_value_timeseries_point.RUMAggregateBucketValueTimeseriesPoint.openapi_types">(RUMAggregateBucketValueTimeseriesPoint attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregate_request.RUMAggregateRequest.openapi_types">(RUMAggregateRequest attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregate_sort.RUMAggregateSort.openapi_types">(RUMAggregateSort attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregate_sort_type.RUMAggregateSortType.openapi_types">(RUMAggregateSortType attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregation_buckets_response.RUMAggregationBucketsResponse.openapi_types">(RUMAggregationBucketsResponse attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregation_function.RUMAggregationFunction.openapi_types">(RUMAggregationFunction attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_analytics_aggregate_response.RUMAnalyticsAggregateResponse.openapi_types">(RUMAnalyticsAggregateResponse attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_bucket_response.RUMBucketResponse.openapi_types">(RUMBucketResponse attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_compute.RUMCompute.openapi_types">(RUMCompute attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_compute_type.RUMComputeType.openapi_types">(RUMComputeType attribute)</a>
+</li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_event.RUMEvent.openapi_types">(RUMEvent attribute)</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_event_attributes.RUMEventAttributes.openapi_types">(RUMEventAttributes attribute)</a>
@@ -17568,6 +17789,10 @@
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_events_response.RUMEventsResponse.openapi_types">(RUMEventsResponse attribute)</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_event_type.RUMEventType.openapi_types">(RUMEventType attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_group_by.RUMGroupBy.openapi_types">(RUMGroupBy attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_group_by_histogram.RUMGroupByHistogram.openapi_types">(RUMGroupByHistogram attribute)</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_query_filter.RUMQueryFilter.openapi_types">(RUMQueryFilter attribute)</a>
 </li>
@@ -17586,6 +17811,8 @@
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_search_events_request.RUMSearchEventsRequest.openapi_types">(RUMSearchEventsRequest attribute)</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_sort.RUMSort.openapi_types">(RUMSort attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_sort_order.RUMSortOrder.openapi_types">(RUMSortOrder attribute)</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_warning.RUMWarning.openapi_types">(RUMWarning attribute)</a>
 </li>
@@ -18700,8 +18927,6 @@
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.relationship_to_incident_integration_metadatas.RelationshipToIncidentIntegrationMetadatas">RelationshipToIncidentIntegrationMetadatas (class in datadog_api_client.v2.model.relationship_to_incident_integration_metadatas)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.relationship_to_incident_postmortem.RelationshipToIncidentPostmortem">RelationshipToIncidentPostmortem (class in datadog_api_client.v2.model.relationship_to_incident_postmortem)</a>
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.relationship_to_incident_postmortem_data.RelationshipToIncidentPostmortemData">RelationshipToIncidentPostmortemData (class in datadog_api_client.v2.model.relationship_to_incident_postmortem_data)</a>
@@ -18718,6 +18943,8 @@
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.relationship_to_permissions.RelationshipToPermissions">RelationshipToPermissions (class in datadog_api_client.v2.model.relationship_to_permissions)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.relationship_to_role.RelationshipToRole">RelationshipToRole (class in datadog_api_client.v2.model.relationship_to_role)</a>
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.relationship_to_role_data.RelationshipToRoleData">RelationshipToRoleData (class in datadog_api_client.v2.model.relationship_to_role_data)</a>
@@ -18818,7 +19045,31 @@
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.role_update_response_data.RoleUpdateResponseData">RoleUpdateResponseData (class in datadog_api_client.v2.model.role_update_response_data)</a>
 </li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregate_bucket_value.RUMAggregateBucketValue">RUMAggregateBucketValue (class in datadog_api_client.v2.model.rum_aggregate_bucket_value)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregate_bucket_value_timeseries.RUMAggregateBucketValueTimeseries">RUMAggregateBucketValueTimeseries (class in datadog_api_client.v2.model.rum_aggregate_bucket_value_timeseries)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregate_bucket_value_timeseries_point.RUMAggregateBucketValueTimeseriesPoint">RUMAggregateBucketValueTimeseriesPoint (class in datadog_api_client.v2.model.rum_aggregate_bucket_value_timeseries_point)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregate_request.RUMAggregateRequest">RUMAggregateRequest (class in datadog_api_client.v2.model.rum_aggregate_request)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregate_sort.RUMAggregateSort">RUMAggregateSort (class in datadog_api_client.v2.model.rum_aggregate_sort)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregate_sort_type.RUMAggregateSortType">RUMAggregateSortType (class in datadog_api_client.v2.model.rum_aggregate_sort_type)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregation_buckets_response.RUMAggregationBucketsResponse">RUMAggregationBucketsResponse (class in datadog_api_client.v2.model.rum_aggregation_buckets_response)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_aggregation_function.RUMAggregationFunction">RUMAggregationFunction (class in datadog_api_client.v2.model.rum_aggregation_function)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_analytics_aggregate_response.RUMAnalyticsAggregateResponse">RUMAnalyticsAggregateResponse (class in datadog_api_client.v2.model.rum_analytics_aggregate_response)</a>
+</li>
       <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.rum_api.RUMApi">RUMApi (class in datadog_api_client.v2.api.rum_api)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_bucket_response.RUMBucketResponse">RUMBucketResponse (class in datadog_api_client.v2.model.rum_bucket_response)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_compute.RUMCompute">RUMCompute (class in datadog_api_client.v2.model.rum_compute)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_compute_type.RUMComputeType">RUMComputeType (class in datadog_api_client.v2.model.rum_compute_type)</a>
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_event.RUMEvent">RUMEvent (class in datadog_api_client.v2.model.rum_event)</a>
 </li>
@@ -18827,6 +19078,14 @@
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_events_response.RUMEventsResponse">RUMEventsResponse (class in datadog_api_client.v2.model.rum_events_response)</a>
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_event_type.RUMEventType">RUMEventType (class in datadog_api_client.v2.model.rum_event_type)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_group_by.RUMGroupBy">RUMGroupBy (class in datadog_api_client.v2.model.rum_group_by)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_group_by_histogram.RUMGroupByHistogram">RUMGroupByHistogram (class in datadog_api_client.v2.model.rum_group_by_histogram)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_group_by_missing.RUMGroupByMissing">RUMGroupByMissing (class in datadog_api_client.v2.model.rum_group_by_missing)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_group_by_total.RUMGroupByTotal">RUMGroupByTotal (class in datadog_api_client.v2.model.rum_group_by_total)</a>
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_query_filter.RUMQueryFilter">RUMQueryFilter (class in datadog_api_client.v2.model.rum_query_filter)</a>
 </li>
@@ -18845,6 +19104,8 @@
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_search_events_request.RUMSearchEventsRequest">RUMSearchEventsRequest (class in datadog_api_client.v2.model.rum_search_events_request)</a>
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_sort.RUMSort">RUMSort (class in datadog_api_client.v2.model.rum_sort)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_sort_order.RUMSortOrder">RUMSortOrder (class in datadog_api_client.v2.model.rum_sort_order)</a>
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_warning.RUMWarning">RUMWarning (class in datadog_api_client.v2.model.rum_warning)</a>
 </li>

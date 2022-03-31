@@ -370,7 +370,7 @@
 <section id="getting-started">
 <h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
 <p>Please follow the <a class="reference external" href="#installation">installation</a> instruction and execute the following Python code:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datadog_api_client.v1</span> <span class="kn">import</span> <span class="n">ApiClient</span><span class="p">,</span> <span class="n">Configuration</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datadog_api_client</span> <span class="kn">import</span> <span class="n">ApiClient</span><span class="p">,</span> <span class="n">Configuration</span>
 <span class="kn">from</span> <span class="nn">datadog_api_client.v1.api.monitors_api</span> <span class="kn">import</span> <span class="n">MonitorsApi</span>
 <span class="kn">from</span> <span class="nn">datadog_api_client.v1.model.monitor</span> <span class="kn">import</span> <span class="n">Monitor</span>
 <span class="kn">from</span> <span class="nn">datadog_api_client.v1.model.monitor_type</span> <span class="kn">import</span> <span class="n">MonitorType</span>
@@ -428,7 +428,7 @@ the API methods will then return coroutines that you can wait for.</p>
 <p>To make async support available, you need to install the extra <code class="docutils literal notranslate"><span class="pre">async</span></code> qualifiers during installation: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">datadog-api-client[async]</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
 
-<span class="kn">from</span> <span class="nn">datadog_api_client.v1</span> <span class="kn">import</span> <span class="n">Configuration</span><span class="p">,</span> <span class="n">AsyncApiClient</span>
+<span class="kn">from</span> <span class="nn">datadog_api_client</span> <span class="kn">import</span> <span class="n">Configuration</span><span class="p">,</span> <span class="n">AsyncApiClient</span>
 <span class="kn">from</span> <span class="nn">datadog_api_client.v1.api</span> <span class="kn">import</span> <span class="n">dashboards_api</span>
 
 <span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>

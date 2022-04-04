@@ -7550,6 +7550,18 @@ use. Default is read from the configuration.</p></li>
 <span class="sig-name descname"><span class="pre">get_hourly_usage_attribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_hr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usage_type</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.api.usage_metering_api.UsageMeteringApi.get_hourly_usage_attribution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get Hourly Usage Attribution.</p>
 <p>Get Hourly Usage Attribution.</p>
+<p>This API endpoint is paginated. To make sure you receive all records, check if the value of <cite>next_record_id</cite> is
+set in the response. If it is, make another request and pass <cite>next_record_id</cite> as a parameter.
+Pseudo code example:</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a>`
+response := GetHourlyUsageAttribution(start_month)
+cursor := response.metadata.pagination.next_record_id
+WHILE cursor != null BEGIN</p>
+<blockquote>
+<div><p>sleep(5 seconds)  # Avoid running into rate limit
+response := GetHourlyUsageAttribution(start_month, next_record_id=cursor)
+cursor := response.metadata.pagination.next_record_id</p>
+</div></blockquote>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_hourly_usage_attribution</span><span class="p">(</span><span class="n">start_hr</span><span class="p">,</span> <span class="n">usage_type</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -7564,7 +7576,9 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <li><p><strong>end_hr</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Datetime in ISO-8601 format, UTC, precise to hour: <cite>[YYYY-MM-DDThh]</cite> for usage ending
 <strong>before</strong> this hour.</p></li>
 <li><p><strong>next_record_id</strong> (<em>str</em><em>, </em><em>optional</em>) – List following results with a next_record_id provided in the previous query.</p></li>
-<li><p><strong>tag_breakdown_keys</strong> (<em>str</em><em>, </em><em>optional</em>) – Comma separated list of tags used to group usage. If no value is provided the usage will not be broken down by tags.</p></li>
+<li><p><strong>tag_breakdown_keys</strong> (<em>str</em><em>, </em><em>optional</em>) – <p>Comma separated list of tags used to group usage. If no value is provided the usage will not be broken down by tags.</p>
+<p>To see which tags are available, look for the value of <cite>tag_config_source</cite> in the API response.</p>
+</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
@@ -7722,6 +7736,18 @@ use. Default is read from the configuration.</p></li>
 <span class="sig-name descname"><span class="pre">get_monthly_usage_attribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_month</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.api.usage_metering_api.UsageMeteringApi.get_monthly_usage_attribution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get Monthly Usage Attribution.</p>
 <p>Get Monthly Usage Attribution.</p>
+<p>This API endpoint is paginated. To make sure you receive all records, check if the value of <cite>next_record_id</cite> is
+set in the response. If it is, make another request and pass <cite>next_record_id</cite> as a parameter.
+Pseudo code example:</p>
+<p><a href="#id3"><span class="problematic" id="id4">``</span></a>`
+response := GetMonthlyUsageAttribution(start_month)
+cursor := response.metadata.pagination.next_record_id
+WHILE cursor != null BEGIN</p>
+<blockquote>
+<div><p>sleep(5 seconds)  # Avoid running into rate limit
+response := GetMonthlyUsageAttribution(start_month, next_record_id=cursor)
+cursor := response.metadata.pagination.next_record_id</p>
+</div></blockquote>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_monthly_usage_attribution</span><span class="p">(</span><span class="n">start_month</span><span class="p">,</span> <span class="n">fields</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -7737,7 +7763,9 @@ Maximum of 15 months ago.</p></li>
 <li><p><strong>end_month</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Datetime in ISO-8601 format, UTC, precise to month: <cite>[YYYY-MM]</cite> for usage ending this month.</p></li>
 <li><p><strong>sort_direction</strong> (<a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.usage_sort_direction.UsageSortDirection" title="datadog_api_client.v1.model.usage_sort_direction.UsageSortDirection"><em>UsageSortDirection</em></a><em>, </em><em>optional</em>) – The direction to sort by: <cite>[desc, asc]</cite>.</p></li>
 <li><p><strong>sort_name</strong> (<a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.monthly_usage_attribution_supported_metrics.MonthlyUsageAttributionSupportedMetrics" title="datadog_api_client.v1.model.monthly_usage_attribution_supported_metrics.MonthlyUsageAttributionSupportedMetrics"><em>MonthlyUsageAttributionSupportedMetrics</em></a><em>, </em><em>optional</em>) – The field to sort by.</p></li>
-<li><p><strong>tag_breakdown_keys</strong> (<em>str</em><em>, </em><em>optional</em>) – Comma separated list of tags used to group usage. If no value is provided the usage will not be broken down by tags.</p></li>
+<li><p><strong>tag_breakdown_keys</strong> (<em>str</em><em>, </em><em>optional</em>) – <p>Comma separated list of tag keys used to group usage. If no value is provided the usage will not be broken down by tags.</p>
+<p>To see which tags are available, look for the value of <cite>tag_config_source</cite> in the API response.</p>
+</p></li>
 <li><p><strong>next_record_id</strong> (<em>str</em><em>, </em><em>optional</em>) – List following results with a next_record_id provided in the previous query.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>

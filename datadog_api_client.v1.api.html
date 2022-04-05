@@ -4604,6 +4604,47 @@ use. Default is read from the configuration.</p></li>
 </dl>
 </dd></dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v1.api.monitors_api.MonitorsApi.validate_existing_monitor">
+<span class="sig-name descname"><span class="pre">validate_existing_monitor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">monitor_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.api.monitors_api.MonitorsApi.validate_existing_monitor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate an existing monitor.</p>
+<p>Validate the monitor provided in the request.</p>
+<p>This method makes a synchronous HTTP request by default. To make an
+asynchronous HTTP request, please pass async_req=True.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">validate_existing_monitor</span><span class="p">(</span><span class="n">monitor_id</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">thread</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>monitor_id</strong> (<em>int</em>) – The ID of the monitor</p></li>
+<li><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.monitor.Monitor" title="datadog_api_client.v1.model.monitor.Monitor"><em>Monitor</em></a>) – Monitor request object</p></li>
+<li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
+code and headers. Default is True.</p></li>
+<li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
+will be returned without reading/decoding response data.
+Default is True.</p></li>
+<li><p><strong>_request_timeout</strong> (<em>float/tuple</em>) – Timeout setting for this request. If one
+number provided, it will be total request timeout. It can also be a
+pair (tuple) of (connection, read) timeouts.  Default is None.</p></li>
+<li><p><strong>_check_input_type</strong> (<em>bool</em>) – Specifies if type checking should be done one
+the data sent to the server. Default is True.</p></li>
+<li><p><strong>_check_return_type</strong> (<em>bool</em>) – Specifies if type checking should be done
+one the data received from the server. Default is True.</p></li>
+<li><p><strong>_host_index</strong> (<em>int/None</em>) – Specifies the index of the server that we want to
+use. Default is read from the configuration.</p></li>
+<li><p><strong>async_req</strong> (<em>bool</em>) – Execute request asynchronously.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>If the method is called asynchronously, returns the request thread.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v1.api.monitors_api.MonitorsApi.validate_monitor">
 <span class="sig-name descname"><span class="pre">validate_monitor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.api.monitors_api.MonitorsApi.validate_monitor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Validate a monitor.</p>

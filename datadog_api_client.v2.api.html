@@ -480,6 +480,39 @@ use. Default is read from the configuration.</p></li>
 </dl>
 </dd></dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.audit_api.AuditApi.list_audit_logs_with_pagination">
+<span class="sig-name descname"><span class="pre">list_audit_logs_with_pagination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.audit_api.AuditApi.list_audit_logs_with_pagination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of Audit Logs events.</p>
+<p>Provide a paginated version of <a class="reference internal" href="#datadog_api_client.v2.api.audit_api.AuditApi.list_audit_logs" title="datadog_api_client.v2.api.audit_api.AuditApi.list_audit_logs"><code class="xref py py-meth docutils literal notranslate"><span class="pre">list_audit_logs()</span></code></a>, returning all items.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter_query</strong> (<em>str</em><em>, </em><em>optional</em>) – Search query following Audit Logs syntax.</p></li>
+<li><p><strong>filter_from</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Minimum timestamp for requested events.</p></li>
+<li><p><strong>filter_to</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Maximum timestamp for requested events.</p></li>
+<li><p><strong>sort</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.audit_logs_sort.AuditLogsSort" title="datadog_api_client.v2.model.audit_logs_sort.AuditLogsSort"><em>AuditLogsSort</em></a><em>, </em><em>optional</em>) – Order of events in results.</p></li>
+<li><p><strong>page_cursor</strong> (<em>str</em><em>, </em><em>optional</em>) – List following results with a cursor provided in the previous query.</p></li>
+<li><p><strong>page_limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum number of events in the response.</p></li>
+<li><p><strong>_request_timeout</strong> (<em>float/tuple</em>) – Timeout setting for this request. If one
+number provided, it will be total request timeout. It can also be a
+pair (tuple) of (connection, read) timeouts.  Default is None.</p></li>
+<li><p><strong>_check_input_type</strong> (<em>bool</em>) – Specifies if type checking should be done one
+the data sent to the server. Default is True.</p></li>
+<li><p><strong>_check_return_type</strong> (<em>bool</em>) – Specifies if type checking should be done
+one the data received from the server. Default is True.</p></li>
+<li><p><strong>_host_index</strong> (<em>int/None</em>) – Specifies the index of the server that we want to
+use. Default is read from the configuration.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A generator of paginated results.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>collections.abc.Iterable[<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.audit_logs_event.AuditLogsEvent" title="datadog_api_client.v2.model.audit_logs_event.AuditLogsEvent">AuditLogsEvent</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.audit_api.AuditApi.search_audit_logs">
 <span class="sig-name descname"><span class="pre">search_audit_logs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.audit_api.AuditApi.search_audit_logs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Search Audit Logs events.</p>
@@ -518,6 +551,33 @@ use. Default is read from the configuration.</p></li>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.audit_logs_events_response.AuditLogsEventsResponse" title="datadog_api_client.v2.model.audit_logs_events_response.AuditLogsEventsResponse">AuditLogsEventsResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.audit_api.AuditApi.search_audit_logs_with_pagination">
+<span class="sig-name descname"><span class="pre">search_audit_logs_with_pagination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.audit_api.AuditApi.search_audit_logs_with_pagination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search Audit Logs events.</p>
+<p>Provide a paginated version of <a class="reference internal" href="#datadog_api_client.v2.api.audit_api.AuditApi.search_audit_logs" title="datadog_api_client.v2.api.audit_api.AuditApi.search_audit_logs"><code class="xref py py-meth docutils literal notranslate"><span class="pre">search_audit_logs()</span></code></a>, returning all items.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>_request_timeout</strong> (<em>float/tuple</em>) – Timeout setting for this request. If one
+number provided, it will be total request timeout. It can also be a
+pair (tuple) of (connection, read) timeouts.  Default is None.</p></li>
+<li><p><strong>_check_input_type</strong> (<em>bool</em>) – Specifies if type checking should be done one
+the data sent to the server. Default is True.</p></li>
+<li><p><strong>_check_return_type</strong> (<em>bool</em>) – Specifies if type checking should be done
+one the data received from the server. Default is True.</p></li>
+<li><p><strong>_host_index</strong> (<em>int/None</em>) – Specifies the index of the server that we want to
+use. Default is read from the configuration.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A generator of paginated results.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>collections.abc.Iterable[<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.audit_logs_event.AuditLogsEvent" title="datadog_api_client.v2.model.audit_logs_event.AuditLogsEvent">AuditLogsEvent</a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1753,6 +1813,36 @@ use. Default is read from the configuration.</p></li>
 </dl>
 </dd></dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.incidents_api.IncidentsApi.list_incidents_with_pagination">
+<span class="sig-name descname"><span class="pre">list_incidents_with_pagination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.incidents_api.IncidentsApi.list_incidents_with_pagination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of incidents.</p>
+<p>Provide a paginated version of <a class="reference internal" href="#datadog_api_client.v2.api.incidents_api.IncidentsApi.list_incidents" title="datadog_api_client.v2.api.incidents_api.IncidentsApi.list_incidents"><code class="xref py py-meth docutils literal notranslate"><span class="pre">list_incidents()</span></code></a>, returning all items.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>include</strong> (<em>[</em><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_related_object.IncidentRelatedObject" title="datadog_api_client.v2.model.incident_related_object.IncidentRelatedObject"><em>IncidentRelatedObject</em></a><em>]</em><em>, </em><em>optional</em>) – Specifies which types of related objects should be included in the response.</p></li>
+<li><p><strong>page_size</strong> (<em>int</em><em>, </em><em>optional</em>) – Size for a given page.</p></li>
+<li><p><strong>page_offset</strong> (<em>int</em><em>, </em><em>optional</em>) – Specific offset to use as the beginning of the returned page.</p></li>
+<li><p><strong>_request_timeout</strong> (<em>float/tuple</em>) – Timeout setting for this request. If one
+number provided, it will be total request timeout. It can also be a
+pair (tuple) of (connection, read) timeouts.  Default is None.</p></li>
+<li><p><strong>_check_input_type</strong> (<em>bool</em>) – Specifies if type checking should be done one
+the data sent to the server. Default is True.</p></li>
+<li><p><strong>_check_return_type</strong> (<em>bool</em>) – Specifies if type checking should be done
+one the data received from the server. Default is True.</p></li>
+<li><p><strong>_host_index</strong> (<em>int/None</em>) – Specifies the index of the server that we want to
+use. Default is read from the configuration.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A generator of paginated results.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>collections.abc.Iterable[<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_response_data.IncidentResponseData" title="datadog_api_client.v2.model.incident_response_data.IncidentResponseData">IncidentResponseData</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.incidents_api.IncidentsApi.update_incident">
 <span class="sig-name descname"><span class="pre">update_incident</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">incident_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.incidents_api.IncidentsApi.update_incident" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update an existing incident.</p>
@@ -2530,6 +2620,68 @@ use. Default is read from the configuration.</p></li>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.logs_list_response.LogsListResponse" title="datadog_api_client.v2.model.logs_list_response.LogsListResponse">LogsListResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.logs_api.LogsApi.list_logs_get_with_pagination">
+<span class="sig-name descname"><span class="pre">list_logs_get_with_pagination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.logs_api.LogsApi.list_logs_get_with_pagination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of logs.</p>
+<p>Provide a paginated version of <a class="reference internal" href="#datadog_api_client.v2.api.logs_api.LogsApi.list_logs_get" title="datadog_api_client.v2.api.logs_api.LogsApi.list_logs_get"><code class="xref py py-meth docutils literal notranslate"><span class="pre">list_logs_get()</span></code></a>, returning all items.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter_query</strong> (<em>str</em><em>, </em><em>optional</em>) – Search query following logs syntax.</p></li>
+<li><p><strong>filter_index</strong> (<em>str</em><em>, </em><em>optional</em>) – For customers with multiple indexes, the indexes to search
+Defaults to ‘*’ which means all indexes</p></li>
+<li><p><strong>filter_from</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Minimum timestamp for requested logs.</p></li>
+<li><p><strong>filter_to</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Maximum timestamp for requested logs.</p></li>
+<li><p><strong>sort</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.logs_sort.LogsSort" title="datadog_api_client.v2.model.logs_sort.LogsSort"><em>LogsSort</em></a><em>, </em><em>optional</em>) – Order of logs in results.</p></li>
+<li><p><strong>page_cursor</strong> (<em>str</em><em>, </em><em>optional</em>) – List following results with a cursor provided in the previous query.</p></li>
+<li><p><strong>page_limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum number of logs in the response.</p></li>
+<li><p><strong>_request_timeout</strong> (<em>float/tuple</em>) – Timeout setting for this request. If one
+number provided, it will be total request timeout. It can also be a
+pair (tuple) of (connection, read) timeouts.  Default is None.</p></li>
+<li><p><strong>_check_input_type</strong> (<em>bool</em>) – Specifies if type checking should be done one
+the data sent to the server. Default is True.</p></li>
+<li><p><strong>_check_return_type</strong> (<em>bool</em>) – Specifies if type checking should be done
+one the data received from the server. Default is True.</p></li>
+<li><p><strong>_host_index</strong> (<em>int/None</em>) – Specifies the index of the server that we want to
+use. Default is read from the configuration.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A generator of paginated results.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>collections.abc.Iterable[<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.log.Log" title="datadog_api_client.v2.model.log.Log">Log</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.logs_api.LogsApi.list_logs_with_pagination">
+<span class="sig-name descname"><span class="pre">list_logs_with_pagination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.logs_api.LogsApi.list_logs_with_pagination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search logs.</p>
+<p>Provide a paginated version of <a class="reference internal" href="#datadog_api_client.v2.api.logs_api.LogsApi.list_logs" title="datadog_api_client.v2.api.logs_api.LogsApi.list_logs"><code class="xref py py-meth docutils literal notranslate"><span class="pre">list_logs()</span></code></a>, returning all items.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>_request_timeout</strong> (<em>float/tuple</em>) – Timeout setting for this request. If one
+number provided, it will be total request timeout. It can also be a
+pair (tuple) of (connection, read) timeouts.  Default is None.</p></li>
+<li><p><strong>_check_input_type</strong> (<em>bool</em>) – Specifies if type checking should be done one
+the data sent to the server. Default is True.</p></li>
+<li><p><strong>_check_return_type</strong> (<em>bool</em>) – Specifies if type checking should be done
+one the data received from the server. Default is True.</p></li>
+<li><p><strong>_host_index</strong> (<em>int/None</em>) – Specifies the index of the server that we want to
+use. Default is read from the configuration.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A generator of paginated results.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>collections.abc.Iterable[<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.log.Log" title="datadog_api_client.v2.model.log.Log">Log</a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3717,6 +3869,44 @@ use. Default is read from the configuration.</p></li>
 </dd>
 </dl>
 </dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.processes_api.ProcessesApi.list_processes_with_pagination">
+<span class="sig-name descname"><span class="pre">list_processes_with_pagination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.processes_api.ProcessesApi.list_processes_with_pagination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all processes.</p>
+<p>Provide a paginated version of <a class="reference internal" href="#datadog_api_client.v2.api.processes_api.ProcessesApi.list_processes" title="datadog_api_client.v2.api.processes_api.ProcessesApi.list_processes"><code class="xref py py-meth docutils literal notranslate"><span class="pre">list_processes()</span></code></a>, returning all items.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>search</strong> (<em>str</em><em>, </em><em>optional</em>) – String to search processes by.</p></li>
+<li><p><strong>tags</strong> (<em>str</em><em>, </em><em>optional</em>) – Comma-separated list of tags to filter processes by.</p></li>
+<li><p><strong>_from</strong> (<em>int</em><em>, </em><em>optional</em>) – Unix timestamp (number of seconds since epoch) of the start of the query window.
+If not provided, the start of the query window will be 15 minutes before the <cite>to</cite> timestamp. If neither
+<cite>from</cite> nor <cite>to</cite> are provided, the query window will be <cite>[now - 15m, now]</cite>.</p></li>
+<li><p><strong>to</strong> (<em>int</em><em>, </em><em>optional</em>) – Unix timestamp (number of seconds since epoch) of the end of the query window.
+If not provided, the end of the query window will be 15 minutes after the <cite>from</cite> timestamp. If neither
+<cite>from</cite> nor <cite>to</cite> are provided, the query window will be <cite>[now - 15m, now]</cite>.</p></li>
+<li><p><strong>page_limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum number of results returned.</p></li>
+<li><p><strong>page_cursor</strong> (<em>str</em><em>, </em><em>optional</em>) – String to query the next page of results.
+This key is provided with each valid response from the API in <cite>meta.page.after</cite>.</p></li>
+<li><p><strong>_request_timeout</strong> (<em>float/tuple</em>) – Timeout setting for this request. If one
+number provided, it will be total request timeout. It can also be a
+pair (tuple) of (connection, read) timeouts.  Default is None.</p></li>
+<li><p><strong>_check_input_type</strong> (<em>bool</em>) – Specifies if type checking should be done one
+the data sent to the server. Default is True.</p></li>
+<li><p><strong>_check_return_type</strong> (<em>bool</em>) – Specifies if type checking should be done
+one the data received from the server. Default is True.</p></li>
+<li><p><strong>_host_index</strong> (<em>int/None</em>) – Specifies the index of the server that we want to
+use. Default is read from the configuration.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A generator of paginated results.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>collections.abc.Iterable[<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.process_summary.ProcessSummary" title="datadog_api_client.v2.model.process_summary.ProcessSummary">ProcessSummary</a>]</p>
+</dd>
+</dl>
+</dd></dl>
 </dd></dl>
 </section>
 <section id="module-datadog_api_client.v2.api.roles_api">
@@ -4350,6 +4540,39 @@ use. Default is read from the configuration.</p></li>
 </dl>
 </dd></dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.rum_api.RUMApi.list_rum_events_with_pagination">
+<span class="sig-name descname"><span class="pre">list_rum_events_with_pagination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.rum_api.RUMApi.list_rum_events_with_pagination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of RUM events.</p>
+<p>Provide a paginated version of <a class="reference internal" href="#datadog_api_client.v2.api.rum_api.RUMApi.list_rum_events" title="datadog_api_client.v2.api.rum_api.RUMApi.list_rum_events"><code class="xref py py-meth docutils literal notranslate"><span class="pre">list_rum_events()</span></code></a>, returning all items.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter_query</strong> (<em>str</em><em>, </em><em>optional</em>) – Search query following RUM syntax.</p></li>
+<li><p><strong>filter_from</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Minimum timestamp for requested events.</p></li>
+<li><p><strong>filter_to</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Maximum timestamp for requested events.</p></li>
+<li><p><strong>sort</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_sort.RUMSort" title="datadog_api_client.v2.model.rum_sort.RUMSort"><em>RUMSort</em></a><em>, </em><em>optional</em>) – Order of events in results.</p></li>
+<li><p><strong>page_cursor</strong> (<em>str</em><em>, </em><em>optional</em>) – List following results with a cursor provided in the previous query.</p></li>
+<li><p><strong>page_limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum number of events in the response.</p></li>
+<li><p><strong>_request_timeout</strong> (<em>float/tuple</em>) – Timeout setting for this request. If one
+number provided, it will be total request timeout. It can also be a
+pair (tuple) of (connection, read) timeouts.  Default is None.</p></li>
+<li><p><strong>_check_input_type</strong> (<em>bool</em>) – Specifies if type checking should be done one
+the data sent to the server. Default is True.</p></li>
+<li><p><strong>_check_return_type</strong> (<em>bool</em>) – Specifies if type checking should be done
+one the data received from the server. Default is True.</p></li>
+<li><p><strong>_host_index</strong> (<em>int/None</em>) – Specifies the index of the server that we want to
+use. Default is read from the configuration.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A generator of paginated results.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>collections.abc.Iterable[<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_event.RUMEvent" title="datadog_api_client.v2.model.rum_event.RUMEvent">RUMEvent</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.rum_api.RUMApi.search_rum_events">
 <span class="sig-name descname"><span class="pre">search_rum_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.rum_api.RUMApi.search_rum_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Search RUM events.</p>
@@ -4388,6 +4611,33 @@ use. Default is read from the configuration.</p></li>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_events_response.RUMEventsResponse" title="datadog_api_client.v2.model.rum_events_response.RUMEventsResponse">RUMEventsResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.rum_api.RUMApi.search_rum_events_with_pagination">
+<span class="sig-name descname"><span class="pre">search_rum_events_with_pagination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.rum_api.RUMApi.search_rum_events_with_pagination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search RUM events.</p>
+<p>Provide a paginated version of <a class="reference internal" href="#datadog_api_client.v2.api.rum_api.RUMApi.search_rum_events" title="datadog_api_client.v2.api.rum_api.RUMApi.search_rum_events"><code class="xref py py-meth docutils literal notranslate"><span class="pre">search_rum_events()</span></code></a>, returning all items.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>_request_timeout</strong> (<em>float/tuple</em>) – Timeout setting for this request. If one
+number provided, it will be total request timeout. It can also be a
+pair (tuple) of (connection, read) timeouts.  Default is None.</p></li>
+<li><p><strong>_check_input_type</strong> (<em>bool</em>) – Specifies if type checking should be done one
+the data sent to the server. Default is True.</p></li>
+<li><p><strong>_check_return_type</strong> (<em>bool</em>) – Specifies if type checking should be done
+one the data received from the server. Default is True.</p></li>
+<li><p><strong>_host_index</strong> (<em>int/None</em>) – Specifies the index of the server that we want to
+use. Default is read from the configuration.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A generator of paginated results.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>collections.abc.Iterable[<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_event.RUMEvent" title="datadog_api_client.v2.model.rum_event.RUMEvent">RUMEvent</a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -4770,6 +5020,39 @@ use. Default is read from the configuration.</p></li>
 </dl>
 </dd></dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.list_security_monitoring_signals_with_pagination">
+<span class="sig-name descname"><span class="pre">list_security_monitoring_signals_with_pagination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.list_security_monitoring_signals_with_pagination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a quick list of security signals.</p>
+<p>Provide a paginated version of <a class="reference internal" href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.list_security_monitoring_signals" title="datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.list_security_monitoring_signals"><code class="xref py py-meth docutils literal notranslate"><span class="pre">list_security_monitoring_signals()</span></code></a>, returning all items.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter_query</strong> (<em>str</em><em>, </em><em>optional</em>) – The search query for security signals.</p></li>
+<li><p><strong>filter_from</strong> (<em>datetime</em><em>, </em><em>optional</em>) – The minimum timestamp for requested security signals.</p></li>
+<li><p><strong>filter_to</strong> (<em>datetime</em><em>, </em><em>optional</em>) – The maximum timestamp for requested security signals.</p></li>
+<li><p><strong>sort</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.security_monitoring_signals_sort.SecurityMonitoringSignalsSort" title="datadog_api_client.v2.model.security_monitoring_signals_sort.SecurityMonitoringSignalsSort"><em>SecurityMonitoringSignalsSort</em></a><em>, </em><em>optional</em>) – The order of the security signals in results.</p></li>
+<li><p><strong>page_cursor</strong> (<em>str</em><em>, </em><em>optional</em>) – A list of results using the cursor provided in the previous query.</p></li>
+<li><p><strong>page_limit</strong> (<em>int</em><em>, </em><em>optional</em>) – The maximum number of security signals in the response.</p></li>
+<li><p><strong>_request_timeout</strong> (<em>float/tuple</em>) – Timeout setting for this request. If one
+number provided, it will be total request timeout. It can also be a
+pair (tuple) of (connection, read) timeouts.  Default is None.</p></li>
+<li><p><strong>_check_input_type</strong> (<em>bool</em>) – Specifies if type checking should be done one
+the data sent to the server. Default is True.</p></li>
+<li><p><strong>_check_return_type</strong> (<em>bool</em>) – Specifies if type checking should be done
+one the data received from the server. Default is True.</p></li>
+<li><p><strong>_host_index</strong> (<em>int/None</em>) – Specifies the index of the server that we want to
+use. Default is read from the configuration.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A generator of paginated results.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>collections.abc.Iterable[<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.security_monitoring_signal.SecurityMonitoringSignal" title="datadog_api_client.v2.model.security_monitoring_signal.SecurityMonitoringSignal">SecurityMonitoringSignal</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.search_security_monitoring_signals">
 <span class="sig-name descname"><span class="pre">search_security_monitoring_signals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.search_security_monitoring_signals" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a list of security signals.</p>
@@ -4807,6 +5090,33 @@ use. Default is read from the configuration.</p></li>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.security_monitoring_signals_list_response.SecurityMonitoringSignalsListResponse" title="datadog_api_client.v2.model.security_monitoring_signals_list_response.SecurityMonitoringSignalsListResponse">SecurityMonitoringSignalsListResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.search_security_monitoring_signals_with_pagination">
+<span class="sig-name descname"><span class="pre">search_security_monitoring_signals_with_pagination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.search_security_monitoring_signals_with_pagination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of security signals.</p>
+<p>Provide a paginated version of <a class="reference internal" href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.search_security_monitoring_signals" title="datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.search_security_monitoring_signals"><code class="xref py py-meth docutils literal notranslate"><span class="pre">search_security_monitoring_signals()</span></code></a>, returning all items.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>_request_timeout</strong> (<em>float/tuple</em>) – Timeout setting for this request. If one
+number provided, it will be total request timeout. It can also be a
+pair (tuple) of (connection, read) timeouts.  Default is None.</p></li>
+<li><p><strong>_check_input_type</strong> (<em>bool</em>) – Specifies if type checking should be done one
+the data sent to the server. Default is True.</p></li>
+<li><p><strong>_check_return_type</strong> (<em>bool</em>) – Specifies if type checking should be done
+one the data received from the server. Default is True.</p></li>
+<li><p><strong>_host_index</strong> (<em>int/None</em>) – Specifies the index of the server that we want to
+use. Default is read from the configuration.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A generator of paginated results.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>collections.abc.Iterable[<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.security_monitoring_signal.SecurityMonitoringSignal" title="datadog_api_client.v2.model.security_monitoring_signal.SecurityMonitoringSignal">SecurityMonitoringSignal</a>]</p>
 </dd>
 </dl>
 </dd></dl>

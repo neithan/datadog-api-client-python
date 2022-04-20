@@ -295,6 +295,8 @@
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.service_accounts_api" class="md-nav__link">service_accounts_api</a>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.usage_metering_api" class="md-nav__link">usage_metering_api</a>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.users_api" class="md-nav__link">users_api</a>
         </li></ul>
             </nav>
@@ -404,6 +406,8 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.security_monitoring_api" class="md-nav__link">security_monitoring_api</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.service_accounts_api" class="md-nav__link">service_accounts_api</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.usage_metering_api" class="md-nav__link">usage_metering_api</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.users_api" class="md-nav__link">users_api</a>
         </li></ul>
@@ -5420,6 +5424,56 @@ use. Default is read from the configuration.</p></li>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.partial_application_key_response.PartialApplicationKeyResponse" title="datadog_api_client.v2.model.partial_application_key_response.PartialApplicationKeyResponse">PartialApplicationKeyResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.api.usage_metering_api">
+<span id="usage-metering-api"></span><h2 id="module-datadog_api_client.v2.api.usage_metering_api">usage_metering_api<a class="headerlink" href="#module-datadog_api_client.v2.api.usage_metering_api" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.usage_metering_api.UsageMeteringApi">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UsageMeteringApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.usage_metering_api.UsageMeteringApi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.usage_metering_api.UsageMeteringApi.get_usage_observability_pipelines">
+<span class="sig-name descname"><span class="pre">get_usage_observability_pipelines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_hr</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.usage_metering_api.UsageMeteringApi.get_usage_observability_pipelines" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get hourly usage for Observability Pipelines.</p>
+<p>Get hourly usage for Observability Pipelines.</p>
+<p>This method makes a synchronous HTTP request by default. To make an
+asynchronous HTTP request, please pass async_req=True.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_usage_observability_pipelines</span><span class="p">(</span><span class="n">start_hr</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">thread</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_hr</strong> (<em>datetime</em>) – Datetime in ISO-8601 format, UTC, precise to hour: <cite>[YYYY-MM-DDThh]</cite> for usage beginning at this hour.</p></li>
+<li><p><strong>end_hr</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Datetime in ISO-8601 format, UTC, precise to hour: <cite>[YYYY-MM-DDThh]</cite> for usage ending
+<strong>before</strong> this hour.</p></li>
+<li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
+code and headers. Default is True.</p></li>
+<li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
+will be returned without reading/decoding response data.
+Default is True.</p></li>
+<li><p><strong>_request_timeout</strong> (<em>float/tuple</em>) – Timeout setting for this request. If one
+number provided, it will be total request timeout. It can also be a
+pair (tuple) of (connection, read) timeouts.  Default is None.</p></li>
+<li><p><strong>_check_input_type</strong> (<em>bool</em>) – Specifies if type checking should be done one
+the data sent to the server. Default is True.</p></li>
+<li><p><strong>_check_return_type</strong> (<em>bool</em>) – Specifies if type checking should be done
+one the data received from the server. Default is True.</p></li>
+<li><p><strong>_host_index</strong> (<em>int/None</em>) – Specifies the index of the server that we want to
+use. Default is read from the configuration.</p></li>
+<li><p><strong>async_req</strong> (<em>bool</em>) – Execute request asynchronously.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>If the method is called asynchronously, returns the request thread.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.usage_observability_pipelines_response.UsageObservabilityPipelinesResponse" title="datadog_api_client.v2.model.usage_observability_pipelines_response.UsageObservabilityPipelinesResponse">UsageObservabilityPipelinesResponse</a></p>
 </dd>
 </dl>
 </dd></dl>

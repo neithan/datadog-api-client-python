@@ -3552,6 +3552,51 @@ use. Default is read from the configuration.</p></li>
 </dl>
 </dd></dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.metrics_api.MetricsApi.estimate_metrics_output_series">
+<span class="sig-name descname"><span class="pre">estimate_metrics_output_series</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metric_name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.metrics_api.MetricsApi.estimate_metrics_output_series" title="Permalink to this definition">¶</a></dt>
+<dd><p>Estimate Output Series - Public v2 API.</p>
+<p>Returns a cardinality estimate for a metric with a given tag, percentile, and number of aggregations configuration.</p>
+<p>This method makes a synchronous HTTP request by default. To make an
+asynchronous HTTP request, please pass async_req=True.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">estimate_metrics_output_series</span><span class="p">(</span><span class="n">metric_name</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">thread</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>metric_name</strong> (<em>str</em>) – The name of the metric.</p></li>
+<li><p><strong>filter_groups</strong> (<em>str</em><em>, </em><em>optional</em>) – Filtered tag groups that the metric is configured to query with.</p></li>
+<li><p><strong>filter_hours_ago</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of hours of look back (from now) to estimate cardinality with.</p></li>
+<li><p><strong>filter_num_aggregations</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of aggregations that a <cite>count</cite>, <cite>rate</cite>, or <cite>gauge</cite> metric is configured to use. Max number of aggregation combos is 9.</p></li>
+<li><p><strong>filter_pct</strong> (<em>bool</em><em>, </em><em>optional</em>) – A boolean, for distribution metrics only, to estimate cardinality if the metric includes additional percentile aggregators.</p></li>
+<li><p><strong>filter_timespan_h</strong> (<em>int</em><em>, </em><em>optional</em>) – A window, in hours, from the look back to estimate cardinality with.</p></li>
+<li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
+code and headers. Default is True.</p></li>
+<li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
+will be returned without reading/decoding response data.
+Default is True.</p></li>
+<li><p><strong>_request_timeout</strong> (<em>float/tuple</em>) – Timeout setting for this request. If one
+number provided, it will be total request timeout. It can also be a
+pair (tuple) of (connection, read) timeouts.  Default is None.</p></li>
+<li><p><strong>_check_input_type</strong> (<em>bool</em>) – Specifies if type checking should be done one
+the data sent to the server. Default is True.</p></li>
+<li><p><strong>_check_return_type</strong> (<em>bool</em>) – Specifies if type checking should be done
+one the data received from the server. Default is True.</p></li>
+<li><p><strong>_host_index</strong> (<em>int/None</em>) – Specifies the index of the server that we want to
+use. Default is read from the configuration.</p></li>
+<li><p><strong>async_req</strong> (<em>bool</em>) – Execute request asynchronously.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>If the method is called asynchronously, returns the request thread.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_estimate_response.MetricEstimateResponse" title="datadog_api_client.v2.model.metric_estimate_response.MetricEstimateResponse">MetricEstimateResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.metrics_api.MetricsApi.list_tag_configuration_by_name">
 <span class="sig-name descname"><span class="pre">list_tag_configuration_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metric_name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.metrics_api.MetricsApi.list_tag_configuration_by_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>List tag configuration by name.</p>

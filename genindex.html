@@ -584,6 +584,10 @@
 </li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_distinct_volume_type.MetricDistinctVolumeType.allowed_values">(MetricDistinctVolumeType attribute)</a>
 </li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_estimate_resource_type.MetricEstimateResourceType.allowed_values">(MetricEstimateResourceType attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_estimate_type.MetricEstimateType.allowed_values">(MetricEstimateType attribute)</a>
+</li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_ingested_indexed_volume_type.MetricIngestedIndexedVolumeType.allowed_values">(MetricIngestedIndexedVolumeType attribute)</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_tag_configuration_metric_types.MetricTagConfigurationMetricTypes.allowed_values">(MetricTagConfigurationMetricTypes attribute)</a>
@@ -1679,6 +1683,12 @@
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_distinct_volume.MetricDistinctVolume.attribute_map">(MetricDistinctVolume attribute)</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_distinct_volume_attributes.MetricDistinctVolumeAttributes.attribute_map">(MetricDistinctVolumeAttributes attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_estimate.MetricEstimate.attribute_map">(MetricEstimate attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_estimate_attributes.MetricEstimateAttributes.attribute_map">(MetricEstimateAttributes attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_estimate_response.MetricEstimateResponse.attribute_map">(MetricEstimateResponse attribute)</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_ingested_indexed_volume.MetricIngestedIndexedVolume.attribute_map">(MetricIngestedIndexedVolume attribute)</a>
 </li>
@@ -7324,8 +7334,6 @@
         <li><a href="datadog_api_client.v1.model.html#module-datadog_api_client.v1.model.usage_billable_summary_body">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     datadog_api_client.v1.model.usage_billable_summary_hour
 
@@ -7347,6 +7355,8 @@
         <li><a href="datadog_api_client.v1.model.html#module-datadog_api_client.v1.model.usage_billable_summary_response">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     datadog_api_client.v1.model.usage_ci_visibility_hour
 
@@ -10148,6 +10158,41 @@
 </li>
       </ul></li>
       <li>
+    datadog_api_client.v2.model.metric_estimate
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.metric_estimate">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.metric_estimate_attributes
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.metric_estimate_attributes">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.metric_estimate_resource_type
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.metric_estimate_resource_type">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.metric_estimate_response
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.metric_estimate_response">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.metric_estimate_type
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.metric_estimate_type">module</a>
+</li>
+      </ul></li>
+      <li>
     datadog_api_client.v2.model.metric_ingested_indexed_volume
 
       <ul>
@@ -11652,6 +11697,8 @@
 </li>
       <li><a href="datadog_api_client.html#datadog_api_client.api_client.Endpoint">Endpoint (class in datadog_api_client.api_client)</a>
 </li>
+      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.metrics_api.MetricsApi.estimate_metrics_output_series">estimate_metrics_output_series() (MetricsApi method)</a>
+</li>
       <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.event.Event">Event (class in datadog_api_client.v1.model.event)</a>
 </li>
       <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.event_alert_type.EventAlertType">EventAlertType (class in datadog_api_client.v1.model.event_alert_type)</a>
@@ -11660,10 +11707,10 @@
 </li>
       <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.event_create_response.EventCreateResponse">EventCreateResponse (class in datadog_api_client.v1.model.event_create_response)</a>
 </li>
-      <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.event_list_response.EventListResponse">EventListResponse (class in datadog_api_client.v1.model.event_list_response)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.event_list_response.EventListResponse">EventListResponse (class in datadog_api_client.v1.model.event_list_response)</a>
+</li>
       <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.event_priority.EventPriority">EventPriority (class in datadog_api_client.v1.model.event_priority)</a>
 </li>
       <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.event_query_definition.EventQueryDefinition">EventQueryDefinition (class in datadog_api_client.v1.model.event_query_definition)</a>
@@ -13295,6 +13342,12 @@
 </li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_distinct_volume.lazy_import">(in module datadog_api_client.v2.model.metric_distinct_volume)</a>
 </li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_estimate.lazy_import">(in module datadog_api_client.v2.model.metric_estimate)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_estimate_attributes.lazy_import">(in module datadog_api_client.v2.model.metric_estimate_attributes)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_estimate_response.lazy_import">(in module datadog_api_client.v2.model.metric_estimate_response)</a>
+</li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_ingested_indexed_volume.lazy_import">(in module datadog_api_client.v2.model.metric_ingested_indexed_volume)</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_tag_configuration.lazy_import">(in module datadog_api_client.v2.model.metric_tag_configuration)</a>
@@ -14041,6 +14094,16 @@
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_distinct_volume_attributes.MetricDistinctVolumeAttributes">MetricDistinctVolumeAttributes (class in datadog_api_client.v2.model.metric_distinct_volume_attributes)</a>
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_distinct_volume_type.MetricDistinctVolumeType">MetricDistinctVolumeType (class in datadog_api_client.v2.model.metric_distinct_volume_type)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_estimate.MetricEstimate">MetricEstimate (class in datadog_api_client.v2.model.metric_estimate)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_estimate_attributes.MetricEstimateAttributes">MetricEstimateAttributes (class in datadog_api_client.v2.model.metric_estimate_attributes)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_estimate_resource_type.MetricEstimateResourceType">MetricEstimateResourceType (class in datadog_api_client.v2.model.metric_estimate_resource_type)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_estimate_response.MetricEstimateResponse">MetricEstimateResponse (class in datadog_api_client.v2.model.metric_estimate_response)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_estimate_type.MetricEstimateType">MetricEstimateType (class in datadog_api_client.v2.model.metric_estimate_type)</a>
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_ingested_indexed_volume.MetricIngestedIndexedVolume">MetricIngestedIndexedVolume (class in datadog_api_client.v2.model.metric_ingested_indexed_volume)</a>
 </li>
@@ -16146,6 +16209,16 @@
 </li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.metric_distinct_volume_type">datadog_api_client.v2.model.metric_distinct_volume_type</a>
 </li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.metric_estimate">datadog_api_client.v2.model.metric_estimate</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.metric_estimate_attributes">datadog_api_client.v2.model.metric_estimate_attributes</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.metric_estimate_resource_type">datadog_api_client.v2.model.metric_estimate_resource_type</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.metric_estimate_response">datadog_api_client.v2.model.metric_estimate_response</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.metric_estimate_type">datadog_api_client.v2.model.metric_estimate_type</a>
+</li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.metric_ingested_indexed_volume">datadog_api_client.v2.model.metric_ingested_indexed_volume</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.metric_ingested_indexed_volume_attributes">datadog_api_client.v2.model.metric_ingested_indexed_volume_attributes</a>
@@ -17653,6 +17726,16 @@
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_distinct_volume_attributes.MetricDistinctVolumeAttributes.openapi_types">(MetricDistinctVolumeAttributes attribute)</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_distinct_volume_type.MetricDistinctVolumeType.openapi_types">(MetricDistinctVolumeType attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_estimate.MetricEstimate.openapi_types">(MetricEstimate attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_estimate_attributes.MetricEstimateAttributes.openapi_types">(MetricEstimateAttributes attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_estimate_resource_type.MetricEstimateResourceType.openapi_types">(MetricEstimateResourceType attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_estimate_response.MetricEstimateResponse.openapi_types">(MetricEstimateResponse attribute)</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_estimate_type.MetricEstimateType.openapi_types">(MetricEstimateType attribute)</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_ingested_indexed_volume.MetricIngestedIndexedVolume.openapi_types">(MetricIngestedIndexedVolume attribute)</a>
 </li>

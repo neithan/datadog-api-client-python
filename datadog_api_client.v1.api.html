@@ -4273,6 +4273,17 @@ It is only available via the API and isn’t visible or editable in the Datadog 
 <li><p><strong>`#`</strong> an integer or decimal number used to set the threshold.</p></li>
 </ul>
 <p><strong>NOTE</strong> CI Pipeline monitors are in alpha on US1, EU, US3 and US5.</p>
+<p><strong>CI Tests Alert Query</strong></p>
+<p>Example: <cite>ci-tests(query).rollup(rollup_method[, measure]).last(time_window) operator #</cite></p>
+<ul class="simple">
+<li><p><strong>`query`</strong> The search query - following the [Log search syntax](<a class="reference external" href="https://docs.datadoghq.com/logs/search_syntax/">https://docs.datadoghq.com/logs/search_syntax/</a>).</p></li>
+<li><p><strong>`rollup_method`</strong> The stats roll-up method - supports <cite>count</cite>, <cite>avg</cite>, and <cite>cardinality</cite>.</p></li>
+<li><p><strong>`measure`</strong> For <cite>avg</cite> and cardinality <cite>rollup_method</cite> - specify the measure or the facet name you want to use.</p></li>
+<li><p><strong>`time_window`</strong> #m (between 1 and 2880), #h (between 1 and 48).</p></li>
+<li><p><strong>`operator`</strong> <cite>&lt;</cite>, <cite>&lt;=</cite>, <cite>&gt;</cite>, <cite>&gt;=</cite>, <cite>==</cite>, or <cite>!=</cite>.</p></li>
+<li><p><strong>`#`</strong> an integer or decimal number used to set the threshold.</p></li>
+</ul>
+<p><strong>NOTE</strong> CI Test monitors are available only in closed beta on US1, EU, US3 and US5.</p>
 <p><strong>Error Tracking Alert Query</strong></p>
 <p>Example(RUM): <cite>error-tracking-rum(query).rollup(rollup_method[, measure]).last(time_window) operator #</cite>
 Example(APM Traces): <cite>error-tracking-traces(query).rollup(rollup_method[, measure]).last(time_window) operator #</cite></p>

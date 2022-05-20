@@ -326,6 +326,8 @@
         <li class="md-nav__item"><a href="#enable-requests-logging" class="md-nav__link">Enable requests logging</a>
         </li>
         <li class="md-nav__item"><a href="#asyncio-support" class="md-nav__link">Asyncio support</a>
+        </li>
+        <li class="md-nav__item"><a href="#pagination" class="md-nav__link">Pagination</a>
         </li></ul>
             </nav>
         </li>
@@ -439,6 +441,22 @@ the API methods will then return coroutines that you can wait for.</p>
         <span class="nb">print</span><span class="p">(</span><span class="n">dashbooards</span><span class="p">)</span>
 
 <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+<section id="pagination">
+<h3 id="pagination">Pagination<a class="headerlink" href="#pagination" title="Permalink to this headline">¶</a></h3>
+<p>Several listing operations have a pagination method to help consume all the items available.
+For example, to retrieve all your incidents:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datadog_api_client</span> <span class="kn">import</span> <span class="n">ApiClient</span><span class="p">,</span> <span class="n">Configuration</span>
+<span class="kn">from</span> <span class="nn">datadog_api_client.v2.api.incidents_api</span> <span class="kn">import</span> <span class="n">IncidentsApi</span>
+
+<span class="n">configuration</span> <span class="o">=</span> <span class="n">Configuration</span><span class="p">()</span>
+<span class="n">configuration</span><span class="o">.</span><span class="n">unstable_operations</span><span class="p">[</span><span class="s2">"list_incidents"</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">with</span> <span class="n">ApiClient</span><span class="p">(</span><span class="n">configuration</span><span class="p">)</span> <span class="k">as</span> <span class="n">api_client</span><span class="p">:</span>
+    <span class="n">api_instance</span> <span class="o">=</span> <span class="n">IncidentsApi</span><span class="p">(</span><span class="n">api_client</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">incident</span> <span class="ow">in</span> <span class="n">api_instance</span><span class="o">.</span><span class="n">list_incidents_with_pagination</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">incident</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>

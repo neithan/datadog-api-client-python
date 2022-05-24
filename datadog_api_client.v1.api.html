@@ -4185,119 +4185,119 @@ timeshift):space_aggr:metric{tags} [by {key}] operator #</cite> with:</p>
 <p><strong>Service Check Query</strong></p>
 <p>Example: <cite>“check”.over(tags).last(count).by(group).count_by_status()</cite></p>
 <ul class="simple">
-<li><p><strong>`check`</strong> name of the check, for example <cite>datadog.agent.up</cite></p></li>
-<li><p><strong>`tags`</strong> one or more quoted tags (comma-separated), or “*”. for example: <cite>.over(“env:prod”, “role:db”)</cite>; <strong>`over`</strong> cannot be blank.</p></li>
-<li><p><strong>`count`</strong> must be at greater than or equal to your max threshold (defined in the <cite>options</cite>). It is limited to 100.</p></li>
+<li><p><cite>check</cite> name of the check, for example <cite>datadog.agent.up</cite></p></li>
+<li><p><cite>tags</cite> one or more quoted tags (comma-separated), or “*”. for example: <cite>.over(“env:prod”, “role:db”)</cite>; <cite>over</cite> cannot be blank.</p></li>
+<li><p><cite>count</cite> must be at greater than or equal to your max threshold (defined in the <cite>options</cite>). It is limited to 100.</p></li>
 </ul>
 <p>For example, if you’ve specified to notify on 1 critical, 3 ok, and 2 warn statuses, <cite>count</cite> should be at least 3.
-- <strong>`group`</strong> must be specified for check monitors. Per-check grouping is already explicitly known for some service checks.
+- <cite>group</cite> must be specified for check monitors. Per-check grouping is already explicitly known for some service checks.
 For example, Postgres integration monitors are tagged by <cite>db</cite>, <cite>host</cite>, and <cite>port</cite>, and Network monitors by <cite>host</cite>, <cite>instance</cite>, and <cite>url</cite>. See [Service Checks](<a class="reference external" href="https://docs.datadoghq.com/api/latest/service-checks/">https://docs.datadoghq.com/api/latest/service-checks/</a>) documentation for more information.</p>
 <p><strong>Event Alert Query</strong></p>
 <p>Example: <cite>events(‘sources:nagios status:error,warning priority:normal tags: “string query”’).rollup(“count”).last(“1h”)”</cite></p>
 <ul class="simple">
-<li><p><strong>`event`</strong>, the event query string:</p></li>
-<li><p><strong>`string_query`</strong> free text query to match against event title and text.</p></li>
-<li><p><strong>`sources`</strong> event sources (comma-separated).</p></li>
-<li><p><strong>`status`</strong> event statuses (comma-separated). Valid options: error, warn, and info.</p></li>
-<li><p><strong>`priority`</strong> event priorities (comma-separated). Valid options: low, normal, all.</p></li>
-<li><p><strong>`host`</strong> event reporting host (comma-separated).</p></li>
-<li><p><strong>`tags`</strong> event tags (comma-separated).</p></li>
-<li><p><strong>`excluded_tags`</strong> excluded event tags (comma-separated).</p></li>
-<li><p><strong>`rollup`</strong> the stats roll-up method. <cite>count</cite> is the only supported method now.</p></li>
-<li><p><strong>`last`</strong> the timeframe to roll up the counts. Examples: 45m, 4h. Supported timeframes: m, h and d. This value should not exceed 48 hours.</p></li>
+<li><p><cite>event</cite>, the event query string:</p></li>
+<li><p><cite>string_query</cite> free text query to match against event title and text.</p></li>
+<li><p><cite>sources</cite> event sources (comma-separated).</p></li>
+<li><p><cite>status</cite> event statuses (comma-separated). Valid options: error, warn, and info.</p></li>
+<li><p><cite>priority</cite> event priorities (comma-separated). Valid options: low, normal, all.</p></li>
+<li><p><cite>host</cite> event reporting host (comma-separated).</p></li>
+<li><p><cite>tags</cite> event tags (comma-separated).</p></li>
+<li><p><cite>excluded_tags</cite> excluded event tags (comma-separated).</p></li>
+<li><p><cite>rollup</cite> the stats roll-up method. <cite>count</cite> is the only supported method now.</p></li>
+<li><p><cite>last</cite> the timeframe to roll up the counts. Examples: 45m, 4h. Supported timeframes: m, h and d. This value should not exceed 48 hours.</p></li>
 </ul>
 <p><strong>NOTE</strong> The Event Alert Query is being deprecated and replaced by the Event V2 Alert Query. For more information, see the [Event Migration guide](<a class="reference external" href="https://docs.datadoghq.com/events/guides/migrating_to_new_events_features/">https://docs.datadoghq.com/events/guides/migrating_to_new_events_features/</a>).</p>
 <p><strong>Event V2 Alert Query</strong></p>
 <p>Example: <cite>events(query).rollup(rollup_method[, measure]).last(time_window) operator #</cite></p>
 <ul class="simple">
-<li><p><strong>`query`</strong> The search query - following the [Log search syntax](<a class="reference external" href="https://docs.datadoghq.com/logs/search_syntax/">https://docs.datadoghq.com/logs/search_syntax/</a>).</p></li>
-<li><p><strong>`rollup_method`</strong> The stats roll-up method - supports <cite>count</cite>, <cite>avg</cite> and <cite>cardinality</cite>.</p></li>
-<li><p><strong>`measure`</strong> For <cite>avg</cite> and cardinality <cite>rollup_method</cite> - specify the measure or the facet name you want to use.</p></li>
-<li><p><strong>`time_window`</strong> #m (between 1 and 2880), #h (between 1 and 48).</p></li>
-<li><p><strong>`operator`</strong> <cite>&lt;</cite>, <cite>&lt;=</cite>, <cite>&gt;</cite>, <cite>&gt;=</cite>, <cite>==</cite>, or <cite>!=</cite>.</p></li>
-<li><p><strong>`#`</strong> an integer or decimal number used to set the threshold.</p></li>
+<li><p><cite>query</cite> The search query - following the [Log search syntax](<a class="reference external" href="https://docs.datadoghq.com/logs/search_syntax/">https://docs.datadoghq.com/logs/search_syntax/</a>).</p></li>
+<li><p><cite>rollup_method</cite> The stats roll-up method - supports <cite>count</cite>, <cite>avg</cite> and <cite>cardinality</cite>.</p></li>
+<li><p><cite>measure</cite> For <cite>avg</cite> and cardinality <cite>rollup_method</cite> - specify the measure or the facet name you want to use.</p></li>
+<li><p><cite>time_window</cite> #m (between 1 and 2880), #h (between 1 and 48).</p></li>
+<li><p><cite>operator</cite> <cite>&lt;</cite>, <cite>&lt;=</cite>, <cite>&gt;</cite>, <cite>&gt;=</cite>, <cite>==</cite>, or <cite>!=</cite>.</p></li>
+<li><p><cite>#</cite> an integer or decimal number used to set the threshold.</p></li>
 </ul>
 <p><strong>Process Alert Query</strong></p>
 <p>Example: <cite>processes(search).over(tags).rollup(‘count’).last(timeframe) operator #</cite></p>
 <ul class="simple">
-<li><p><strong>`search`</strong> free text search string for querying processes.</p></li>
+<li><p><cite>search</cite> free text search string for querying processes.</p></li>
 </ul>
 <p>Matching processes match results on the [Live Processes](<a class="reference external" href="https://docs.datadoghq.com/infrastructure/process/?tab=linuxwindows">https://docs.datadoghq.com/infrastructure/process/?tab=linuxwindows</a>) page.
-- <strong>`tags`</strong> one or more tags (comma-separated)
-- <strong>`timeframe`</strong> the timeframe to roll up the counts. Examples: 10m, 4h. Supported timeframes: s, m, h and d
-- <strong>`operator`</strong> &lt;, &lt;=, &gt;, &gt;=, ==, or !=
-- <strong>`#`</strong> an integer or decimal number used to set the threshold</p>
+- <cite>tags</cite> one or more tags (comma-separated)
+- <cite>timeframe</cite> the timeframe to roll up the counts. Examples: 10m, 4h. Supported timeframes: s, m, h and d
+- <cite>operator</cite> &lt;, &lt;=, &gt;, &gt;=, ==, or !=
+- <cite>#</cite> an integer or decimal number used to set the threshold</p>
 <p><strong>Logs Alert Query</strong></p>
 <p>Example: <cite>logs(query).index(index_name).rollup(rollup_method[, measure]).last(time_window) operator #</cite></p>
 <ul class="simple">
-<li><p><strong>`query`</strong> The search query - following the [Log search syntax](<a class="reference external" href="https://docs.datadoghq.com/logs/search_syntax/">https://docs.datadoghq.com/logs/search_syntax/</a>).</p></li>
-<li><p><strong>`index_name`</strong> For multi-index organizations, the log index in which the request is performed.</p></li>
-<li><p><strong>`rollup_method`</strong> The stats roll-up method - supports <cite>count</cite>, <cite>avg</cite> and <cite>cardinality</cite>.</p></li>
-<li><p><strong>`measure`</strong> For <cite>avg</cite> and cardinality <cite>rollup_method</cite> - specify the measure or the facet name you want to use.</p></li>
-<li><p><strong>`time_window`</strong> #m (between 1 and 2880), #h (between 1 and 48).</p></li>
-<li><p><strong>`operator`</strong> <cite>&lt;</cite>, <cite>&lt;=</cite>, <cite>&gt;</cite>, <cite>&gt;=</cite>, <cite>==</cite>, or <cite>!=</cite>.</p></li>
-<li><p><strong>`#`</strong> an integer or decimal number used to set the threshold.</p></li>
+<li><p><cite>query</cite> The search query - following the [Log search syntax](<a class="reference external" href="https://docs.datadoghq.com/logs/search_syntax/">https://docs.datadoghq.com/logs/search_syntax/</a>).</p></li>
+<li><p><cite>index_name</cite> For multi-index organizations, the log index in which the request is performed.</p></li>
+<li><p><cite>rollup_method</cite> The stats roll-up method - supports <cite>count</cite>, <cite>avg</cite> and <cite>cardinality</cite>.</p></li>
+<li><p><cite>measure</cite> For <cite>avg</cite> and cardinality <cite>rollup_method</cite> - specify the measure or the facet name you want to use.</p></li>
+<li><p><cite>time_window</cite> #m (between 1 and 2880), #h (between 1 and 48).</p></li>
+<li><p><cite>operator</cite> <cite>&lt;</cite>, <cite>&lt;=</cite>, <cite>&gt;</cite>, <cite>&gt;=</cite>, <cite>==</cite>, or <cite>!=</cite>.</p></li>
+<li><p><cite>#</cite> an integer or decimal number used to set the threshold.</p></li>
 </ul>
 <p><strong>Composite Query</strong></p>
 <p>Example: <cite>12345 &amp;&amp; 67890</cite>, where <cite>12345</cite> and <cite>67890</cite> are the IDs of non-composite monitors</p>
 <ul class="simple">
-<li><p><strong>`name`</strong> [<em>required</em>, <em>default</em> = <strong>dynamic, based on query</strong>]: The name of the alert.</p></li>
-<li><p><strong>`message`</strong> [<em>required</em>, <em>default</em> = <strong>dynamic, based on query</strong>]: A message to include with notifications for this monitor.</p></li>
+<li><p><cite>name</cite> [<em>required</em>, <em>default</em> = <strong>dynamic, based on query</strong>]: The name of the alert.</p></li>
+<li><p><cite>message</cite> [<em>required</em>, <em>default</em> = <strong>dynamic, based on query</strong>]: A message to include with notifications for this monitor.</p></li>
 </ul>
 <p>Email notifications can be sent to specific users by using the same <a class="reference external" href="mailto:'%40username">‘<span>@</span>username</a>’ notation as events.
-* <strong>`tags`</strong> [<em>optional</em>, <em>default</em> = <strong>empty list</strong>]: A list of tags to associate with your monitor.
+* <cite>tags</cite> [<em>optional</em>, <em>default</em> = <strong>empty list</strong>]: A list of tags to associate with your monitor.
 When getting all monitor details via the API, use the <cite>monitor_tags</cite> argument to filter results by these tags.
 It is only available via the API and isn’t visible or editable in the Datadog UI.</p>
 <p><strong>SLO Alert Query</strong></p>
 <p>Example: <cite>error_budget(“slo_id”).over(“time_window”) operator #</cite></p>
 <ul class="simple">
-<li><p><strong>`slo_id`</strong>: The alphanumeric SLO ID of the SLO you are configuring the alert for.</p></li>
-<li><p><strong>`time_window`</strong>: The time window of the SLO target you wish to alert on. Valid options: <cite>7d</cite>, <cite>30d</cite>, <cite>90d</cite>.</p></li>
-<li><p><strong>`operator`</strong>: <cite>&gt;=</cite> or <cite>&gt;</cite></p></li>
+<li><p><cite>slo_id</cite>: The alphanumeric SLO ID of the SLO you are configuring the alert for.</p></li>
+<li><p><cite>time_window</cite>: The time window of the SLO target you wish to alert on. Valid options: <cite>7d</cite>, <cite>30d</cite>, <cite>90d</cite>.</p></li>
+<li><p><cite>operator</cite>: <cite>&gt;=</cite> or <cite>&gt;</cite></p></li>
 </ul>
 <p><strong>Audit Alert Query</strong></p>
 <p>Example: <cite>audits(query).rollup(rollup_method[, measure]).last(time_window) operator #</cite></p>
 <ul class="simple">
-<li><p><strong>`query`</strong> The search query - following the [Log search syntax](<a class="reference external" href="https://docs.datadoghq.com/logs/search_syntax/">https://docs.datadoghq.com/logs/search_syntax/</a>).</p></li>
-<li><p><strong>`rollup_method`</strong> The stats roll-up method - supports <cite>count</cite>, <cite>avg</cite> and <cite>cardinality</cite>.</p></li>
-<li><p><strong>`measure`</strong> For <cite>avg</cite> and cardinality <cite>rollup_method</cite> - specify the measure or the facet name you want to use.</p></li>
-<li><p><strong>`time_window`</strong> #m (between 1 and 2880), #h (between 1 and 48).</p></li>
-<li><p><strong>`operator`</strong> <cite>&lt;</cite>, <cite>&lt;=</cite>, <cite>&gt;</cite>, <cite>&gt;=</cite>, <cite>==</cite>, or <cite>!=</cite>.</p></li>
-<li><p><strong>`#`</strong> an integer or decimal number used to set the threshold.</p></li>
+<li><p><cite>query</cite> The search query - following the [Log search syntax](<a class="reference external" href="https://docs.datadoghq.com/logs/search_syntax/">https://docs.datadoghq.com/logs/search_syntax/</a>).</p></li>
+<li><p><cite>rollup_method</cite> The stats roll-up method - supports <cite>count</cite>, <cite>avg</cite> and <cite>cardinality</cite>.</p></li>
+<li><p><cite>measure</cite> For <cite>avg</cite> and cardinality <cite>rollup_method</cite> - specify the measure or the facet name you want to use.</p></li>
+<li><p><cite>time_window</cite> #m (between 1 and 2880), #h (between 1 and 48).</p></li>
+<li><p><cite>operator</cite> <cite>&lt;</cite>, <cite>&lt;=</cite>, <cite>&gt;</cite>, <cite>&gt;=</cite>, <cite>==</cite>, or <cite>!=</cite>.</p></li>
+<li><p><cite>#</cite> an integer or decimal number used to set the threshold.</p></li>
 </ul>
 <p><strong>NOTE</strong> Only available on US1-FED and in closed beta on US1, EU, US3, and US5.</p>
 <p><strong>CI Pipelines Alert Query</strong></p>
 <p>Example: <cite>ci-pipelines(query).rollup(rollup_method[, measure]).last(time_window) operator #</cite></p>
 <ul class="simple">
-<li><p><strong>`query`</strong> The search query - following the [Log search syntax](<a class="reference external" href="https://docs.datadoghq.com/logs/search_syntax/">https://docs.datadoghq.com/logs/search_syntax/</a>).</p></li>
-<li><p><strong>`rollup_method`</strong> The stats roll-up method - supports <cite>count</cite>, <cite>avg</cite>, and <cite>cardinality</cite>.</p></li>
-<li><p><strong>`measure`</strong> For <cite>avg</cite> and cardinality <cite>rollup_method</cite> - specify the measure or the facet name you want to use.</p></li>
-<li><p><strong>`time_window`</strong> #m (between 1 and 2880), #h (between 1 and 48).</p></li>
-<li><p><strong>`operator`</strong> <cite>&lt;</cite>, <cite>&lt;=</cite>, <cite>&gt;</cite>, <cite>&gt;=</cite>, <cite>==</cite>, or <cite>!=</cite>.</p></li>
-<li><p><strong>`#`</strong> an integer or decimal number used to set the threshold.</p></li>
+<li><p><cite>query</cite> The search query - following the [Log search syntax](<a class="reference external" href="https://docs.datadoghq.com/logs/search_syntax/">https://docs.datadoghq.com/logs/search_syntax/</a>).</p></li>
+<li><p><cite>rollup_method</cite> The stats roll-up method - supports <cite>count</cite>, <cite>avg</cite>, and <cite>cardinality</cite>.</p></li>
+<li><p><cite>measure</cite> For <cite>avg</cite> and cardinality <cite>rollup_method</cite> - specify the measure or the facet name you want to use.</p></li>
+<li><p><cite>time_window</cite> #m (between 1 and 2880), #h (between 1 and 48).</p></li>
+<li><p><cite>operator</cite> <cite>&lt;</cite>, <cite>&lt;=</cite>, <cite>&gt;</cite>, <cite>&gt;=</cite>, <cite>==</cite>, or <cite>!=</cite>.</p></li>
+<li><p><cite>#</cite> an integer or decimal number used to set the threshold.</p></li>
 </ul>
 <p><strong>NOTE</strong> CI Pipeline monitors are in alpha on US1, EU, US3 and US5.</p>
 <p><strong>CI Tests Alert Query</strong></p>
 <p>Example: <cite>ci-tests(query).rollup(rollup_method[, measure]).last(time_window) operator #</cite></p>
 <ul class="simple">
-<li><p><strong>`query`</strong> The search query - following the [Log search syntax](<a class="reference external" href="https://docs.datadoghq.com/logs/search_syntax/">https://docs.datadoghq.com/logs/search_syntax/</a>).</p></li>
-<li><p><strong>`rollup_method`</strong> The stats roll-up method - supports <cite>count</cite>, <cite>avg</cite>, and <cite>cardinality</cite>.</p></li>
-<li><p><strong>`measure`</strong> For <cite>avg</cite> and cardinality <cite>rollup_method</cite> - specify the measure or the facet name you want to use.</p></li>
-<li><p><strong>`time_window`</strong> #m (between 1 and 2880), #h (between 1 and 48).</p></li>
-<li><p><strong>`operator`</strong> <cite>&lt;</cite>, <cite>&lt;=</cite>, <cite>&gt;</cite>, <cite>&gt;=</cite>, <cite>==</cite>, or <cite>!=</cite>.</p></li>
-<li><p><strong>`#`</strong> an integer or decimal number used to set the threshold.</p></li>
+<li><p><cite>query</cite> The search query - following the [Log search syntax](<a class="reference external" href="https://docs.datadoghq.com/logs/search_syntax/">https://docs.datadoghq.com/logs/search_syntax/</a>).</p></li>
+<li><p><cite>rollup_method</cite> The stats roll-up method - supports <cite>count</cite>, <cite>avg</cite>, and <cite>cardinality</cite>.</p></li>
+<li><p><cite>measure</cite> For <cite>avg</cite> and cardinality <cite>rollup_method</cite> - specify the measure or the facet name you want to use.</p></li>
+<li><p><cite>time_window</cite> #m (between 1 and 2880), #h (between 1 and 48).</p></li>
+<li><p><cite>operator</cite> <cite>&lt;</cite>, <cite>&lt;=</cite>, <cite>&gt;</cite>, <cite>&gt;=</cite>, <cite>==</cite>, or <cite>!=</cite>.</p></li>
+<li><p><cite>#</cite> an integer or decimal number used to set the threshold.</p></li>
 </ul>
 <p><strong>NOTE</strong> CI Test monitors are available only in closed beta on US1, EU, US3 and US5.</p>
 <p><strong>Error Tracking Alert Query</strong></p>
 <p>Example(RUM): <cite>error-tracking-rum(query).rollup(rollup_method[, measure]).last(time_window) operator #</cite>
 Example(APM Traces): <cite>error-tracking-traces(query).rollup(rollup_method[, measure]).last(time_window) operator #</cite></p>
 <ul class="simple">
-<li><p><strong>`query`</strong> The search query - following the [Log search syntax](<a class="reference external" href="https://docs.datadoghq.com/logs/search_syntax/">https://docs.datadoghq.com/logs/search_syntax/</a>).</p></li>
-<li><p><strong>`rollup_method`</strong> The stats roll-up method - supports <cite>count</cite>, <cite>avg</cite>, and <cite>cardinality</cite>.</p></li>
-<li><p><strong>`measure`</strong> For <cite>avg</cite> and cardinality <cite>rollup_method</cite> - specify the measure or the facet name you want to use.</p></li>
-<li><p><strong>`time_window`</strong> #m (between 1 and 2880), #h (between 1 and 48).</p></li>
-<li><p><strong>`operator`</strong> <cite>&lt;</cite>, <cite>&lt;=</cite>, <cite>&gt;</cite>, <cite>&gt;=</cite>, <cite>==</cite>, or <cite>!=</cite>.</p></li>
-<li><p><strong>`#`</strong> an integer or decimal number used to set the threshold.</p></li>
+<li><p><cite>query</cite> The search query - following the [Log search syntax](<a class="reference external" href="https://docs.datadoghq.com/logs/search_syntax/">https://docs.datadoghq.com/logs/search_syntax/</a>).</p></li>
+<li><p><cite>rollup_method</cite> The stats roll-up method - supports <cite>count</cite>, <cite>avg</cite>, and <cite>cardinality</cite>.</p></li>
+<li><p><cite>measure</cite> For <cite>avg</cite> and cardinality <cite>rollup_method</cite> - specify the measure or the facet name you want to use.</p></li>
+<li><p><cite>time_window</cite> #m (between 1 and 2880), #h (between 1 and 48).</p></li>
+<li><p><cite>operator</cite> <cite>&lt;</cite>, <cite>&lt;=</cite>, <cite>&gt;</cite>, <cite>&gt;=</cite>, <cite>==</cite>, or <cite>!=</cite>.</p></li>
+<li><p><cite>#</cite> an integer or decimal number used to set the threshold.</p></li>
 </ul>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>

@@ -2547,9 +2547,9 @@ use. Default is read from the configuration.</p></li>
 <p>List endpoint returns logs that match a log search query.
 <a class="reference external" href="/logs/guide/collect-multiple-logs-with-pagination">Results are paginated</a>.</p>
 <p>Use this endpoint to build complex logs filtering and search.</p>
-<p><strong>If you are considering archiving logs for your organization,
+<p>If you are considering archiving logs for your organization,
 consider use of the Datadog archive capabilities instead of the log list API.
-See `Datadog Logs Archive documentation &lt;https://docs.datadoghq.com/logs/archives&gt;`_.</strong></p>
+See <a class="reference external" href="https://docs.datadoghq.com/logs/archives">Datadog Logs Archive documentation</a>.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">list_logs</span><span class="p">(</span><span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -2591,9 +2591,9 @@ use. Default is read from the configuration.</p></li>
 <p>List endpoint returns logs that match a log search query.
 <a class="reference external" href="/logs/guide/collect-multiple-logs-with-pagination">Results are paginated</a>.</p>
 <p>Use this endpoint to see your latest logs.</p>
-<p><strong>If you are considering archiving logs for your organization,
+<p>If you are considering archiving logs for your organization,
 consider use of the Datadog archive capabilities instead of the log list API.
-See `Datadog Logs Archive documentation &lt;https://docs.datadoghq.com/logs/archives&gt;`_.</strong></p>
+See <a class="reference external" href="https://docs.datadoghq.com/logs/archives">Datadog Logs Archive documentation</a>.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">list_logs_get</span><span class="p">(</span><span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -2779,7 +2779,7 @@ for a list of the archives currently configured in web UI.</p>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.logs_archives_api.LogsArchivesApi.add_read_role_to_archive">
 <span class="sig-name descname"><span class="pre">add_read_role_to_archive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">archive_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.logs_archives_api.LogsArchivesApi.add_read_role_to_archive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Grant role to an archive.</p>
-<p>Adds a read role to an archive. (<a class="reference external" href="https://docs.datadoghq.com/api/v2/roles/">Roles API</a>)</p>
+<p>Adds a read role to an archive. ( <a class="reference external" href="https://docs.datadoghq.com/api/v2/roles/">Roles API</a> )</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">add_read_role_to_archive</span><span class="p">(</span><span class="n">archive_id</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -3058,7 +3058,7 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.logs_archives_api.LogsArchivesApi.remove_role_from_archive">
 <span class="sig-name descname"><span class="pre">remove_role_from_archive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">archive_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.logs_archives_api.LogsArchivesApi.remove_role_from_archive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Revoke role from an archive.</p>
-<p>Removes a role from an archive. (<a class="reference external" href="https://docs.datadoghq.com/api/v2/roles/">Roles API</a>)</p>
+<p>Removes a role from an archive. ( <a class="reference external" href="https://docs.datadoghq.com/api/v2/roles/">Roles API</a> )</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">remove_role_from_archive</span><span class="p">(</span><span class="n">archive_id</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -3099,7 +3099,7 @@ use. Default is read from the configuration.</p></li>
 <span class="sig-name descname"><span class="pre">update_logs_archive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">archive_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.logs_archives_api.LogsArchivesApi.update_logs_archive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update an archive.</p>
 <p>Update a given archive configuration.</p>
-<p><strong>Note</strong>: Using this method updates your archive configuration by <strong>replacing</strong>
+<p><strong>Note</strong> : Using this method updates your archive configuration by <strong>replacing</strong>
 your current configuration with the new one sent to your Datadog organization.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
@@ -3143,7 +3143,7 @@ use. Default is read from the configuration.</p></li>
 <dd><p>Update archive order.</p>
 <p>Update the order of your archives. Since logs are processed sequentially, reordering an archive may change
 the structure and content of the data processed by other archives.</p>
-<p><strong>Note</strong>: Using the <code class="docutils literal notranslate"><span class="pre">PUT</span></code> method updates your archive’s order by replacing the current order
+<p><strong>Note</strong> : Using the <code class="docutils literal notranslate"><span class="pre">PUT</span></code> method updates your archive’s order by replacing the current order
 with the new one.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
@@ -3406,7 +3406,7 @@ use. Default is read from the configuration.</p></li>
 <li><p>Modify tag configurations for metrics</p></li>
 <li><p>View tags and volumes for metrics</p></li>
 </ul>
-<p><strong>Note</strong>: A graph can only contain a set number of points
+<p><strong>Note</strong> : A graph can only contain a set number of points
 and as the timeframe over which a metric is viewed increases,
 aggregation between points occurs to stay below that set number.</p>
 <p>The Post, Patch, and Delete <code class="docutils literal notranslate"><span class="pre">manage_tags</span></code> API methods can only be performed by
@@ -3598,7 +3598,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <li><p><strong>metric_name</strong> (<em>str</em>) – The name of the metric.</p></li>
 <li><p><strong>filter_groups</strong> (<em>str</em><em>, </em><em>optional</em>) – Filtered tag keys that the metric is configured to query with.</p></li>
 <li><p><strong>filter_hours_ago</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of hours of look back (from now) to estimate cardinality with.</p></li>
-<li><p><strong>filter_num_aggregations</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of aggregations that a <code class="docutils literal notranslate"><span class="pre">count</span></code>, <code class="docutils literal notranslate"><span class="pre">rate</span></code>, or <code class="docutils literal notranslate"><span class="pre">gauge</span></code> metric is configured to use. Max number of aggregation combos is 9.</p></li>
+<li><p><strong>filter_num_aggregations</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of aggregations that a <code class="docutils literal notranslate"><span class="pre">count</span></code> , <code class="docutils literal notranslate"><span class="pre">rate</span></code> , or <code class="docutils literal notranslate"><span class="pre">gauge</span></code> metric is configured to use. Max number of aggregation combos is 9.</p></li>
 <li><p><strong>filter_pct</strong> (<em>bool</em><em>, </em><em>optional</em>) – A boolean, for distribution metrics only, to estimate cardinality if the metric includes additional percentile aggregators.</p></li>
 <li><p><strong>filter_timespan_h</strong> (<em>int</em><em>, </em><em>optional</em>) – A window, in hours, from the look back to estimate cardinality with.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
@@ -4039,7 +4039,7 @@ use. Default is read from the configuration.</p></li>
 </dd></dl>
 </section>
 <section id="module-datadog_api_client.v2.api.roles_api">
-<span id="id6"></span><h2 id="module-datadog_api_client.v2.api.roles_api">roles_api<a class="headerlink" href="#module-datadog_api_client.v2.api.roles_api" title="Permalink to this headline">¶</a></h2>
+<span id="id7"></span><h2 id="module-datadog_api_client.v2.api.roles_api">roles_api<a class="headerlink" href="#module-datadog_api_client.v2.api.roles_api" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.roles_api.RolesApi">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RolesApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.roles_api.RolesApi" title="Permalink to this definition">¶</a></dt>
@@ -4388,7 +4388,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <li><p><strong>page_number</strong> (<em>int</em><em>, </em><em>optional</em>) – Specific page number to return.</p></li>
 <li><p><strong>sort</strong> (<em>str</em><em>, </em><em>optional</em>) – User attribute to order results by. Sort order is <strong>ascending</strong> by default.
 Sort order is <strong>descending</strong> if the field is prefixed by a negative sign,
-for example <code class="docutils literal notranslate"><span class="pre">sort=-name</span></code>. Options: <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">email</span></code>, <code class="docutils literal notranslate"><span class="pre">status</span></code>.</p></li>
+for example <code class="docutils literal notranslate"><span class="pre">sort=-name</span></code>. Options: <code class="docutils literal notranslate"><span class="pre">name</span></code> , <code class="docutils literal notranslate"><span class="pre">email</span></code> , <code class="docutils literal notranslate"><span class="pre">status</span></code>.</p></li>
 <li><p><strong>filter</strong> (<em>str</em><em>, </em><em>optional</em>) – Filter all users by the given string. Defaults to no filtering.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
@@ -5303,7 +5303,7 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.update_security_monitoring_rule">
 <span class="sig-name descname"><span class="pre">update_security_monitoring_rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rule_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.update_security_monitoring_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update an existing rule.</p>
-<p>Update an existing rule. When updating <code class="docutils literal notranslate"><span class="pre">cases</span></code>, <code class="docutils literal notranslate"><span class="pre">queries</span></code> or <code class="docutils literal notranslate"><span class="pre">options</span></code>, the whole field
+<p>Update an existing rule. When updating <code class="docutils literal notranslate"><span class="pre">cases</span></code> , <code class="docutils literal notranslate"><span class="pre">queries</span></code> or <code class="docutils literal notranslate"><span class="pre">options</span></code> , the whole field
 must be included. For example, when modifying a query all queries must be included.
 Default rules can only be updated to be enabled and to change notifications.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
@@ -5573,7 +5573,7 @@ use. Default is read from the configuration.</p></li>
 monthly usage across multiple facets of Datadog.
 This API is available to all Pro and Enterprise customers.
 Usage is only accessible for <a class="reference external" href="https://docs.datadoghq.com/account_management/multi_organization/">parent-level organizations</a>.</p>
-<p><strong>Note</strong>: Usage data is delayed by up to 72 hours from when it was incurred.
+<p><strong>Note</strong> : Usage data is delayed by up to 72 hours from when it was incurred.
 It is retained for 15 months.</p>
 <p>You can retrieve up to 24 hours of hourly usage data for multiple organizations,
 and up to two months of hourly usage data for a single organization in one request.</p>
@@ -6053,12 +6053,12 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <li><p><strong>page_number</strong> (<em>int</em><em>, </em><em>optional</em>) – Specific page number to return.</p></li>
 <li><p><strong>sort</strong> (<em>str</em><em>, </em><em>optional</em>) – User attribute to order results by. Sort order is ascending by default.
 Sort order is descending if the field
-is prefixed by a negative sign, for example <code class="docutils literal notranslate"><span class="pre">sort=-name</span></code>. Options: <code class="docutils literal notranslate"><span class="pre">name</span></code>,
-<code class="docutils literal notranslate"><span class="pre">modified_at</span></code>, <code class="docutils literal notranslate"><span class="pre">user_count</span></code>.</p></li>
-<li><p><strong>sort_dir</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.query_sort_order.QuerySortOrder" title="datadog_api_client.v2.model.query_sort_order.QuerySortOrder"><em>QuerySortOrder</em></a><em>, </em><em>optional</em>) – Direction of sort. Options: <code class="docutils literal notranslate"><span class="pre">asc</span></code>, <code class="docutils literal notranslate"><span class="pre">desc</span></code>.</p></li>
+is prefixed by a negative sign, for example <code class="docutils literal notranslate"><span class="pre">sort=-name</span></code>. Options: <code class="docutils literal notranslate"><span class="pre">name</span></code> ,
+<code class="docutils literal notranslate"><span class="pre">modified_at</span></code> , <code class="docutils literal notranslate"><span class="pre">user_count</span></code>.</p></li>
+<li><p><strong>sort_dir</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.query_sort_order.QuerySortOrder" title="datadog_api_client.v2.model.query_sort_order.QuerySortOrder"><em>QuerySortOrder</em></a><em>, </em><em>optional</em>) – Direction of sort. Options: <code class="docutils literal notranslate"><span class="pre">asc</span></code> , <code class="docutils literal notranslate"><span class="pre">desc</span></code>.</p></li>
 <li><p><strong>filter</strong> (<em>str</em><em>, </em><em>optional</em>) – Filter all users by the given string. Defaults to no filtering.</p></li>
 <li><p><strong>filter_status</strong> (<em>str</em><em>, </em><em>optional</em>) – Filter on status attribute.
-Comma separated list, with possible values <code class="docutils literal notranslate"><span class="pre">Active</span></code>, <code class="docutils literal notranslate"><span class="pre">Pending</span></code>, and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.
+Comma separated list, with possible values <code class="docutils literal notranslate"><span class="pre">Active</span></code> , <code class="docutils literal notranslate"><span class="pre">Pending</span></code> , and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.
 Defaults to no filtering.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>

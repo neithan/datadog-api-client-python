@@ -3510,18 +3510,18 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>access_key_id</strong> (<em>str</em><em>, </em><em>optional</em>) – Your AWS access key ID. Only required if your AWS account is a GovCloud or China account.</p></li>
 <li><p><strong>account_id</strong> (<em>str</em><em>, </em><em>optional</em>) – Your AWS Account ID without dashes.</p></li>
-<li><p><strong>account_specific_namespace_rules</strong> (<em>{str:</em><em> (</em><em>bool</em><em>,</em><em>)</em><em>}</em><em>, </em><em>optional</em>) – An object, (in the form <code class="docutils literal notranslate"><span class="pre">{"namespace1":true/false,</span> <span class="pre">"namespace2":true/false}</span></code>),
+<li><p><strong>account_specific_namespace_rules</strong> (<em>{str:</em><em> (</em><em>bool</em><em>,</em><em>)</em><em>}</em><em>, </em><em>optional</em>) – An object, (in the form <code class="docutils literal notranslate"><span class="pre">{"namespace1":true/false,</span> <span class="pre">"namespace2":true/false}</span></code> ),
 that enables or disables metric collection for specific AWS namespaces for this
 AWS account only.</p></li>
 <li><p><strong>cspm_resource_collection_enabled</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether Datadog collects cloud security posture management resources from your AWS account. This includes additional resources not covered under the general <code class="docutils literal notranslate"><span class="pre">resource_collection</span></code>.</p></li>
 <li><p><strong>excluded_regions</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – An array of AWS regions to exclude from metrics collection.</p></li>
-<li><p><strong>filter_tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – The array of EC2 tags (in the form <code class="docutils literal notranslate"><span class="pre">key:value</span></code>) defines a filter that Datadog uses when collecting metrics from EC2.
+<li><p><strong>filter_tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – The array of EC2 tags (in the form <code class="docutils literal notranslate"><span class="pre">key:value</span></code> ) defines a filter that Datadog uses when collecting metrics from EC2.
 Wildcards, such as <code class="docutils literal notranslate"><span class="pre">?</span></code> (for single characters) and <code class="docutils literal notranslate"><span class="pre">*</span></code> (for multiple characters) can also be used.
 Only hosts that match one of the defined tags
 will be imported into Datadog. The rest will be ignored.
 Host matching a given tag can also be excluded by adding <code class="docutils literal notranslate"><span class="pre">!</span></code> before the tag.
 For example, <code class="docutils literal notranslate"><span class="pre">env:production,instance-type:c1.*,!region:us-east-1</span></code></p></li>
-<li><p><strong>host_tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Array of tags (in the form <code class="docutils literal notranslate"><span class="pre">key:value</span></code>) to add to all hosts
+<li><p><strong>host_tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Array of tags (in the form <code class="docutils literal notranslate"><span class="pre">key:value</span></code> ) to add to all hosts
 and metrics reporting through this integration.</p></li>
 <li><p><strong>metrics_collection_enabled</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether Datadog collects metrics for this AWS account.</p></li>
 <li><p><strong>resource_collection_enabled</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether Datadog collects a standard set of resources from your AWS account.</p></li>
@@ -3823,7 +3823,7 @@ Only hosts that match one of the defined tags are imported into Datadog.</p></li
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>scope</strong> (<em>str</em>) – The scope(s) to which the downtime applies. For example, <code class="docutils literal notranslate"><span class="pre">host:app2</span></code>.
 Provide multiple scopes as a comma-separated list like <code class="docutils literal notranslate"><span class="pre">env:dev,env:prod</span></code>.
-The resulting downtime applies to sources that matches ALL provided scopes (<code class="docutils literal notranslate"><span class="pre">env:dev</span></code> <strong>AND</strong> <code class="docutils literal notranslate"><span class="pre">env:prod</span></code>).</p>
+The resulting downtime applies to sources that matches ALL provided scopes ( <code class="docutils literal notranslate"><span class="pre">env:dev</span></code> <strong>AND</strong> <code class="docutils literal notranslate"><span class="pre">env:prod</span></code> ).</p>
 </dd>
 </dl>
 </dd></dl>
@@ -4168,7 +4168,7 @@ widgets should not have layouts.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>author</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.creator.Creator" title="datadog_api_client.v2.model.creator.Creator"><em>Creator</em></a><em>, </em><em>optional</em>) – Object describing the creator of the shared element.</p></li>
+<li><p><strong>author</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.creator.Creator" title="datadog_api_client.v1.model.creator.Creator"><em>Creator</em></a><em>, </em><em>optional</em>) – Object describing the creator of the shared element.</p></li>
 <li><p><strong>created</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Date of creation of the dashboard list.</p></li>
 <li><p><strong>dashboard_count</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of dashboards in the list.</p></li>
 <li><p><strong>id</strong> (<em>int</em><em>, </em><em>optional</em>) – The ID of the dashboard list.</p></li>
@@ -4511,7 +4511,7 @@ For example, <code class="docutils literal notranslate"><span class="pre">servic
 <li><p><strong>recurrence</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.downtime_recurrence.DowntimeRecurrence" title="datadog_api_client.v1.model.downtime_recurrence.DowntimeRecurrence"><em>DowntimeRecurrence</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – An object defining the recurrence of the downtime.</p></li>
 <li><p><strong>scope</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – The scope(s) to which the downtime applies. For example, <code class="docutils literal notranslate"><span class="pre">host:app2</span></code>.
 Provide multiple scopes as a comma-separated list like <code class="docutils literal notranslate"><span class="pre">env:dev,env:prod</span></code>.
-The resulting downtime applies to sources that matches ALL provided scopes (<code class="docutils literal notranslate"><span class="pre">env:dev</span></code> <strong>AND</strong> <code class="docutils literal notranslate"><span class="pre">env:prod</span></code>).</p></li>
+The resulting downtime applies to sources that matches ALL provided scopes ( <code class="docutils literal notranslate"><span class="pre">env:dev</span></code> <strong>AND</strong> <code class="docutils literal notranslate"><span class="pre">env:prod</span></code> ).</p></li>
 <li><p><strong>start</strong> (<em>int</em><em>, </em><em>optional</em>) – POSIX timestamp to start the downtime.
 If not provided, the downtime starts the moment it is created.</p></li>
 <li><p><strong>timezone</strong> (<em>str</em><em>, </em><em>optional</em>) – The timezone in which to display the downtime’s start and end times in Datadog applications.</p></li>
@@ -4555,7 +4555,7 @@ For example, <code class="docutils literal notranslate"><span class="pre">servic
 <li><p><strong>recurrence</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.downtime_recurrence.DowntimeRecurrence" title="datadog_api_client.v1.model.downtime_recurrence.DowntimeRecurrence"><em>DowntimeRecurrence</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – An object defining the recurrence of the downtime.</p></li>
 <li><p><strong>scope</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – The scope(s) to which the downtime applies. For example, <code class="docutils literal notranslate"><span class="pre">host:app2</span></code>.
 Provide multiple scopes as a comma-separated list like <code class="docutils literal notranslate"><span class="pre">env:dev,env:prod</span></code>.
-The resulting downtime applies to sources that matches ALL provided scopes (<code class="docutils literal notranslate"><span class="pre">env:dev</span></code> <strong>AND</strong> <code class="docutils literal notranslate"><span class="pre">env:prod</span></code>).</p></li>
+The resulting downtime applies to sources that matches ALL provided scopes ( <code class="docutils literal notranslate"><span class="pre">env:dev</span></code> <strong>AND</strong> <code class="docutils literal notranslate"><span class="pre">env:prod</span></code> ).</p></li>
 <li><p><strong>start</strong> (<em>int</em><em>, </em><em>optional</em>) – POSIX timestamp to start the downtime.
 If not provided, the downtime starts the moment it is created.</p></li>
 <li><p><strong>timezone</strong> (<em>str</em><em>, </em><em>optional</em>) – The timezone in which to display the downtime’s start and end times in Datadog applications.</p></li>
@@ -4577,18 +4577,18 @@ If not provided, the downtime starts the moment it is created.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>period</strong> (<em>int</em><em>, </em><em>optional</em>) – How often to repeat as an integer.
 For example, to repeat every 3 days, select a type of <code class="docutils literal notranslate"><span class="pre">days</span></code> and a period of <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p></li>
-<li><p><strong>rrule</strong> (<em>str</em><em>, </em><em>optional</em>) – <p>The <code class="docutils literal notranslate"><span class="pre">RRULE</span></code> standard for defining recurring events (<strong>requires to set “type” to rrule</strong>)
+<li><p><strong>rrule</strong> (<em>str</em><em>, </em><em>optional</em>) – <p>The <code class="docutils literal notranslate"><span class="pre">RRULE</span></code> standard for defining recurring events ( <strong>requires to set “type” to rrule</strong> )
 For example, to have a recurring event on the first day of each month, set the type to <code class="docutils literal notranslate"><span class="pre">rrule</span></code> and set the <code class="docutils literal notranslate"><span class="pre">FREQ</span></code> to <code class="docutils literal notranslate"><span class="pre">MONTHLY</span></code> and <code class="docutils literal notranslate"><span class="pre">BYMONTHDAY</span></code> to <code class="docutils literal notranslate"><span class="pre">1</span></code>.
 Most common <code class="docutils literal notranslate"><span class="pre">rrule</span></code> options from the <a class="reference external" href="https://tools.ietf.org/html/rfc5545">iCalendar Spec</a> are supported.</p>
-<p><strong>Note</strong>: Attributes specifying the duration in <code class="docutils literal notranslate"><span class="pre">RRULE</span></code> are not supported (for example, <code class="docutils literal notranslate"><span class="pre">DTSTART</span></code>, <code class="docutils literal notranslate"><span class="pre">DTEND</span></code>, <code class="docutils literal notranslate"><span class="pre">DURATION</span></code>).
+<p><strong>Note</strong> : Attributes specifying the duration in <code class="docutils literal notranslate"><span class="pre">RRULE</span></code> are not supported (for example, <code class="docutils literal notranslate"><span class="pre">DTSTART</span></code> , <code class="docutils literal notranslate"><span class="pre">DTEND</span></code> , <code class="docutils literal notranslate"><span class="pre">DURATION</span></code> ).
 More examples available in this <a class="reference external" href="https://docs.datadoghq.com/monitors/guide/suppress-alert-with-downtimes/?tab=api">downtime guide</a></p>
 </p></li>
-<li><p><strong>type</strong> (<em>str</em><em>, </em><em>optional</em>) – The type of recurrence. Choose from <code class="docutils literal notranslate"><span class="pre">days</span></code>, <code class="docutils literal notranslate"><span class="pre">weeks</span></code>, <code class="docutils literal notranslate"><span class="pre">months</span></code>, <code class="docutils literal notranslate"><span class="pre">years</span></code>, <code class="docutils literal notranslate"><span class="pre">rrule</span></code>.</p></li>
+<li><p><strong>type</strong> (<em>str</em><em>, </em><em>optional</em>) – The type of recurrence. Choose from <code class="docutils literal notranslate"><span class="pre">days</span></code> , <code class="docutils literal notranslate"><span class="pre">weeks</span></code> , <code class="docutils literal notranslate"><span class="pre">months</span></code> , <code class="docutils literal notranslate"><span class="pre">years</span></code> , <code class="docutils literal notranslate"><span class="pre">rrule</span></code>.</p></li>
 <li><p><strong>until_date</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The date at which the recurrence should end as a POSIX timestamp.
 <code class="docutils literal notranslate"><span class="pre">until_occurences</span></code> and <code class="docutils literal notranslate"><span class="pre">until_date</span></code> are mutually exclusive.</p></li>
 <li><p><strong>until_occurrences</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – How many times the downtime is rescheduled.
 <code class="docutils literal notranslate"><span class="pre">until_occurences</span></code> and <code class="docutils literal notranslate"><span class="pre">until_date</span></code> are mutually exclusive.</p></li>
-<li><p><strong>week_days</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – A list of week days to repeat on. Choose from <code class="docutils literal notranslate"><span class="pre">Mon</span></code>, <code class="docutils literal notranslate"><span class="pre">Tue</span></code>, <code class="docutils literal notranslate"><span class="pre">Wed</span></code>, <code class="docutils literal notranslate"><span class="pre">Thu</span></code>, <code class="docutils literal notranslate"><span class="pre">Fri</span></code>, <code class="docutils literal notranslate"><span class="pre">Sat</span></code> or <code class="docutils literal notranslate"><span class="pre">Sun</span></code>.
+<li><p><strong>week_days</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – A list of week days to repeat on. Choose from <code class="docutils literal notranslate"><span class="pre">Mon</span></code> , <code class="docutils literal notranslate"><span class="pre">Tue</span></code> , <code class="docutils literal notranslate"><span class="pre">Wed</span></code> , <code class="docutils literal notranslate"><span class="pre">Thu</span></code> , <code class="docutils literal notranslate"><span class="pre">Fri</span></code> , <code class="docutils literal notranslate"><span class="pre">Sat</span></code> or <code class="docutils literal notranslate"><span class="pre">Sun</span></code>.
 Only applicable when type is weeks. First letter must be capitalized.</p></li>
 </ul>
 </dd>
@@ -4606,8 +4606,8 @@ Only applicable when type is weeks. First letter must be capitalized.</p></li>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>alert_type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.event_alert_type.EventAlertType" title="datadog_api_client.v1.model.event_alert_type.EventAlertType"><em>EventAlertType</em></a><em>, </em><em>optional</em>) – If an alert event is enabled, set its type.
-For example, <code class="docutils literal notranslate"><span class="pre">error</span></code>, <code class="docutils literal notranslate"><span class="pre">warning</span></code>, <code class="docutils literal notranslate"><span class="pre">info</span></code>, <code class="docutils literal notranslate"><span class="pre">success</span></code>, <code class="docutils literal notranslate"><span class="pre">user_update</span></code>,
-<code class="docutils literal notranslate"><span class="pre">recommendation</span></code>, and <code class="docutils literal notranslate"><span class="pre">snapshot</span></code>.</p></li>
+For example, <code class="docutils literal notranslate"><span class="pre">error</span></code> , <code class="docutils literal notranslate"><span class="pre">warning</span></code> , <code class="docutils literal notranslate"><span class="pre">info</span></code> , <code class="docutils literal notranslate"><span class="pre">success</span></code> , <code class="docutils literal notranslate"><span class="pre">user_update</span></code> ,
+<code class="docutils literal notranslate"><span class="pre">recommendation</span></code> , and <code class="docutils literal notranslate"><span class="pre">snapshot</span></code>.</p></li>
 <li><p><strong>date_happened</strong> (<em>int</em><em>, </em><em>optional</em>) – POSIX timestamp of the event. Must be sent as an integer (that is no quotes).
 Limited to events no older than 18 hours.</p></li>
 <li><p><strong>device_name</strong> (<em>str</em><em>, </em><em>optional</em>) – A device name.</p></li>
@@ -4661,8 +4661,8 @@ For example, <cite>error</cite>, <cite>warning</cite>, <cite>info</cite>, <cite>
 <li><p><strong>aggregation_key</strong> (<em>str</em><em>, </em><em>optional</em>) – An arbitrary string to use for aggregation. Limited to 100 characters.
 If you specify a key, all events using that key are grouped together in the Event Stream.</p></li>
 <li><p><strong>alert_type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.event_alert_type.EventAlertType" title="datadog_api_client.v1.model.event_alert_type.EventAlertType"><em>EventAlertType</em></a><em>, </em><em>optional</em>) – If an alert event is enabled, set its type.
-For example, <code class="docutils literal notranslate"><span class="pre">error</span></code>, <code class="docutils literal notranslate"><span class="pre">warning</span></code>, <code class="docutils literal notranslate"><span class="pre">info</span></code>, <code class="docutils literal notranslate"><span class="pre">success</span></code>, <code class="docutils literal notranslate"><span class="pre">user_update</span></code>,
-<code class="docutils literal notranslate"><span class="pre">recommendation</span></code>, and <code class="docutils literal notranslate"><span class="pre">snapshot</span></code>.</p></li>
+For example, <code class="docutils literal notranslate"><span class="pre">error</span></code> , <code class="docutils literal notranslate"><span class="pre">warning</span></code> , <code class="docutils literal notranslate"><span class="pre">info</span></code> , <code class="docutils literal notranslate"><span class="pre">success</span></code> , <code class="docutils literal notranslate"><span class="pre">user_update</span></code> ,
+<code class="docutils literal notranslate"><span class="pre">recommendation</span></code> , and <code class="docutils literal notranslate"><span class="pre">snapshot</span></code>.</p></li>
 <li><p><strong>date_happened</strong> (<em>int</em><em>, </em><em>optional</em>) – POSIX timestamp of the event. Must be sent as an integer (that is no quotes).
 Limited to events no older than 18 hours</p></li>
 <li><p><strong>device_name</strong> (<em>str</em><em>, </em><em>optional</em>) – A device name.</p></li>
@@ -5050,7 +5050,7 @@ on the Event Stream view. Only available on FREE layout dashboards.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>aggregation</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.formula_and_function_event_aggregation.FormulaAndFunctionEventAggregation" title="datadog_api_client.v1.model.formula_and_function_event_aggregation.FormulaAndFunctionEventAggregation"><em>FormulaAndFunctionEventAggregation</em></a>) – Aggregation methods for event platform queries.</p></li>
 <li><p><strong>metric</strong> (<em>str</em><em>, </em><em>optional</em>) – Metric used for sorting group by results.</p></li>
-<li><p><strong>order</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.query_sort_order.QuerySortOrder" title="datadog_api_client.v2.model.query_sort_order.QuerySortOrder"><em>QuerySortOrder</em></a><em>, </em><em>optional</em>) – Direction of sort.</p></li>
+<li><p><strong>order</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.query_sort_order.QuerySortOrder" title="datadog_api_client.v1.model.query_sort_order.QuerySortOrder"><em>QuerySortOrder</em></a><em>, </em><em>optional</em>) – Direction of sort.</p></li>
 </ul>
 </dd>
 </dl>
@@ -5151,7 +5151,7 @@ on the Event Stream view. Only available on FREE layout dashboards.</p>
 <li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of hits to return.</p></li>
 <li><p><strong>metric</strong> (<em>str</em>) – Process metric name.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – Name of query for use in formulas.</p></li>
-<li><p><strong>sort</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.query_sort_order.QuerySortOrder" title="datadog_api_client.v2.model.query_sort_order.QuerySortOrder"><em>QuerySortOrder</em></a><em>, </em><em>optional</em>) – Direction of sort.</p></li>
+<li><p><strong>sort</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.query_sort_order.QuerySortOrder" title="datadog_api_client.v1.model.query_sort_order.QuerySortOrder"><em>QuerySortOrder</em></a><em>, </em><em>optional</em>) – Direction of sort.</p></li>
 <li><p><strong>tag_filters</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – An array of tags to filter by.</p></li>
 <li><p><strong>text_filter</strong> (<em>str</em><em>, </em><em>optional</em>) – Text to use as filter.</p></li>
 </ul>
@@ -5180,7 +5180,7 @@ on the Event Stream view. Only available on FREE layout dashboards.</p>
 <li><p><strong>is_normalized_cpu</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to normalize the CPU percentages.</p></li>
 <li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of hits to return.</p></li>
 <li><p><strong>metric</strong> (<em>str</em>) – Process metric name.</p></li>
-<li><p><strong>sort</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.query_sort_order.QuerySortOrder" title="datadog_api_client.v2.model.query_sort_order.QuerySortOrder"><em>QuerySortOrder</em></a><em>, </em><em>optional</em>) – Direction of sort.</p></li>
+<li><p><strong>sort</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.query_sort_order.QuerySortOrder" title="datadog_api_client.v1.model.query_sort_order.QuerySortOrder"><em>QuerySortOrder</em></a><em>, </em><em>optional</em>) – Direction of sort.</p></li>
 <li><p><strong>tag_filters</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – An array of tags to filter by.</p></li>
 <li><p><strong>text_filter</strong> (<em>str</em><em>, </em><em>optional</em>) – Text to use as filter.</p></li>
 <li><p><strong>env</strong> (<em>str</em>) – APM environment.</p></li>
@@ -6140,9 +6140,9 @@ See <a class="reference external" href="https://docs.datadoghq.com/logs/log_coll
 <li><p><strong>has_border</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to display a border or not.</p></li>
 <li><p><strong>horizontal_align</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.widget_horizontal_align.WidgetHorizontalAlign" title="datadog_api_client.v1.model.widget_horizontal_align.WidgetHorizontalAlign"><em>WidgetHorizontalAlign</em></a><em>, </em><em>optional</em>) – Horizontal alignment.</p></li>
 <li><p><strong>margin</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.widget_margin.WidgetMargin" title="datadog_api_client.v1.model.widget_margin.WidgetMargin"><em>WidgetMargin</em></a><em>, </em><em>optional</em>) – Size of the margins around the image.
-<strong>Note</strong>: <code class="docutils literal notranslate"><span class="pre">small</span></code> and <code class="docutils literal notranslate"><span class="pre">large</span></code> values are deprecated.</p></li>
+<strong>Note</strong> : <code class="docutils literal notranslate"><span class="pre">small</span></code> and <code class="docutils literal notranslate"><span class="pre">large</span></code> values are deprecated.</p></li>
 <li><p><strong>sizing</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.widget_image_sizing.WidgetImageSizing" title="datadog_api_client.v1.model.widget_image_sizing.WidgetImageSizing"><em>WidgetImageSizing</em></a><em>, </em><em>optional</em>) – How to size the image on the widget. The values are based on the image <code class="docutils literal notranslate"><span class="pre">object-fit</span></code> CSS properties.
-<strong>Note</strong>: <code class="docutils literal notranslate"><span class="pre">zoom</span></code>, <code class="docutils literal notranslate"><span class="pre">fit</span></code> and <code class="docutils literal notranslate"><span class="pre">center</span></code> values are deprecated.</p></li>
+<strong>Note</strong> : <code class="docutils literal notranslate"><span class="pre">zoom</span></code> , <code class="docutils literal notranslate"><span class="pre">fit</span></code> and <code class="docutils literal notranslate"><span class="pre">center</span></code> values are deprecated.</p></li>
 <li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.image_widget_definition_type.ImageWidgetDefinitionType" title="datadog_api_client.v1.model.image_widget_definition_type.ImageWidgetDefinitionType"><em>ImageWidgetDefinitionType</em></a>) – Type of the image widget.</p></li>
 <li><p><strong>url</strong> (<em>str</em>) – URL of the image.</p></li>
 <li><p><strong>url_dark_theme</strong> (<em>str</em><em>, </em><em>optional</em>) – URL of the image in dark mode.</p></li>
@@ -6661,17 +6661,17 @@ value when you use both products.</p></li>
 in the new attribute name) to a log with the result of the provided formula.
 This enables you to remap different time attributes with different units into a single attribute,
 or to compute operations on attributes within the same log.</p>
-<p>The formula can use parentheses and the basic arithmetic operators <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>.</p>
+<p>The formula can use parentheses and the basic arithmetic operators <code class="docutils literal notranslate"><span class="pre">-</span></code> , <code class="docutils literal notranslate"><span class="pre">+</span></code> , <code class="docutils literal notranslate"><span class="pre">*</span></code> , <code class="docutils literal notranslate"><span class="pre">/</span></code>.</p>
 <p>By default, the calculation is skipped if an attribute is missing.
 Select “Replace missing attribute by 0” to automatically populate
 missing attribute values with 0 to ensure that the calculation is done.
 An attribute is missing if it is not found in the log attributes,
 or if it cannot be converted to a number.</p>
-<p><em>Notes</em>:</p>
+<p><em>Notes</em> :</p>
 <ul class="simple">
 <li><p>The operator <code class="docutils literal notranslate"><span class="pre">-</span></code> needs to be space split in the formula as it can also be contained in attribute names.</p></li>
 <li><p>If the target attribute already exists, it is overwritten by the result of the formula.</p></li>
-<li><p>Results are rounded up to the 9th decimal. For example, if the result of the formula is <code class="docutils literal notranslate"><span class="pre">0.1234567891</span></code>,
+<li><p>Results are rounded up to the 9th decimal. For example, if the result of the formula is <code class="docutils literal notranslate"><span class="pre">0.1234567891</span></code> ,
 the actual value stored for the attribute is <code class="docutils literal notranslate"><span class="pre">0.123456789</span></code>.</p></li>
 <li><p>If you need to scale a unit of measure,
 see <a class="reference external" href="https://docs.datadoghq.com/logs/log_configuration/parsing/?tab=filter#matcher-and-filter">Scale Filter</a>.</p></li>
@@ -6681,7 +6681,7 @@ see <a class="reference external" href="https://docs.datadoghq.com/logs/log_conf
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>expression</strong> (<em>str</em>) – Arithmetic operation between one or more log attributes.</p></li>
 <li><p><strong>is_enabled</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not the processor is enabled.</p></li>
-<li><p><strong>is_replace_missing</strong> (<em>bool</em><em>, </em><em>optional</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, it replaces all missing attributes of expression by <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code>
+<li><p><strong>is_replace_missing</strong> (<em>bool</em><em>, </em><em>optional</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code> , it replaces all missing attributes of expression by <code class="docutils literal notranslate"><span class="pre">0</span></code> , <code class="docutils literal notranslate"><span class="pre">false</span></code>
 skip the operation if an attribute is missing.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the processor.</p></li>
 <li><p><strong>target</strong> (<em>str</em>) – Name of the attribute that contains the result of the arithmetic operation.</p></li>
@@ -6725,9 +6725,9 @@ Some additional constraints are applied as <code class="docutils literal notrans
 <li><p><strong>source_type</strong> (<em>str</em><em>, </em><em>optional</em>) – Defines if the sources are from log <code class="docutils literal notranslate"><span class="pre">attribute</span></code> or <code class="docutils literal notranslate"><span class="pre">tag</span></code>.</p></li>
 <li><p><strong>sources</strong> (<em>[</em><em>str</em><em>]</em>) – Array of source attributes.</p></li>
 <li><p><strong>target</strong> (<em>str</em>) – Final attribute or tag name to remap the sources to.</p></li>
-<li><p><strong>target_format</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.target_format_type.TargetFormatType" title="datadog_api_client.v1.model.target_format_type.TargetFormatType"><em>TargetFormatType</em></a><em>, </em><em>optional</em>) – If the <code class="docutils literal notranslate"><span class="pre">target_type</span></code> of the remapper is <code class="docutils literal notranslate"><span class="pre">attribute</span></code>, try to cast the value to a new specific type.
-If the cast is not possible, the original type is kept. <code class="docutils literal notranslate"><span class="pre">string</span></code>, <code class="docutils literal notranslate"><span class="pre">integer</span></code>, or <code class="docutils literal notranslate"><span class="pre">double</span></code> are the possible types.
-If the <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">tag</span></code>, this parameter may not be specified.</p></li>
+<li><p><strong>target_format</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.target_format_type.TargetFormatType" title="datadog_api_client.v1.model.target_format_type.TargetFormatType"><em>TargetFormatType</em></a><em>, </em><em>optional</em>) – If the <code class="docutils literal notranslate"><span class="pre">target_type</span></code> of the remapper is <code class="docutils literal notranslate"><span class="pre">attribute</span></code> , try to cast the value to a new specific type.
+If the cast is not possible, the original type is kept. <code class="docutils literal notranslate"><span class="pre">string</span></code> , <code class="docutils literal notranslate"><span class="pre">integer</span></code> , or <code class="docutils literal notranslate"><span class="pre">double</span></code> are the possible types.
+If the <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">tag</span></code> , this parameter may not be specified.</p></li>
 <li><p><strong>target_type</strong> (<em>str</em><em>, </em><em>optional</em>) – Defines if the final attribute or tag name is from log <code class="docutils literal notranslate"><span class="pre">attribute</span></code> or <code class="docutils literal notranslate"><span class="pre">tag</span></code>.</p></li>
 <li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.logs_attribute_remapper_type.LogsAttributeRemapperType" title="datadog_api_client.v1.model.logs_attribute_remapper_type.LogsAttributeRemapperType"><em>LogsAttributeRemapperType</em></a>) – Type of logs attribute remapper.</p></li>
 </ul>
@@ -6822,7 +6822,7 @@ If the <code class="docutils literal notranslate"><span class="pre">target_type<
 <p>Use the Category Processor to add a new attribute (without spaces or special characters in the new attribute name)
 to a log matching a provided search query. Use categories to create groups for an analytical view.
 For example, URL groups, machine groups, environments, and response time buckets.</p>
-<p><strong>Notes</strong>:</p>
+<p><strong>Notes</strong> :</p>
 <ul class="simple">
 <li><p>The syntax of the query is the one of Logs Explorer search bar.
 The query can be done on any log attribute or tag, whether it is a facet or not.
@@ -6957,7 +6957,7 @@ only the first one (according to the pipelines order) is taken into account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>query</strong> (<em>str</em><em>, </em><em>optional</em>) – Default query is <code class="docutils literal notranslate"><span class="pre">*</span></code>, meaning all logs flowing in the index would be excluded.
+<li><p><strong>query</strong> (<em>str</em><em>, </em><em>optional</em>) – Default query is <code class="docutils literal notranslate"><span class="pre">*</span></code> , meaning all logs flowing in the index would be excluded.
 Scope down exclusion filter to only a subset of logs with a log query.</p></li>
 <li><p><strong>sample_rate</strong> (<em>float</em>) – Sample rate to apply to logs going through this exclusion filter,
 a value of 1.0 excludes all logs matching the query.</p></li>
@@ -7167,10 +7167,10 @@ Logs are eventually stored in the first matching index.</p>
 the default is all live indexes. Historical indexes of rehydrated logs must be specified.</p></li>
 <li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of logs return in the response.</p></li>
 <li><p><strong>query</strong> (<em>str</em><em>, </em><em>optional</em>) – The search query - following the log search syntax.</p></li>
-<li><p><strong>sort</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.logs_sort.LogsSort" title="datadog_api_client.v2.model.logs_sort.LogsSort"><em>LogsSort</em></a><em>, </em><em>optional</em>) – Time-ascending <code class="docutils literal notranslate"><span class="pre">asc</span></code> or time-descending <code class="docutils literal notranslate"><span class="pre">desc</span></code> results.</p></li>
+<li><p><strong>sort</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.logs_sort.LogsSort" title="datadog_api_client.v1.model.logs_sort.LogsSort"><em>LogsSort</em></a><em>, </em><em>optional</em>) – Time-ascending <code class="docutils literal notranslate"><span class="pre">asc</span></code> or time-descending <code class="docutils literal notranslate"><span class="pre">desc</span></code> results.</p></li>
 <li><p><strong>start_at</strong> (<em>str</em><em>, </em><em>optional</em>) – <p>Hash identifier of the first log to return in the list, available in a log <code class="docutils literal notranslate"><span class="pre">id</span></code> attribute.
 This parameter is used for the pagination feature.</p>
-<p><strong>Note</strong>: This parameter is ignored if the corresponding log
+<p><strong>Note</strong> : This parameter is ignored if the corresponding log
 is out of the scope of the specified time window.</p>
 </p></li>
 <li><p><strong>time</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.logs_list_request_time.LogsListRequestTime" title="datadog_api_client.v1.model.logs_list_request_time.LogsListRequestTime"><em>LogsListRequestTime</em></a>) – Timeframe to retrieve the log from.</p></li>
@@ -7208,7 +7208,7 @@ or a regional zone (for example “Europe/Paris”).</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>logs</strong> (<em>[</em><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.log.Log" title="datadog_api_client.v2.model.log.Log"><em>Log</em></a><em>]</em><em>, </em><em>optional</em>) – Array of logs matching the request and the <code class="docutils literal notranslate"><span class="pre">nextLogId</span></code> if sent.</p></li>
+<li><p><strong>logs</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.log.Log" title="datadog_api_client.v1.model.log.Log"><em>Log</em></a><em>]</em><em>, </em><em>optional</em>) – Array of logs matching the request and the <code class="docutils literal notranslate"><span class="pre">nextLogId</span></code> if sent.</p></li>
 <li><p><strong>next_log_id</strong> (<em>str</em><em>, </em><em>optional</em>) – Hash identifier of the next log to return in the list.
 This parameter is used for the pagination feature.</p></li>
 <li><p><strong>status</strong> (<em>str</em><em>, </em><em>optional</em>) – Status of the response.</p></li>
@@ -7307,7 +7307,7 @@ only the first one (according to the pipeline order) is taken into account.</p>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">datadog_api_client.model_utils.ModelNormal</span></code></a></p>
 <p>Pipelines and processors operate on incoming logs,
 parsing and transforming them into structured attributes for easier querying.</p>
-<p><strong>Note</strong>: These endpoints are only available for admin users.
+<p><strong>Note</strong> : These endpoints are only available for admin users.
 Make sure to use an application key created by an admin.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -7556,7 +7556,7 @@ only the first one (according to the pipeline order) is taken into account.</p>
 <li><p>Strings beginning with <code class="docutils literal notranslate"><span class="pre">w</span></code> (case-insensitive) map to <code class="docutils literal notranslate"><span class="pre">warning</span></code> (4)</p></li>
 <li><p>Strings beginning with <code class="docutils literal notranslate"><span class="pre">n</span></code> (case-insensitive) map to <code class="docutils literal notranslate"><span class="pre">notice</span></code> (5)</p></li>
 <li><p>Strings beginning with <code class="docutils literal notranslate"><span class="pre">i</span></code> (case-insensitive) map to <code class="docutils literal notranslate"><span class="pre">info</span></code> (6)</p></li>
-<li><p>Strings beginning with <code class="docutils literal notranslate"><span class="pre">d</span></code>, <code class="docutils literal notranslate"><span class="pre">trace</span></code> or <code class="docutils literal notranslate"><span class="pre">verbose</span></code> (case-insensitive) map to <code class="docutils literal notranslate"><span class="pre">debug</span></code> (7)</p></li>
+<li><p>Strings beginning with <code class="docutils literal notranslate"><span class="pre">d</span></code> , <code class="docutils literal notranslate"><span class="pre">trace</span></code> or <code class="docutils literal notranslate"><span class="pre">verbose</span></code> (case-insensitive) map to <code class="docutils literal notranslate"><span class="pre">debug</span></code> (7)</p></li>
 <li><p>Strings beginning with <code class="docutils literal notranslate"><span class="pre">o</span></code> or matching <code class="docutils literal notranslate"><span class="pre">OK</span></code> or <code class="docutils literal notranslate"><span class="pre">Success</span></code> (case-insensitive) map to OK</p></li>
 <li><p>All others map to <code class="docutils literal notranslate"><span class="pre">info</span></code> (6)</p>
 <p><strong>Note:</strong> If multiple log status remapper processors can be applied to a given log,
@@ -7600,7 +7600,7 @@ only the first one (according to the pipelines order) is taken into account.</p>
 to a log with the result of the provided template.
 This enables aggregation of different attributes or raw strings into a single attribute.</p>
 <p>The template is defined by both raw text and blocks with the syntax <code class="docutils literal notranslate"><span class="pre">%{attribute_path}</span></code>.</p>
-<p><strong>Notes</strong>:</p>
+<p><strong>Notes</strong> :</p>
 <ul class="simple">
 <li><p>The processor only accepts attributes with values or an array of values in the blocks.</p></li>
 <li><p>If an attribute cannot be used (object or array of object),
@@ -7869,8 +7869,8 @@ It recognizes major bots like the Google Bot, Yahoo Slurp, and Bing.</p>
 <li><p><strong>start</strong> (<em>int</em><em>, </em><em>optional</em>) – Start of the time window, milliseconds since Unix epoch.</p></li>
 <li><p><strong>tag_set</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Unique tags identifying this series.</p></li>
 <li><p><strong>unit</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.metrics_query_unit.MetricsQueryUnit" title="datadog_api_client.v1.model.metrics_query_unit.MetricsQueryUnit"><em>MetricsQueryUnit</em></a><em>]</em><em>, </em><em>optional</em>) – Detailed information about the metric unit.
-First element describes the “primary unit” (for example, <code class="docutils literal notranslate"><span class="pre">bytes</span></code> in <code class="docutils literal notranslate"><span class="pre">bytes</span> <span class="pre">per</span> <span class="pre">second</span></code>),
-second describes the “per unit” (for example, <code class="docutils literal notranslate"><span class="pre">second</span></code> in <code class="docutils literal notranslate"><span class="pre">bytes</span> <span class="pre">per</span> <span class="pre">second</span></code>).</p></li>
+First element describes the “primary unit” (for example, <code class="docutils literal notranslate"><span class="pre">bytes</span></code> in <code class="docutils literal notranslate"><span class="pre">bytes</span> <span class="pre">per</span> <span class="pre">second</span></code> ),
+second describes the “per unit” (for example, <code class="docutils literal notranslate"><span class="pre">second</span></code> in <code class="docutils literal notranslate"><span class="pre">bytes</span> <span class="pre">per</span> <span class="pre">second</span></code> ).</p></li>
 </ul>
 </dd>
 </dl>
@@ -7931,8 +7931,8 @@ second describes the “per unit” (for example, <code class="docutils literal 
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>created</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Timestamp of the monitor creation.</p></li>
-<li><p><strong>creator</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.creator.Creator" title="datadog_api_client.v2.model.creator.Creator"><em>Creator</em></a><em>, </em><em>optional</em>) – Object describing the creator of the shared element.</p></li>
-<li><p><strong>deleted</strong> (<em>datetime</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Whether or not the monitor is deleted. (Always <code class="docutils literal notranslate"><span class="pre">null</span></code>)</p></li>
+<li><p><strong>creator</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.creator.Creator" title="datadog_api_client.v1.model.creator.Creator"><em>Creator</em></a><em>, </em><em>optional</em>) – Object describing the creator of the shared element.</p></li>
+<li><p><strong>deleted</strong> (<em>datetime</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Whether or not the monitor is deleted. (Always <code class="docutils literal notranslate"><span class="pre">null</span></code> )</p></li>
 <li><p><strong>id</strong> (<em>int</em><em>, </em><em>optional</em>) – ID of this monitor.</p></li>
 <li><p><strong>message</strong> (<em>str</em><em>, </em><em>optional</em>) – A message to include with notifications for this monitor.</p></li>
 <li><p><strong>modified</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Last timestamp when the monitor was edited.</p></li>
@@ -7942,10 +7942,10 @@ second describes the “per unit” (for example, <code class="docutils literal 
 <li><p><strong>overall_state</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.monitor_overall_states.MonitorOverallStates" title="datadog_api_client.v1.model.monitor_overall_states.MonitorOverallStates"><em>MonitorOverallStates</em></a><em>, </em><em>optional</em>) – The different states your monitor can be in.</p></li>
 <li><p><strong>priority</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Integer from 1 (high) to 5 (low) indicating alert severity.</p></li>
 <li><p><strong>query</strong> (<em>str</em>) – The monitor query.</p></li>
-<li><p><strong>restricted_roles</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – A list of unique role identifiers to define which roles are allowed to edit the monitor. The unique identifiers for all roles can be pulled from the <a class="reference external" href="https://docs.datadoghq.com/api/latest/roles/#list-roles">Roles API</a> and are located in the <code class="docutils literal notranslate"><span class="pre">data.id</span></code> field. Editing a monitor includes any updates to the monitor configuration, monitor deletion, and muting of the monitor for any amount of time. <code class="docutils literal notranslate"><span class="pre">restricted_roles</span></code> is the successor of <code class="docutils literal notranslate"><span class="pre">locked</span></code>. For more information about <code class="docutils literal notranslate"><span class="pre">locked</span></code> and <code class="docutils literal notranslate"><span class="pre">restricted_roles</span></code>, see the <a class="reference external" href="https://docs.datadoghq.com/monitors/guide/monitor_api_options/#permissions-options">monitor options docs</a>.</p></li>
+<li><p><strong>restricted_roles</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – A list of unique role identifiers to define which roles are allowed to edit the monitor. The unique identifiers for all roles can be pulled from the <a class="reference external" href="https://docs.datadoghq.com/api/latest/roles/#list-roles">Roles API</a> and are located in the <code class="docutils literal notranslate"><span class="pre">data.id</span></code> field. Editing a monitor includes any updates to the monitor configuration, monitor deletion, and muting of the monitor for any amount of time. <code class="docutils literal notranslate"><span class="pre">restricted_roles</span></code> is the successor of <code class="docutils literal notranslate"><span class="pre">locked</span></code>. For more information about <code class="docutils literal notranslate"><span class="pre">locked</span></code> and <code class="docutils literal notranslate"><span class="pre">restricted_roles</span></code> , see the <a class="reference external" href="https://docs.datadoghq.com/monitors/guide/monitor_api_options/#permissions-options">monitor options docs</a>.</p></li>
 <li><p><strong>state</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.monitor_state.MonitorState" title="datadog_api_client.v1.model.monitor_state.MonitorState"><em>MonitorState</em></a><em>, </em><em>optional</em>) – Wrapper object with the different monitor states.</p></li>
 <li><p><strong>tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Tags associated to your monitor.</p></li>
-<li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.monitor_type.MonitorType" title="datadog_api_client.v1.model.monitor_type.MonitorType"><em>MonitorType</em></a>) – The type of the monitor. For more information about <code class="docutils literal notranslate"><span class="pre">type</span></code>, see the <a class="reference external" href="https://docs.datadoghq.com/monitors/guide/monitor_api_options/">monitor options</a> docs.</p></li>
+<li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.monitor_type.MonitorType" title="datadog_api_client.v1.model.monitor_type.MonitorType"><em>MonitorType</em></a>) – The type of the monitor. For more information about <code class="docutils literal notranslate"><span class="pre">type</span></code> , see the <a class="reference external" href="https://docs.datadoghq.com/monitors/guide/monitor_api_options/">monitor options</a> docs.</p></li>
 </ul>
 </dd>
 </dl>
@@ -8064,7 +8064,7 @@ second describes the “per unit” (for example, <code class="docutils literal 
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>aggregation</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.monitor_formula_and_function_event_aggregation.MonitorFormulaAndFunctionEventAggregation" title="datadog_api_client.v1.model.monitor_formula_and_function_event_aggregation.MonitorFormulaAndFunctionEventAggregation"><em>MonitorFormulaAndFunctionEventAggregation</em></a>) – Aggregation methods for event platform queries.</p></li>
 <li><p><strong>metric</strong> (<em>str</em><em>, </em><em>optional</em>) – Metric used for sorting group by results.</p></li>
-<li><p><strong>order</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.query_sort_order.QuerySortOrder" title="datadog_api_client.v2.model.query_sort_order.QuerySortOrder"><em>QuerySortOrder</em></a><em>, </em><em>optional</em>) – Direction of sort.</p></li>
+<li><p><strong>order</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.query_sort_order.QuerySortOrder" title="datadog_api_client.v1.model.query_sort_order.QuerySortOrder"><em>QuerySortOrder</em></a><em>, </em><em>optional</em>) – Direction of sort.</p></li>
 </ul>
 </dd>
 </dl>
@@ -8176,7 +8176,7 @@ second describes the “per unit” (for example, <code class="docutils literal 
 <li><p><strong>aggregation</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.monitor_options_aggregation.MonitorOptionsAggregation" title="datadog_api_client.v1.model.monitor_options_aggregation.MonitorOptionsAggregation"><em>MonitorOptionsAggregation</em></a><em>, </em><em>optional</em>) – Type of aggregation performed in the monitor query.</p></li>
 <li><p><strong>device_ids</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.monitor_device_id.MonitorDeviceID" title="datadog_api_client.v1.model.monitor_device_id.MonitorDeviceID"><em>MonitorDeviceID</em></a><em>]</em><em>, </em><em>optional</em>) – IDs of the device the Synthetics monitor is running on.</p></li>
 <li><p><strong>enable_logs_sample</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not to send a log sample when the log monitor triggers.</p></li>
-<li><p><strong>escalation_message</strong> (<em>str</em><em>, </em><em>optional</em>) – We recommend using the <a class="reference external" href="https://docs.datadoghq.com/monitors/notify/?tab=is_alert#renotify">is_renotify</a>,
+<li><p><strong>escalation_message</strong> (<em>str</em><em>, </em><em>optional</em>) – We recommend using the <a class="reference external" href="https://docs.datadoghq.com/monitors/notify/?tab=is_alert#renotify">is_renotify</a> ,
 block in the original message instead.
 A message to include with a re-notification. Supports the <code class="docutils literal notranslate"><span class="pre">@username</span></code> notification we allow elsewhere.
 Not applicable if <code class="docutils literal notranslate"><span class="pre">renotify_interval</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
@@ -8187,14 +8187,14 @@ This is useful for AWS CloudWatch and other backfilled metrics to ensure the mon
 <li><p><strong>include_tags</strong> (<em>bool</em><em>, </em><em>optional</em>) – <p>A Boolean indicating whether notifications from this monitor automatically inserts its triggering tags into the title.</p>
 <p><strong>Examples</strong></p>
 <ul>
-<li><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, <code class="docutils literal notranslate"><span class="pre">[Triggered</span> <span class="pre">on</span> <span class="pre">{host:h1}]</span> <span class="pre">Monitor</span> <span class="pre">Title</span></code></p></li>
-<li><p>If <code class="docutils literal notranslate"><span class="pre">False</span></code>, <code class="docutils literal notranslate"><span class="pre">[Triggered]</span> <span class="pre">Monitor</span> <span class="pre">Title</span></code></p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code> , <code class="docutils literal notranslate"><span class="pre">[Triggered</span> <span class="pre">on</span> <span class="pre">{host:h1}]</span> <span class="pre">Monitor</span> <span class="pre">Title</span></code></p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">False</span></code> , <code class="docutils literal notranslate"><span class="pre">[Triggered]</span> <span class="pre">Monitor</span> <span class="pre">Title</span></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>locked</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not the monitor is locked (only editable by creator and admins). Use <code class="docutils literal notranslate"><span class="pre">restricted_roles</span></code> instead.</p></li>
 <li><p><strong>min_failure_duration</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – How long the test should be in failure before alerting (integer, number of seconds, max 7200).</p></li>
 <li><p><strong>min_location_failed</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The minimum number of locations in failure at the same time during
-at least one moment in the <code class="docutils literal notranslate"><span class="pre">min_failure_duration</span></code> period (<code class="docutils literal notranslate"><span class="pre">min_location_failed</span></code> and <code class="docutils literal notranslate"><span class="pre">min_failure_duration</span></code>
+at least one moment in the <code class="docutils literal notranslate"><span class="pre">min_failure_duration</span></code> period ( <code class="docutils literal notranslate"><span class="pre">min_location_failed</span></code> and <code class="docutils literal notranslate"><span class="pre">min_failure_duration</span></code>
 are part of the advanced alerting rules - integer, &gt;= 1).</p></li>
 <li><p><strong>new_group_delay</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – <p>Time (in seconds) to skip evaluations for new groups.</p>
 <p>For example, this option can be used to skip evaluations for new hosts while they initialize.</p>
@@ -8355,7 +8355,7 @@ otherwise some evaluations are skipped. Default is false.</p></li>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>classification</strong> (<em>str</em><em>, </em><em>optional</em>) – Classification of the monitor.</p></li>
-<li><p><strong>creator</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.creator.Creator" title="datadog_api_client.v2.model.creator.Creator"><em>Creator</em></a><em>, </em><em>optional</em>) – Object describing the creator of the shared element.</p></li>
+<li><p><strong>creator</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.creator.Creator" title="datadog_api_client.v1.model.creator.Creator"><em>Creator</em></a><em>, </em><em>optional</em>) – Object describing the creator of the shared element.</p></li>
 <li><p><strong>id</strong> (<em>int</em><em>, </em><em>optional</em>) – ID of the monitor.</p></li>
 <li><p><strong>last_triggered_ts</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Latest timestamp the monitor triggered.</p></li>
 <li><p><strong>metrics</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Metrics used by the monitor.</p></li>
@@ -8366,10 +8366,10 @@ otherwise some evaluations are skipped. Default is false.</p></li>
 <li><p><strong>scopes</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – The scope(s) to which the downtime applies, for example <code class="docutils literal notranslate"><span class="pre">host:app2</span></code>.
 Provide multiple scopes as a comma-separated list, for example <code class="docutils literal notranslate"><span class="pre">env:dev,env:prod</span></code>.
 The resulting downtime applies to sources that matches ALL provided scopes
-(that is <code class="docutils literal notranslate"><span class="pre">env:dev</span> <span class="pre">AND</span> <span class="pre">env:prod</span></code>), NOT any of them.</p></li>
+(that is <code class="docutils literal notranslate"><span class="pre">env:dev</span> <span class="pre">AND</span> <span class="pre">env:prod</span></code> ), NOT any of them.</p></li>
 <li><p><strong>status</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.monitor_overall_states.MonitorOverallStates" title="datadog_api_client.v1.model.monitor_overall_states.MonitorOverallStates"><em>MonitorOverallStates</em></a><em>, </em><em>optional</em>) – The different states your monitor can be in.</p></li>
 <li><p><strong>tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Tags associated with the monitor.</p></li>
-<li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.monitor_type.MonitorType" title="datadog_api_client.v1.model.monitor_type.MonitorType"><em>MonitorType</em></a><em>, </em><em>optional</em>) – <p>The type of the monitor. For more information about <code class="docutils literal notranslate"><span class="pre">type</span></code>, see the <a class="reference external" href="https://docs.datadoghq.com/monitors/guide/monitor_api_options/">monitor options</a> docs.</p>
+<li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.monitor_type.MonitorType" title="datadog_api_client.v1.model.monitor_type.MonitorType"><em>MonitorType</em></a><em>, </em><em>optional</em>) – <p>The type of the monitor. For more information about <code class="docutils literal notranslate"><span class="pre">type</span></code> , see the <a class="reference external" href="https://docs.datadoghq.com/monitors/guide/monitor_api_options/">monitor options</a> docs.</p>
 </p></li>
 </ul>
 </dd>
@@ -8536,8 +8536,8 @@ the list of groups your monitor is broken down on.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>created</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Timestamp of the monitor creation.</p></li>
-<li><p><strong>creator</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.creator.Creator" title="datadog_api_client.v2.model.creator.Creator"><em>Creator</em></a><em>, </em><em>optional</em>) – Object describing the creator of the shared element.</p></li>
-<li><p><strong>deleted</strong> (<em>datetime</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Whether or not the monitor is deleted. (Always <code class="docutils literal notranslate"><span class="pre">null</span></code>)</p></li>
+<li><p><strong>creator</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.creator.Creator" title="datadog_api_client.v1.model.creator.Creator"><em>Creator</em></a><em>, </em><em>optional</em>) – Object describing the creator of the shared element.</p></li>
+<li><p><strong>deleted</strong> (<em>datetime</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Whether or not the monitor is deleted. (Always <code class="docutils literal notranslate"><span class="pre">null</span></code> )</p></li>
 <li><p><strong>id</strong> (<em>int</em><em>, </em><em>optional</em>) – ID of this monitor.</p></li>
 <li><p><strong>message</strong> (<em>str</em><em>, </em><em>optional</em>) – A message to include with notifications for this monitor.</p></li>
 <li><p><strong>modified</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Last timestamp when the monitor was edited.</p></li>
@@ -8547,11 +8547,11 @@ the list of groups your monitor is broken down on.</p>
 <li><p><strong>overall_state</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.monitor_overall_states.MonitorOverallStates" title="datadog_api_client.v1.model.monitor_overall_states.MonitorOverallStates"><em>MonitorOverallStates</em></a><em>, </em><em>optional</em>) – The different states your monitor can be in.</p></li>
 <li><p><strong>priority</strong> (<em>int</em><em>, </em><em>optional</em>) – Integer from 1 (high) to 5 (low) indicating alert severity.</p></li>
 <li><p><strong>query</strong> (<em>str</em><em>, </em><em>optional</em>) – The monitor query.</p></li>
-<li><p><strong>restricted_roles</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – <p>A list of unique role identifiers to define which roles are allowed to edit the monitor. The unique identifiers for all roles can be pulled from the <a class="reference external" href="https://docs.datadoghq.com/api/latest/roles/#list-roles">Roles API</a> and are located in the <code class="docutils literal notranslate"><span class="pre">data.id</span></code> field. Editing a monitor includes any updates to the monitor configuration, monitor deletion, and muting of the monitor for any amount of time. <code class="docutils literal notranslate"><span class="pre">restricted_roles</span></code> is the successor of <code class="docutils literal notranslate"><span class="pre">locked</span></code>. For more information about <code class="docutils literal notranslate"><span class="pre">locked</span></code> and <code class="docutils literal notranslate"><span class="pre">restricted_roles</span></code>, see the <a class="reference external" href="https://docs.datadoghq.com/monitors/guide/monitor_api_options/#permissions-options">monitor options docs</a>.</p>
+<li><p><strong>restricted_roles</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – <p>A list of unique role identifiers to define which roles are allowed to edit the monitor. The unique identifiers for all roles can be pulled from the <a class="reference external" href="https://docs.datadoghq.com/api/latest/roles/#list-roles">Roles API</a> and are located in the <code class="docutils literal notranslate"><span class="pre">data.id</span></code> field. Editing a monitor includes any updates to the monitor configuration, monitor deletion, and muting of the monitor for any amount of time. <code class="docutils literal notranslate"><span class="pre">restricted_roles</span></code> is the successor of <code class="docutils literal notranslate"><span class="pre">locked</span></code>. For more information about <code class="docutils literal notranslate"><span class="pre">locked</span></code> and <code class="docutils literal notranslate"><span class="pre">restricted_roles</span></code> , see the <a class="reference external" href="https://docs.datadoghq.com/monitors/guide/monitor_api_options/#permissions-options">monitor options docs</a>.</p>
 </p></li>
 <li><p><strong>state</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.monitor_state.MonitorState" title="datadog_api_client.v1.model.monitor_state.MonitorState"><em>MonitorState</em></a><em>, </em><em>optional</em>) – Wrapper object with the different monitor states.</p></li>
 <li><p><strong>tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Tags associated to your monitor.</p></li>
-<li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.monitor_type.MonitorType" title="datadog_api_client.v1.model.monitor_type.MonitorType"><em>MonitorType</em></a><em>, </em><em>optional</em>) – <p>The type of the monitor. For more information about <code class="docutils literal notranslate"><span class="pre">type</span></code>, see the <a class="reference external" href="https://docs.datadoghq.com/monitors/guide/monitor_api_options/">monitor options</a> docs.</p>
+<li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.monitor_type.MonitorType" title="datadog_api_client.v1.model.monitor_type.MonitorType"><em>MonitorType</em></a><em>, </em><em>optional</em>) – <p>The type of the monitor. For more information about <code class="docutils literal notranslate"><span class="pre">type</span></code> , see the <a class="reference external" href="https://docs.datadoghq.com/monitors/guide/monitor_api_options/">monitor options</a> docs.</p>
 </p></li>
 </ul>
 </dd>
@@ -8780,7 +8780,7 @@ the list of groups your monitor is broken down on.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>attributes</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.notebook_cell_create_request_attributes.NotebookCellCreateRequestAttributes" title="datadog_api_client.v1.model.notebook_cell_create_request_attributes.NotebookCellCreateRequestAttributes"><em>NotebookCellCreateRequestAttributes</em></a>) – The attributes of a notebook cell in create cell request. Valid cell types are <code class="docutils literal notranslate"><span class="pre">markdown</span></code>, <code class="docutils literal notranslate"><span class="pre">timeseries</span></code>, <code class="docutils literal notranslate"><span class="pre">toplist</span></code>, <code class="docutils literal notranslate"><span class="pre">heatmap</span></code>, <code class="docutils literal notranslate"><span class="pre">distribution</span></code>,
+<li><p><strong>attributes</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.notebook_cell_create_request_attributes.NotebookCellCreateRequestAttributes" title="datadog_api_client.v1.model.notebook_cell_create_request_attributes.NotebookCellCreateRequestAttributes"><em>NotebookCellCreateRequestAttributes</em></a>) – The attributes of a notebook cell in create cell request. Valid cell types are <code class="docutils literal notranslate"><span class="pre">markdown</span></code> , <code class="docutils literal notranslate"><span class="pre">timeseries</span></code> , <code class="docutils literal notranslate"><span class="pre">toplist</span></code> , <code class="docutils literal notranslate"><span class="pre">heatmap</span></code> , <code class="docutils literal notranslate"><span class="pre">distribution</span></code> ,
 <code class="docutils literal notranslate"><span class="pre">log_stream</span></code>. <a class="reference external" href="https://docs.datadoghq.com/dashboards/widgets/">More information on each graph visualization type.</a></p></li>
 <li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.notebook_cell_resource_type.NotebookCellResourceType" title="datadog_api_client.v1.model.notebook_cell_resource_type.NotebookCellResourceType"><em>NotebookCellResourceType</em></a>) – Type of the Notebook Cell resource.</p></li>
 </ul>
@@ -8794,7 +8794,7 @@ the list of groups your monitor is broken down on.</p>
 <dt class="sig sig-object py" id="datadog_api_client.v1.model.notebook_cell_create_request_attributes.NotebookCellCreateRequestAttributes">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NotebookCellCreateRequestAttributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.notebook_cell_create_request_attributes.NotebookCellCreateRequestAttributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelComposed" title="datadog_api_client.model_utils.ModelComposed"><code class="xref py py-class docutils literal notranslate"><span class="pre">datadog_api_client.model_utils.ModelComposed</span></code></a></p>
-<p>The attributes of a notebook cell in create cell request. Valid cell types are <code class="docutils literal notranslate"><span class="pre">markdown</span></code>, <code class="docutils literal notranslate"><span class="pre">timeseries</span></code>, <code class="docutils literal notranslate"><span class="pre">toplist</span></code>, <code class="docutils literal notranslate"><span class="pre">heatmap</span></code>, <code class="docutils literal notranslate"><span class="pre">distribution</span></code>,
+<p>The attributes of a notebook cell in create cell request. Valid cell types are <code class="docutils literal notranslate"><span class="pre">markdown</span></code> , <code class="docutils literal notranslate"><span class="pre">timeseries</span></code> , <code class="docutils literal notranslate"><span class="pre">toplist</span></code> , <code class="docutils literal notranslate"><span class="pre">heatmap</span></code> , <code class="docutils literal notranslate"><span class="pre">distribution</span></code> ,
 <code class="docutils literal notranslate"><span class="pre">log_stream</span></code>. <a class="reference external" href="https://docs.datadoghq.com/dashboards/widgets/">More information on each graph visualization type.</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -8833,7 +8833,7 @@ the list of groups your monitor is broken down on.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>attributes</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.notebook_cell_response_attributes.NotebookCellResponseAttributes" title="datadog_api_client.v1.model.notebook_cell_response_attributes.NotebookCellResponseAttributes"><em>NotebookCellResponseAttributes</em></a>) – <p>The attributes of a notebook cell response. Valid cell types are <code class="docutils literal notranslate"><span class="pre">markdown</span></code>, <code class="docutils literal notranslate"><span class="pre">timeseries</span></code>, <code class="docutils literal notranslate"><span class="pre">toplist</span></code>, <code class="docutils literal notranslate"><span class="pre">heatmap</span></code>, <code class="docutils literal notranslate"><span class="pre">distribution</span></code>,
+<li><p><strong>attributes</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.notebook_cell_response_attributes.NotebookCellResponseAttributes" title="datadog_api_client.v1.model.notebook_cell_response_attributes.NotebookCellResponseAttributes"><em>NotebookCellResponseAttributes</em></a>) – <p>The attributes of a notebook cell response. Valid cell types are <code class="docutils literal notranslate"><span class="pre">markdown</span></code> , <code class="docutils literal notranslate"><span class="pre">timeseries</span></code> , <code class="docutils literal notranslate"><span class="pre">toplist</span></code> , <code class="docutils literal notranslate"><span class="pre">heatmap</span></code> , <code class="docutils literal notranslate"><span class="pre">distribution</span></code> ,
 <code class="docutils literal notranslate"><span class="pre">log_stream</span></code>. <a class="reference external" href="https://docs.datadoghq.com/dashboards/widgets/">More information on each graph visualization type.</a></p>
 </p></li>
 <li><p><strong>id</strong> (<em>str</em>) – Notebook cell ID.</p></li>
@@ -8849,7 +8849,7 @@ the list of groups your monitor is broken down on.</p>
 <dt class="sig sig-object py" id="datadog_api_client.v1.model.notebook_cell_response_attributes.NotebookCellResponseAttributes">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NotebookCellResponseAttributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.notebook_cell_response_attributes.NotebookCellResponseAttributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelComposed" title="datadog_api_client.model_utils.ModelComposed"><code class="xref py py-class docutils literal notranslate"><span class="pre">datadog_api_client.model_utils.ModelComposed</span></code></a></p>
-<p>The attributes of a notebook cell response. Valid cell types are <code class="docutils literal notranslate"><span class="pre">markdown</span></code>, <code class="docutils literal notranslate"><span class="pre">timeseries</span></code>, <code class="docutils literal notranslate"><span class="pre">toplist</span></code>, <code class="docutils literal notranslate"><span class="pre">heatmap</span></code>, <code class="docutils literal notranslate"><span class="pre">distribution</span></code>,
+<p>The attributes of a notebook cell response. Valid cell types are <code class="docutils literal notranslate"><span class="pre">markdown</span></code> , <code class="docutils literal notranslate"><span class="pre">timeseries</span></code> , <code class="docutils literal notranslate"><span class="pre">toplist</span></code> , <code class="docutils literal notranslate"><span class="pre">heatmap</span></code> , <code class="docutils literal notranslate"><span class="pre">distribution</span></code> ,
 <code class="docutils literal notranslate"><span class="pre">log_stream</span></code>. <a class="reference external" href="https://docs.datadoghq.com/dashboards/widgets/">More information on each graph visualization type.</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -8892,7 +8892,7 @@ the list of groups your monitor is broken down on.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>attributes</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.notebook_cell_update_request_attributes.NotebookCellUpdateRequestAttributes" title="datadog_api_client.v1.model.notebook_cell_update_request_attributes.NotebookCellUpdateRequestAttributes"><em>NotebookCellUpdateRequestAttributes</em></a>) – <p>The attributes of a notebook cell in update cell request. Valid cell types are <code class="docutils literal notranslate"><span class="pre">markdown</span></code>, <code class="docutils literal notranslate"><span class="pre">timeseries</span></code>, <code class="docutils literal notranslate"><span class="pre">toplist</span></code>, <code class="docutils literal notranslate"><span class="pre">heatmap</span></code>, <code class="docutils literal notranslate"><span class="pre">distribution</span></code>,
+<li><p><strong>attributes</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.notebook_cell_update_request_attributes.NotebookCellUpdateRequestAttributes" title="datadog_api_client.v1.model.notebook_cell_update_request_attributes.NotebookCellUpdateRequestAttributes"><em>NotebookCellUpdateRequestAttributes</em></a>) – <p>The attributes of a notebook cell in update cell request. Valid cell types are <code class="docutils literal notranslate"><span class="pre">markdown</span></code> , <code class="docutils literal notranslate"><span class="pre">timeseries</span></code> , <code class="docutils literal notranslate"><span class="pre">toplist</span></code> , <code class="docutils literal notranslate"><span class="pre">heatmap</span></code> , <code class="docutils literal notranslate"><span class="pre">distribution</span></code> ,
 <code class="docutils literal notranslate"><span class="pre">log_stream</span></code>. <a class="reference external" href="https://docs.datadoghq.com/dashboards/widgets/">More information on each graph visualization type.</a></p>
 </p></li>
 <li><p><strong>id</strong> (<em>str</em>) – Notebook cell ID.</p></li>
@@ -8908,7 +8908,7 @@ the list of groups your monitor is broken down on.</p>
 <dt class="sig sig-object py" id="datadog_api_client.v1.model.notebook_cell_update_request_attributes.NotebookCellUpdateRequestAttributes">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NotebookCellUpdateRequestAttributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.notebook_cell_update_request_attributes.NotebookCellUpdateRequestAttributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelComposed" title="datadog_api_client.model_utils.ModelComposed"><code class="xref py py-class docutils literal notranslate"><span class="pre">datadog_api_client.model_utils.ModelComposed</span></code></a></p>
-<p>The attributes of a notebook cell in update cell request. Valid cell types are <code class="docutils literal notranslate"><span class="pre">markdown</span></code>, <code class="docutils literal notranslate"><span class="pre">timeseries</span></code>, <code class="docutils literal notranslate"><span class="pre">toplist</span></code>, <code class="docutils literal notranslate"><span class="pre">heatmap</span></code>, <code class="docutils literal notranslate"><span class="pre">distribution</span></code>,
+<p>The attributes of a notebook cell in update cell request. Valid cell types are <code class="docutils literal notranslate"><span class="pre">markdown</span></code> , <code class="docutils literal notranslate"><span class="pre">timeseries</span></code> , <code class="docutils literal notranslate"><span class="pre">toplist</span></code> , <code class="docutils literal notranslate"><span class="pre">heatmap</span></code> , <code class="docutils literal notranslate"><span class="pre">distribution</span></code> ,
 <code class="docutils literal notranslate"><span class="pre">log_stream</span></code>. <a class="reference external" href="https://docs.datadoghq.com/dashboards/widgets/">More information on each graph visualization type.</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -9074,7 +9074,7 @@ Unlike the heat map, a distribution graph’s x-axis is quantity rather than tim
 <p>The attributes of a notebook <code class="docutils literal notranslate"><span class="pre">markdown</span></code> cell.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>definition</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.notebook_markdown_cell_definition.NotebookMarkdownCellDefinition" title="datadog_api_client.v1.model.notebook_markdown_cell_definition.NotebookMarkdownCellDefinition"><em>NotebookMarkdownCellDefinition</em></a>) – Text in a notebook is formatted with <a class="reference external" href="https://daringfireball.net/projects/markdown/">Markdown</a>, which enables the use of headings, subheadings, links, images, lists, and code blocks.</p>
+<dd class="field-odd"><p><strong>definition</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.notebook_markdown_cell_definition.NotebookMarkdownCellDefinition" title="datadog_api_client.v1.model.notebook_markdown_cell_definition.NotebookMarkdownCellDefinition"><em>NotebookMarkdownCellDefinition</em></a>) – Text in a notebook is formatted with <a class="reference external" href="https://daringfireball.net/projects/markdown/">Markdown</a> , which enables the use of headings, subheadings, links, images, lists, and code blocks.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -9085,7 +9085,7 @@ Unlike the heat map, a distribution graph’s x-axis is quantity rather than tim
 <dt class="sig sig-object py" id="datadog_api_client.v1.model.notebook_markdown_cell_definition.NotebookMarkdownCellDefinition">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NotebookMarkdownCellDefinition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.notebook_markdown_cell_definition.NotebookMarkdownCellDefinition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">datadog_api_client.model_utils.ModelNormal</span></code></a></p>
-<p>Text in a notebook is formatted with <a class="reference external" href="https://daringfireball.net/projects/markdown/">Markdown</a>, which enables the use of headings, subheadings, links, images, lists, and code blocks.</p>
+<p>Text in a notebook is formatted with <a class="reference external" href="https://daringfireball.net/projects/markdown/">Markdown</a> , which enables the use of headings, subheadings, links, images, lists, and code blocks.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -9524,8 +9524,8 @@ To delete existing cell(s), simply omit it from the list of cells.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>api_key</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.api_key.ApiKey" title="datadog_api_client.v1.model.api_key.ApiKey"><em>ApiKey</em></a><em>, </em><em>optional</em>) – Datadog API key.</p></li>
 <li><p><strong>application_key</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.application_key.ApplicationKey" title="datadog_api_client.v1.model.application_key.ApplicationKey"><em>ApplicationKey</em></a><em>, </em><em>optional</em>) – An application key with its associated metadata.</p></li>
-<li><p><strong>org</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.organization.Organization" title="datadog_api_client.v2.model.organization.Organization"><em>Organization</em></a><em>, </em><em>optional</em>) – Create, edit, and manage organizations.</p></li>
-<li><p><strong>user</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user.User" title="datadog_api_client.v2.model.user.User"><em>User</em></a><em>, </em><em>optional</em>) – Create, edit, and disable users.</p></li>
+<li><p><strong>org</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.organization.Organization" title="datadog_api_client.v1.model.organization.Organization"><em>Organization</em></a><em>, </em><em>optional</em>) – Create, edit, and manage organizations.</p></li>
+<li><p><strong>user</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.user.User" title="datadog_api_client.v1.model.user.User"><em>User</em></a><em>, </em><em>optional</em>) – Create, edit, and disable users.</p></li>
 </ul>
 </dd>
 </dl>
@@ -9540,7 +9540,7 @@ To delete existing cell(s), simply omit it from the list of cells.</p>
 <p>Response with the list of organizations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>orgs</strong> (<em>[</em><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.organization.Organization" title="datadog_api_client.v2.model.organization.Organization"><em>Organization</em></a><em>]</em><em>, </em><em>optional</em>) – Array of organization objects.</p>
+<dd class="field-odd"><p><strong>orgs</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.organization.Organization" title="datadog_api_client.v1.model.organization.Organization"><em>Organization</em></a><em>]</em><em>, </em><em>optional</em>) – Array of organization objects.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -9554,7 +9554,7 @@ To delete existing cell(s), simply omit it from the list of cells.</p>
 <p>Response with an organization.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>org</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.organization.Organization" title="datadog_api_client.v2.model.organization.Organization"><em>Organization</em></a><em>, </em><em>optional</em>) – Create, edit, and manage organizations.</p>
+<dd class="field-odd"><p><strong>org</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.organization.Organization" title="datadog_api_client.v1.model.organization.Organization"><em>Organization</em></a><em>, </em><em>optional</em>) – Create, edit, and manage organizations.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -9573,7 +9573,7 @@ To delete existing cell(s), simply omit it from the list of cells.</p>
 <li><p><strong>saml</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.organization_settings_saml.OrganizationSettingsSaml" title="datadog_api_client.v1.model.organization_settings_saml.OrganizationSettingsSaml"><em>OrganizationSettingsSaml</em></a><em>, </em><em>optional</em>) – Set the boolean property enabled to enable or disable single sign on with SAML.
 See the SAML documentation for more information about all SAML settings.</p></li>
 <li><p><strong>saml_autocreate_access_role</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.access_role.AccessRole" title="datadog_api_client.v1.model.access_role.AccessRole"><em>AccessRole</em></a><em>, </em><em>optional</em>) – The access role of the user. Options are <strong>st</strong> (standard user), <strong>adm</strong> (admin user), or <strong>ro</strong> (read-only user).</p></li>
-<li><p><strong>saml_autocreate_users_domains</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.organization_settings_saml_autocreate_users_domains.OrganizationSettingsSamlAutocreateUsersDomains" title="datadog_api_client.v1.model.organization_settings_saml_autocreate_users_domains.OrganizationSettingsSamlAutocreateUsersDomains"><em>OrganizationSettingsSamlAutocreateUsersDomains</em></a><em>, </em><em>optional</em>) – Has two properties, <code class="docutils literal notranslate"><span class="pre">enabled</span></code> (boolean) and <code class="docutils literal notranslate"><span class="pre">domains</span></code>, which is a list of domains without the @ symbol.</p></li>
+<li><p><strong>saml_autocreate_users_domains</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.organization_settings_saml_autocreate_users_domains.OrganizationSettingsSamlAutocreateUsersDomains" title="datadog_api_client.v1.model.organization_settings_saml_autocreate_users_domains.OrganizationSettingsSamlAutocreateUsersDomains"><em>OrganizationSettingsSamlAutocreateUsersDomains</em></a><em>, </em><em>optional</em>) – Has two properties, <code class="docutils literal notranslate"><span class="pre">enabled</span></code> (boolean) and <code class="docutils literal notranslate"><span class="pre">domains</span></code> , which is a list of domains without the @ symbol.</p></li>
 <li><p><strong>saml_can_be_enabled</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not SAML can be enabled for this organization.</p></li>
 <li><p><strong>saml_idp_endpoint</strong> (<em>str</em><em>, </em><em>optional</em>) – Identity provider endpoint for SAML authentication.</p></li>
 <li><p><strong>saml_idp_initiated_login</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.organization_settings_saml_idp_initiated_login.OrganizationSettingsSamlIdpInitiatedLogin" title="datadog_api_client.v1.model.organization_settings_saml_idp_initiated_login.OrganizationSettingsSamlIdpInitiatedLogin"><em>OrganizationSettingsSamlIdpInitiatedLogin</em></a><em>, </em><em>optional</em>) – Has one property enabled (boolean).</p></li>
@@ -9606,7 +9606,7 @@ See the SAML documentation for more information about all SAML settings.</p>
 <dt class="sig sig-object py" id="datadog_api_client.v1.model.organization_settings_saml_autocreate_users_domains.OrganizationSettingsSamlAutocreateUsersDomains">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OrganizationSettingsSamlAutocreateUsersDomains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.organization_settings_saml_autocreate_users_domains.OrganizationSettingsSamlAutocreateUsersDomains" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">datadog_api_client.model_utils.ModelNormal</span></code></a></p>
-<p>Has two properties, <code class="docutils literal notranslate"><span class="pre">enabled</span></code> (boolean) and <code class="docutils literal notranslate"><span class="pre">domains</span></code>, which is a list of domains without the @ symbol.</p>
+<p>Has two properties, <code class="docutils literal notranslate"><span class="pre">enabled</span></code> (boolean) and <code class="docutils literal notranslate"><span class="pre">domains</span></code> , which is a list of domains without the @ symbol.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -9656,7 +9656,7 @@ Learn more on the <a class="reference external" href="https://docs.datadoghq.com
 <p>Subscription definition.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>type</strong> (<em>str</em><em>, </em><em>optional</em>) – The subscription type. Types available are <code class="docutils literal notranslate"><span class="pre">trial</span></code>, <code class="docutils literal notranslate"><span class="pre">free</span></code>, and <code class="docutils literal notranslate"><span class="pre">pro</span></code>.</p>
+<dd class="field-odd"><p><strong>type</strong> (<em>str</em><em>, </em><em>optional</em>) – The subscription type. Types available are <code class="docutils literal notranslate"><span class="pre">trial</span></code> , <code class="docutils literal notranslate"><span class="pre">free</span></code> , and <code class="docutils literal notranslate"><span class="pre">pro</span></code>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -9850,7 +9850,7 @@ Learn more on the <a class="reference external" href="https://docs.datadoghq.com
 <p>Object describing meta attributes of response.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>page</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.pagination.Pagination" title="datadog_api_client.v2.model.pagination.Pagination"><em>Pagination</em></a><em>, </em><em>optional</em>) – Pagination object.</p>
+<dd class="field-odd"><p><strong>page</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.pagination.Pagination" title="datadog_api_client.v1.model.pagination.Pagination"><em>Pagination</em></a><em>, </em><em>optional</em>) – Pagination object.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -10020,7 +10020,7 @@ See <a class="reference external" href="https://docs.datadoghq.com/developers/me
 <li><p><strong>metric</strong> (<em>str</em>) – The name of the timeseries.</p></li>
 <li><p><strong>points</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.point.Point" title="datadog_api_client.v1.model.point.Point"><em>Point</em></a><em>]</em>) – Points relating to a metric. All points must be tuples with timestamp and a scalar value (cannot be a string). Timestamps should be in POSIX time in seconds, and cannot be more than ten minutes in the future or more than one hour in the past.</p></li>
 <li><p><strong>tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – A list of tags associated with the metric.</p></li>
-<li><p><strong>type</strong> (<em>str</em><em>, </em><em>optional</em>) – The type of the metric. Valid types are “”,<code class="docutils literal notranslate"><span class="pre">count</span></code>, <code class="docutils literal notranslate"><span class="pre">gauge</span></code>, and <code class="docutils literal notranslate"><span class="pre">rate</span></code>.</p></li>
+<li><p><strong>type</strong> (<em>str</em><em>, </em><em>optional</em>) – The type of the metric. Valid types are “”, <code class="docutils literal notranslate"><span class="pre">count</span></code> , <code class="docutils literal notranslate"><span class="pre">gauge</span></code> , and <code class="docutils literal notranslate"><span class="pre">rate</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -10081,16 +10081,16 @@ See <a class="reference external" href="https://docs.datadoghq.com/developers/me
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ServiceLevelObjective</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.service_level_objective.ServiceLevelObjective" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">datadog_api_client.model_utils.ModelNormal</span></code></a></p>
 <p>A service level objective object includes a service level indicator, thresholds
-for one or more timeframes, and metadata (<code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">description</span></code>, <code class="docutils literal notranslate"><span class="pre">tags</span></code>, etc.).</p>
+for one or more timeframes, and metadata ( <code class="docutils literal notranslate"><span class="pre">name</span></code> , <code class="docutils literal notranslate"><span class="pre">description</span></code> , <code class="docutils literal notranslate"><span class="pre">tags</span></code> , etc.).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>created_at</strong> (<em>int</em><em>, </em><em>optional</em>) – <p>Creation timestamp (UNIX time in seconds)</p>
 <p>Always included in service level objective responses.</p>
 </p></li>
-<li><p><strong>creator</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.creator.Creator" title="datadog_api_client.v2.model.creator.Creator"><em>Creator</em></a><em>, </em><em>optional</em>) – Object describing the creator of the shared element.</p></li>
+<li><p><strong>creator</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.creator.Creator" title="datadog_api_client.v1.model.creator.Creator"><em>Creator</em></a><em>, </em><em>optional</em>) – Object describing the creator of the shared element.</p></li>
 <li><p><strong>description</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – <p>A user-defined description of the service level objective.</p>
-<p>Always included in service level objective responses (but may be <code class="docutils literal notranslate"><span class="pre">null</span></code>).
+<p>Always included in service level objective responses (but may be <code class="docutils literal notranslate"><span class="pre">null</span></code> ).
 Optional in create/update requests.</p>
 </p></li>
 <li><p><strong>groups</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – <p>A list of (up to 20) monitor groups that narrow the scope of a monitor service level objective.</p>
@@ -10153,12 +10153,12 @@ min of all of those requests.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ServiceLevelObjectiveRequest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.service_level_objective_request.ServiceLevelObjectiveRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">datadog_api_client.model_utils.ModelNormal</span></code></a></p>
 <p>A service level objective object includes a service level indicator, thresholds
-for one or more timeframes, and metadata (<code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">description</span></code>, <code class="docutils literal notranslate"><span class="pre">tags</span></code>, etc.).</p>
+for one or more timeframes, and metadata ( <code class="docutils literal notranslate"><span class="pre">name</span></code> , <code class="docutils literal notranslate"><span class="pre">description</span></code> , <code class="docutils literal notranslate"><span class="pre">tags</span></code> , etc.).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>description</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – <p>A user-defined description of the service level objective.</p>
-<p>Always included in service level objective responses (but may be <code class="docutils literal notranslate"><span class="pre">null</span></code>).
+<p>Always included in service level objective responses (but may be <code class="docutils literal notranslate"><span class="pre">null</span></code> ).
 Optional in create/update requests.</p>
 </p></li>
 <li><p><strong>groups</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – <p>A list of (up to 20) monitor groups that narrow the scope of a monitor service level objective.</p>
@@ -10530,7 +10530,7 @@ threshold was deleted, but that were not completely deleted).</p></li>
 <li><p><strong>duration</strong> (<em>int</em><em>, </em><em>optional</em>) – Length of time (in seconds) for a specified <code class="docutils literal notranslate"><span class="pre">rrule</span></code> recurring SLO correction.</p></li>
 <li><p><strong>end</strong> (<em>int</em><em>, </em><em>optional</em>) – Ending time of the correction in epoch seconds.</p></li>
 <li><p><strong>rrule</strong> (<em>str</em><em>, </em><em>optional</em>) – The recurrence rules as defined in the iCalendar RFC 5545. The supported rules for SLO corrections
-are <code class="docutils literal notranslate"><span class="pre">FREQ</span></code>, <code class="docutils literal notranslate"><span class="pre">INTERVAL</span></code>, <code class="docutils literal notranslate"><span class="pre">COUNT</span></code> and <code class="docutils literal notranslate"><span class="pre">UNTIL</span></code>.</p></li>
+are <code class="docutils literal notranslate"><span class="pre">FREQ</span></code> , <code class="docutils literal notranslate"><span class="pre">INTERVAL</span></code> , <code class="docutils literal notranslate"><span class="pre">COUNT</span></code> and <code class="docutils literal notranslate"><span class="pre">UNTIL</span></code>.</p></li>
 <li><p><strong>slo_id</strong> (<em>str</em>) – ID of the SLO that this correction applies to.</p></li>
 <li><p><strong>start</strong> (<em>int</em>) – Starting time of the correction in epoch seconds.</p></li>
 <li><p><strong>timezone</strong> (<em>str</em><em>, </em><em>optional</em>) – The timezone to display in the UI for the correction times (defaults to “UTC”).</p></li>
@@ -10550,7 +10550,7 @@ are <code class="docutils literal notranslate"><span class="pre">FREQ</span></co
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.slo_correction.SLOCorrection" title="datadog_api_client.v1.model.slo_correction.SLOCorrection"><em>SLOCorrection</em></a><em>]</em><em>, </em><em>optional</em>) – The list of of SLO corrections objects.</p></li>
-<li><p><strong>meta</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.response_meta_attributes.ResponseMetaAttributes" title="datadog_api_client.v2.model.response_meta_attributes.ResponseMetaAttributes"><em>ResponseMetaAttributes</em></a><em>, </em><em>optional</em>) – Object describing meta attributes of response.</p></li>
+<li><p><strong>meta</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.response_meta_attributes.ResponseMetaAttributes" title="datadog_api_client.v1.model.response_meta_attributes.ResponseMetaAttributes"><em>ResponseMetaAttributes</em></a><em>, </em><em>optional</em>) – Object describing meta attributes of response.</p></li>
 </ul>
 </dd>
 </dl>
@@ -10582,14 +10582,14 @@ are <code class="docutils literal notranslate"><span class="pre">FREQ</span></co
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>category</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.slo_correction_category.SLOCorrectionCategory" title="datadog_api_client.v1.model.slo_correction_category.SLOCorrectionCategory"><em>SLOCorrectionCategory</em></a><em>, </em><em>optional</em>) – Category the SLO correction belongs to.</p></li>
 <li><p><strong>created_at</strong> (<em>int</em><em>, </em><em>optional</em>) – The epoch timestamp of when the correction was created at.</p></li>
-<li><p><strong>creator</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.creator.Creator" title="datadog_api_client.v2.model.creator.Creator"><em>Creator</em></a><em>, </em><em>optional</em>) – Object describing the creator of the shared element.</p></li>
+<li><p><strong>creator</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.creator.Creator" title="datadog_api_client.v1.model.creator.Creator"><em>Creator</em></a><em>, </em><em>optional</em>) – Object describing the creator of the shared element.</p></li>
 <li><p><strong>description</strong> (<em>str</em><em>, </em><em>optional</em>) – Description of the correction being made.</p></li>
 <li><p><strong>duration</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Length of time (in seconds) for a specified <code class="docutils literal notranslate"><span class="pre">rrule</span></code> recurring SLO correction.</p></li>
 <li><p><strong>end</strong> (<em>int</em><em>, </em><em>optional</em>) – Ending time of the correction in epoch seconds.</p></li>
 <li><p><strong>modified_at</strong> (<em>int</em><em>, </em><em>optional</em>) – The epoch timestamp of when the correction was modified at.</p></li>
 <li><p><strong>modifier</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.slo_correction_response_attributes_modifier.SLOCorrectionResponseAttributesModifier" title="datadog_api_client.v1.model.slo_correction_response_attributes_modifier.SLOCorrectionResponseAttributesModifier"><em>SLOCorrectionResponseAttributesModifier</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Modifier of the object.</p></li>
 <li><p><strong>rrule</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The recurrence rules as defined in the iCalendar RFC 5545. The supported rules for SLO corrections
-are <code class="docutils literal notranslate"><span class="pre">FREQ</span></code>, <code class="docutils literal notranslate"><span class="pre">INTERVAL</span></code>, <code class="docutils literal notranslate"><span class="pre">COUNT</span></code>, and <code class="docutils literal notranslate"><span class="pre">UNTIL</span></code>.</p></li>
+are <code class="docutils literal notranslate"><span class="pre">FREQ</span></code> , <code class="docutils literal notranslate"><span class="pre">INTERVAL</span></code> , <code class="docutils literal notranslate"><span class="pre">COUNT</span></code> , and <code class="docutils literal notranslate"><span class="pre">UNTIL</span></code>.</p></li>
 <li><p><strong>slo_id</strong> (<em>str</em><em>, </em><em>optional</em>) – ID of the SLO that this correction applies to.</p></li>
 <li><p><strong>start</strong> (<em>int</em><em>, </em><em>optional</em>) – Starting time of the correction in epoch seconds.</p></li>
 <li><p><strong>timezone</strong> (<em>str</em><em>, </em><em>optional</em>) – The timezone to display in the UI for the correction times (defaults to “UTC”).</p></li>
@@ -10677,7 +10677,7 @@ are <code class="docutils literal notranslate"><span class="pre">FREQ</span></co
 <li><p><strong>duration</strong> (<em>int</em><em>, </em><em>optional</em>) – Length of time (in seconds) for a specified <code class="docutils literal notranslate"><span class="pre">rrule</span></code> recurring SLO correction.</p></li>
 <li><p><strong>end</strong> (<em>int</em><em>, </em><em>optional</em>) – Ending time of the correction in epoch seconds.</p></li>
 <li><p><strong>rrule</strong> (<em>str</em><em>, </em><em>optional</em>) – The recurrence rules as defined in the iCalendar RFC 5545. The supported rules for SLO corrections
-are <code class="docutils literal notranslate"><span class="pre">FREQ</span></code>, <code class="docutils literal notranslate"><span class="pre">INTERVAL</span></code>, <code class="docutils literal notranslate"><span class="pre">COUNT</span></code>, and <code class="docutils literal notranslate"><span class="pre">UNTIL</span></code>.</p></li>
+are <code class="docutils literal notranslate"><span class="pre">FREQ</span></code> , <code class="docutils literal notranslate"><span class="pre">INTERVAL</span></code> , <code class="docutils literal notranslate"><span class="pre">COUNT</span></code> , and <code class="docutils literal notranslate"><span class="pre">UNTIL</span></code>.</p></li>
 <li><p><strong>start</strong> (<em>int</em><em>, </em><em>optional</em>) – Starting time of the correction in epoch seconds.</p></li>
 <li><p><strong>timezone</strong> (<em>str</em><em>, </em><em>optional</em>) – The timezone to display in the UI for the correction times (defaults to “UTC”).</p></li>
 </ul>
@@ -10806,7 +10806,7 @@ If a metric query only has one unit object, the second array element is null.</p
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>family</strong> (<em>str</em><em>, </em><em>optional</em>) – The family of metric unit, for example <code class="docutils literal notranslate"><span class="pre">bytes</span></code> is the family for <code class="docutils literal notranslate"><span class="pre">kibibyte</span></code>, <code class="docutils literal notranslate"><span class="pre">byte</span></code>, and <code class="docutils literal notranslate"><span class="pre">bit</span></code> units.</p></li>
+<li><p><strong>family</strong> (<em>str</em><em>, </em><em>optional</em>) – The family of metric unit, for example <code class="docutils literal notranslate"><span class="pre">bytes</span></code> is the family for <code class="docutils literal notranslate"><span class="pre">kibibyte</span></code> , <code class="docutils literal notranslate"><span class="pre">byte</span></code> , and <code class="docutils literal notranslate"><span class="pre">bit</span></code> units.</p></li>
 <li><p><strong>id</strong> (<em>int</em><em>, </em><em>optional</em>) – The ID of the metric unit.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – The unit of the metric, for instance <code class="docutils literal notranslate"><span class="pre">byte</span></code>.</p></li>
 <li><p><strong>plural</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The plural Unit of metric, for instance <code class="docutils literal notranslate"><span class="pre">bytes</span></code>.</p></li>
@@ -10891,7 +10891,7 @@ This can also represent the SLI value for a specific monitor in multi-monitor SL
 <li><p><strong>thresholds</strong> (<em>{str:</em><em> (</em><a class="reference internal" href="#datadog_api_client.v1.model.slo_threshold.SLOThreshold" title="datadog_api_client.v1.model.slo_threshold.SLOThreshold"><em>SLOThreshold</em></a><em>,</em><em>)</em><em>}</em><em>, </em><em>optional</em>) – mapping of string timeframe to the SLO threshold.</p></li>
 <li><p><strong>to_ts</strong> (<em>int</em><em>, </em><em>optional</em>) – The <code class="docutils literal notranslate"><span class="pre">to</span></code> timestamp in epoch seconds.</p></li>
 <li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.slo_type.SLOType" title="datadog_api_client.v1.model.slo_type.SLOType"><em>SLOType</em></a><em>, </em><em>optional</em>) – The type of the service level objective.</p></li>
-<li><p><strong>type_id</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.slo_type_numeric.SLOTypeNumeric" title="datadog_api_client.v1.model.slo_type_numeric.SLOTypeNumeric"><em>SLOTypeNumeric</em></a><em>, </em><em>optional</em>) – A numeric representation of the type of the service level objective (<code class="docutils literal notranslate"><span class="pre">0</span></code> for
+<li><p><strong>type_id</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.slo_type_numeric.SLOTypeNumeric" title="datadog_api_client.v1.model.slo_type_numeric.SLOTypeNumeric"><em>SLOTypeNumeric</em></a><em>, </em><em>optional</em>) – A numeric representation of the type of the service level objective ( <code class="docutils literal notranslate"><span class="pre">0</span></code> for
 monitor, <code class="docutils literal notranslate"><span class="pre">1</span></code> for metric). Always included in service level objective responses.
 Ignored in create/update requests.</p></li>
 </ul>
@@ -11020,7 +11020,7 @@ used.</p></li>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.slo_response_data.SLOResponseData" title="datadog_api_client.v1.model.slo_response_data.SLOResponseData"><em>SLOResponseData</em></a><em>, </em><em>optional</em>) – A service level objective object includes a service level indicator, thresholds
-for one or more timeframes, and metadata (<code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">description</span></code>, <code class="docutils literal notranslate"><span class="pre">tags</span></code>, etc.).</p></li>
+for one or more timeframes, and metadata ( <code class="docutils literal notranslate"><span class="pre">name</span></code> , <code class="docutils literal notranslate"><span class="pre">description</span></code> , <code class="docutils literal notranslate"><span class="pre">tags</span></code> , etc.).</p></li>
 <li><p><strong>errors</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – An array of error messages. Each endpoint documents how/whether this field is
 used.</p></li>
 </ul>
@@ -11035,7 +11035,7 @@ used.</p></li>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SLOResponseData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.slo_response_data.SLOResponseData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">datadog_api_client.model_utils.ModelNormal</span></code></a></p>
 <p>A service level objective object includes a service level indicator, thresholds
-for one or more timeframes, and metadata (<code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">description</span></code>, <code class="docutils literal notranslate"><span class="pre">tags</span></code>, etc.).</p>
+for one or more timeframes, and metadata ( <code class="docutils literal notranslate"><span class="pre">name</span></code> , <code class="docutils literal notranslate"><span class="pre">description</span></code> , <code class="docutils literal notranslate"><span class="pre">tags</span></code> , etc.).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -11043,9 +11043,9 @@ for one or more timeframes, and metadata (<code class="docutils literal notransl
 <li><p><strong>created_at</strong> (<em>int</em><em>, </em><em>optional</em>) – <p>Creation timestamp (UNIX time in seconds)</p>
 <p>Always included in service level objective responses.</p>
 </p></li>
-<li><p><strong>creator</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.creator.Creator" title="datadog_api_client.v2.model.creator.Creator"><em>Creator</em></a><em>, </em><em>optional</em>) – Object describing the creator of the shared element.</p></li>
+<li><p><strong>creator</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.creator.Creator" title="datadog_api_client.v1.model.creator.Creator"><em>Creator</em></a><em>, </em><em>optional</em>) – Object describing the creator of the shared element.</p></li>
 <li><p><strong>description</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – <p>A user-defined description of the service level objective.</p>
-<p>Always included in service level objective responses (but may be <code class="docutils literal notranslate"><span class="pre">null</span></code>).
+<p>Always included in service level objective responses (but may be <code class="docutils literal notranslate"><span class="pre">null</span></code> ).
 Optional in create/update requests.</p>
 </p></li>
 <li><p><strong>groups</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – <p>A list of (up to 20) monitor groups that narrow the scope of a monitor service level objective.</p>
@@ -11095,7 +11095,7 @@ objective object.</p></li>
 <li><p><strong>target</strong> (<em>float</em>) – The target value for the service level indicator within the corresponding
 timeframe.</p></li>
 <li><p><strong>target_display</strong> (<em>str</em><em>, </em><em>optional</em>) – <p>A string representation of the target that indicates its precision.
-It uses trailing zeros to show significant decimal places (for example <code class="docutils literal notranslate"><span class="pre">98.00</span></code>).</p>
+It uses trailing zeros to show significant decimal places (for example <code class="docutils literal notranslate"><span class="pre">98.00</span></code> ).</p>
 <p>Always included in service level objective responses. Ignored in
 create/update requests.</p>
 </p></li>
@@ -11415,10 +11415,10 @@ Can be used only if <code class="docutils literal notranslate"><span class="pre"
 <li><p><strong>name</strong> (<em>str</em>) – Name of the test.</p></li>
 <li><p><strong>options</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_options.SyntheticsTestOptions" title="datadog_api_client.v1.model.synthetics_test_options.SyntheticsTestOptions"><em>SyntheticsTestOptions</em></a>) – Object describing the extra options for a Synthetic test.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The public ID for the test.</p></li>
-<li><p><strong>status</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_pause_status.SyntheticsTestPauseStatus" title="datadog_api_client.v1.model.synthetics_test_pause_status.SyntheticsTestPauseStatus"><em>SyntheticsTestPauseStatus</em></a><em>, </em><em>optional</em>) – Define whether you want to start (<code class="docutils literal notranslate"><span class="pre">live</span></code>) or pause (<code class="docutils literal notranslate"><span class="pre">paused</span></code>) a
+<li><p><strong>status</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_pause_status.SyntheticsTestPauseStatus" title="datadog_api_client.v1.model.synthetics_test_pause_status.SyntheticsTestPauseStatus"><em>SyntheticsTestPauseStatus</em></a><em>, </em><em>optional</em>) – Define whether you want to start ( <code class="docutils literal notranslate"><span class="pre">live</span></code> ) or pause ( <code class="docutils literal notranslate"><span class="pre">paused</span></code> ) a
 Synthetic test.</p></li>
-<li><p><strong>subtype</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_details_sub_type.SyntheticsTestDetailsSubType" title="datadog_api_client.v1.model.synthetics_test_details_sub_type.SyntheticsTestDetailsSubType"><em>SyntheticsTestDetailsSubType</em></a><em>, </em><em>optional</em>) – The subtype of the Synthetic API test, <code class="docutils literal notranslate"><span class="pre">http</span></code>, <code class="docutils literal notranslate"><span class="pre">ssl</span></code>, <code class="docutils literal notranslate"><span class="pre">tcp</span></code>,
-<code class="docutils literal notranslate"><span class="pre">dns</span></code>, <code class="docutils literal notranslate"><span class="pre">icmp</span></code>, <code class="docutils literal notranslate"><span class="pre">udp</span></code>, <code class="docutils literal notranslate"><span class="pre">websocket</span></code>, <code class="docutils literal notranslate"><span class="pre">grpc</span></code> or <code class="docutils literal notranslate"><span class="pre">multi</span></code>.</p></li>
+<li><p><strong>subtype</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_details_sub_type.SyntheticsTestDetailsSubType" title="datadog_api_client.v1.model.synthetics_test_details_sub_type.SyntheticsTestDetailsSubType"><em>SyntheticsTestDetailsSubType</em></a><em>, </em><em>optional</em>) – The subtype of the Synthetic API test, <code class="docutils literal notranslate"><span class="pre">http</span></code> , <code class="docutils literal notranslate"><span class="pre">ssl</span></code> , <code class="docutils literal notranslate"><span class="pre">tcp</span></code> ,
+<code class="docutils literal notranslate"><span class="pre">dns</span></code> , <code class="docutils literal notranslate"><span class="pre">icmp</span></code> , <code class="docutils literal notranslate"><span class="pre">udp</span></code> , <code class="docutils literal notranslate"><span class="pre">websocket</span></code> , <code class="docutils literal notranslate"><span class="pre">grpc</span></code> or <code class="docutils literal notranslate"><span class="pre">multi</span></code>.</p></li>
 <li><p><strong>tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Array of tags attached to the test.</p></li>
 <li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_api_test_type.SyntheticsAPITestType" title="datadog_api_client.v1.model.synthetics_api_test_type.SyntheticsAPITestType"><em>SyntheticsAPITestType</em></a>) – Type of the Synthetic test, <code class="docutils literal notranslate"><span class="pre">api</span></code>.</p></li>
 </ul>
@@ -11439,7 +11439,7 @@ Synthetic test.</p></li>
 <li><p><strong>assertions</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.synthetics_assertion.SyntheticsAssertion" title="datadog_api_client.v1.model.synthetics_assertion.SyntheticsAssertion"><em>SyntheticsAssertion</em></a><em>]</em><em>, </em><em>optional</em>) – Array of assertions used for the test. Required for single API tests.</p></li>
 <li><p><strong>config_variables</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.synthetics_config_variable.SyntheticsConfigVariable" title="datadog_api_client.v1.model.synthetics_config_variable.SyntheticsConfigVariable"><em>SyntheticsConfigVariable</em></a><em>]</em><em>, </em><em>optional</em>) – Array of variables used for the test.</p></li>
 <li><p><strong>request</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_request.SyntheticsTestRequest" title="datadog_api_client.v1.model.synthetics_test_request.SyntheticsTestRequest"><em>SyntheticsTestRequest</em></a><em>, </em><em>optional</em>) – Object describing the Synthetic test request.</p></li>
-<li><p><strong>steps</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.synthetics_api_step.SyntheticsAPIStep" title="datadog_api_client.v1.model.synthetics_api_step.SyntheticsAPIStep"><em>SyntheticsAPIStep</em></a><em>]</em><em>, </em><em>optional</em>) – When the test subtype is <code class="docutils literal notranslate"><span class="pre">multi</span></code>, the steps of the test.</p></li>
+<li><p><strong>steps</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.synthetics_api_step.SyntheticsAPIStep" title="datadog_api_client.v1.model.synthetics_api_step.SyntheticsAPIStep"><em>SyntheticsAPIStep</em></a><em>]</em><em>, </em><em>optional</em>) – When the test subtype is <code class="docutils literal notranslate"><span class="pre">multi</span></code> , the steps of the test.</p></li>
 </ul>
 </dd>
 </dl>
@@ -11962,7 +11962,7 @@ which property they apply, and upon which target.</p>
 <li><p><strong>name</strong> (<em>str</em>) – Name of the test.</p></li>
 <li><p><strong>options</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_options.SyntheticsTestOptions" title="datadog_api_client.v1.model.synthetics_test_options.SyntheticsTestOptions"><em>SyntheticsTestOptions</em></a>) – Object describing the extra options for a Synthetic test.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The public ID of the test.</p></li>
-<li><p><strong>status</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_pause_status.SyntheticsTestPauseStatus" title="datadog_api_client.v1.model.synthetics_test_pause_status.SyntheticsTestPauseStatus"><em>SyntheticsTestPauseStatus</em></a><em>, </em><em>optional</em>) – Define whether you want to start (<code class="docutils literal notranslate"><span class="pre">live</span></code>) or pause (<code class="docutils literal notranslate"><span class="pre">paused</span></code>) a
+<li><p><strong>status</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_pause_status.SyntheticsTestPauseStatus" title="datadog_api_client.v1.model.synthetics_test_pause_status.SyntheticsTestPauseStatus"><em>SyntheticsTestPauseStatus</em></a><em>, </em><em>optional</em>) – Define whether you want to start ( <code class="docutils literal notranslate"><span class="pre">live</span></code> ) or pause ( <code class="docutils literal notranslate"><span class="pre">paused</span></code> ) a
 Synthetic test.</p></li>
 <li><p><strong>steps</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.synthetics_step.SyntheticsStep" title="datadog_api_client.v1.model.synthetics_step.SyntheticsStep"><em>SyntheticsStep</em></a><em>]</em><em>, </em><em>optional</em>) – The steps of the test.</p></li>
 <li><p><strong>tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Array of tags attached to the test.</p></li>
@@ -12570,7 +12570,7 @@ deletion timestamp.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>field</strong> (<em>str</em><em>, </em><em>optional</em>) – When type is <code class="docutils literal notranslate"><span class="pre">http_header</span></code>, name of the header to use to extract the value.</p></li>
+<li><p><strong>field</strong> (<em>str</em><em>, </em><em>optional</em>) – When type is <code class="docutils literal notranslate"><span class="pre">http_header</span></code> , name of the header to use to extract the value.</p></li>
 <li><p><strong>parser</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_variable_parser.SyntheticsVariableParser" title="datadog_api_client.v1.model.synthetics_variable_parser.SyntheticsVariableParser"><em>SyntheticsVariableParser</em></a>) – Details of the parser to use for the global variable.</p></li>
 <li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_global_variable_parse_test_options_type.SyntheticsGlobalVariableParseTestOptionsType" title="datadog_api_client.v1.model.synthetics_global_variable_parse_test_options_type.SyntheticsGlobalVariableParseTestOptionsType"><em>SyntheticsGlobalVariableParseTestOptionsType</em></a>) – Property of the Synthetics Test Response to use for a Synthetics global variable.</p></li>
 </ul>
@@ -12696,7 +12696,7 @@ test.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>field</strong> (<em>str</em><em>, </em><em>optional</em>) – When type is <code class="docutils literal notranslate"><span class="pre">http_header</span></code>, name of the header to use to extract the value.</p></li>
+<li><p><strong>field</strong> (<em>str</em><em>, </em><em>optional</em>) – When type is <code class="docutils literal notranslate"><span class="pre">http_header</span></code> , name of the header to use to extract the value.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the variable to extract.</p></li>
 <li><p><strong>parser</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_variable_parser.SyntheticsVariableParser" title="datadog_api_client.v1.model.synthetics_variable_parser.SyntheticsVariableParser"><em>SyntheticsVariableParser</em></a><em>, </em><em>optional</em>) – Details of the parser to use for the global variable.</p></li>
 <li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_global_variable_parse_test_options_type.SyntheticsGlobalVariableParseTestOptionsType" title="datadog_api_client.v1.model.synthetics_global_variable_parse_test_options_type.SyntheticsGlobalVariableParseTestOptionsType"><em>SyntheticsGlobalVariableParseTestOptionsType</em></a><em>, </em><em>optional</em>) – Property of the Synthetics Test Response to use for a Synthetics global variable.</p></li>
@@ -13051,18 +13051,18 @@ test.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>config</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_config.SyntheticsTestConfig" title="datadog_api_client.v1.model.synthetics_test_config.SyntheticsTestConfig"><em>SyntheticsTestConfig</em></a><em>, </em><em>optional</em>) – Configuration object for a Synthetic test.</p></li>
-<li><p><strong>creator</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.creator.Creator" title="datadog_api_client.v2.model.creator.Creator"><em>Creator</em></a><em>, </em><em>optional</em>) – Object describing the creator of the shared element.</p></li>
+<li><p><strong>creator</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.creator.Creator" title="datadog_api_client.v1.model.creator.Creator"><em>Creator</em></a><em>, </em><em>optional</em>) – Object describing the creator of the shared element.</p></li>
 <li><p><strong>locations</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Array of locations used to run the test.</p></li>
 <li><p><strong>message</strong> (<em>str</em><em>, </em><em>optional</em>) – Notification message associated with the test.</p></li>
 <li><p><strong>monitor_id</strong> (<em>int</em><em>, </em><em>optional</em>) – The associated monitor ID.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the test.</p></li>
 <li><p><strong>options</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_options.SyntheticsTestOptions" title="datadog_api_client.v1.model.synthetics_test_options.SyntheticsTestOptions"><em>SyntheticsTestOptions</em></a><em>, </em><em>optional</em>) – Object describing the extra options for a Synthetic test.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The test public ID.</p></li>
-<li><p><strong>status</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_pause_status.SyntheticsTestPauseStatus" title="datadog_api_client.v1.model.synthetics_test_pause_status.SyntheticsTestPauseStatus"><em>SyntheticsTestPauseStatus</em></a><em>, </em><em>optional</em>) – Define whether you want to start (<code class="docutils literal notranslate"><span class="pre">live</span></code>) or pause (<code class="docutils literal notranslate"><span class="pre">paused</span></code>) a
+<li><p><strong>status</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_pause_status.SyntheticsTestPauseStatus" title="datadog_api_client.v1.model.synthetics_test_pause_status.SyntheticsTestPauseStatus"><em>SyntheticsTestPauseStatus</em></a><em>, </em><em>optional</em>) – Define whether you want to start ( <code class="docutils literal notranslate"><span class="pre">live</span></code> ) or pause ( <code class="docutils literal notranslate"><span class="pre">paused</span></code> ) a
 Synthetic test.</p></li>
 <li><p><strong>steps</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.synthetics_step.SyntheticsStep" title="datadog_api_client.v1.model.synthetics_step.SyntheticsStep"><em>SyntheticsStep</em></a><em>]</em><em>, </em><em>optional</em>) – For browser test, the steps of the test.</p></li>
-<li><p><strong>subtype</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_details_sub_type.SyntheticsTestDetailsSubType" title="datadog_api_client.v1.model.synthetics_test_details_sub_type.SyntheticsTestDetailsSubType"><em>SyntheticsTestDetailsSubType</em></a><em>, </em><em>optional</em>) – The subtype of the Synthetic API test, <code class="docutils literal notranslate"><span class="pre">http</span></code>, <code class="docutils literal notranslate"><span class="pre">ssl</span></code>, <code class="docutils literal notranslate"><span class="pre">tcp</span></code>,
-<code class="docutils literal notranslate"><span class="pre">dns</span></code>, <code class="docutils literal notranslate"><span class="pre">icmp</span></code>, <code class="docutils literal notranslate"><span class="pre">udp</span></code>, <code class="docutils literal notranslate"><span class="pre">websocket</span></code>, <code class="docutils literal notranslate"><span class="pre">grpc</span></code> or <code class="docutils literal notranslate"><span class="pre">multi</span></code>.</p></li>
+<li><p><strong>subtype</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_details_sub_type.SyntheticsTestDetailsSubType" title="datadog_api_client.v1.model.synthetics_test_details_sub_type.SyntheticsTestDetailsSubType"><em>SyntheticsTestDetailsSubType</em></a><em>, </em><em>optional</em>) – The subtype of the Synthetic API test, <code class="docutils literal notranslate"><span class="pre">http</span></code> , <code class="docutils literal notranslate"><span class="pre">ssl</span></code> , <code class="docutils literal notranslate"><span class="pre">tcp</span></code> ,
+<code class="docutils literal notranslate"><span class="pre">dns</span></code> , <code class="docutils literal notranslate"><span class="pre">icmp</span></code> , <code class="docutils literal notranslate"><span class="pre">udp</span></code> , <code class="docutils literal notranslate"><span class="pre">websocket</span></code> , <code class="docutils literal notranslate"><span class="pre">grpc</span></code> or <code class="docutils literal notranslate"><span class="pre">multi</span></code>.</p></li>
 <li><p><strong>tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Array of tags attached to the test.</p></li>
 <li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_details_type.SyntheticsTestDetailsType" title="datadog_api_client.v1.model.synthetics_test_details_type.SyntheticsTestDetailsType"><em>SyntheticsTestDetailsType</em></a><em>, </em><em>optional</em>) – Type of the Synthetic test, either <code class="docutils literal notranslate"><span class="pre">api</span></code> or <code class="docutils literal notranslate"><span class="pre">browser</span></code>.</p></li>
 </ul>
@@ -13471,7 +13471,7 @@ Learn more about those metrics in <a class="reference external" href="https://do
 <p>Object to start or pause an existing Synthetic test.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>new_status</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_pause_status.SyntheticsTestPauseStatus" title="datadog_api_client.v1.model.synthetics_test_pause_status.SyntheticsTestPauseStatus"><em>SyntheticsTestPauseStatus</em></a><em>, </em><em>optional</em>) – Define whether you want to start (<code class="docutils literal notranslate"><span class="pre">live</span></code>) or pause (<code class="docutils literal notranslate"><span class="pre">paused</span></code>) a
+<dd class="field-odd"><p><strong>new_status</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_pause_status.SyntheticsTestPauseStatus" title="datadog_api_client.v1.model.synthetics_test_pause_status.SyntheticsTestPauseStatus"><em>SyntheticsTestPauseStatus</em></a><em>, </em><em>optional</em>) – Define whether you want to start ( <code class="docutils literal notranslate"><span class="pre">live</span></code> ) or pause ( <code class="docutils literal notranslate"><span class="pre">paused</span></code> ) a
 Synthetic test.</p>
 </dd>
 </dl>
@@ -14618,7 +14618,7 @@ these are counted as billable (except during trial periods).</p></li>
 (and were NOT running the Datadog Agent).</p></li>
 <li><p><strong>heroku_host_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the total number of Heroku dynos reported by the Datadog Agent.</p></li>
 <li><p><strong>host_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the total number of billable infrastructure hosts reporting during a given hour.
-This is the sum of <code class="docutils literal notranslate"><span class="pre">agent_host_count</span></code>, <code class="docutils literal notranslate"><span class="pre">aws_host_count</span></code>, and <code class="docutils literal notranslate"><span class="pre">gcp_host_count</span></code>.</p></li>
+This is the sum of <code class="docutils literal notranslate"><span class="pre">agent_host_count</span></code> , <code class="docutils literal notranslate"><span class="pre">aws_host_count</span></code> , and <code class="docutils literal notranslate"><span class="pre">gcp_host_count</span></code>.</p></li>
 <li><p><strong>hour</strong> (<em>datetime</em><em>, </em><em>optional</em>) – The hour for the usage.</p></li>
 <li><p><strong>infra_azure_app_service</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the total number of hosts that reported through the Azure App Services integration
 (and were NOT running the Datadog Agent).</p></li>
@@ -15837,7 +15837,7 @@ for each hour for a given organization.</p>
 <p>Array of Datadog users for a given organization.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>users</strong> (<em>[</em><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user.User" title="datadog_api_client.v2.model.user.User"><em>User</em></a><em>]</em><em>, </em><em>optional</em>) – Array of users.</p>
+<dd class="field-odd"><p><strong>users</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.user.User" title="datadog_api_client.v1.model.user.User"><em>User</em></a><em>]</em><em>, </em><em>optional</em>) – Array of users.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -15851,7 +15851,7 @@ for each hour for a given organization.</p>
 <p>A Datadog User.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>user</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user.User" title="datadog_api_client.v2.model.user.User"><em>User</em></a><em>, </em><em>optional</em>) – Create, edit, and disable users.</p>
+<dd class="field-odd"><p><strong>user</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.user.User" title="datadog_api_client.v1.model.user.User"><em>User</em></a><em>, </em><em>optional</em>) – Create, edit, and disable users.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -15866,13 +15866,13 @@ for each hour for a given organization.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>custom_headers</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – If <code class="docutils literal notranslate"><span class="pre">null</span></code>, uses no header.
+<li><p><strong>custom_headers</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – If <code class="docutils literal notranslate"><span class="pre">null</span></code> , uses no header.
 If given a JSON payload, these will be headers attached to your webhook.</p></li>
 <li><p><strong>encode_as</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.webhooks_integration_encoding.WebhooksIntegrationEncoding" title="datadog_api_client.v1.model.webhooks_integration_encoding.WebhooksIntegrationEncoding"><em>WebhooksIntegrationEncoding</em></a><em>, </em><em>optional</em>) – Encoding type. Can be given either <code class="docutils literal notranslate"><span class="pre">json</span></code> or <code class="docutils literal notranslate"><span class="pre">form</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The name of the webhook. It corresponds with <code class="docutils literal notranslate"><span class="pre">&lt;WEBHOOK_NAME&gt;</span></code>.
 Learn more on how to use it in
 <a class="reference external" href="https://docs.datadoghq.com/monitors/notify">monitor notifications</a>.</p></li>
-<li><p><strong>payload</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – If <code class="docutils literal notranslate"><span class="pre">null</span></code>, uses the default payload.
+<li><p><strong>payload</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – If <code class="docutils literal notranslate"><span class="pre">null</span></code> , uses the default payload.
 If given a JSON payload, the webhook returns the payload
 specified by the given payload.
 <a class="reference external" href="https://docs.datadoghq.com/integrations/webhooks/#usage">Webhooks variable usage</a>.</p></li>
@@ -15966,14 +15966,14 @@ If the custom variable is secret, the value is not returned in the response payl
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>custom_headers</strong> (<em>str</em><em>, </em><em>optional</em>) – If <code class="docutils literal notranslate"><span class="pre">null</span></code>, uses no header.
+<li><p><strong>custom_headers</strong> (<em>str</em><em>, </em><em>optional</em>) – If <code class="docutils literal notranslate"><span class="pre">null</span></code> , uses no header.
 If given a JSON payload, these will be headers attached to your webhook.</p></li>
 <li><p><strong>encode_as</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.webhooks_integration_encoding.WebhooksIntegrationEncoding" title="datadog_api_client.v1.model.webhooks_integration_encoding.WebhooksIntegrationEncoding"><em>WebhooksIntegrationEncoding</em></a><em>, </em><em>optional</em>) – Encoding type. Can be given either <code class="docutils literal notranslate"><span class="pre">json</span></code> or <code class="docutils literal notranslate"><span class="pre">form</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – <p>The name of the webhook. It corresponds with <code class="docutils literal notranslate"><span class="pre">&lt;WEBHOOK_NAME&gt;</span></code>.
 Learn more on how to use it in
 <a class="reference external" href="https://docs.datadoghq.com/monitors/notify">monitor notifications</a>.</p>
 </p></li>
-<li><p><strong>payload</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – <p>If <code class="docutils literal notranslate"><span class="pre">null</span></code>, uses the default payload.
+<li><p><strong>payload</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – <p>If <code class="docutils literal notranslate"><span class="pre">null</span></code> , uses the default payload.
 If given a JSON payload, the webhook returns the payload
 specified by the given payload.
 <a class="reference external" href="https://docs.datadoghq.com/integrations/webhooks/#usage">Webhooks variable usage</a>.</p>
@@ -15992,7 +15992,7 @@ specified by the given payload.
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">datadog_api_client.model_utils.ModelNormal</span></code></a></p>
 <p>Information about widget.</p>
 <dl>
-<dt><strong>Note</strong><span class="classifier">The <code class="docutils literal notranslate"><span class="pre">layout</span></code> property is required for widgets in dashboards with <code class="docutils literal notranslate"><span class="pre">free</span></code> <code class="docutils literal notranslate"><span class="pre">layout_type</span></code>.</span></dt><dd><p>For the <strong>new dashboard layout</strong>, the <code class="docutils literal notranslate"><span class="pre">layout</span></code> property depends on the <code class="docutils literal notranslate"><span class="pre">reflow_type</span></code> of the dashboard.</p>
+<dt><strong>Note</strong><span class="classifier">The <code class="docutils literal notranslate"><span class="pre">layout</span></code> property is required for widgets in dashboards with <code class="docutils literal notranslate"><span class="pre">free</span></code> <code class="docutils literal notranslate"><span class="pre">layout_type</span></code>.</span></dt><dd><p>For the <strong>new dashboard layout</strong> , the <code class="docutils literal notranslate"><span class="pre">layout</span></code> property depends on the <code class="docutils literal notranslate"><span class="pre">reflow_type</span></code> of the dashboard.</p>
 </dd>
 </dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- If `reflow_type` is `fixed`, `layout` is required.
@@ -16039,7 +16039,7 @@ specified by the given payload.
 <li><p><strong>label</strong> (<em>str</em><em>, </em><em>optional</em>) – The label of the axis to display on the graph.</p></li>
 <li><p><strong>max</strong> (<em>str</em><em>, </em><em>optional</em>) – Specifies the maximum value to show on the y-axis. It takes a number, or auto for default behavior.</p></li>
 <li><p><strong>min</strong> (<em>str</em><em>, </em><em>optional</em>) – Specifies minimum value to show on the y-axis. It takes a number, or auto for default behavior.</p></li>
-<li><p><strong>scale</strong> (<em>str</em><em>, </em><em>optional</em>) – Specifies the scale type. Possible values are <code class="docutils literal notranslate"><span class="pre">linear</span></code>, <code class="docutils literal notranslate"><span class="pre">log</span></code>, <code class="docutils literal notranslate"><span class="pre">sqrt</span></code>, <code class="docutils literal notranslate"><span class="pre">pow##</span></code> (for example <code class="docutils literal notranslate"><span class="pre">pow2</span></code>, <code class="docutils literal notranslate"><span class="pre">pow0.5</span></code> etc.).</p></li>
+<li><p><strong>scale</strong> (<em>str</em><em>, </em><em>optional</em>) – Specifies the scale type. Possible values are <code class="docutils literal notranslate"><span class="pre">linear</span></code> , <code class="docutils literal notranslate"><span class="pre">log</span></code> , <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> , <code class="docutils literal notranslate"><span class="pre">pow##</span></code> (for example <code class="docutils literal notranslate"><span class="pre">pow2</span></code> , <code class="docutils literal notranslate"><span class="pre">pow0.5</span></code> etc.).</p></li>
 </ul>
 </dd>
 </dl>
@@ -16142,7 +16142,7 @@ specified by the given payload.
 <li><p><strong>is_hidden</strong> (<em>bool</em><em>, </em><em>optional</em>) – The flag for toggling context menu link visibility.</p></li>
 <li><p><strong>label</strong> (<em>str</em><em>, </em><em>optional</em>) – The label for the custom link URL. Keep the label short and descriptive. Use metrics and tags as variables.</p></li>
 <li><p><strong>link</strong> (<em>str</em><em>, </em><em>optional</em>) – The URL of the custom link. URL must include <code class="docutils literal notranslate"><span class="pre">http</span></code> or <code class="docutils literal notranslate"><span class="pre">https</span></code>. A relative URL must start with <code class="docutils literal notranslate"><span class="pre">/</span></code>.</p></li>
-<li><p><strong>override_label</strong> (<em>str</em><em>, </em><em>optional</em>) – The label ID that refers to a context menu link. Can be <code class="docutils literal notranslate"><span class="pre">logs</span></code>, <code class="docutils literal notranslate"><span class="pre">hosts</span></code>, <code class="docutils literal notranslate"><span class="pre">traces</span></code>, <code class="docutils literal notranslate"><span class="pre">profiles</span></code>, <code class="docutils literal notranslate"><span class="pre">processes</span></code>, <code class="docutils literal notranslate"><span class="pre">containers</span></code>, or <code class="docutils literal notranslate"><span class="pre">rum</span></code>.</p></li>
+<li><p><strong>override_label</strong> (<em>str</em><em>, </em><em>optional</em>) – The label ID that refers to a context menu link. Can be <code class="docutils literal notranslate"><span class="pre">logs</span></code> , <code class="docutils literal notranslate"><span class="pre">hosts</span></code> , <code class="docutils literal notranslate"><span class="pre">traces</span></code> , <code class="docutils literal notranslate"><span class="pre">profiles</span></code> , <code class="docutils literal notranslate"><span class="pre">processes</span></code> , <code class="docutils literal notranslate"><span class="pre">containers</span></code> , or <code class="docutils literal notranslate"><span class="pre">rum</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -16364,7 +16364,7 @@ to learn how to build the <code class="docutils literal notranslate"><span class
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>count</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of results to return.</p></li>
-<li><p><strong>order</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.query_sort_order.QuerySortOrder" title="datadog_api_client.v2.model.query_sort_order.QuerySortOrder"><em>QuerySortOrder</em></a><em>, </em><em>optional</em>) – Direction of sort.</p></li>
+<li><p><strong>order</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.query_sort_order.QuerySortOrder" title="datadog_api_client.v1.model.query_sort_order.QuerySortOrder"><em>QuerySortOrder</em></a><em>, </em><em>optional</em>) – Direction of sort.</p></li>
 </ul>
 </dd>
 </dl>
@@ -16428,7 +16428,7 @@ to learn how to build the <code class="docutils literal notranslate"><span class
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>height</strong> (<em>int</em>) – The height of the widget. Should be a non-negative integer.</p></li>
 <li><p><strong>is_column_break</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether the widget should be the first one on the second column in high density or not.
-<strong>Note</strong>: Only for the <strong>new dashboard layout</strong> and only one widget in the dashboard should have this property set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<strong>Note</strong> : Only for the <strong>new dashboard layout</strong> and only one widget in the dashboard should have this property set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>width</strong> (<em>int</em>) – The width of the widget. Should be a non-negative integer.</p></li>
 <li><p><strong>x</strong> (<em>int</em>) – The position of the widget on the x (horizontal) axis. Should be a non-negative integer.</p></li>
 <li><p><strong>y</strong> (<em>int</em>) – The position of the widget on the y (vertical) axis. Should be a non-negative integer.</p></li>

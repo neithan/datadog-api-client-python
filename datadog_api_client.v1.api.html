@@ -592,8 +592,8 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.aws_tag_filter_create_request.AWSTagFilterCreateRequest" title="datadog_api_client.v1.model.aws_tag_filter_create_request.AWSTagFilterCreateRequest"><em>AWSTagFilterCreateRequest</em></a>) – Set an AWS tag filter using an <code class="docutils literal notranslate"><span class="pre">aws_account_identifier</span></code>, <code class="docutils literal notranslate"><span class="pre">namespace</span></code>, and filtering string.
-Namespace options are <code class="docutils literal notranslate"><span class="pre">application_elb</span></code>, <code class="docutils literal notranslate"><span class="pre">elb</span></code>, <code class="docutils literal notranslate"><span class="pre">lambda</span></code>, <code class="docutils literal notranslate"><span class="pre">network_elb</span></code>, <code class="docutils literal notranslate"><span class="pre">rds</span></code>, <code class="docutils literal notranslate"><span class="pre">sqs</span></code>, and <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p></li>
+<li><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.aws_tag_filter_create_request.AWSTagFilterCreateRequest" title="datadog_api_client.v1.model.aws_tag_filter_create_request.AWSTagFilterCreateRequest"><em>AWSTagFilterCreateRequest</em></a>) – Set an AWS tag filter using an <code class="docutils literal notranslate"><span class="pre">aws_account_identifier</span></code> , <code class="docutils literal notranslate"><span class="pre">namespace</span></code> , and filtering string.
+Namespace options are <code class="docutils literal notranslate"><span class="pre">application_elb</span></code> , <code class="docutils literal notranslate"><span class="pre">elb</span></code> , <code class="docutils literal notranslate"><span class="pre">lambda</span></code> , <code class="docutils literal notranslate"><span class="pre">network_elb</span></code> , <code class="docutils literal notranslate"><span class="pre">rds</span></code> , <code class="docutils literal notranslate"><span class="pre">sqs</span></code> , and <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
@@ -1391,7 +1391,7 @@ use. Default is read from the configuration.</p></li>
 <span class="sig-name descname"><span class="pre">update_azure_integration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.api.azure_integration_api.AzureIntegrationApi.update_azure_integration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update an Azure integration.</p>
 <p>Update a Datadog-Azure integration. Requires an existing <code class="docutils literal notranslate"><span class="pre">tenant_name</span></code> and <code class="docutils literal notranslate"><span class="pre">client_id</span></code>.
-Any other fields supplied will overwrite existing values. To overwrite <code class="docutils literal notranslate"><span class="pre">tenant_name</span></code> or <code class="docutils literal notranslate"><span class="pre">client_id</span></code>,
+Any other fields supplied will overwrite existing values. To overwrite <code class="docutils literal notranslate"><span class="pre">tenant_name</span></code> or <code class="docutils literal notranslate"><span class="pre">client_id</span></code> ,
 use <code class="docutils literal notranslate"><span class="pre">new_tenant_name</span></code> and <code class="docutils literal notranslate"><span class="pre">new_client_id</span></code>. To leave a field unchanged, do not supply that field in the payload.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
@@ -1815,7 +1815,7 @@ use. Default is read from the configuration.</p></li>
 <span class="sig-name descname"><span class="pre">list_dashboards</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.api.dashboards_api.DashboardsApi.list_dashboards" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get all dashboards.</p>
 <p>Get all dashboards.</p>
-<p><strong>Note</strong>: This query will only return custom created or cloned dashboards.
+<p><strong>Note</strong> : This query will only return custom created or cloned dashboards.
 This query will not return preset dashboards.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
@@ -1826,9 +1826,9 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>filter_shared</strong> (<em>bool</em><em>, </em><em>optional</em>) – When <code class="docutils literal notranslate"><span class="pre">true</span></code>, this query only returns shared custom created
+<li><p><strong>filter_shared</strong> (<em>bool</em><em>, </em><em>optional</em>) – When <code class="docutils literal notranslate"><span class="pre">true</span></code> , this query only returns shared custom created
 or cloned dashboards.</p></li>
-<li><p><strong>filter_deleted</strong> (<em>bool</em><em>, </em><em>optional</em>) – When <code class="docutils literal notranslate"><span class="pre">true</span></code>, this query returns only deleted custom-created
+<li><p><strong>filter_deleted</strong> (<em>bool</em><em>, </em><em>optional</em>) – When <code class="docutils literal notranslate"><span class="pre">true</span></code> , this query returns only deleted custom-created
 or cloned dashboards. This parameter is incompatible with <code class="docutils literal notranslate"><span class="pre">filter[shared]</span></code>.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
@@ -2286,8 +2286,8 @@ use. Default is read from the configuration.</p></li>
 <span class="sig-name descname"><span class="pre">get_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.api.events_api.EventsApi.get_event" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an event.</p>
 <p>This endpoint allows you to query for event details.</p>
-<p><strong>Note</strong>: If the event you’re querying contains markdown formatting of any kind,
-you may see characters such as <code class="docutils literal notranslate"><span class="pre">%</span></code>,<code class="docutils literal notranslate"><span class="pre">\</span></code>,<code class="docutils literal notranslate"><span class="pre">n</span></code> in your output.</p>
+<p><strong>Note</strong> : If the event you’re querying contains markdown formatting of any kind,
+you may see characters such as <code class="docutils literal notranslate"><span class="pre">%</span></code> , <code class="docutils literal notranslate"><span class="pre">\</span></code> , <code class="docutils literal notranslate"><span class="pre">n</span></code> in your output.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_event</span><span class="p">(</span><span class="n">event_id</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -2328,10 +2328,10 @@ use. Default is read from the configuration.</p></li>
 <span class="sig-name descname"><span class="pre">list_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.api.events_api.EventsApi.list_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Query the event stream.</p>
 <p>The event stream can be queried and filtered by time, priority, sources and tags.</p>
-<p><strong>Notes</strong>:</p>
+<p><strong>Notes</strong> :</p>
 <ul class="simple">
 <li><p>If the event you’re querying contains markdown formatting of any kind,
-you may see characters such as <code class="docutils literal notranslate"><span class="pre">%</span></code>,<code class="docutils literal notranslate"><span class="pre">\</span></code>,<code class="docutils literal notranslate"><span class="pre">n</span></code> in your output.</p></li>
+you may see characters such as <code class="docutils literal notranslate"><span class="pre">%</span></code> , <code class="docutils literal notranslate"><span class="pre">\</span></code> , <code class="docutils literal notranslate"><span class="pre">n</span></code> in your output.</p></li>
 <li><p>This endpoint returns a maximum of <code class="docutils literal notranslate"><span class="pre">1000</span></code> most recent results. To return additional results,
 identify the last timestamp of the last result and set that as the <code class="docutils literal notranslate"><span class="pre">end</span></code> query time to
 paginate the results. You can also use the page parameter to specify which set of <code class="docutils literal notranslate"><span class="pre">1000</span></code> results to return.</p></li>
@@ -2350,10 +2350,10 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <li><p><strong>priority</strong> (<a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.event_priority.EventPriority" title="datadog_api_client.v1.model.event_priority.EventPriority"><em>EventPriority</em></a><em>, </em><em>optional</em>) – Priority of your events, either <code class="docutils literal notranslate"><span class="pre">low</span></code> or <code class="docutils literal notranslate"><span class="pre">normal</span></code>.</p></li>
 <li><p><strong>sources</strong> (<em>str</em><em>, </em><em>optional</em>) – A comma separated string of sources.</p></li>
 <li><p><strong>tags</strong> (<em>str</em><em>, </em><em>optional</em>) – A comma separated list indicating what tags, if any, should be used to filter the list of monitors by scope.</p></li>
-<li><p><strong>unaggregated</strong> (<em>bool</em><em>, </em><em>optional</em>) – Set unaggregated to <code class="docutils literal notranslate"><span class="pre">true</span></code> to return all events within the specified [<code class="docutils literal notranslate"><span class="pre">start</span></code>,<code class="docutils literal notranslate"><span class="pre">end</span></code>] timeframe.
+<li><p><strong>unaggregated</strong> (<em>bool</em><em>, </em><em>optional</em>) – Set unaggregated to <code class="docutils literal notranslate"><span class="pre">true</span></code> to return all events within the specified [ <code class="docutils literal notranslate"><span class="pre">start</span></code> , <code class="docutils literal notranslate"><span class="pre">end</span></code> ] timeframe.
 Otherwise if an event is aggregated to a parent event with a timestamp outside of the timeframe,
 it won’t be available in the output. Aggregated events with <code class="docutils literal notranslate"><span class="pre">is_aggregate=true</span></code> in the response will still be returned unless exclude_aggregate is set to <code class="docutils literal notranslate"><span class="pre">true.</span></code></p></li>
-<li><p><strong>exclude_aggregate</strong> (<em>bool</em><em>, </em><em>optional</em>) – Set <code class="docutils literal notranslate"><span class="pre">exclude_aggregate</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code> to only return unaggregated events where <code class="docutils literal notranslate"><span class="pre">is_aggregate=false</span></code> in the response. If the <code class="docutils literal notranslate"><span class="pre">exclude_aggregate</span></code> parameter is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>,
+<li><p><strong>exclude_aggregate</strong> (<em>bool</em><em>, </em><em>optional</em>) – Set <code class="docutils literal notranslate"><span class="pre">exclude_aggregate</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code> to only return unaggregated events where <code class="docutils literal notranslate"><span class="pre">is_aggregate=false</span></code> in the response. If the <code class="docutils literal notranslate"><span class="pre">exclude_aggregate</span></code> parameter is set to <code class="docutils literal notranslate"><span class="pre">true</span></code> ,
 then the unaggregated parameter is ignored and will be <code class="docutils literal notranslate"><span class="pre">true</span></code> by default.</p></li>
 <li><p><strong>page</strong> (<em>int</em><em>, </em><em>optional</em>) – By default 1000 results are returned per request. Set page to the number of the page to return with <code class="docutils literal notranslate"><span class="pre">0</span></code> being the first page. The page parameter can only be used
 when either unaggregated or exclude_aggregate is set to <code class="docutils literal notranslate"><span class="pre">true.</span></code></p></li>
@@ -2516,8 +2516,8 @@ use. Default is read from the configuration.</p></li>
 <span class="sig-name descname"><span class="pre">update_gcp_integration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.api.gcp_integration_api.GCPIntegrationApi.update_gcp_integration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update a GCP integration.</p>
 <p>Update a Datadog-GCP integrations host_filters and/or auto-mute.
-Requires a <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">client_email</span></code>, however these fields cannot be updated.
-If you need to update these fields, delete and use the create (<code class="docutils literal notranslate"><span class="pre">POST</span></code>) endpoint.
+Requires a <code class="docutils literal notranslate"><span class="pre">project_id</span></code> and <code class="docutils literal notranslate"><span class="pre">client_email</span></code> , however these fields cannot be updated.
+If you need to update these fields, delete and use the create ( <code class="docutils literal notranslate"><span class="pre">POST</span></code> ) endpoint.
 The unspecified fields will keep their original values.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
@@ -2869,7 +2869,7 @@ use. Default is read from the configuration.</p></li>
 <dd class="field-even"><p>If the method is called asynchronously, returns the request thread.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.application_key_response.ApplicationKeyResponse" title="datadog_api_client.v2.model.application_key_response.ApplicationKeyResponse">ApplicationKeyResponse</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.application_key_response.ApplicationKeyResponse" title="datadog_api_client.v1.model.application_key_response.ApplicationKeyResponse">ApplicationKeyResponse</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -2949,7 +2949,7 @@ use. Default is read from the configuration.</p></li>
 <dd class="field-even"><p>If the method is called asynchronously, returns the request thread.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.application_key_response.ApplicationKeyResponse" title="datadog_api_client.v2.model.application_key_response.ApplicationKeyResponse">ApplicationKeyResponse</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.application_key_response.ApplicationKeyResponse" title="datadog_api_client.v1.model.application_key_response.ApplicationKeyResponse">ApplicationKeyResponse</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -3029,7 +3029,7 @@ use. Default is read from the configuration.</p></li>
 <dd class="field-even"><p>If the method is called asynchronously, returns the request thread.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.application_key_response.ApplicationKeyResponse" title="datadog_api_client.v2.model.application_key_response.ApplicationKeyResponse">ApplicationKeyResponse</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.application_key_response.ApplicationKeyResponse" title="datadog_api_client.v1.model.application_key_response.ApplicationKeyResponse">ApplicationKeyResponse</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -3187,7 +3187,7 @@ use. Default is read from the configuration.</p></li>
 <dd class="field-even"><p>If the method is called asynchronously, returns the request thread.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.application_key_response.ApplicationKeyResponse" title="datadog_api_client.v2.model.application_key_response.ApplicationKeyResponse">ApplicationKeyResponse</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.application_key_response.ApplicationKeyResponse" title="datadog_api_client.v1.model.application_key_response.ApplicationKeyResponse">ApplicationKeyResponse</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -3206,9 +3206,9 @@ use. Default is read from the configuration.</p></li>
 <dd><p>Search logs.</p>
 <p>List endpoint returns logs that match a log search query.
 <a class="reference external" href="/logs/guide/collect-multiple-logs-with-pagination">Results are paginated</a>.</p>
-<p><strong>If you are considering archiving logs for your organization,
+<p>If you are considering archiving logs for your organization,
 consider use of the Datadog archive capabilities instead of the log list API.
-See `Datadog Logs Archive documentation &lt;https://docs.datadoghq.com/logs/archives&gt;`_.</strong></p>
+See <a class="reference external" href="https://docs.datadoghq.com/logs/archives">Datadog Logs Archive documentation</a>.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">list_logs</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -3218,7 +3218,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.logs_list_request.LogsListRequest" title="datadog_api_client.v2.model.logs_list_request.LogsListRequest"><em>LogsListRequest</em></a>) – Logs filter</p></li>
+<li><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.logs_list_request.LogsListRequest" title="datadog_api_client.v1.model.logs_list_request.LogsListRequest"><em>LogsListRequest</em></a>) – Logs filter</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
@@ -3240,7 +3240,7 @@ use. Default is read from the configuration.</p></li>
 <dd class="field-even"><p>If the method is called asynchronously, returns the request thread.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.logs_list_response.LogsListResponse" title="datadog_api_client.v2.model.logs_list_response.LogsListResponse">LogsListResponse</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.logs_list_response.LogsListResponse" title="datadog_api_client.v1.model.logs_list_response.LogsListResponse">LogsListResponse</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -3278,8 +3278,8 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.http_log.HTTPLog" title="datadog_api_client.v2.model.http_log.HTTPLog"><em>HTTPLog</em></a>) – Log to send (JSON format).</p></li>
-<li><p><strong>content_encoding</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.content_encoding.ContentEncoding" title="datadog_api_client.v2.model.content_encoding.ContentEncoding"><em>ContentEncoding</em></a><em>, </em><em>optional</em>) – HTTP header used to compress the media-type.</p></li>
+<li><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.http_log.HTTPLog" title="datadog_api_client.v1.model.http_log.HTTPLog"><em>HTTPLog</em></a>) – Log to send (JSON format).</p></li>
+<li><p><strong>content_encoding</strong> (<a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.content_encoding.ContentEncoding" title="datadog_api_client.v1.model.content_encoding.ContentEncoding"><em>ContentEncoding</em></a><em>, </em><em>optional</em>) – HTTP header used to compress the media-type.</p></li>
 <li><p><strong>ddtags</strong> (<em>str</em><em>, </em><em>optional</em>) – Log tags can be passed as query parameters with <code class="docutils literal notranslate"><span class="pre">text/plain</span></code> content type.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
@@ -3795,7 +3795,7 @@ use. Default is read from the configuration.</p></li>
 <span class="sig-name descname"><span class="pre">update_logs_pipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pipeline_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.api.logs_pipelines_api.LogsPipelinesApi.update_logs_pipeline" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update a pipeline.</p>
 <p>Update a given pipeline configuration to change it’s processors or their order.</p>
-<p><strong>Note</strong>: Using this method updates your pipeline configuration by <strong>replacing</strong>
+<p><strong>Note</strong> : Using this method updates your pipeline configuration by <strong>replacing</strong>
 your current configuration with the new one sent to your Datadog organization.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
@@ -3839,7 +3839,7 @@ use. Default is read from the configuration.</p></li>
 <dd><p>Update pipeline order.</p>
 <p>Update the order of your pipelines. Since logs are processed sequentially, reordering a pipeline may change
 the structure and content of the data processed by other pipelines and their processors.</p>
-<p><strong>Note</strong>: Using the <code class="docutils literal notranslate"><span class="pre">PUT</span></code> method updates your pipeline order by replacing your current order
+<p><strong>Note</strong> : Using the <code class="docutils literal notranslate"><span class="pre">PUT</span></code> method updates your pipeline order by replacing your current order
 with the new one sent to your Datadog organization.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
@@ -3891,7 +3891,7 @@ use. Default is read from the configuration.</p></li>
 <li><p>Modify tag configurations for metrics</p></li>
 <li><p>View tags and volumes for metrics</p></li>
 </ul>
-<p><strong>Note</strong>: A graph can only contain a set number of points
+<p><strong>Note</strong> : A graph can only contain a set number of points
 and as the timeframe over which a metric is viewed increases,
 aggregation between points occurs to stay below that set number.</p>
 <p>The Post, Patch, and Delete <code class="docutils literal notranslate"><span class="pre">manage_tags</span></code> API methods can only be performed by
@@ -3932,7 +3932,7 @@ use. Default is read from the configuration.</p></li>
 <dd class="field-even"><p>If the method is called asynchronously, returns the request thread.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_metadata.MetricMetadata" title="datadog_api_client.v2.model.metric_metadata.MetricMetadata">MetricMetadata</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.metric_metadata.MetricMetadata" title="datadog_api_client.v1.model.metric_metadata.MetricMetadata">MetricMetadata</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -4086,7 +4086,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>content_encoding</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_content_encoding.MetricContentEncoding" title="datadog_api_client.v2.model.metric_content_encoding.MetricContentEncoding"><em>MetricContentEncoding</em></a><em>, </em><em>optional</em>) – HTTP header used to compress the media-type.</p></li>
+<li><p><strong>content_encoding</strong> (<a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.metric_content_encoding.MetricContentEncoding" title="datadog_api_client.v1.model.metric_content_encoding.MetricContentEncoding"><em>MetricContentEncoding</em></a><em>, </em><em>optional</em>) – HTTP header used to compress the media-type.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
@@ -4108,7 +4108,7 @@ use. Default is read from the configuration.</p></li>
 <dd class="field-even"><p>If the method is called asynchronously, returns the request thread.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.intake_payload_accepted.IntakePayloadAccepted" title="datadog_api_client.v2.model.intake_payload_accepted.IntakePayloadAccepted">IntakePayloadAccepted</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.intake_payload_accepted.IntakePayloadAccepted" title="datadog_api_client.v1.model.intake_payload_accepted.IntakePayloadAccepted">IntakePayloadAccepted</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -4127,7 +4127,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>metric_name</strong> (<em>str</em>) – Name of the metric for which to edit metadata.</p></li>
-<li><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_metadata.MetricMetadata" title="datadog_api_client.v2.model.metric_metadata.MetricMetadata"><em>MetricMetadata</em></a>) – New metadata.</p></li>
+<li><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.metric_metadata.MetricMetadata" title="datadog_api_client.v1.model.metric_metadata.MetricMetadata"><em>MetricMetadata</em></a>) – New metadata.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
@@ -4149,7 +4149,7 @@ use. Default is read from the configuration.</p></li>
 <dd class="field-even"><p>If the method is called asynchronously, returns the request thread.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_metadata.MetricMetadata" title="datadog_api_client.v2.model.metric_metadata.MetricMetadata">MetricMetadata</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.metric_metadata.MetricMetadata" title="datadog_api_client.v1.model.metric_metadata.MetricMetadata">MetricMetadata</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -4237,13 +4237,13 @@ use. Default is read from the configuration.</p></li>
 <p><strong>Metric Alert Query</strong></p>
 <p>Example: <code class="docutils literal notranslate"><span class="pre">time_aggr(time_window):space_aggr:metric{tags}</span> <span class="pre">[by</span> <span class="pre">{key}]</span> <span class="pre">operator</span> <span class="pre">#</span></code></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">time_aggr</span></code>: avg, sum, max, min, change, or pct_change</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">time_window</span></code>: <code class="docutils literal notranslate"><span class="pre">last_#m</span></code> (with <code class="docutils literal notranslate"><span class="pre">#</span></code> between 1 and 10080 depending on the monitor type) or <code class="docutils literal notranslate"><span class="pre">last_#h</span></code>(with <code class="docutils literal notranslate"><span class="pre">#</span></code> between 1 and 168 depending on the monitor type) or <code class="docutils literal notranslate"><span class="pre">last_1d</span></code>, or <code class="docutils literal notranslate"><span class="pre">last_1w</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">space_aggr</span></code>: avg, sum, min, or max</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code>: one or more tags (comma-separated), or *</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time_aggr</span></code> : avg, sum, max, min, change, or pct_change</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time_window</span></code> : <code class="docutils literal notranslate"><span class="pre">last_#m</span></code> (with <code class="docutils literal notranslate"><span class="pre">#</span></code> between 1 and 10080 depending on the monitor type) or <code class="docutils literal notranslate"><span class="pre">last_#h</span></code> (with <code class="docutils literal notranslate"><span class="pre">#</span></code> between 1 and 168 depending on the monitor type) or <code class="docutils literal notranslate"><span class="pre">last_1d</span></code> , or <code class="docutils literal notranslate"><span class="pre">last_1w</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">space_aggr</span></code> : avg, sum, min, or max</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> : one or more tags (comma-separated), or *</p></li>
 <li><p><cite>key</cite>: a ‘key’ in key:value tag syntax; defines a separate alert for each tag in the group (multi-alert)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code>: &lt;, &lt;=, &gt;, &gt;=, ==, or !=</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">#</span></code>: an integer or decimal number used to set the threshold</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> : &lt;, &lt;=, &gt;, &gt;=, ==, or !=</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#</span></code> : an integer or decimal number used to set the threshold</p></li>
 </ul>
 <p>If you are using the <code class="docutils literal notranslate"><span class="pre">_change_</span></code> or <code class="docutils literal notranslate"><span class="pre">_pct_change_</span></code> time aggregator, instead use <code class="docutils literal notranslate"><span class="pre">change_aggr(time_aggr(time_window),</span>
 <span class="pre">timeshift):space_aggr:metric{tags}</span> <span class="pre">[by</span> <span class="pre">{key}]</span> <span class="pre">operator</span> <span class="pre">#</span></code> with:</p>
@@ -4259,16 +4259,16 @@ use. Default is read from the configuration.</p></li>
 <p>Example: <code class="docutils literal notranslate"><span class="pre">"check".over(tags).last(count).by(group).count_by_status()</span></code></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">check</span></code> name of the check, for example <code class="docutils literal notranslate"><span class="pre">datadog.agent.up</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> one or more quoted tags (comma-separated), or “*”. for example: <code class="docutils literal notranslate"><span class="pre">.over("env:prod",</span> <span class="pre">"role:db")</span></code>; <code class="docutils literal notranslate"><span class="pre">over</span></code> cannot be blank.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> must be at greater than or equal to your max threshold (defined in the <code class="docutils literal notranslate"><span class="pre">options</span></code>). It is limited to 100.
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> one or more quoted tags (comma-separated), or “*”. for example: <code class="docutils literal notranslate"><span class="pre">.over("env:prod",</span> <span class="pre">"role:db")</span></code> ; <code class="docutils literal notranslate"><span class="pre">over</span></code> cannot be blank.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> must be at greater than or equal to your max threshold (defined in the <code class="docutils literal notranslate"><span class="pre">options</span></code> ). It is limited to 100.
 For example, if you’ve specified to notify on 1 critical, 3 ok, and 2 warn statuses, <code class="docutils literal notranslate"><span class="pre">count</span></code> should be at least 3.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">group</span></code> must be specified for check monitors. Per-check grouping is already explicitly known for some service checks.
-For example, Postgres integration monitors are tagged by <code class="docutils literal notranslate"><span class="pre">db</span></code>, <code class="docutils literal notranslate"><span class="pre">host</span></code>, and <code class="docutils literal notranslate"><span class="pre">port</span></code>, and Network monitors by <code class="docutils literal notranslate"><span class="pre">host</span></code>, <code class="docutils literal notranslate"><span class="pre">instance</span></code>, and <code class="docutils literal notranslate"><span class="pre">url</span></code>. See <a class="reference external" href="https://docs.datadoghq.com/api/latest/service-checks/">Service Checks</a> documentation for more information.</p></li>
+For example, Postgres integration monitors are tagged by <code class="docutils literal notranslate"><span class="pre">db</span></code> , <code class="docutils literal notranslate"><span class="pre">host</span></code> , and <code class="docutils literal notranslate"><span class="pre">port</span></code> , and Network monitors by <code class="docutils literal notranslate"><span class="pre">host</span></code> , <code class="docutils literal notranslate"><span class="pre">instance</span></code> , and <code class="docutils literal notranslate"><span class="pre">url</span></code>. See <a class="reference external" href="https://docs.datadoghq.com/api/latest/service-checks/">Service Checks</a> documentation for more information.</p></li>
 </ul>
 <p><strong>Event Alert Query</strong></p>
 <p>Example: <code class="docutils literal notranslate"><span class="pre">events('sources:nagios</span> <span class="pre">status:error,warning</span> <span class="pre">priority:normal</span> <span class="pre">tags:</span> <span class="pre">"string</span> <span class="pre">query"').rollup("count").last("1h")"</span></code></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">event</span></code>, the event query string:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">event</span></code> , the event query string:</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">string_query</span></code> free text query to match against event title and text.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sources</span></code> event sources (comma-separated).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> event statuses (comma-separated). Valid options: error, warn, and info.</p></li>
@@ -4284,10 +4284,10 @@ For example, Postgres integration monitors are tagged by <code class="docutils l
 <p>Example: <code class="docutils literal notranslate"><span class="pre">events(query).rollup(rollup_method[,</span> <span class="pre">measure]).last(time_window)</span> <span class="pre">operator</span> <span class="pre">#</span></code></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> The search query - following the <a class="reference external" href="https://docs.datadoghq.com/logs/search_syntax/">Log search syntax</a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rollup_method</span></code> The stats roll-up method - supports <code class="docutils literal notranslate"><span class="pre">count</span></code>, <code class="docutils literal notranslate"><span class="pre">avg</span></code> and <code class="docutils literal notranslate"><span class="pre">cardinality</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rollup_method</span></code> The stats roll-up method - supports <code class="docutils literal notranslate"><span class="pre">count</span></code> , <code class="docutils literal notranslate"><span class="pre">avg</span></code> and <code class="docutils literal notranslate"><span class="pre">cardinality</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">measure</span></code> For <code class="docutils literal notranslate"><span class="pre">avg</span></code> and cardinality <code class="docutils literal notranslate"><span class="pre">rollup_method</span></code> - specify the measure or the facet name you want to use.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">time_window</span></code> #m (between 1 and 2880), #h (between 1 and 48).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">==</span></code>, or <code class="docutils literal notranslate"><span class="pre">!=</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> , <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> , <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> , <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> , <code class="docutils literal notranslate"><span class="pre">==</span></code> , or <code class="docutils literal notranslate"><span class="pre">!=</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">#</span></code> an integer or decimal number used to set the threshold.</p></li>
 </ul>
 <p><strong>Process Alert Query</strong></p>
@@ -4305,37 +4305,37 @@ Matching processes match results on the <a class="reference external" href="http
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> The search query - following the <a class="reference external" href="https://docs.datadoghq.com/logs/search_syntax/">Log search syntax</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">index_name</span></code> For multi-index organizations, the log index in which the request is performed.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rollup_method</span></code> The stats roll-up method - supports <code class="docutils literal notranslate"><span class="pre">count</span></code>, <code class="docutils literal notranslate"><span class="pre">avg</span></code> and <code class="docutils literal notranslate"><span class="pre">cardinality</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rollup_method</span></code> The stats roll-up method - supports <code class="docutils literal notranslate"><span class="pre">count</span></code> , <code class="docutils literal notranslate"><span class="pre">avg</span></code> and <code class="docutils literal notranslate"><span class="pre">cardinality</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">measure</span></code> For <code class="docutils literal notranslate"><span class="pre">avg</span></code> and cardinality <code class="docutils literal notranslate"><span class="pre">rollup_method</span></code> - specify the measure or the facet name you want to use.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">time_window</span></code> #m (between 1 and 2880), #h (between 1 and 48).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">==</span></code>, or <code class="docutils literal notranslate"><span class="pre">!=</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> , <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> , <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> , <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> , <code class="docutils literal notranslate"><span class="pre">==</span></code> , or <code class="docutils literal notranslate"><span class="pre">!=</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">#</span></code> an integer or decimal number used to set the threshold.</p></li>
 </ul>
 <p><strong>Composite Query</strong></p>
-<p>Example: <code class="docutils literal notranslate"><span class="pre">12345</span> <span class="pre">&amp;&amp;</span> <span class="pre">67890</span></code>, where <code class="docutils literal notranslate"><span class="pre">12345</span></code> and <code class="docutils literal notranslate"><span class="pre">67890</span></code> are the IDs of non-composite monitors</p>
+<p>Example: <code class="docutils literal notranslate"><span class="pre">12345</span> <span class="pre">&amp;&amp;</span> <span class="pre">67890</span></code> , where <code class="docutils literal notranslate"><span class="pre">12345</span></code> and <code class="docutils literal notranslate"><span class="pre">67890</span></code> are the IDs of non-composite monitors</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> [<em>required</em>, <em>default</em> = <strong>dynamic, based on query</strong>]: The name of the alert.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">message</span></code> [<em>required</em>, <em>default</em> = <strong>dynamic, based on query</strong>]: A message to include with notifications for this monitor.
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> [ <em>required</em> , <em>default</em> = <strong>dynamic, based on query</strong> ]: The name of the alert.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">message</span></code> [ <em>required</em> , <em>default</em> = <strong>dynamic, based on query</strong> ]: A message to include with notifications for this monitor.
 Email notifications can be sent to specific users by using the same <a class="reference external" href="mailto:'%40username">‘<span>@</span>username</a>’ notation as events.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> [<em>optional</em>, <em>default</em> = <strong>empty list</strong>]: A list of tags to associate with your monitor.
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> [ <em>optional</em> , <em>default</em> = <strong>empty list</strong> ]: A list of tags to associate with your monitor.
 When getting all monitor details via the API, use the <code class="docutils literal notranslate"><span class="pre">monitor_tags</span></code> argument to filter results by these tags.
 It is only available via the API and isn’t visible or editable in the Datadog UI.</p></li>
 </ul>
 <p><strong>SLO Alert Query</strong></p>
 <p>Example: <code class="docutils literal notranslate"><span class="pre">error_budget("slo_id").over("time_window")</span> <span class="pre">operator</span> <span class="pre">#</span></code></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">slo_id</span></code>: The alphanumeric SLO ID of the SLO you are configuring the alert for.</p></li>
-<li><p><cite>time_window</cite>: The time window of the SLO target you wish to alert on. Valid options: <code class="docutils literal notranslate"><span class="pre">7d</span></code>, <code class="docutils literal notranslate"><span class="pre">30d</span></code>, <code class="docutils literal notranslate"><span class="pre">90d</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code>: <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> or <code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">slo_id</span></code> : The alphanumeric SLO ID of the SLO you are configuring the alert for.</p></li>
+<li><p><cite>time_window</cite>: The time window of the SLO target you wish to alert on. Valid options: <code class="docutils literal notranslate"><span class="pre">7d</span></code> , <code class="docutils literal notranslate"><span class="pre">30d</span></code> , <code class="docutils literal notranslate"><span class="pre">90d</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> : <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> or <code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p></li>
 </ul>
 <p><strong>Audit Alert Query</strong></p>
 <p>Example: <code class="docutils literal notranslate"><span class="pre">audits(query).rollup(rollup_method[,</span> <span class="pre">measure]).last(time_window)</span> <span class="pre">operator</span> <span class="pre">#</span></code></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> The search query - following the <a class="reference external" href="https://docs.datadoghq.com/logs/search_syntax/">Log search syntax</a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rollup_method</span></code> The stats roll-up method - supports <code class="docutils literal notranslate"><span class="pre">count</span></code>, <code class="docutils literal notranslate"><span class="pre">avg</span></code> and <code class="docutils literal notranslate"><span class="pre">cardinality</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rollup_method</span></code> The stats roll-up method - supports <code class="docutils literal notranslate"><span class="pre">count</span></code> , <code class="docutils literal notranslate"><span class="pre">avg</span></code> and <code class="docutils literal notranslate"><span class="pre">cardinality</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">measure</span></code> For <code class="docutils literal notranslate"><span class="pre">avg</span></code> and cardinality <code class="docutils literal notranslate"><span class="pre">rollup_method</span></code> - specify the measure or the facet name you want to use.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">time_window</span></code> #m (between 1 and 2880), #h (between 1 and 48).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">==</span></code>, or <code class="docutils literal notranslate"><span class="pre">!=</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> , <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> , <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> , <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> , <code class="docutils literal notranslate"><span class="pre">==</span></code> , or <code class="docutils literal notranslate"><span class="pre">!=</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">#</span></code> an integer or decimal number used to set the threshold.</p></li>
 </ul>
 <p><strong>NOTE</strong> Only available on US1-FED and in closed beta on US1, EU, US3, and US5.</p>
@@ -4343,10 +4343,10 @@ It is only available via the API and isn’t visible or editable in the Datadog 
 <p>Example: <code class="docutils literal notranslate"><span class="pre">ci-pipelines(query).rollup(rollup_method[,</span> <span class="pre">measure]).last(time_window)</span> <span class="pre">operator</span> <span class="pre">#</span></code></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> The search query - following the <a class="reference external" href="https://docs.datadoghq.com/logs/search_syntax/">Log search syntax</a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rollup_method</span></code> The stats roll-up method - supports <code class="docutils literal notranslate"><span class="pre">count</span></code>, <code class="docutils literal notranslate"><span class="pre">avg</span></code>, and <code class="docutils literal notranslate"><span class="pre">cardinality</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rollup_method</span></code> The stats roll-up method - supports <code class="docutils literal notranslate"><span class="pre">count</span></code> , <code class="docutils literal notranslate"><span class="pre">avg</span></code> , and <code class="docutils literal notranslate"><span class="pre">cardinality</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">measure</span></code> For <code class="docutils literal notranslate"><span class="pre">avg</span></code> and cardinality <code class="docutils literal notranslate"><span class="pre">rollup_method</span></code> - specify the measure or the facet name you want to use.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">time_window</span></code> #m (between 1 and 2880), #h (between 1 and 48).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">==</span></code>, or <code class="docutils literal notranslate"><span class="pre">!=</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> , <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> , <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> , <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> , <code class="docutils literal notranslate"><span class="pre">==</span></code> , or <code class="docutils literal notranslate"><span class="pre">!=</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">#</span></code> an integer or decimal number used to set the threshold.</p></li>
 </ul>
 <p><strong>NOTE</strong> CI Pipeline monitors are in alpha on US1, EU, US3 and US5.</p>
@@ -4354,10 +4354,10 @@ It is only available via the API and isn’t visible or editable in the Datadog 
 <p>Example: <code class="docutils literal notranslate"><span class="pre">ci-tests(query).rollup(rollup_method[,</span> <span class="pre">measure]).last(time_window)</span> <span class="pre">operator</span> <span class="pre">#</span></code></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> The search query - following the <a class="reference external" href="https://docs.datadoghq.com/logs/search_syntax/">Log search syntax</a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rollup_method</span></code> The stats roll-up method - supports <code class="docutils literal notranslate"><span class="pre">count</span></code>, <code class="docutils literal notranslate"><span class="pre">avg</span></code>, and <code class="docutils literal notranslate"><span class="pre">cardinality</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rollup_method</span></code> The stats roll-up method - supports <code class="docutils literal notranslate"><span class="pre">count</span></code> , <code class="docutils literal notranslate"><span class="pre">avg</span></code> , and <code class="docutils literal notranslate"><span class="pre">cardinality</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">measure</span></code> For <code class="docutils literal notranslate"><span class="pre">avg</span></code> and cardinality <code class="docutils literal notranslate"><span class="pre">rollup_method</span></code> - specify the measure or the facet name you want to use.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">time_window</span></code> #m (between 1 and 2880), #h (between 1 and 48).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">==</span></code>, or <code class="docutils literal notranslate"><span class="pre">!=</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> , <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> , <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> , <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> , <code class="docutils literal notranslate"><span class="pre">==</span></code> , or <code class="docutils literal notranslate"><span class="pre">!=</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">#</span></code> an integer or decimal number used to set the threshold.</p></li>
 </ul>
 <p><strong>NOTE</strong> CI Test monitors are available only in closed beta on US1, EU, US3 and US5.</p>
@@ -4366,10 +4366,10 @@ It is only available via the API and isn’t visible or editable in the Datadog 
 Example(APM Traces): <code class="docutils literal notranslate"><span class="pre">error-tracking-traces(query).rollup(rollup_method[,</span> <span class="pre">measure]).last(time_window)</span> <span class="pre">operator</span> <span class="pre">#</span></code></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> The search query - following the <a class="reference external" href="https://docs.datadoghq.com/logs/search_syntax/">Log search syntax</a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rollup_method</span></code> The stats roll-up method - supports <code class="docutils literal notranslate"><span class="pre">count</span></code>, <code class="docutils literal notranslate"><span class="pre">avg</span></code>, and <code class="docutils literal notranslate"><span class="pre">cardinality</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rollup_method</span></code> The stats roll-up method - supports <code class="docutils literal notranslate"><span class="pre">count</span></code> , <code class="docutils literal notranslate"><span class="pre">avg</span></code> , and <code class="docutils literal notranslate"><span class="pre">cardinality</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">measure</span></code> For <code class="docutils literal notranslate"><span class="pre">avg</span></code> and cardinality <code class="docutils literal notranslate"><span class="pre">rollup_method</span></code> - specify the measure or the facet name you want to use.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">time_window</span></code> #m (between 1 and 2880), #h (between 1 and 48).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">==</span></code>, or <code class="docutils literal notranslate"><span class="pre">!=</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> , <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> , <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> , <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> , <code class="docutils literal notranslate"><span class="pre">==</span></code> , or <code class="docutils literal notranslate"><span class="pre">!=</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">#</span></code> an integer or decimal number used to set the threshold.</p></li>
 </ul>
 <p>This method makes a synchronous HTTP request by default. To make an
@@ -4463,7 +4463,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>monitor_id</strong> (<em>int</em>) – The ID of the monitor</p></li>
-<li><p><strong>group_states</strong> (<em>str</em><em>, </em><em>optional</em>) – When specified, shows additional information about the group states. Choose one or more from <code class="docutils literal notranslate"><span class="pre">all</span></code>, <code class="docutils literal notranslate"><span class="pre">alert</span></code>, <code class="docutils literal notranslate"><span class="pre">warn</span></code>, and <code class="docutils literal notranslate"><span class="pre">no</span> <span class="pre">data</span></code>.</p></li>
+<li><p><strong>group_states</strong> (<em>str</em><em>, </em><em>optional</em>) – When specified, shows additional information about the group states. Choose one or more from <code class="docutils literal notranslate"><span class="pre">all</span></code> , <code class="docutils literal notranslate"><span class="pre">alert</span></code> , <code class="docutils literal notranslate"><span class="pre">warn</span></code> , and <code class="docutils literal notranslate"><span class="pre">no</span> <span class="pre">data</span></code>.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
@@ -4504,7 +4504,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>group_states</strong> (<em>str</em><em>, </em><em>optional</em>) – When specified, shows additional information about the group states.
-Choose one or more from <code class="docutils literal notranslate"><span class="pre">all</span></code>, <code class="docutils literal notranslate"><span class="pre">alert</span></code>, <code class="docutils literal notranslate"><span class="pre">warn</span></code>, and <code class="docutils literal notranslate"><span class="pre">no</span> <span class="pre">data</span></code>.</p></li>
+Choose one or more from <code class="docutils literal notranslate"><span class="pre">all</span></code> , <code class="docutils literal notranslate"><span class="pre">alert</span></code> , <code class="docutils literal notranslate"><span class="pre">warn</span></code> , and <code class="docutils literal notranslate"><span class="pre">no</span> <span class="pre">data</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – A string to filter monitors by name.</p></li>
 <li><p><strong>tags</strong> (<em>str</em><em>, </em><em>optional</em>) – A comma separated list indicating what tags, if any, should be used to filter the list of monitors by scope.
 For example, <code class="docutils literal notranslate"><span class="pre">host:host0</span></code>.</p></li>
@@ -4560,7 +4560,7 @@ page to learn more.</p>
 </p></li>
 <li><p><strong>page</strong> (<em>int</em><em>, </em><em>optional</em>) – Page to start paginating from.</p></li>
 <li><p><strong>per_page</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of monitors to return per page.</p></li>
-<li><p><strong>sort</strong> (<em>str</em><em>, </em><em>optional</em>) – <p>String for sort order, composed of field and sort order separate by a comma, for example <code class="docutils literal notranslate"><span class="pre">name,asc</span></code>. Supported sort directions: <code class="docutils literal notranslate"><span class="pre">asc</span></code>, <code class="docutils literal notranslate"><span class="pre">desc</span></code>. Supported fields:</p>
+<li><p><strong>sort</strong> (<em>str</em><em>, </em><em>optional</em>) – <p>String for sort order, composed of field and sort order separate by a comma, for example <code class="docutils literal notranslate"><span class="pre">name,asc</span></code>. Supported sort directions: <code class="docutils literal notranslate"><span class="pre">asc</span></code> , <code class="docutils literal notranslate"><span class="pre">desc</span></code>. Supported fields:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code></p></li>
@@ -4613,7 +4613,7 @@ page to learn more.</p>
 </p></li>
 <li><p><strong>page</strong> (<em>int</em><em>, </em><em>optional</em>) – Page to start paginating from.</p></li>
 <li><p><strong>per_page</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of monitors to return per page.</p></li>
-<li><p><strong>sort</strong> (<em>str</em><em>, </em><em>optional</em>) – <p>String for sort order, composed of field and sort order separate by a comma, for example <code class="docutils literal notranslate"><span class="pre">name,asc</span></code>. Supported sort directions: <code class="docutils literal notranslate"><span class="pre">asc</span></code>, <code class="docutils literal notranslate"><span class="pre">desc</span></code>. Supported fields:</p>
+<li><p><strong>sort</strong> (<em>str</em><em>, </em><em>optional</em>) – <p>String for sort order, composed of field and sort order separate by a comma, for example <code class="docutils literal notranslate"><span class="pre">name,asc</span></code>. Supported sort directions: <code class="docutils literal notranslate"><span class="pre">asc</span></code> , <code class="docutils literal notranslate"><span class="pre">desc</span></code>. Supported fields:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code></p></li>
@@ -4917,7 +4917,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <li><p><strong>exclude_author_handle</strong> (<em>str</em><em>, </em><em>optional</em>) – Return notebooks not created by the given <code class="docutils literal notranslate"><span class="pre">author_handle</span></code>.</p></li>
 <li><p><strong>start</strong> (<em>int</em><em>, </em><em>optional</em>) – The index of the first notebook you want returned.</p></li>
 <li><p><strong>count</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of notebooks to be returned.</p></li>
-<li><p><strong>sort_field</strong> (<em>str</em><em>, </em><em>optional</em>) – Sort by field <code class="docutils literal notranslate"><span class="pre">modified</span></code>, <code class="docutils literal notranslate"><span class="pre">name</span></code>, or <code class="docutils literal notranslate"><span class="pre">created</span></code>.</p></li>
+<li><p><strong>sort_field</strong> (<em>str</em><em>, </em><em>optional</em>) – Sort by field <code class="docutils literal notranslate"><span class="pre">modified</span></code> , <code class="docutils literal notranslate"><span class="pre">name</span></code> , or <code class="docutils literal notranslate"><span class="pre">created</span></code>.</p></li>
 <li><p><strong>sort_dir</strong> (<em>str</em><em>, </em><em>optional</em>) – Sort by direction <code class="docutils literal notranslate"><span class="pre">asc</span></code> or <code class="docutils literal notranslate"><span class="pre">desc</span></code>.</p></li>
 <li><p><strong>query</strong> (<em>str</em><em>, </em><em>optional</em>) – Return only notebooks with <code class="docutils literal notranslate"><span class="pre">query</span></code> string in notebook name or author handle.</p></li>
 <li><p><strong>include_cells</strong> (<em>bool</em><em>, </em><em>optional</em>) – Value of <code class="docutils literal notranslate"><span class="pre">false</span></code> excludes the <code class="docutils literal notranslate"><span class="pre">cells</span></code> and global <code class="docutils literal notranslate"><span class="pre">time</span></code> for each notebook.</p></li>
@@ -5008,7 +5008,7 @@ use. Default is read from the configuration.</p></li>
 feature and must be enabled by
 <a class="reference external" href="https://docs.datadoghq.com/help/">contacting support</a>.</p>
 <p>Once a new child organization is created, you can interact with it
-by using the <code class="docutils literal notranslate"><span class="pre">org.public_id</span></code>, <code class="docutils literal notranslate"><span class="pre">api_key.key</span></code>, and
+by using the <code class="docutils literal notranslate"><span class="pre">org.public_id</span></code> , <code class="docutils literal notranslate"><span class="pre">api_key.key</span></code> , and
 <code class="docutils literal notranslate"><span class="pre">application_key.hash</span></code> provided in the response.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
@@ -5171,7 +5171,7 @@ use. Default is read from the configuration.</p></li>
 <p>There are a couple of options for updating the Identity Provider (IdP)
 metadata from your SAML IdP.</p>
 <ul class="simple">
-<li><p><strong>Multipart Form-Data</strong>: Post the IdP metadata file using a form post.</p></li>
+<li><p><strong>Multipart Form-Data</strong> : Post the IdP metadata file using a form post.</p></li>
 <li><p><strong>XML Body:</strong> Post the IdP metadata file as the body of the request.</p></li>
 </ul>
 <p>This method makes a synchronous HTTP request by default. To make an
@@ -5539,7 +5539,7 @@ an OK status.</p>
 <span class="sig-name descname"><span class="pre">submit_service_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.api.service_checks_api.ServiceChecksApi.submit_service_check" title="Permalink to this definition">¶</a></dt>
 <dd><p>Submit a Service Check.</p>
 <p>Submit a list of Service Checks.</p>
-<p><strong>Notes</strong>:</p>
+<p><strong>Notes</strong> :</p>
 <ul class="simple">
 <li><p>A valid API key is required.</p></li>
 <li><p>Service checks can be submitted up to 10 minutes in the past.</p></li>
@@ -5575,7 +5575,7 @@ use. Default is read from the configuration.</p></li>
 <dd class="field-even"><p>If the method is called asynchronously, returns the request thread.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.intake_payload_accepted.IntakePayloadAccepted" title="datadog_api_client.v2.model.intake_payload_accepted.IntakePayloadAccepted">IntakePayloadAccepted</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.intake_payload_accepted.IntakePayloadAccepted" title="datadog_api_client.v1.model.intake_payload_accepted.IntakePayloadAccepted">IntakePayloadAccepted</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -6076,7 +6076,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <li><p><strong>from_ts</strong> (<em>int</em>) – The <code class="docutils literal notranslate"><span class="pre">from</span></code> timestamp for the query window in epoch seconds.</p></li>
 <li><p><strong>to_ts</strong> (<em>int</em>) – The <code class="docutils literal notranslate"><span class="pre">to</span></code> timestamp for the query window in epoch seconds.</p></li>
 <li><p><strong>target</strong> (<em>float</em><em>, </em><em>optional</em>) – The SLO target. If <code class="docutils literal notranslate"><span class="pre">target</span></code> is passed in, the response will include the remaining error budget and a timeframe value of <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p></li>
-<li><p><strong>apply_correction</strong> (<em>bool</em><em>, </em><em>optional</em>) – Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. If any SLO corrections are applied and this parameter is set to <code class="docutils literal notranslate"><span class="pre">false</span></code>,
+<li><p><strong>apply_correction</strong> (<em>bool</em><em>, </em><em>optional</em>) – Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. If any SLO corrections are applied and this parameter is set to <code class="docutils literal notranslate"><span class="pre">false</span></code> ,
 then the corrections will not be applied and the SLI values will not be affected.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
@@ -6418,7 +6418,7 @@ use. Default is read from the configuration.</p></li>
 <span class="sig-name descname"><span class="pre">get_graph_snapshot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.api.snapshots_api.SnapshotsApi.get_graph_snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Take graph snapshots.</p>
 <p>Take graph snapshots.
-<strong>Note</strong>: When a snapshot is created, there is some delay before it is available.</p>
+<strong>Note</strong> : When a snapshot is created, there is some delay before it is available.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_graph_snapshot</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -7581,7 +7581,7 @@ use. Default is read from the configuration.</p></li>
 <p>The tag endpoint allows you to assign tags to hosts,
 for example: <code class="docutils literal notranslate"><span class="pre">role:database</span></code>. Those tags are applied to
 all metrics sent by the host. Refer to hosts by name
-(<code class="docutils literal notranslate"><span class="pre">yourhost.example.com</span></code>) when fetching and applying
+( <code class="docutils literal notranslate"><span class="pre">yourhost.example.com</span></code> ) when fetching and applying
 tags to a particular host.</p>
 <p>The component of your infrastructure responsible for a tag is identified
 by a source. For example, some valid sources include nagios, hudson, jenkins,
@@ -7814,7 +7814,7 @@ use. Default is read from the configuration.</p></li>
 monthly usage across multiple facets of Datadog.
 This API is available to all Pro and Enterprise customers.
 Usage is only accessible for <a class="reference external" href="https://docs.datadoghq.com/account_management/multi_organization/">parent-level organizations</a>.</p>
-<p><strong>Note</strong>: Usage data is delayed by up to 72 hours from when it was incurred.
+<p><strong>Note</strong> : Usage data is delayed by up to 72 hours from when it was incurred.
 It is retained for 15 months.</p>
 <p>You can retrieve up to 24 hours of hourly usage data for multiple organizations,
 and up to two months of hourly usage data for a single organization in one request.</p>
@@ -9458,7 +9458,7 @@ use. Default is read from the configuration.</p></li>
 <span class="sig-name descname"><span class="pre">create_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.api.users_api.UsersApi.create_user" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a user.</p>
 <p>Create a user for your organization.</p>
-<p><strong>Note</strong>: Users can only be created with the admin access role
+<p><strong>Note</strong> : Users can only be created with the admin access role
 if application keys belong to administrators.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
@@ -9469,7 +9469,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user.User" title="datadog_api_client.v2.model.user.User"><em>User</em></a>) – User object that needs to be created.</p></li>
+<li><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.user.User" title="datadog_api_client.v1.model.user.User"><em>User</em></a>) – User object that needs to be created.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
@@ -9491,7 +9491,7 @@ use. Default is read from the configuration.</p></li>
 <dd class="field-even"><p>If the method is called asynchronously, returns the request thread.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user_response.UserResponse" title="datadog_api_client.v2.model.user_response.UserResponse">UserResponse</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.user_response.UserResponse" title="datadog_api_client.v1.model.user_response.UserResponse">UserResponse</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -9500,7 +9500,7 @@ use. Default is read from the configuration.</p></li>
 <span class="sig-name descname"><span class="pre">disable_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_handle</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.api.users_api.UsersApi.disable_user" title="Permalink to this definition">¶</a></dt>
 <dd><p>Disable a user.</p>
 <p>Delete a user from an organization.</p>
-<p><strong>Note</strong>: This endpoint can only be used with application keys belonging to
+<p><strong>Note</strong> : This endpoint can only be used with application keys belonging to
 administrators.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
@@ -9573,7 +9573,7 @@ use. Default is read from the configuration.</p></li>
 <dd class="field-even"><p>If the method is called asynchronously, returns the request thread.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user_response.UserResponse" title="datadog_api_client.v2.model.user_response.UserResponse">UserResponse</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.user_response.UserResponse" title="datadog_api_client.v1.model.user_response.UserResponse">UserResponse</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -9621,7 +9621,7 @@ use. Default is read from the configuration.</p></li>
 <span class="sig-name descname"><span class="pre">update_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_handle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.api.users_api.UsersApi.update_user" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update a user.</p>
 <p>Update a user information.</p>
-<p><strong>Note</strong>: It can only be used with application keys belonging to administrators.</p>
+<p><strong>Note</strong> : It can only be used with application keys belonging to administrators.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">update_user</span><span class="p">(</span><span class="n">user_handle</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -9632,7 +9632,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>user_handle</strong> (<em>str</em>) – The ID of the user.</p></li>
-<li><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user.User" title="datadog_api_client.v2.model.user.User"><em>User</em></a>) – Description of the update.</p></li>
+<li><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.user.User" title="datadog_api_client.v1.model.user.User"><em>User</em></a>) – Description of the update.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
@@ -9654,7 +9654,7 @@ use. Default is read from the configuration.</p></li>
 <dd class="field-even"><p>If the method is called asynchronously, returns the request thread.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user_response.UserResponse" title="datadog_api_client.v2.model.user_response.UserResponse">UserResponse</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.user_response.UserResponse" title="datadog_api_client.v1.model.user_response.UserResponse">UserResponse</a></p>
 </dd>
 </dl>
 </dd></dl>

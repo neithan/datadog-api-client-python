@@ -4967,7 +4967,7 @@ Note: You should only supply timezone or time offset but not both otherwise the 
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>aggregation</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.logs_aggregation_function.LogsAggregationFunction" title="datadog_api_client.v2.model.logs_aggregation_function.LogsAggregationFunction"><em>LogsAggregationFunction</em></a><em>, </em><em>optional</em>) – An aggregation function</p></li>
-<li><p><strong>metric</strong> (<em>str</em><em>, </em><em>optional</em>) – The metric to sort by (only used for <code class="docutils literal notranslate"><span class="pre">type=measure</span></code>)</p></li>
+<li><p><strong>metric</strong> (<em>str</em><em>, </em><em>optional</em>) – The metric to sort by (only used for <code class="docutils literal notranslate"><span class="pre">type=measure</span></code> )</p></li>
 <li><p><strong>order</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.logs_sort_order.LogsSortOrder" title="datadog_api_client.v2.model.logs_sort_order.LogsSortOrder"><em>LogsSortOrder</em></a><em>, </em><em>optional</em>) – The order to use, ascending or descending</p></li>
 <li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.logs_aggregate_sort_type.LogsAggregateSortType" title="datadog_api_client.v2.model.logs_aggregate_sort_type.LogsAggregateSortType"><em>LogsAggregateSortType</em></a><em>, </em><em>optional</em>) – The type of sorting algorithm</p></li>
 </ul>
@@ -6294,7 +6294,7 @@ Additional time &amp; space combinations are also available:</p>
 <li><p>time: sum, space: avg</p></li>
 <li><p>time: sum, space: sum</p></li>
 </ul>
-<p>Can only be applied to metrics that have a <code class="docutils literal notranslate"><span class="pre">metric_type</span></code> of <code class="docutils literal notranslate"><span class="pre">count</span></code>, <code class="docutils literal notranslate"><span class="pre">rate</span></code>, or <code class="docutils literal notranslate"><span class="pre">gauge</span></code>.</p>
+<p>Can only be applied to metrics that have a <code class="docutils literal notranslate"><span class="pre">metric_type</span></code> of <code class="docutils literal notranslate"><span class="pre">count</span></code> , <code class="docutils literal notranslate"><span class="pre">rate</span></code> , or <code class="docutils literal notranslate"><span class="pre">gauge</span></code>.</p>
 <p>Note that value can be passed either in args or in kwargs, but not in both.</p>
 <dl class="field-list simple">
 </dl>
@@ -6671,7 +6671,7 @@ Additional time &amp; space combinations are also available:</p>
 <li><p>time: sum, space: avg</p></li>
 <li><p>time: sum, space: sum</p></li>
 </ul>
-<p>Can only be applied to metrics that have a <code class="docutils literal notranslate"><span class="pre">metric_type</span></code> of <code class="docutils literal notranslate"><span class="pre">count</span></code>, <code class="docutils literal notranslate"><span class="pre">rate</span></code>, or <code class="docutils literal notranslate"><span class="pre">gauge</span></code>.</p>
+<p>Can only be applied to metrics that have a <code class="docutils literal notranslate"><span class="pre">metric_type</span></code> of <code class="docutils literal notranslate"><span class="pre">count</span></code> , <code class="docutils literal notranslate"><span class="pre">rate</span></code> , or <code class="docutils literal notranslate"><span class="pre">gauge</span></code>.</p>
 </p></li>
 <li><p><strong>created_at</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Timestamp when the tag configuration was created.</p></li>
 <li><p><strong>include_percentiles</strong> (<em>bool</em><em>, </em><em>optional</em>) – Toggle to turn on/off percentile aggregations for distribution metrics.
@@ -6709,7 +6709,7 @@ Additional time &amp; space combinations are also available:</p>
 <li><p>time: sum, space: avg</p></li>
 <li><p>time: sum, space: sum</p></li>
 </ul>
-<p>Can only be applied to metrics that have a <code class="docutils literal notranslate"><span class="pre">metric_type</span></code> of <code class="docutils literal notranslate"><span class="pre">count</span></code>, <code class="docutils literal notranslate"><span class="pre">rate</span></code>, or <code class="docutils literal notranslate"><span class="pre">gauge</span></code>.</p>
+<p>Can only be applied to metrics that have a <code class="docutils literal notranslate"><span class="pre">metric_type</span></code> of <code class="docutils literal notranslate"><span class="pre">count</span></code> , <code class="docutils literal notranslate"><span class="pre">rate</span></code> , or <code class="docutils literal notranslate"><span class="pre">gauge</span></code>.</p>
 </p></li>
 <li><p><strong>include_percentiles</strong> (<em>bool</em><em>, </em><em>optional</em>) – Toggle to include/exclude percentiles for a distribution metric.
 Defaults to false. Can only be applied to metrics that have a <code class="docutils literal notranslate"><span class="pre">metric_type</span></code> of <code class="docutils literal notranslate"><span class="pre">distribution</span></code>.</p></li>
@@ -6821,7 +6821,7 @@ Additional time &amp; space combinations are also available:</p>
 <li><p>time: sum, space: avg</p></li>
 <li><p>time: sum, space: sum</p></li>
 </ul>
-<p>Can only be applied to metrics that have a <code class="docutils literal notranslate"><span class="pre">metric_type</span></code> of <code class="docutils literal notranslate"><span class="pre">count</span></code>, <code class="docutils literal notranslate"><span class="pre">rate</span></code>, or <code class="docutils literal notranslate"><span class="pre">gauge</span></code>.</p>
+<p>Can only be applied to metrics that have a <code class="docutils literal notranslate"><span class="pre">metric_type</span></code> of <code class="docutils literal notranslate"><span class="pre">count</span></code> , <code class="docutils literal notranslate"><span class="pre">rate</span></code> , or <code class="docutils literal notranslate"><span class="pre">gauge</span></code>.</p>
 </p></li>
 <li><p><strong>include_percentiles</strong> (<em>bool</em><em>, </em><em>optional</em>) – Toggle to include/exclude percentiles for a distribution metric.
 Defaults to false. Can only be applied to metrics that have a <code class="docutils literal notranslate"><span class="pre">metric_type</span></code> of <code class="docutils literal notranslate"><span class="pre">distribution</span></code>.</p></li>
@@ -8026,7 +8026,7 @@ Note: Only supply timezone or time offset, not both. Otherwise, the query fails.
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>aggregation</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.rum_aggregation_function.RUMAggregationFunction" title="datadog_api_client.v2.model.rum_aggregation_function.RUMAggregationFunction"><em>RUMAggregationFunction</em></a><em>, </em><em>optional</em>) – An aggregation function.</p></li>
-<li><p><strong>metric</strong> (<em>str</em><em>, </em><em>optional</em>) – The metric to sort by (only used for <code class="docutils literal notranslate"><span class="pre">type=measure</span></code>).</p></li>
+<li><p><strong>metric</strong> (<em>str</em><em>, </em><em>optional</em>) – The metric to sort by (only used for <code class="docutils literal notranslate"><span class="pre">type=measure</span></code> ).</p></li>
 <li><p><strong>order</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.rum_sort_order.RUMSortOrder" title="datadog_api_client.v2.model.rum_sort_order.RUMSortOrder"><em>RUMSortOrder</em></a><em>, </em><em>optional</em>) – The order to use, ascending or descending.</p></li>
 <li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.rum_aggregate_sort_type.RUMAggregateSortType" title="datadog_api_client.v2.model.rum_aggregate_sort_type.RUMAggregateSortType"><em>RUMAggregateSortType</em></a><em>, </em><em>optional</em>) – The type of sorting algorithm.</p></li>
 </ul>
@@ -8831,7 +8831,7 @@ Note: Only supply timezone or time offset, not both. Otherwise, the query fails.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>condition</strong> (<em>str</em><em>, </em><em>optional</em>) – A rule case contains logical operations (<code class="docutils literal notranslate"><span class="pre">&gt;</span></code>,<code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code>, <code class="docutils literal notranslate"><span class="pre">||</span></code>) to determine if a signal should be generated
+<li><p><strong>condition</strong> (<em>str</em><em>, </em><em>optional</em>) – A rule case contains logical operations ( <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> , <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> , <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> , <code class="docutils literal notranslate"><span class="pre">||</span></code> ) to determine if a signal should be generated
 based on the event counts in the previously defined queries.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the case.</p></li>
 <li><p><strong>notifications</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Notification targets for each rule case.</p></li>
@@ -8851,7 +8851,7 @@ based on the event counts in the previously defined queries.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>condition</strong> (<em>str</em><em>, </em><em>optional</em>) – A rule case contains logical operations (<code class="docutils literal notranslate"><span class="pre">&gt;</span></code>,<code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code>, <code class="docutils literal notranslate"><span class="pre">||</span></code>) to determine if a signal should be generated
+<li><p><strong>condition</strong> (<em>str</em><em>, </em><em>optional</em>) – A rule case contains logical operations ( <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> , <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> , <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> , <code class="docutils literal notranslate"><span class="pre">||</span></code> ) to determine if a signal should be generated
 based on the event counts in the previously defined queries.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the case.</p></li>
 <li><p><strong>notifications</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Notification targets for each rule case.</p></li>
@@ -9349,7 +9349,7 @@ and pagination information.</p>
 <p>Links attributes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>next</strong> (<em>str</em><em>, </em><em>optional</em>) – The link for the next set of results. <strong>Note</strong>: The request can also be made using the
+<dd class="field-odd"><p><strong>next</strong> (<em>str</em><em>, </em><em>optional</em>) – The link for the next set of results. <strong>Note</strong> : The request can also be made using the
 POST endpoint.</p>
 </dd>
 </dl>

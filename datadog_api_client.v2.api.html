@@ -435,14 +435,14 @@
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.audit_api.AuditApi">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AuditApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.audit_api.AuditApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Search your Audit Logs events over HTTP.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.audit_api.AuditApi.list_audit_logs">
 <span class="sig-name descname"><span class="pre">list_audit_logs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.audit_api.AuditApi.list_audit_logs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a list of Audit Logs events.</p>
 <p>List endpoint returns events that match a Audit Logs search query.
-[Results are paginated][1].</p>
+<a class="reference external" href="https://docs.datadoghq.com/logs/guide/collect-multiple-logs-with-pagination">Results are paginated</a>.</p>
 <p>Use this endpoint to see your latest Audit Logs events.</p>
-<p>[1]: <a class="reference external" href="https://docs.datadoghq.com/logs/guide/collect-multiple-logs-with-pagination">https://docs.datadoghq.com/logs/guide/collect-multiple-logs-with-pagination</a></p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">list_audit_logs</span><span class="p">(</span><span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -521,9 +521,8 @@ use. Default is read from the configuration.</p></li>
 <span class="sig-name descname"><span class="pre">search_audit_logs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.audit_api.AuditApi.search_audit_logs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Search Audit Logs events.</p>
 <p>List endpoint returns Audit Logs events that match an Audit search query.
-[Results are paginated][1].</p>
+<a class="reference external" href="https://docs.datadoghq.com/logs/guide/collect-multiple-logs-with-pagination">Results are paginated</a>.</p>
 <p>Use this endpoint to build complex Audit Logs events filtering and search.</p>
-<p>[1]: <a class="reference external" href="https://docs.datadoghq.com/logs/guide/collect-multiple-logs-with-pagination">https://docs.datadoghq.com/logs/guide/collect-multiple-logs-with-pagination</a></p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">search_audit_logs</span><span class="p">(</span><span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -593,6 +592,9 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.authn_mappings_api.AuthNMappingsApi">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AuthNMappingsApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.authn_mappings_api.AuthNMappingsApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p><a class="reference external" href="https://docs.datadoghq.com/account_management/authn_mapping/?tab=example">AuthN Mappings API</a>
+is used to automatically map group of users to roles in Datadog using attributes
+sent from Identity Providers.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.authn_mappings_api.AuthNMappingsApi.create_authn_mapping">
 <span class="sig-name descname"><span class="pre">create_authn_mapping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.authn_mappings_api.AuthNMappingsApi.create_authn_mapping" title="Permalink to this definition">¶</a></dt>
@@ -803,6 +805,7 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.cloud_workload_security_api.CloudWorkloadSecurityApi">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CloudWorkloadSecurityApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.cloud_workload_security_api.CloudWorkloadSecurityApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Workload activity security rules for generating events using the Datadog security Agent.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.cloud_workload_security_api.CloudWorkloadSecurityApi.create_cloud_workload_security_agent_rule">
 <span class="sig-name descname"><span class="pre">create_cloud_workload_security_agent_rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.cloud_workload_security_api.CloudWorkloadSecurityApi.create_cloud_workload_security_agent_rule" title="Permalink to this definition">¶</a></dt>
@@ -1053,6 +1056,9 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.dashboard_lists_api.DashboardListsApi">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DashboardListsApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.dashboard_lists_api.DashboardListsApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Interact with your dashboard lists through the API to
+organize, find, and share all of your dashboards with your team and
+organization.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.dashboard_lists_api.DashboardListsApi.create_dashboard_list_items">
 <span class="sig-name descname"><span class="pre">create_dashboard_list_items</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dashboard_list_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.dashboard_lists_api.DashboardListsApi.create_dashboard_list_items" title="Permalink to this definition">¶</a></dt>
@@ -1224,6 +1230,7 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.incident_services_api.IncidentServicesApi">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IncidentServicesApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.incident_services_api.IncidentServicesApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Create, update, delete, and retrieve services which can be associated with incidents.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.incident_services_api.IncidentServicesApi.create_incident_service">
 <span class="sig-name descname"><span class="pre">create_incident_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.incident_services_api.IncidentServicesApi.create_incident_service" title="Permalink to this definition">¶</a></dt>
@@ -1308,7 +1315,7 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.incident_services_api.IncidentServicesApi.get_incident_service">
 <span class="sig-name descname"><span class="pre">get_incident_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">service_id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.incident_services_api.IncidentServicesApi.get_incident_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get details of an incident service.</p>
-<p>Get details of an incident service. If the <cite>include[users]</cite> query parameter is provided,
+<p>Get details of an incident service. If the <code class="docutils literal notranslate"><span class="pre">include[users]</span></code> query parameter is provided,
 the included attribute will contain the users related to these incident services.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
@@ -1350,7 +1357,7 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.incident_services_api.IncidentServicesApi.list_incident_services">
 <span class="sig-name descname"><span class="pre">list_incident_services</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.incident_services_api.IncidentServicesApi.list_incident_services" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a list of all incident services.</p>
-<p>Get all incident services uploaded for the requesting user’s organization. If the <cite>include[users]</cite> query parameter is provided, the included attribute will contain the users related to these incident services.</p>
+<p>Get all incident services uploaded for the requesting user’s organization. If the <code class="docutils literal notranslate"><span class="pre">include[users]</span></code> query parameter is provided, the included attribute will contain the users related to these incident services.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">list_incident_services</span><span class="p">(</span><span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -1438,6 +1445,7 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.incident_teams_api.IncidentTeamsApi">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IncidentTeamsApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.incident_teams_api.IncidentTeamsApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Create, update, delete and retrieve teams which can be associated with incidents.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.incident_teams_api.IncidentTeamsApi.create_incident_team">
 <span class="sig-name descname"><span class="pre">create_incident_team</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.incident_teams_api.IncidentTeamsApi.create_incident_team" title="Permalink to this definition">¶</a></dt>
@@ -1522,7 +1530,7 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.incident_teams_api.IncidentTeamsApi.get_incident_team">
 <span class="sig-name descname"><span class="pre">get_incident_team</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">team_id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.incident_teams_api.IncidentTeamsApi.get_incident_team" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get details of an incident team.</p>
-<p>Get details of an incident team. If the <cite>include[users]</cite> query parameter is provided,
+<p>Get details of an incident team. If the <code class="docutils literal notranslate"><span class="pre">include[users]</span></code> query parameter is provided,
 the included attribute will contain the users related to these incident teams.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
@@ -1564,7 +1572,7 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.incident_teams_api.IncidentTeamsApi.list_incident_teams">
 <span class="sig-name descname"><span class="pre">list_incident_teams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.incident_teams_api.IncidentTeamsApi.list_incident_teams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a list of all incident teams.</p>
-<p>Get all incident teams for the requesting user’s organization. If the <cite>include[users]</cite> query parameter is provided, the included attribute will contain the users related to these incident teams.</p>
+<p>Get all incident teams for the requesting user’s organization. If the <code class="docutils literal notranslate"><span class="pre">include[users]</span></code> query parameter is provided, the included attribute will contain the users related to these incident teams.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">list_incident_teams</span><span class="p">(</span><span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -1652,6 +1660,7 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.incidents_api.IncidentsApi">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IncidentsApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.incidents_api.IncidentsApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Manage incident response.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.incidents_api.IncidentsApi.create_incident">
 <span class="sig-name descname"><span class="pre">create_incident</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.incidents_api.IncidentsApi.create_incident" title="Permalink to this definition">¶</a></dt>
@@ -1736,7 +1745,7 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.incidents_api.IncidentsApi.get_incident">
 <span class="sig-name descname"><span class="pre">get_incident</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">incident_id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.incidents_api.IncidentsApi.get_incident" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the details of an incident.</p>
-<p>Get the details of an incident by <cite>incident_id</cite>.</p>
+<p>Get the details of an incident by <code class="docutils literal notranslate"><span class="pre">incident_id</span></code>.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_incident</span><span class="p">(</span><span class="n">incident_id</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -1895,6 +1904,10 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.key_management_api.KeyManagementApi">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">KeyManagementApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.key_management_api.KeyManagementApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Manage your Datadog API and application keys. You need an API key and
+an application key for a user with the required permissions to interact
+with these endpoints. The full list of API and application keys can be
+seen on your <a class="reference external" href="https://app.datadoghq.com/account/settings#api">Datadog API page</a>.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.key_management_api.KeyManagementApi.create_api_key">
 <span class="sig-name descname"><span class="pre">create_api_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.key_management_api.KeyManagementApi.create_api_key" title="Permalink to this definition">¶</a></dt>
@@ -2108,7 +2121,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>api_key_id</strong> (<em>str</em>) – The ID of the API key.</p></li>
-<li><p><strong>include</strong> (<em>str</em><em>, </em><em>optional</em>) – Comma separated list of resource paths for related resources to include in the response. Supported resource paths are <cite>created_by</cite> and <cite>modified_by</cite>.</p></li>
+<li><p><strong>include</strong> (<em>str</em><em>, </em><em>optional</em>) – Comma separated list of resource paths for related resources to include in the response. Supported resource paths are <code class="docutils literal notranslate"><span class="pre">created_by</span></code> and <code class="docutils literal notranslate"><span class="pre">modified_by</span></code>.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
@@ -2149,7 +2162,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>app_key_id</strong> (<em>str</em>) – The ID of the application key.</p></li>
-<li><p><strong>include</strong> (<em>str</em><em>, </em><em>optional</em>) – Resource path for related resources to include in the response. Only <cite>owned_by</cite> is supported.</p></li>
+<li><p><strong>include</strong> (<em>str</em><em>, </em><em>optional</em>) – Resource path for related resources to include in the response. Only <code class="docutils literal notranslate"><span class="pre">owned_by</span></code> is supported.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
@@ -2239,7 +2252,7 @@ attribute with a minus sign.</p></li>
 <li><p><strong>filter_created_at_end</strong> (<em>str</em><em>, </em><em>optional</em>) – Only include API keys created on or before the specified date.</p></li>
 <li><p><strong>filter_modified_at_start</strong> (<em>str</em><em>, </em><em>optional</em>) – Only include API keys modified on or after the specified date.</p></li>
 <li><p><strong>filter_modified_at_end</strong> (<em>str</em><em>, </em><em>optional</em>) – Only include API keys modified on or before the specified date.</p></li>
-<li><p><strong>include</strong> (<em>str</em><em>, </em><em>optional</em>) – Comma separated list of resource paths for related resources to include in the response. Supported resource paths are <cite>created_by</cite> and <cite>modified_by</cite>.</p></li>
+<li><p><strong>include</strong> (<em>str</em><em>, </em><em>optional</em>) – Comma separated list of resource paths for related resources to include in the response. Supported resource paths are <code class="docutils literal notranslate"><span class="pre">created_by</span></code> and <code class="docutils literal notranslate"><span class="pre">modified_by</span></code>.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
@@ -2487,6 +2500,7 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.logs_api.LogsApi">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LogsApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.logs_api.LogsApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Search your logs and send them to your Datadog platform over HTTP.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.logs_api.LogsApi.aggregate_logs">
 <span class="sig-name descname"><span class="pre">aggregate_logs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.logs_api.LogsApi.aggregate_logs" title="Permalink to this definition">¶</a></dt>
@@ -2531,13 +2545,11 @@ use. Default is read from the configuration.</p></li>
 <span class="sig-name descname"><span class="pre">list_logs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.logs_api.LogsApi.list_logs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Search logs.</p>
 <p>List endpoint returns logs that match a log search query.
-[Results are paginated][1].</p>
+<a class="reference external" href="/logs/guide/collect-multiple-logs-with-pagination">Results are paginated</a>.</p>
 <p>Use this endpoint to build complex logs filtering and search.</p>
 <p><strong>If you are considering archiving logs for your organization,
 consider use of the Datadog archive capabilities instead of the log list API.
-See [Datadog Logs Archive documentation][2].</strong></p>
-<p>[1]: /logs/guide/collect-multiple-logs-with-pagination
-[2]: <a class="reference external" href="https://docs.datadoghq.com/logs/archives">https://docs.datadoghq.com/logs/archives</a></p>
+See `Datadog Logs Archive documentation &lt;https://docs.datadoghq.com/logs/archives&gt;`_.</strong></p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">list_logs</span><span class="p">(</span><span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -2577,13 +2589,11 @@ use. Default is read from the configuration.</p></li>
 <span class="sig-name descname"><span class="pre">list_logs_get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.logs_api.LogsApi.list_logs_get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a list of logs.</p>
 <p>List endpoint returns logs that match a log search query.
-[Results are paginated][1].</p>
+<a class="reference external" href="/logs/guide/collect-multiple-logs-with-pagination">Results are paginated</a>.</p>
 <p>Use this endpoint to see your latest logs.</p>
 <p><strong>If you are considering archiving logs for your organization,
 consider use of the Datadog archive capabilities instead of the log list API.
-See [Datadog Logs Archive documentation][2].</strong></p>
-<p>[1]: /logs/guide/collect-multiple-logs-with-pagination
-[2]: <a class="reference external" href="https://docs.datadoghq.com/logs/archives">https://docs.datadoghq.com/logs/archives</a></p>
+See `Datadog Logs Archive documentation &lt;https://docs.datadoghq.com/logs/archives&gt;`_.</strong></p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">list_logs_get</span><span class="p">(</span><span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -2698,21 +2708,25 @@ use. Default is read from the configuration.</p></li>
 <li><p>Maximum size for a single log: 1MB</p></li>
 <li><p>Maximum array size if sending multiple logs in an array: 1000 entries</p></li>
 </ul>
-<p>Any log exceeding 1MB is accepted and truncated by Datadog:
-- For a single log request, the API truncates the log at 1MB and returns a 2xx.
-- For a multi-logs request, the API processes all logs, truncates only logs larger than 1MB, and returns a 2xx.</p>
+<p>Any log exceeding 1MB is accepted and truncated by Datadog:</p>
+<ul class="simple">
+<li><p>For a single log request, the API truncates the log at 1MB and returns a 2xx.</p></li>
+<li><p>For a multi-logs request, the API processes all logs, truncates only logs larger than 1MB, and returns a 2xx.</p></li>
+</ul>
 <p>Datadog recommends sending your logs compressed.
-Add the <cite>Content-Encoding: gzip</cite> header to the request when sending compressed logs.</p>
-<p>The status codes answered by the HTTP API are:
-- 202: Accepted: the request has been accepted for processing
-- 400: Bad request (likely an issue in the payload formatting)
-- 401: Unauthorized (likely a missing API Key)
-- 403: Permission issue (likely using an invalid API Key)
-- 408: Request Timeout, request should be retried after some time
-- 413: Payload too large (batch is above 5MB uncompressed)
-- 429: Too Many Requests, request should be retried after some time
-- 500: Internal Server Error, the server encountered an unexpected condition that prevented it from fulfilling the request, request should be retried after some time
-- 503: Service Unavailable, the server is not ready to handle the request probably because it is overloaded, request should be retried after some time</p>
+Add the <code class="docutils literal notranslate"><span class="pre">Content-Encoding:</span> <span class="pre">gzip</span></code> header to the request when sending compressed logs.</p>
+<p>The status codes answered by the HTTP API are:</p>
+<ul class="simple">
+<li><p>202: Accepted: the request has been accepted for processing</p></li>
+<li><p>400: Bad request (likely an issue in the payload formatting)</p></li>
+<li><p>401: Unauthorized (likely a missing API Key)</p></li>
+<li><p>403: Permission issue (likely using an invalid API Key)</p></li>
+<li><p>408: Request Timeout, request should be retried after some time</p></li>
+<li><p>413: Payload too large (batch is above 5MB uncompressed)</p></li>
+<li><p>429: Too Many Requests, request should be retried after some time</p></li>
+<li><p>500: Internal Server Error, the server encountered an unexpected condition that prevented it from fulfilling the request, request should be retried after some time</p></li>
+<li><p>503: Service Unavailable, the server is not ready to handle the request probably because it is overloaded, request should be retried after some time</p></li>
+</ul>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">submit_log</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -2724,7 +2738,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.http_log.HTTPLog" title="datadog_api_client.v2.model.http_log.HTTPLog"><em>HTTPLog</em></a>) – Log to send (JSON format).</p></li>
 <li><p><strong>content_encoding</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.content_encoding.ContentEncoding" title="datadog_api_client.v2.model.content_encoding.ContentEncoding"><em>ContentEncoding</em></a><em>, </em><em>optional</em>) – HTTP header used to compress the media-type.</p></li>
-<li><p><strong>ddtags</strong> (<em>str</em><em>, </em><em>optional</em>) – Log tags can be passed as query parameters with <cite>text/plain</cite> content type.</p></li>
+<li><p><strong>ddtags</strong> (<em>str</em><em>, </em><em>optional</em>) – Log tags can be passed as query parameters with <code class="docutils literal notranslate"><span class="pre">text/plain</span></code> content type.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
@@ -2758,11 +2772,14 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.logs_archives_api.LogsArchivesApi">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LogsArchivesApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.logs_archives_api.LogsArchivesApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Archives forward all the logs ingested to a cloud storage system.</p>
+<p>See the <a class="reference external" href="https://app.datadoghq.com/logs/pipelines/archives">Archives Page</a>
+for a list of the archives currently configured in web UI.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.logs_archives_api.LogsArchivesApi.add_read_role_to_archive">
 <span class="sig-name descname"><span class="pre">add_read_role_to_archive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">archive_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.logs_archives_api.LogsArchivesApi.add_read_role_to_archive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Grant role to an archive.</p>
-<p>Adds a read role to an archive. ([Roles API](<a class="reference external" href="https://docs.datadoghq.com/api/v2/roles/">https://docs.datadoghq.com/api/v2/roles/</a>))</p>
+<p>Adds a read role to an archive. (<a class="reference external" href="https://docs.datadoghq.com/api/v2/roles/">Roles API</a>)</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">add_read_role_to_archive</span><span class="p">(</span><span class="n">archive_id</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -3041,7 +3058,7 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.logs_archives_api.LogsArchivesApi.remove_role_from_archive">
 <span class="sig-name descname"><span class="pre">remove_role_from_archive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">archive_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.logs_archives_api.LogsArchivesApi.remove_role_from_archive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Revoke role from an archive.</p>
-<p>Removes a role from an archive. ([Roles API](<a class="reference external" href="https://docs.datadoghq.com/api/v2/roles/">https://docs.datadoghq.com/api/v2/roles/</a>))</p>
+<p>Removes a role from an archive. (<a class="reference external" href="https://docs.datadoghq.com/api/v2/roles/">Roles API</a>)</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">remove_role_from_archive</span><span class="p">(</span><span class="n">archive_id</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -3126,7 +3143,7 @@ use. Default is read from the configuration.</p></li>
 <dd><p>Update archive order.</p>
 <p>Update the order of your archives. Since logs are processed sequentially, reordering an archive may change
 the structure and content of the data processed by other archives.</p>
-<p><strong>Note</strong>: Using the <cite>PUT</cite> method updates your archive’s order by replacing the current order
+<p><strong>Note</strong>: Using the <code class="docutils literal notranslate"><span class="pre">PUT</span></code> method updates your archive’s order by replacing the current order
 with the new one.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
@@ -3171,6 +3188,7 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.logs_metrics_api.LogsMetricsApi">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LogsMetricsApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.logs_metrics_api.LogsMetricsApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Manage configuration of <a class="reference external" href="https://app.datadoghq.com/logs/pipelines/generate-metrics">log-based metrics</a> for your organization.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.logs_metrics_api.LogsMetricsApi.create_logs_metric">
 <span class="sig-name descname"><span class="pre">create_logs_metric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.logs_metrics_api.LogsMetricsApi.create_logs_metric" title="Permalink to this definition">¶</a></dt>
@@ -3381,6 +3399,18 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.metrics_api.MetricsApi">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MetricsApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.metrics_api.MetricsApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The metrics endpoint allows you to:</p>
+<ul class="simple">
+<li><p>Post metrics data so it can be graphed on Datadog’s dashboards</p></li>
+<li><p>Query metrics from any time period</p></li>
+<li><p>Modify tag configurations for metrics</p></li>
+<li><p>View tags and volumes for metrics</p></li>
+</ul>
+<p><strong>Note</strong>: A graph can only contain a set number of points
+and as the timeframe over which a metric is viewed increases,
+aggregation between points occurs to stay below that set number.</p>
+<p>The Post, Patch, and Delete <code class="docutils literal notranslate"><span class="pre">manage_tags</span></code> API methods can only be performed by
+a user who has the <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">Tags</span> <span class="pre">for</span> <span class="pre">Metrics</span></code> permission.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.metrics_api.MetricsApi.create_bulk_tags_metrics_configuration">
 <span class="sig-name descname"><span class="pre">create_bulk_tags_metrics_configuration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.metrics_api.MetricsApi.create_bulk_tags_metrics_configuration" title="Permalink to this definition">¶</a></dt>
@@ -3390,7 +3420,7 @@ Metrics are selected by passing a metric name prefix. Use the Delete method of t
 Results can be sent to a set of account email addresses, just like the same operation in the Datadog web app.
 If multiple calls include the same metric, the last configuration applied (not by submit order) is used, do not
 expect deterministic ordering of concurrent calls.
-Can only be used with application keys of users with the <cite>Manage Tags for Metrics</cite> permission.</p>
+Can only be used with application keys of users with the <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">Tags</span> <span class="pre">for</span> <span class="pre">Metrics</span></code> permission.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">create_bulk_tags_metrics_configuration</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -3432,7 +3462,7 @@ use. Default is read from the configuration.</p></li>
 <p>Create and define a list of queryable tag keys for an existing count/gauge/rate/distribution metric.
 Optionally, include percentile aggregations on any distribution metric or configure custom aggregations
 on any count, rate, or gauge metric.
-Can only be used with application keys of users with the <cite>Manage Tags for Metrics</cite> permission.</p>
+Can only be used with application keys of users with the <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">Tags</span> <span class="pre">for</span> <span class="pre">Metrics</span></code> permission.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">create_tag_configuration</span><span class="p">(</span><span class="n">metric_name</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -3475,7 +3505,7 @@ use. Default is read from the configuration.</p></li>
 <p>Delete all custom lists of queryable tag keys for a set of existing count, gauge, rate, and distribution metrics.
 Metrics are selected by passing a metric name prefix.
 Results can be sent to a set of account email addresses, just like the same operation in the Datadog web app.
-Can only be used with application keys of users with the <cite>Manage Tags for Metrics</cite> permission.</p>
+Can only be used with application keys of users with the <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">Tags</span> <span class="pre">for</span> <span class="pre">Metrics</span></code> permission.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">delete_bulk_tags_metrics_configuration</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -3515,7 +3545,7 @@ use. Default is read from the configuration.</p></li>
 <span class="sig-name descname"><span class="pre">delete_tag_configuration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metric_name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.metrics_api.MetricsApi.delete_tag_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete a tag configuration.</p>
 <p>Deletes a metric’s tag configuration. Can only be used with application
-keys from users with the <cite>Manage Tags for Metrics</cite> permission.</p>
+keys from users with the <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">Tags</span> <span class="pre">for</span> <span class="pre">Metrics</span></code> permission.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">delete_tag_configuration</span><span class="p">(</span><span class="n">metric_name</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -3568,7 +3598,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <li><p><strong>metric_name</strong> (<em>str</em>) – The name of the metric.</p></li>
 <li><p><strong>filter_groups</strong> (<em>str</em><em>, </em><em>optional</em>) – Filtered tag keys that the metric is configured to query with.</p></li>
 <li><p><strong>filter_hours_ago</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of hours of look back (from now) to estimate cardinality with.</p></li>
-<li><p><strong>filter_num_aggregations</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of aggregations that a <cite>count</cite>, <cite>rate</cite>, or <cite>gauge</cite> metric is configured to use. Max number of aggregation combos is 9.</p></li>
+<li><p><strong>filter_num_aggregations</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of aggregations that a <code class="docutils literal notranslate"><span class="pre">count</span></code>, <code class="docutils literal notranslate"><span class="pre">rate</span></code>, or <code class="docutils literal notranslate"><span class="pre">gauge</span></code> metric is configured to use. Max number of aggregation combos is 9.</p></li>
 <li><p><strong>filter_pct</strong> (<em>bool</em><em>, </em><em>optional</em>) – A boolean, for distribution metrics only, to estimate cardinality if the metric includes additional percentile aggregators.</p></li>
 <li><p><strong>filter_timespan_h</strong> (<em>int</em><em>, </em><em>optional</em>) – A window, in hours, from the look back to estimate cardinality with.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
@@ -3732,7 +3762,7 @@ use. Default is read from the configuration.</p></li>
 <p>View distinct metrics volumes for the given metric name.</p>
 <p>Custom distribution metrics will return both ingested and indexed custom metric volumes.
 For Metrics without Limits&amp;trade; beta customers, all metrics will return both ingested/indexed volumes.
-Custom metrics generated in-app from other products will return <cite>null</cite> for ingested volumes.</p>
+Custom metrics generated in-app from other products will return <code class="docutils literal notranslate"><span class="pre">null</span></code> for ingested volumes.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">list_volumes_by_metric_name</span><span class="p">(</span><span class="n">metric_name</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -3823,7 +3853,7 @@ use. Default is read from the configuration.</p></li>
 <dd><p>Update a tag configuration.</p>
 <p>Update the tag configuration of a metric or percentile aggregations of a distribution metric or custom aggregations
 of a count, rate, or gauge metric.
-Can only be used with application keys from users with the <cite>Manage Tags for Metrics</cite> permission.</p>
+Can only be used with application keys from users with the <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">Tags</span> <span class="pre">for</span> <span class="pre">Metrics</span></code> permission.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">update_tag_configuration</span><span class="p">(</span><span class="n">metric_name</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -3867,6 +3897,7 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.organizations_api.OrganizationsApi">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OrganizationsApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.organizations_api.OrganizationsApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Create, edit, and manage your organizations. Read more about <a class="reference external" href="https://docs.datadoghq.com/account_management/multi_organization">multi-org accounts</a>.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.organizations_api.OrganizationsApi.upload_idp_metadata">
 <span class="sig-name descname"><span class="pre">upload_idp_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.organizations_api.OrganizationsApi.upload_idp_metadata" title="Permalink to this definition">¶</a></dt>
@@ -3916,6 +3947,7 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.processes_api.ProcessesApi">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ProcessesApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.processes_api.ProcessesApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The processes API allows you to query processes data for your organization.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.processes_api.ProcessesApi.list_processes">
 <span class="sig-name descname"><span class="pre">list_processes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.processes_api.ProcessesApi.list_processes" title="Permalink to this definition">¶</a></dt>
@@ -3933,14 +3965,14 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <li><p><strong>search</strong> (<em>str</em><em>, </em><em>optional</em>) – String to search processes by.</p></li>
 <li><p><strong>tags</strong> (<em>str</em><em>, </em><em>optional</em>) – Comma-separated list of tags to filter processes by.</p></li>
 <li><p><strong>_from</strong> (<em>int</em><em>, </em><em>optional</em>) – Unix timestamp (number of seconds since epoch) of the start of the query window.
-If not provided, the start of the query window will be 15 minutes before the <cite>to</cite> timestamp. If neither
-<cite>from</cite> nor <cite>to</cite> are provided, the query window will be <cite>[now - 15m, now]</cite>.</p></li>
+If not provided, the start of the query window will be 15 minutes before the <code class="docutils literal notranslate"><span class="pre">to</span></code> timestamp. If neither
+<code class="docutils literal notranslate"><span class="pre">from</span></code> nor <code class="docutils literal notranslate"><span class="pre">to</span></code> are provided, the query window will be <code class="docutils literal notranslate"><span class="pre">[now</span> <span class="pre">-</span> <span class="pre">15m,</span> <span class="pre">now]</span></code>.</p></li>
 <li><p><strong>to</strong> (<em>int</em><em>, </em><em>optional</em>) – Unix timestamp (number of seconds since epoch) of the end of the query window.
-If not provided, the end of the query window will be 15 minutes after the <cite>from</cite> timestamp. If neither
-<cite>from</cite> nor <cite>to</cite> are provided, the query window will be <cite>[now - 15m, now]</cite>.</p></li>
+If not provided, the end of the query window will be 15 minutes after the <code class="docutils literal notranslate"><span class="pre">from</span></code> timestamp. If neither
+<code class="docutils literal notranslate"><span class="pre">from</span></code> nor <code class="docutils literal notranslate"><span class="pre">to</span></code> are provided, the query window will be <code class="docutils literal notranslate"><span class="pre">[now</span> <span class="pre">-</span> <span class="pre">15m,</span> <span class="pre">now]</span></code>.</p></li>
 <li><p><strong>page_limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum number of results returned.</p></li>
 <li><p><strong>page_cursor</strong> (<em>str</em><em>, </em><em>optional</em>) – String to query the next page of results.
-This key is provided with each valid response from the API in <cite>meta.page.after</cite>.</p></li>
+This key is provided with each valid response from the API in <code class="docutils literal notranslate"><span class="pre">meta.page.after</span></code>.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
@@ -3977,14 +4009,14 @@ use. Default is read from the configuration.</p></li>
 <li><p><strong>search</strong> (<em>str</em><em>, </em><em>optional</em>) – String to search processes by.</p></li>
 <li><p><strong>tags</strong> (<em>str</em><em>, </em><em>optional</em>) – Comma-separated list of tags to filter processes by.</p></li>
 <li><p><strong>_from</strong> (<em>int</em><em>, </em><em>optional</em>) – Unix timestamp (number of seconds since epoch) of the start of the query window.
-If not provided, the start of the query window will be 15 minutes before the <cite>to</cite> timestamp. If neither
-<cite>from</cite> nor <cite>to</cite> are provided, the query window will be <cite>[now - 15m, now]</cite>.</p></li>
+If not provided, the start of the query window will be 15 minutes before the <code class="docutils literal notranslate"><span class="pre">to</span></code> timestamp. If neither
+<code class="docutils literal notranslate"><span class="pre">from</span></code> nor <code class="docutils literal notranslate"><span class="pre">to</span></code> are provided, the query window will be <code class="docutils literal notranslate"><span class="pre">[now</span> <span class="pre">-</span> <span class="pre">15m,</span> <span class="pre">now]</span></code>.</p></li>
 <li><p><strong>to</strong> (<em>int</em><em>, </em><em>optional</em>) – Unix timestamp (number of seconds since epoch) of the end of the query window.
-If not provided, the end of the query window will be 15 minutes after the <cite>from</cite> timestamp. If neither
-<cite>from</cite> nor <cite>to</cite> are provided, the query window will be <cite>[now - 15m, now]</cite>.</p></li>
+If not provided, the end of the query window will be 15 minutes after the <code class="docutils literal notranslate"><span class="pre">from</span></code> timestamp. If neither
+<code class="docutils literal notranslate"><span class="pre">from</span></code> nor <code class="docutils literal notranslate"><span class="pre">to</span></code> are provided, the query window will be <code class="docutils literal notranslate"><span class="pre">[now</span> <span class="pre">-</span> <span class="pre">15m,</span> <span class="pre">now]</span></code>.</p></li>
 <li><p><strong>page_limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum number of results returned.</p></li>
 <li><p><strong>page_cursor</strong> (<em>str</em><em>, </em><em>optional</em>) – String to query the next page of results.
-This key is provided with each valid response from the API in <cite>meta.page.after</cite>.</p></li>
+This key is provided with each valid response from the API in <code class="docutils literal notranslate"><span class="pre">meta.page.after</span></code>.</p></li>
 <li><p><strong>_request_timeout</strong> (<em>float/tuple</em>) – Timeout setting for this request. If one
 number provided, it will be total request timeout. It can also be a
 pair (tuple) of (connection, read) timeouts.  Default is None.</p></li>
@@ -4007,11 +4039,18 @@ use. Default is read from the configuration.</p></li>
 </dd></dl>
 </section>
 <section id="module-datadog_api_client.v2.api.roles_api">
-<span id="roles-api"></span><h2 id="module-datadog_api_client.v2.api.roles_api">roles_api<a class="headerlink" href="#module-datadog_api_client.v2.api.roles_api" title="Permalink to this headline">¶</a></h2>
+<span id="id6"></span><h2 id="module-datadog_api_client.v2.api.roles_api">roles_api<a class="headerlink" href="#module-datadog_api_client.v2.api.roles_api" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.roles_api.RolesApi">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RolesApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.roles_api.RolesApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Roles API is used to create and manage Datadog roles, what
+<a class="reference external" href="https://docs.datadoghq.com/account_management/rbac/">global permissions</a>
+they grant, and which users belong to them.</p>
+<p>Permissions related to specific account assets can be granted to roles
+in the Datadog application without using this API. For example, granting
+read access on a specific log index to a role can be done in Datadog from the
+<a class="reference external" href="https://app.datadoghq.com/logs/pipelines">Pipelines page</a>.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.roles_api.RolesApi.add_permission_to_role">
 <span class="sig-name descname"><span class="pre">add_permission_to_role</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">role_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.roles_api.RolesApi.add_permission_to_role" title="Permalink to this definition">¶</a></dt>
@@ -4215,7 +4254,7 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.roles_api.RolesApi.get_role">
 <span class="sig-name descname"><span class="pre">get_role</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">role_id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.roles_api.RolesApi.get_role" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a role.</p>
-<p>Get a role in the organization specified by the role’s <cite>role_id</cite>.</p>
+<p>Get a role in the organization specified by the role’s <code class="docutils literal notranslate"><span class="pre">role_id</span></code>.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_role</span><span class="p">(</span><span class="n">role_id</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -4349,7 +4388,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <li><p><strong>page_number</strong> (<em>int</em><em>, </em><em>optional</em>) – Specific page number to return.</p></li>
 <li><p><strong>sort</strong> (<em>str</em><em>, </em><em>optional</em>) – User attribute to order results by. Sort order is <strong>ascending</strong> by default.
 Sort order is <strong>descending</strong> if the field is prefixed by a negative sign,
-for example <cite>sort=-name</cite>. Options: <cite>name</cite>, <cite>email</cite>, <cite>status</cite>.</p></li>
+for example <code class="docutils literal notranslate"><span class="pre">sort=-name</span></code>. Options: <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">email</span></code>, <code class="docutils literal notranslate"><span class="pre">status</span></code>.</p></li>
 <li><p><strong>filter</strong> (<em>str</em><em>, </em><em>optional</em>) – Filter all users by the given string. Defaults to no filtering.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
@@ -4394,7 +4433,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <li><p><strong>page_number</strong> (<em>int</em><em>, </em><em>optional</em>) – Specific page number to return.</p></li>
 <li><p><strong>sort</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.roles_sort.RolesSort" title="datadog_api_client.v2.model.roles_sort.RolesSort"><em>RolesSort</em></a><em>, </em><em>optional</em>) – Sort roles depending on the given field. Sort order is <strong>ascending</strong> by default.
 Sort order is <strong>descending</strong> if the field is prefixed by a negative sign, for example:
-<cite>sort=-name</cite>.</p></li>
+<code class="docutils literal notranslate"><span class="pre">sort=-name</span></code>.</p></li>
 <li><p><strong>filter</strong> (<em>str</em><em>, </em><em>optional</em>) – Filter all roles by the given string.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
@@ -4549,6 +4588,7 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.rum_api.RUMApi">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RUMApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.rum_api.RUMApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Search or aggregate your RUM events over HTTP.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.rum_api.RUMApi.aggregate_rum_events">
 <span class="sig-name descname"><span class="pre">aggregate_rum_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.rum_api.RUMApi.aggregate_rum_events" title="Permalink to this definition">¶</a></dt>
@@ -4593,9 +4633,8 @@ use. Default is read from the configuration.</p></li>
 <span class="sig-name descname"><span class="pre">list_rum_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.rum_api.RUMApi.list_rum_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a list of RUM events.</p>
 <p>List endpoint returns events that match a RUM search query.
-[Results are paginated][1].</p>
+<a class="reference external" href="https://docs.datadoghq.com/logs/guide/collect-multiple-logs-with-pagination">Results are paginated</a>.</p>
 <p>Use this endpoint to see your latest RUM events.</p>
-<p>[1]: <a class="reference external" href="https://docs.datadoghq.com/logs/guide/collect-multiple-logs-with-pagination">https://docs.datadoghq.com/logs/guide/collect-multiple-logs-with-pagination</a></p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">list_rum_events</span><span class="p">(</span><span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -4674,9 +4713,8 @@ use. Default is read from the configuration.</p></li>
 <span class="sig-name descname"><span class="pre">search_rum_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.rum_api.RUMApi.search_rum_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Search RUM events.</p>
 <p>List endpoint returns RUM events that match a RUM search query.
-[Results are paginated][1].</p>
+<a class="reference external" href="https://docs.datadoghq.com/logs/guide/collect-multiple-logs-with-pagination">Results are paginated</a>.</p>
 <p>Use this endpoint to build complex RUM events filtering and search.</p>
-<p>[1]: <a class="reference external" href="https://docs.datadoghq.com/logs/guide/collect-multiple-logs-with-pagination">https://docs.datadoghq.com/logs/guide/collect-multiple-logs-with-pagination</a></p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">search_rum_events</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -4746,12 +4784,14 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SecurityMonitoringApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Detection rules for generating signals and listing of generated
+signals.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.create_security_filter">
 <span class="sig-name descname"><span class="pre">create_security_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.create_security_filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a security filter.</p>
 <p>Create a security filter.</p>
-<p>See the [security filter guide](<a class="reference external" href="https://docs.datadoghq.com/security_platform/guide/how-to-setup-security-filters-using-security-monitoring-api/">https://docs.datadoghq.com/security_platform/guide/how-to-setup-security-filters-using-security-monitoring-api/</a>)
+<p>See the <a class="reference external" href="https://docs.datadoghq.com/security_platform/guide/how-to-setup-security-filters-using-security-monitoring-api/">security filter guide</a>
 for more examples.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
@@ -4912,7 +4952,7 @@ use. Default is read from the configuration.</p></li>
 <span class="sig-name descname"><span class="pre">get_security_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">security_filter_id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.get_security_filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a security filter.</p>
 <p>Get the details of a specific security filter.</p>
-<p>See the [security filter guide](<a class="reference external" href="https://docs.datadoghq.com/security_platform/guide/how-to-setup-security-filters-using-security-monitoring-api/">https://docs.datadoghq.com/security_platform/guide/how-to-setup-security-filters-using-security-monitoring-api/</a>)
+<p>See the <a class="reference external" href="https://docs.datadoghq.com/security_platform/guide/how-to-setup-security-filters-using-security-monitoring-api/">security filter guide</a>
 for more examples.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
@@ -5263,7 +5303,7 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.update_security_monitoring_rule">
 <span class="sig-name descname"><span class="pre">update_security_monitoring_rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rule_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.update_security_monitoring_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update an existing rule.</p>
-<p>Update an existing rule. When updating <cite>cases</cite>, <cite>queries</cite> or <cite>options</cite>, the whole field
+<p>Update an existing rule. When updating <code class="docutils literal notranslate"><span class="pre">cases</span></code>, <code class="docutils literal notranslate"><span class="pre">queries</span></code> or <code class="docutils literal notranslate"><span class="pre">options</span></code>, the whole field
 must be included. For example, when modifying a query all queries must be included.
 Default rules can only be updated to be enabled and to change notifications.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
@@ -5309,6 +5349,7 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.service_accounts_api.ServiceAccountsApi">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ServiceAccountsApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.service_accounts_api.ServiceAccountsApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Create, edit, and disable service accounts.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.service_accounts_api.ServiceAccountsApi.create_service_account_application_key">
 <span class="sig-name descname"><span class="pre">create_service_account_application_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">service_account_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.service_accounts_api.ServiceAccountsApi.create_service_account_application_key" title="Permalink to this definition">¶</a></dt>
@@ -5528,6 +5569,14 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.usage_metering_api.UsageMeteringApi">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UsageMeteringApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.usage_metering_api.UsageMeteringApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The usage metering API allows you to get hourly, daily, and
+monthly usage across multiple facets of Datadog.
+This API is available to all Pro and Enterprise customers.
+Usage is only accessible for <a class="reference external" href="https://docs.datadoghq.com/account_management/multi_organization/">parent-level organizations</a>.</p>
+<p><strong>Note</strong>: Usage data is delayed by up to 72 hours from when it was incurred.
+It is retained for 15 months.</p>
+<p>You can retrieve up to 24 hours of hourly usage data for multiple organizations,
+and up to two months of hourly usage data for a single organization in one request.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.usage_metering_api.UsageMeteringApi.get_cost_by_org">
 <span class="sig-name descname"><span class="pre">get_cost_by_org</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_month</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.usage_metering_api.UsageMeteringApi.get_cost_by_org" title="Permalink to this definition">¶</a></dt>
@@ -5542,8 +5591,8 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>start_month</strong> (<em>datetime</em>) – Datetime in ISO-8601 format, UTC, precise to month: <cite>[YYYY-MM]</cite> for cost beginning this month.</p></li>
-<li><p><strong>end_month</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Datetime in ISO-8601 format, UTC, precise to month: <cite>[YYYY-MM]</cite> for cost ending this month.</p></li>
+<li><p><strong>start_month</strong> (<em>datetime</em>) – Datetime in ISO-8601 format, UTC, precise to month: <code class="docutils literal notranslate"><span class="pre">[YYYY-MM]</span></code> for cost beginning this month.</p></li>
+<li><p><strong>end_month</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Datetime in ISO-8601 format, UTC, precise to month: <code class="docutils literal notranslate"><span class="pre">[YYYY-MM]</span></code> for cost ending this month.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
@@ -5583,8 +5632,8 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>start_hr</strong> (<em>datetime</em>) – Datetime in ISO-8601 format, UTC, precise to hour: <cite>[YYYY-MM-DDThh]</cite> for usage beginning at this hour.</p></li>
-<li><p><strong>end_hr</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Datetime in ISO-8601 format, UTC, precise to hour: <cite>[YYYY-MM-DDThh]</cite> for usage ending
+<li><p><strong>start_hr</strong> (<em>datetime</em>) – Datetime in ISO-8601 format, UTC, precise to hour: <code class="docutils literal notranslate"><span class="pre">[YYYY-MM-DDThh]</span></code> for usage beginning at this hour.</p></li>
+<li><p><strong>end_hr</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Datetime in ISO-8601 format, UTC, precise to hour: <code class="docutils literal notranslate"><span class="pre">[YYYY-MM-DDThh]</span></code> for usage ending
 <strong>before</strong> this hour.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
@@ -5625,8 +5674,8 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>start_hr</strong> (<em>datetime</em>) – Datetime in ISO-8601 format, UTC, precise to hour: <cite>[YYYY-MM-DDThh]</cite> for usage beginning at this hour.</p></li>
-<li><p><strong>end_hr</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Datetime in ISO-8601 format, UTC, precise to hour: <cite>[YYYY-MM-DDThh]</cite> for usage ending
+<li><p><strong>start_hr</strong> (<em>datetime</em>) – Datetime in ISO-8601 format, UTC, precise to hour: <code class="docutils literal notranslate"><span class="pre">[YYYY-MM-DDThh]</span></code> for usage beginning at this hour.</p></li>
+<li><p><strong>end_hr</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Datetime in ISO-8601 format, UTC, precise to hour: <code class="docutils literal notranslate"><span class="pre">[YYYY-MM-DDThh]</span></code> for usage ending
 <strong>before</strong> this hour.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
@@ -5667,8 +5716,8 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>start_hr</strong> (<em>datetime</em>) – Datetime in ISO-8601 format, UTC, precise to hour: <cite>[YYYY-MM-DDThh]</cite> for usage beginning at this hour.</p></li>
-<li><p><strong>end_hr</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Datetime in ISO-8601 format, UTC, precise to hour: <cite>[YYYY-MM-DDThh]</cite> for usage ending
+<li><p><strong>start_hr</strong> (<em>datetime</em>) – Datetime in ISO-8601 format, UTC, precise to hour: <code class="docutils literal notranslate"><span class="pre">[YYYY-MM-DDThh]</span></code> for usage beginning at this hour.</p></li>
+<li><p><strong>end_hr</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Datetime in ISO-8601 format, UTC, precise to hour: <code class="docutils literal notranslate"><span class="pre">[YYYY-MM-DDThh]</span></code> for usage ending
 <strong>before</strong> this hour.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
@@ -5703,6 +5752,7 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.users_api.UsersApi">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UsersApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.users_api.UsersApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Create, edit, and disable users.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.users_api.UsersApi.create_service_account">
 <span class="sig-name descname"><span class="pre">create_service_account</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.users_api.UsersApi.create_service_account" title="Permalink to this definition">¶</a></dt>
@@ -5866,7 +5916,7 @@ use. Default is read from the configuration.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.users_api.UsersApi.get_user">
 <span class="sig-name descname"><span class="pre">get_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.users_api.UsersApi.get_user" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get user details.</p>
-<p>Get a user in the organization specified by the user’s <cite>user_id</cite>.</p>
+<p>Get a user in the organization specified by the user’s <code class="docutils literal notranslate"><span class="pre">user_id</span></code>.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -6003,12 +6053,12 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <li><p><strong>page_number</strong> (<em>int</em><em>, </em><em>optional</em>) – Specific page number to return.</p></li>
 <li><p><strong>sort</strong> (<em>str</em><em>, </em><em>optional</em>) – User attribute to order results by. Sort order is ascending by default.
 Sort order is descending if the field
-is prefixed by a negative sign, for example <cite>sort=-name</cite>. Options: <cite>name</cite>,
-<cite>modified_at</cite>, <cite>user_count</cite>.</p></li>
-<li><p><strong>sort_dir</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.query_sort_order.QuerySortOrder" title="datadog_api_client.v2.model.query_sort_order.QuerySortOrder"><em>QuerySortOrder</em></a><em>, </em><em>optional</em>) – Direction of sort. Options: <cite>asc</cite>, <cite>desc</cite>.</p></li>
+is prefixed by a negative sign, for example <code class="docutils literal notranslate"><span class="pre">sort=-name</span></code>. Options: <code class="docutils literal notranslate"><span class="pre">name</span></code>,
+<code class="docutils literal notranslate"><span class="pre">modified_at</span></code>, <code class="docutils literal notranslate"><span class="pre">user_count</span></code>.</p></li>
+<li><p><strong>sort_dir</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.query_sort_order.QuerySortOrder" title="datadog_api_client.v2.model.query_sort_order.QuerySortOrder"><em>QuerySortOrder</em></a><em>, </em><em>optional</em>) – Direction of sort. Options: <code class="docutils literal notranslate"><span class="pre">asc</span></code>, <code class="docutils literal notranslate"><span class="pre">desc</span></code>.</p></li>
 <li><p><strong>filter</strong> (<em>str</em><em>, </em><em>optional</em>) – Filter all users by the given string. Defaults to no filtering.</p></li>
 <li><p><strong>filter_status</strong> (<em>str</em><em>, </em><em>optional</em>) – Filter on status attribute.
-Comma separated list, with possible values <cite>Active</cite>, <cite>Pending</cite>, and <cite>Disabled</cite>.
+Comma separated list, with possible values <code class="docutils literal notranslate"><span class="pre">Active</span></code>, <code class="docutils literal notranslate"><span class="pre">Pending</span></code>, and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.
 Defaults to no filtering.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>

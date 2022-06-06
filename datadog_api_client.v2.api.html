@@ -3761,9 +3761,7 @@ use. Default is read from the configuration.</p></li>
 <span class="sig-name descname"><span class="pre">list_volumes_by_metric_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metric_name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.metrics_api.MetricsApi.list_volumes_by_metric_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>List distinct metric volumes by metric name.</p>
 <p>View distinct metrics volumes for the given metric name.</p>
-<p>Custom distribution metrics will return both ingested and indexed custom metric volumes.
-For Metrics without Limits&amp;trade; beta customers, all metrics will return both ingested/indexed volumes.
-Custom metrics generated in-app from other products will return <code class="docutils literal notranslate"><span class="pre">null</span></code> for ingested volumes.</p>
+<p>Custom metrics generated in-app from other products will return <code class="docutils literal notranslate"><span class="pre">null</span></code> for ingested volumes.</p>
 <p>This method makes a synchronous HTTP request by default. To make an
 asynchronous HTTP request, please pass async_req=True.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">thread</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">list_volumes_by_metric_name</span><span class="p">(</span><span class="n">metric_name</span><span class="p">,</span> <span class="n">async_req</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>

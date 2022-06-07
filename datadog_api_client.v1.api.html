@@ -7896,6 +7896,7 @@ asynchronous HTTP request, please pass async_req=True.</p>
 <li><p><strong>tag_breakdown_keys</strong> (<em>str</em><em>, </em><em>optional</em>) – <p>Comma separated list of tags used to group usage. If no value is provided the usage will not be broken down by tags.</p>
 <p>To see which tags are available, look for the value of <code class="docutils literal notranslate"><span class="pre">tag_config_source</span></code> in the API response.</p>
 </p></li>
+<li><p><strong>include_descendants</strong> (<em>bool</em><em>, </em><em>optional</em>) – Include child org usage in the response. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object
@@ -8084,6 +8085,7 @@ Maximum of 15 months ago.</p></li>
 <p>To see which tags are available, look for the value of <code class="docutils literal notranslate"><span class="pre">tag_config_source</span></code> in the API response.</p>
 </p></li>
 <li><p><strong>next_record_id</strong> (<em>str</em><em>, </em><em>optional</em>) – List following results with a next_record_id provided in the previous query.</p></li>
+<li><p><strong>include_descendants</strong> (<em>bool</em><em>, </em><em>optional</em>) – Include child org usage in the response. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>_return_http_data_only</strong> (<em>bool</em>) – Response data without head status
 code and headers. Default is True.</p></li>
 <li><p><strong>_preload_content</strong> (<em>bool</em>) – If False, the urllib3.HTTPResponse object

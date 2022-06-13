@@ -1928,6 +1928,20 @@ Cannot be combined with other filters.</p></li>
 </dl>
 </dd></dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v1.api.metrics_api.MetricsApi.submit_distribution_points">
+<span class="sig-name descname"><span class="pre">submit_distribution_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.api.metrics_api.MetricsApi.submit_distribution_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Submit distribution points.</p>
+<p>The distribution points end-point allows you to post distribution data that can be graphed on Datadog’s dashboards.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>content_encoding</strong> (<a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.distribution_points_content_encoding.DistributionPointsContentEncoding" title="datadog_api_client.v1.model.distribution_points_content_encoding.DistributionPointsContentEncoding"><em>DistributionPointsContentEncoding</em></a><em>, </em><em>optional</em>) – HTTP header used to compress the media-type.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.intake_payload_accepted.IntakePayloadAccepted" title="datadog_api_client.v1.model.intake_payload_accepted.IntakePayloadAccepted">IntakePayloadAccepted</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v1.api.metrics_api.MetricsApi.submit_metrics">
 <span class="sig-name descname"><span class="pre">submit_metrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.api.metrics_api.MetricsApi.submit_metrics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Submit metrics.</p>

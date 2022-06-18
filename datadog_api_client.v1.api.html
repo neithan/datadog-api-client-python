@@ -2477,6 +2477,20 @@ by using the <code class="docutils literal notranslate"><span class="pre">org.pu
 </dl>
 </dd></dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v1.api.organizations_api.OrganizationsApi.downgrade_org">
+<span class="sig-name descname"><span class="pre">downgrade_org</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">public_id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.api.organizations_api.OrganizationsApi.downgrade_org" title="Permalink to this definition">¶</a></dt>
+<dd><p>Spin-off Child Organization.</p>
+<p>Only available for MSP customers. Removes a child organization from the hierarchy of the master organization and places the child organization on a 30-day trial.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>public_id</strong> (<em>str</em>) – The <code class="docutils literal notranslate"><span class="pre">public_id</span></code> of the organization you are operating within.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.org_downgraded_response.OrgDowngradedResponse" title="datadog_api_client.v1.model.org_downgraded_response.OrgDowngradedResponse">OrgDowngradedResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v1.api.organizations_api.OrganizationsApi.get_org">
 <span class="sig-name descname"><span class="pre">get_org</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">public_id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.api.organizations_api.OrganizationsApi.get_org" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get organization information.</p>

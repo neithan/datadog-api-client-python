@@ -916,6 +916,8 @@
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.notebooks_response_page" class="md-nav__link">notebooks_response_page</a>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.org_downgraded_response" class="md-nav__link">org_downgraded_response</a>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.organization" class="md-nav__link">organization</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.organization_billing" class="md-nav__link">organization_billing</a>
@@ -2441,6 +2443,8 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.notebooks_response_meta" class="md-nav__link">notebooks_response_meta</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.notebooks_response_page" class="md-nav__link">notebooks_response_page</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.org_downgraded_response" class="md-nav__link">org_downgraded_response</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.organization" class="md-nav__link">organization</a>
         </li>
@@ -9610,6 +9614,20 @@ To delete existing cell(s), simply omit it from the list of cells.</p>
 </dl>
 </dd></dl>
 </section>
+<section id="module-datadog_api_client.v1.model.org_downgraded_response">
+<span id="org-downgraded-response"></span><h2 id="module-datadog_api_client.v1.model.org_downgraded_response">org_downgraded_response<a class="headerlink" href="#module-datadog_api_client.v1.model.org_downgraded_response" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.org_downgraded_response.OrgDowngradedResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OrgDowngradedResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.org_downgraded_response.OrgDowngradedResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>Status of downgrade</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>message</strong> (<em>str</em><em>, </em><em>optional</em>) – Information pertaining to the downgraded child organization.</p>
+</dd>
+</dl>
+</dd></dl>
+</section>
 <section id="module-datadog_api_client.v1.model.organization">
 <span id="organization"></span><h2 id="module-datadog_api_client.v1.model.organization">organization<a class="headerlink" href="#module-datadog_api_client.v1.model.organization" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
@@ -9627,6 +9645,7 @@ To delete existing cell(s), simply omit it from the list of cells.</p>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The <code class="docutils literal notranslate"><span class="pre">public_id</span></code> of the organization you are operating within.</p></li>
 <li><p><strong>settings</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.organization_settings.OrganizationSettings" title="datadog_api_client.v1.model.organization_settings.OrganizationSettings"><em>OrganizationSettings</em></a><em>, </em><em>optional</em>) – A JSON array of settings.</p></li>
 <li><p><strong>subscription</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.organization_subscription.OrganizationSubscription" title="datadog_api_client.v1.model.organization_subscription.OrganizationSubscription"><em>OrganizationSubscription</em></a><em>, </em><em>optional</em>) – Subscription definition.</p></li>
+<li><p><strong>trial</strong> (<em>bool</em><em>, </em><em>optional</em>) – Only available for MSP customers. Allows child organizations to be created on a trial plan.</p></li>
 </ul>
 </dd>
 </dl>

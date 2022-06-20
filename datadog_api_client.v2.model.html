@@ -1106,6 +1106,10 @@
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.security_monitoring_rule_new_value_options_learning_duration" class="md-nav__link">security_monitoring_rule_new_value_options_learning_duration</a>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.security_monitoring_rule_new_value_options_learning_method" class="md-nav__link">security_monitoring_rule_new_value_options_learning_method</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.security_monitoring_rule_new_value_options_learning_threshold" class="md-nav__link">security_monitoring_rule_new_value_options_learning_threshold</a>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.security_monitoring_rule_options" class="md-nav__link">security_monitoring_rule_options</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.security_monitoring_rule_query" class="md-nav__link">security_monitoring_rule_query</a>
@@ -2114,6 +2118,10 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.security_monitoring_rule_new_value_options_forget_after" class="md-nav__link">security_monitoring_rule_new_value_options_forget_after</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.security_monitoring_rule_new_value_options_learning_duration" class="md-nav__link">security_monitoring_rule_new_value_options_learning_duration</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.security_monitoring_rule_new_value_options_learning_method" class="md-nav__link">security_monitoring_rule_new_value_options_learning_method</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.security_monitoring_rule_new_value_options_learning_threshold" class="md-nav__link">security_monitoring_rule_new_value_options_learning_threshold</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.security_monitoring_rule_options" class="md-nav__link">security_monitoring_rule_options</a>
         </li>
@@ -9236,6 +9244,8 @@ This time is calculated from the first seen timestamp.</p>
 <li><p><strong>forget_after</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.security_monitoring_rule_new_value_options_forget_after.SecurityMonitoringRuleNewValueOptionsForgetAfter" title="datadog_api_client.v2.model.security_monitoring_rule_new_value_options_forget_after.SecurityMonitoringRuleNewValueOptionsForgetAfter"><em>SecurityMonitoringRuleNewValueOptionsForgetAfter</em></a><em>, </em><em>optional</em>) – The duration in days after which a learned value is forgotten.</p></li>
 <li><p><strong>learning_duration</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.security_monitoring_rule_new_value_options_learning_duration.SecurityMonitoringRuleNewValueOptionsLearningDuration" title="datadog_api_client.v2.model.security_monitoring_rule_new_value_options_learning_duration.SecurityMonitoringRuleNewValueOptionsLearningDuration"><em>SecurityMonitoringRuleNewValueOptionsLearningDuration</em></a><em>, </em><em>optional</em>) – The duration in days during which values are learned, and after which signals will be generated for values that
 weren’t learned. If set to 0, a signal will be generated for all new values after the first value is learned.</p></li>
+<li><p><strong>learning_method</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.security_monitoring_rule_new_value_options_learning_method.SecurityMonitoringRuleNewValueOptionsLearningMethod" title="datadog_api_client.v2.model.security_monitoring_rule_new_value_options_learning_method.SecurityMonitoringRuleNewValueOptionsLearningMethod"><em>SecurityMonitoringRuleNewValueOptionsLearningMethod</em></a><em>, </em><em>optional</em>) – The learning method used to determine when signals should be generated for values that weren’t learned.</p></li>
+<li><p><strong>learning_threshold</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.security_monitoring_rule_new_value_options_learning_threshold.SecurityMonitoringRuleNewValueOptionsLearningThreshold" title="datadog_api_client.v2.model.security_monitoring_rule_new_value_options_learning_threshold.SecurityMonitoringRuleNewValueOptionsLearningThreshold"><em>SecurityMonitoringRuleNewValueOptionsLearningThreshold</em></a><em>, </em><em>optional</em>) – A number of occurrences after which signals will be generated for values that weren’t learned.</p></li>
 </ul>
 </dd>
 </dl>
@@ -9267,7 +9277,37 @@ weren’t learned. If set to 0, a signal will be generated for all new values af
 <p>Note that value can be passed either in args or in kwargs, but not in both.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>value</strong> (<em>int</em>) – Must be one of [0, 1, 7].</p>
+<dd class="field-odd"><p><strong>value</strong> (<em>int</em>) – If omitted defaults to 0. Must be one of [0, 1, 7].</p>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.model.security_monitoring_rule_new_value_options_learning_method">
+<span id="security-monitoring-rule-new-value-options-learning-method"></span><h2 id="module-datadog_api_client.v2.model.security_monitoring_rule_new_value_options_learning_method">security_monitoring_rule_new_value_options_learning_method<a class="headerlink" href="#module-datadog_api_client.v2.model.security_monitoring_rule_new_value_options_learning_method" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.security_monitoring_rule_new_value_options_learning_method.SecurityMonitoringRuleNewValueOptionsLearningMethod">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SecurityMonitoringRuleNewValueOptionsLearningMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.security_monitoring_rule_new_value_options_learning_method.SecurityMonitoringRuleNewValueOptionsLearningMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelSimple" title="datadog_api_client.model_utils.ModelSimple"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSimple</span></code></a></p>
+<p>The learning method used to determine when signals should be generated for values that weren’t learned.</p>
+<p>Note that value can be passed either in args or in kwargs, but not in both.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>str</em>) – If omitted defaults to “duration”. Must be one of [“duration”, “threshold”].</p>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.model.security_monitoring_rule_new_value_options_learning_threshold">
+<span id="security-monitoring-rule-new-value-options-learning-threshold"></span><h2 id="module-datadog_api_client.v2.model.security_monitoring_rule_new_value_options_learning_threshold">security_monitoring_rule_new_value_options_learning_threshold<a class="headerlink" href="#module-datadog_api_client.v2.model.security_monitoring_rule_new_value_options_learning_threshold" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.security_monitoring_rule_new_value_options_learning_threshold.SecurityMonitoringRuleNewValueOptionsLearningThreshold">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SecurityMonitoringRuleNewValueOptionsLearningThreshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.security_monitoring_rule_new_value_options_learning_threshold.SecurityMonitoringRuleNewValueOptionsLearningThreshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelSimple" title="datadog_api_client.model_utils.ModelSimple"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSimple</span></code></a></p>
+<p>A number of occurrences after which signals will be generated for values that weren’t learned.</p>
+<p>Note that value can be passed either in args or in kwargs, but not in both.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>int</em>) – If omitted defaults to 0. Must be one of [0, 1].</p>
 </dd>
 </dl>
 </dd></dl>

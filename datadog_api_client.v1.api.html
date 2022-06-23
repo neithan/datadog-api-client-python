@@ -2960,6 +2960,24 @@ then the corrections will not be applied and the SLI values will not be affected
 </dl>
 </dd></dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v1.api.service_level_objectives_api.ServiceLevelObjectivesApi.search_slo">
+<span class="sig-name descname"><span class="pre">search_slo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.api.service_level_objectives_api.ServiceLevelObjectivesApi.search_slo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search for SLOs.</p>
+<p>Get a list of service level objective objects for your organization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>str</em><em>, </em><em>optional</em>) – The query string to filter results based on SLO names.</p></li>
+<li><p><strong>page_size</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of files to return in the response <code class="docutils literal notranslate"><span class="pre">[default=10]</span></code>.</p></li>
+<li><p><strong>page_number</strong> (<em>int</em><em>, </em><em>optional</em>) – The identifier of the first page to return. This parameter is used for the pagination feature <code class="docutils literal notranslate"><span class="pre">[default=0]</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.search_slo_response.SearchSLOResponse" title="datadog_api_client.v1.model.search_slo_response.SearchSLOResponse">SearchSLOResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v1.api.service_level_objectives_api.ServiceLevelObjectivesApi.update_slo">
 <span class="sig-name descname"><span class="pre">update_slo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">slo_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.api.service_level_objectives_api.ServiceLevelObjectivesApi.update_slo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update an SLO.</p>

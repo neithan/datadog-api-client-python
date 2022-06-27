@@ -6186,7 +6186,7 @@ and should be formatted to a single line then URL encoded.</p></li>
 <p>Note that value can be passed either in args or in kwargs, but not in both.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>value</strong> (<em>str</em>) – Must be one of [“api_usage”, “apm_host_usage”, “browser_usage”, “container_usage”, “custom_timeseries_usage”, “estimated_indexed_logs_usage”, “fargate_usage”, “functions_usage”, “indexed_logs_usage”, “infra_host_usage”, “invocations_usage”, “npm_host_usage”, “profiled_container_usage”, “profiled_host_usage”, “snmp_usage”].</p>
+<dd class="field-odd"><p><strong>value</strong> (<em>str</em>) – Must be one of [“api_usage”, “apm_host_usage”, “browser_usage”, “container_usage”, “custom_timeseries_usage”, “estimated_indexed_logs_usage”, “estimated_indexed_spans_usage”, “fargate_usage”, “functions_usage”, “indexed_logs_usage”, “infra_host_usage”, “invocations_usage”, “npm_host_usage”, “profiled_container_usage”, “profiled_host_usage”, “snmp_usage”].</p>
 </dd>
 </dl>
 </dd></dl>
@@ -8834,7 +8834,7 @@ the list of groups your monitor is broken down on.</p>
 <p>Note that value can be passed either in args or in kwargs, but not in both.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>value</strong> (<em>str</em>) – Must be one of [“api_usage”, “api_percentage”, “apm_host_usage”, “apm_host_percentage”, “browser_usage”, “browser_percentage”, “container_usage”, “container_percentage”, “custom_timeseries_usage”, “custom_timeseries_percentage”, “estimated_indexed_logs_usage”, “estimated_indexed_logs_percentage”, “fargate_usage”, “fargate_percentage”, “functions_usage”, “functions_percentage”, “indexed_logs_usage”, “indexed_logs_percentage”, “infra_host_usage”, “infra_host_percentage”, “invocations_usage”, “invocations_percentage”, “npm_host_usage”, “npm_host_percentage”, “profiled_container_usage”, “profiled_container_percentage”, “profiled_host_usage”, “profiled_host_percentage”, “snmp_usage”, “snmp_percentage”, “*”].</p>
+<dd class="field-odd"><p><strong>value</strong> (<em>str</em>) – Must be one of [“api_usage”, “api_percentage”, “apm_host_usage”, “apm_host_percentage”, “browser_usage”, “browser_percentage”, “container_usage”, “container_percentage”, “custom_timeseries_usage”, “custom_timeseries_percentage”, “estimated_indexed_logs_usage”, “estimated_indexed_logs_percentage”, “estimated_indexed_spans_usage”, “estimated_indexed_spans_percentage”, “fargate_usage”, “fargate_percentage”, “functions_usage”, “functions_percentage”, “indexed_logs_usage”, “indexed_logs_percentage”, “infra_host_usage”, “infra_host_percentage”, “invocations_usage”, “invocations_percentage”, “npm_host_usage”, “npm_host_percentage”, “profiled_container_usage”, “profiled_container_percentage”, “profiled_host_usage”, “profiled_host_percentage”, “snmp_usage”, “snmp_percentage”, “*”].</p>
 </dd>
 </dl>
 </dd></dl>
@@ -8861,6 +8861,8 @@ the list of groups your monitor is broken down on.</p>
 <li><p><strong>custom_timeseries_usage</strong> (<em>float</em><em>, </em><em>optional</em>) – The custom metrics usage by tag(s).</p></li>
 <li><p><strong>estimated_indexed_logs_percentage</strong> (<em>float</em><em>, </em><em>optional</em>) – The percentage of estimated live indexed logs usage by tag(s). This field is in private beta.</p></li>
 <li><p><strong>estimated_indexed_logs_usage</strong> (<em>float</em><em>, </em><em>optional</em>) – The estimated live indexed logs usage by tag(s). This field is in private beta.</p></li>
+<li><p><strong>estimated_indexed_spans_percentage</strong> (<em>float</em><em>, </em><em>optional</em>) – The percentage of estimated indexed spans usage by tag(s). This field is in private beta.</p></li>
+<li><p><strong>estimated_indexed_spans_usage</strong> (<em>float</em><em>, </em><em>optional</em>) – The estimated indexed spans usage by tag(s). This field is in private beta.</p></li>
 <li><p><strong>fargate_percentage</strong> (<em>float</em><em>, </em><em>optional</em>) – The percentage of Fargate usage by tags.</p></li>
 <li><p><strong>fargate_usage</strong> (<em>float</em><em>, </em><em>optional</em>) – The Fargate usage by tags.</p></li>
 <li><p><strong>functions_percentage</strong> (<em>float</em><em>, </em><em>optional</em>) – The percentage of Lambda function usage by tag(s).</p></li>
@@ -14506,7 +14508,7 @@ If the <cite>target_type</cite> is <cite>tag</cite>, this parameter may not be s
 <p>Note that value can be passed either in args or in kwargs, but not in both.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>value</strong> (<em>str</em>) – If omitted defaults to “custom_timeseries_usage”. Must be one of [“api_percentage”, “snmp_usage”, “apm_host_usage”, “api_usage”, “container_usage”, “custom_timeseries_percentage”, “container_percentage”, “apm_host_percentage”, “npm_host_percentage”, “browser_percentage”, “browser_usage”, “infra_host_percentage”, “snmp_percentage”, “npm_host_usage”, “infra_host_usage”, “custom_timeseries_usage”, “lambda_functions_usage”, “lambda_functions_percentage”, “lambda_invocations_usage”, “lambda_invocations_percentage”, “estimated_indexed_logs_usage”, “estimated_indexed_logs_percentage”].</p>
+<dd class="field-odd"><p><strong>value</strong> (<em>str</em>) – If omitted defaults to “custom_timeseries_usage”. Must be one of [“api_percentage”, “snmp_usage”, “apm_host_usage”, “api_usage”, “container_usage”, “custom_timeseries_percentage”, “container_percentage”, “apm_host_percentage”, “npm_host_percentage”, “browser_percentage”, “browser_usage”, “infra_host_percentage”, “snmp_percentage”, “npm_host_usage”, “infra_host_usage”, “custom_timeseries_usage”, “lambda_functions_usage”, “lambda_functions_percentage”, “lambda_invocations_usage”, “lambda_invocations_percentage”, “estimated_indexed_logs_usage”, “estimated_indexed_logs_percentage”, “estimated_indexed_spans_usage”, “estimated_indexed_spans_percentage”].</p>
 </dd>
 </dl>
 </dd></dl>
@@ -14521,7 +14523,7 @@ If the <cite>target_type</cite> is <cite>tag</cite>, this parameter may not be s
 <p>Note that value can be passed either in args or in kwargs, but not in both.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>value</strong> (<em>str</em>) – Must be one of [“custom_timeseries_usage”, “container_usage”, “snmp_percentage”, “apm_host_usage”, “browser_usage”, “npm_host_percentage”, “infra_host_usage”, “custom_timeseries_percentage”, “container_percentage”, “api_usage”, “apm_host_percentage”, “infra_host_percentage”, “snmp_usage”, “browser_percentage”, “api_percentage”, “npm_host_usage”, “lambda_functions_usage”, “lambda_functions_percentage”, “lambda_invocations_usage”, “lambda_invocations_percentage”, “fargate_usage”, “fargate_percentage”, “profiled_host_usage”, “profiled_host_percentage”, “profiled_container_usage”, “profiled_container_percentage”, “dbm_hosts_usage”, “dbm_hosts_percentage”, “dbm_queries_usage”, “dbm_queries_percentage”, “estimated_indexed_logs_usage”, “estimated_indexed_logs_percentage”, “*”].</p>
+<dd class="field-odd"><p><strong>value</strong> (<em>str</em>) – Must be one of [“custom_timeseries_usage”, “container_usage”, “snmp_percentage”, “apm_host_usage”, “browser_usage”, “npm_host_percentage”, “infra_host_usage”, “custom_timeseries_percentage”, “container_percentage”, “api_usage”, “apm_host_percentage”, “infra_host_percentage”, “snmp_usage”, “browser_percentage”, “api_percentage”, “npm_host_usage”, “lambda_functions_usage”, “lambda_functions_percentage”, “lambda_invocations_usage”, “lambda_invocations_percentage”, “fargate_usage”, “fargate_percentage”, “profiled_host_usage”, “profiled_host_percentage”, “profiled_container_usage”, “profiled_container_percentage”, “dbm_hosts_usage”, “dbm_hosts_percentage”, “dbm_queries_usage”, “dbm_queries_percentage”, “estimated_indexed_logs_usage”, “estimated_indexed_logs_percentage”, “estimated_indexed_spans_usage”, “estimated_indexed_spans_percentage”, “*”].</p>
 </dd>
 </dl>
 </dd></dl>
@@ -14569,6 +14571,8 @@ If the <cite>target_type</cite> is <cite>tag</cite>, this parameter may not be s
 <li><p><strong>dbm_queries_usage</strong> (<em>float</em><em>, </em><em>optional</em>) – The Database Monitoring normalized queries usage by tag(s).</p></li>
 <li><p><strong>estimated_indexed_logs_percentage</strong> (<em>float</em><em>, </em><em>optional</em>) – The percentage of estimated live indexed logs usage by tag(s). Note this field is in private beta.</p></li>
 <li><p><strong>estimated_indexed_logs_usage</strong> (<em>float</em><em>, </em><em>optional</em>) – The estimated live indexed logs usage by tag(s). Note this field is in private beta.</p></li>
+<li><p><strong>estimated_indexed_spans_percentage</strong> (<em>float</em><em>, </em><em>optional</em>) – The percentage of estimated indexed spans usage by tag(s). Note this field is in private beta.</p></li>
+<li><p><strong>estimated_indexed_spans_usage</strong> (<em>float</em><em>, </em><em>optional</em>) – The estimated indexed spans usage by tag(s). Note this field is in private beta.</p></li>
 <li><p><strong>infra_host_percentage</strong> (<em>float</em><em>, </em><em>optional</em>) – The percentage of infrastructure host usage by tag(s).</p></li>
 <li><p><strong>infra_host_usage</strong> (<em>float</em><em>, </em><em>optional</em>) – The infrastructure host usage by tag(s).</p></li>
 <li><p><strong>lambda_functions_percentage</strong> (<em>float</em><em>, </em><em>optional</em>) – The percentage of Lambda function usage by tag(s).</p></li>

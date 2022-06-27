@@ -2720,6 +2720,25 @@ and up to two months of hourly usage data for a single organization in one reque
 </dl>
 </dd></dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.usage_metering_api.UsageMeteringApi.get_estimated_cost_by_org">
+<span class="sig-name descname"><span class="pre">get_estimated_cost_by_org</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.usage_metering_api.UsageMeteringApi.get_estimated_cost_by_org" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get estimated cost across multi-org account.</p>
+<p>Get estimated cost across multi-org account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_month</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Datetime in ISO-8601 format, UTC, precise to month: <code class="docutils literal notranslate"><span class="pre">[YYYY-MM]</span></code> for cost beginning this month. Either start_month or start_date should be specified, but not both.</p></li>
+<li><p><strong>end_month</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Datetime in ISO-8601 format, UTC, precise to month: <code class="docutils literal notranslate"><span class="pre">[YYYY-MM]</span></code> for cost ending this month.</p></li>
+<li><p><strong>start_date</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Datetime in ISO-8601 format, UTC, precise to day: <code class="docutils literal notranslate"><span class="pre">[YYYY-MM-DD]</span></code> for cost beginning this day. Either start_month or start_date should be specified, but not both.</p></li>
+<li><p><strong>end_date</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Datetime in ISO-8601 format, UTC, precise to day: <code class="docutils literal notranslate"><span class="pre">[YYYY-MM-DD]</span></code> for cost ending this day.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.cost_by_org_response.CostByOrgResponse" title="datadog_api_client.v2.model.cost_by_org_response.CostByOrgResponse">CostByOrgResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.usage_metering_api.UsageMeteringApi.get_usage_application_security_monitoring">
 <span class="sig-name descname"><span class="pre">get_usage_application_security_monitoring</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_hr</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.usage_metering_api.UsageMeteringApi.get_usage_application_security_monitoring" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get hourly usage for Application Security.</p>

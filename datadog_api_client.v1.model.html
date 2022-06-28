@@ -590,6 +590,8 @@
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.ip_prefixes_synthetics" class="md-nav__link">ip_prefixes_synthetics</a>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.ip_prefixes_synthetics_private_locations" class="md-nav__link">ip_prefixes_synthetics_private_locations</a>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.ip_prefixes_webhooks" class="md-nav__link">ip_prefixes_webhooks</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.ip_ranges" class="md-nav__link">ip_ranges</a>
@@ -2137,6 +2139,8 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.ip_prefixes_process" class="md-nav__link">ip_prefixes_process</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.ip_prefixes_synthetics" class="md-nav__link">ip_prefixes_synthetics</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.ip_prefixes_synthetics_private_locations" class="md-nav__link">ip_prefixes_synthetics_private_locations</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.ip_prefixes_webhooks" class="md-nav__link">ip_prefixes_webhooks</a>
         </li>
@@ -6481,6 +6485,23 @@ See <a class="reference external" href="https://docs.datadoghq.com/logs/log_coll
 </dl>
 </dd></dl>
 </section>
+<section id="module-datadog_api_client.v1.model.ip_prefixes_synthetics_private_locations">
+<span id="ip-prefixes-synthetics-private-locations"></span><h2 id="module-datadog_api_client.v1.model.ip_prefixes_synthetics_private_locations">ip_prefixes_synthetics_private_locations<a class="headerlink" href="#module-datadog_api_client.v1.model.ip_prefixes_synthetics_private_locations" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.ip_prefixes_synthetics_private_locations.IPPrefixesSyntheticsPrivateLocations">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IPPrefixesSyntheticsPrivateLocations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.ip_prefixes_synthetics_private_locations.IPPrefixesSyntheticsPrivateLocations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>Available prefix information for the Synthetics Private Locations endpoints.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prefixes_ipv4</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – List of IPv4 prefixes.</p></li>
+<li><p><strong>prefixes_ipv6</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – List of IPv6 prefixes.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
 <section id="module-datadog_api_client.v1.model.ip_prefixes_webhooks">
 <span id="ip-prefixes-webhooks"></span><h2 id="module-datadog_api_client.v1.model.ip_prefixes_webhooks">ip_prefixes_webhooks<a class="headerlink" href="#module-datadog_api_client.v1.model.ip_prefixes_webhooks" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
@@ -6515,6 +6536,7 @@ See <a class="reference external" href="https://docs.datadoghq.com/logs/log_coll
 <li><p><strong>modified</strong> (<em>str</em><em>, </em><em>optional</em>) – Date when last updated, in the form <code class="docutils literal notranslate"><span class="pre">YYYY-MM-DD-hh-mm-ss</span></code>.</p></li>
 <li><p><strong>process</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.ip_prefixes_process.IPPrefixesProcess" title="datadog_api_client.v1.model.ip_prefixes_process.IPPrefixesProcess"><em>IPPrefixesProcess</em></a><em>, </em><em>optional</em>) – Available prefix information for the Process endpoints.</p></li>
 <li><p><strong>synthetics</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.ip_prefixes_synthetics.IPPrefixesSynthetics" title="datadog_api_client.v1.model.ip_prefixes_synthetics.IPPrefixesSynthetics"><em>IPPrefixesSynthetics</em></a><em>, </em><em>optional</em>) – Available prefix information for the Synthetics endpoints.</p></li>
+<li><p><strong>synthetics_private_locations</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.ip_prefixes_synthetics_private_locations.IPPrefixesSyntheticsPrivateLocations" title="datadog_api_client.v1.model.ip_prefixes_synthetics_private_locations.IPPrefixesSyntheticsPrivateLocations"><em>IPPrefixesSyntheticsPrivateLocations</em></a><em>, </em><em>optional</em>) – Available prefix information for the Synthetics Private Locations endpoints.</p></li>
 <li><p><strong>version</strong> (<em>int</em><em>, </em><em>optional</em>) – Version of the IP list.</p></li>
 <li><p><strong>webhooks</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.ip_prefixes_webhooks.IPPrefixesWebhooks" title="datadog_api_client.v1.model.ip_prefixes_webhooks.IPPrefixesWebhooks"><em>IPPrefixesWebhooks</em></a><em>, </em><em>optional</em>) – Available prefix information for the Webhook endpoints.</p></li>
 </ul>

@@ -58,6 +58,22 @@ Feature: Usage Metering
     When the request is sent
     Then the response status is 200 OK
 
+  @generated @skip @team:DataDog/red-zone-revenue-query
+  Scenario: Get hourly usage by product family returns "Bad Request" response
+    Given new "GetHourlyUsage" request
+    And request contains "filter[timestamp][start]" parameter from "REPLACE.ME"
+    And request contains "filter[product_families]" parameter from "REPLACE.ME"
+    When the request is sent
+    Then the response status is 400 Bad Request
+
+  @generated @skip @team:DataDog/red-zone-revenue-query
+  Scenario: Get hourly usage by product family returns "OK" response
+    Given new "GetHourlyUsage" request
+    And request contains "filter[timestamp][start]" parameter from "REPLACE.ME"
+    And request contains "filter[product_families]" parameter from "REPLACE.ME"
+    When the request is sent
+    Then the response status is 200 OK
+
   @team:DataDog/red-zone-revenue-query
   Scenario: Get hourly usage for Application Security returns "Bad Request" response
     Given new "GetUsageApplicationSecurityMonitoring" request

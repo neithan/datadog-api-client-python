@@ -1107,13 +1107,6 @@ http\_log\_item
    :members:
    :show-inheritance:
 
-http\_method
-------------
-
-.. automodule:: datadog_api_client.v1.model.http_method
-   :members:
-   :show-inheritance:
-
 i\_frame\_widget\_definition
 ----------------------------
 
@@ -1237,6 +1230,27 @@ list\_stream\_column\_width
 ---------------------------
 
 .. automodule:: datadog_api_client.v1.model.list_stream_column_width
+   :members:
+   :show-inheritance:
+
+list\_stream\_compute\_aggregation
+----------------------------------
+
+.. automodule:: datadog_api_client.v1.model.list_stream_compute_aggregation
+   :members:
+   :show-inheritance:
+
+list\_stream\_compute\_items
+----------------------------
+
+.. automodule:: datadog_api_client.v1.model.list_stream_compute_items
+   :members:
+   :show-inheritance:
+
+list\_stream\_group\_by\_items
+------------------------------
+
+.. automodule:: datadog_api_client.v1.model.list_stream_group_by_items
    :members:
    :show-inheritance:
 
@@ -1898,6 +1912,27 @@ monitor\_options\_aggregation
    :members:
    :show-inheritance:
 
+monitor\_options\_notification\_presets
+---------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.monitor_options_notification_presets
+   :members:
+   :show-inheritance:
+
+monitor\_options\_scheduling\_options
+-------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.monitor_options_scheduling_options
+   :members:
+   :show-inheritance:
+
+monitor\_options\_scheduling\_options\_evaluation\_window
+---------------------------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.monitor_options_scheduling_options_evaluation_window
+   :members:
+   :show-inheritance:
+
 monitor\_overall\_states
 ------------------------
 
@@ -2353,6 +2388,13 @@ notebooks\_response\_page
    :members:
    :show-inheritance:
 
+on\_missing\_data\_option
+-------------------------
+
+.. automodule:: datadog_api_client.v1.model.on_missing_data_option
+   :members:
+   :show-inheritance:
+
 org\_downgraded\_response
 -------------------------
 
@@ -2514,10 +2556,38 @@ query\_value\_widget\_request
    :members:
    :show-inheritance:
 
+reference\_table\_logs\_lookup\_processor
+-----------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.reference_table_logs_lookup_processor
+   :members:
+   :show-inheritance:
+
 response\_meta\_attributes
 --------------------------
 
 .. automodule:: datadog_api_client.v1.model.response_meta_attributes
+   :members:
+   :show-inheritance:
+
+run\_workflow\_widget\_definition
+---------------------------------
+
+.. automodule:: datadog_api_client.v1.model.run_workflow_widget_definition
+   :members:
+   :show-inheritance:
+
+run\_workflow\_widget\_definition\_type
+---------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.run_workflow_widget_definition_type
+   :members:
+   :show-inheritance:
+
+run\_workflow\_widget\_input
+----------------------------
+
+.. automodule:: datadog_api_client.v1.model.run_workflow_widget_input
    :members:
    :show-inheritance:
 
@@ -2574,6 +2644,34 @@ scatterplot\_widget\_formula
 ----------------------------
 
 .. automodule:: datadog_api_client.v1.model.scatterplot_widget_formula
+   :members:
+   :show-inheritance:
+
+search\_service\_level\_objective
+---------------------------------
+
+.. automodule:: datadog_api_client.v1.model.search_service_level_objective
+   :members:
+   :show-inheritance:
+
+search\_service\_level\_objective\_attributes
+---------------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.search_service_level_objective_attributes
+   :members:
+   :show-inheritance:
+
+search\_service\_level\_objective\_data
+---------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.search_service_level_objective_data
+   :members:
+   :show-inheritance:
+
+search\_slo\_query
+------------------
+
+.. automodule:: datadog_api_client.v1.model.search_slo_query
    :members:
    :show-inheritance:
 
@@ -2637,6 +2735,20 @@ search\_slo\_response\_meta\_page
 ---------------------------------
 
 .. automodule:: datadog_api_client.v1.model.search_slo_response_meta_page
+   :members:
+   :show-inheritance:
+
+search\_slo\_threshold
+----------------------
+
+.. automodule:: datadog_api_client.v1.model.search_slo_threshold
+   :members:
+   :show-inheritance:
+
+search\_slo\_timeframe
+----------------------
+
+.. automodule:: datadog_api_client.v1.model.search_slo_timeframe
    :members:
    :show-inheritance:
 
@@ -2885,6 +2997,13 @@ slo\_correction\_update\_request\_attributes
    :members:
    :show-inheritance:
 
+slo\_creator
+------------
+
+.. automodule:: datadog_api_client.v1.model.slo_creator
+   :members:
+   :show-inheritance:
+
 slo\_delete\_response
 ---------------------
 
@@ -2994,6 +3113,55 @@ slo\_list\_response\_metadata\_page
 -----------------------------------
 
 .. automodule:: datadog_api_client.v1.model.slo_list_response_metadata_page
+   :members:
+   :show-inheritance:
+
+slo\_list\_widget\_definition
+-----------------------------
+
+.. automodule:: datadog_api_client.v1.model.slo_list_widget_definition
+   :members:
+   :show-inheritance:
+
+slo\_list\_widget\_definition\_type
+-----------------------------------
+
+.. automodule:: datadog_api_client.v1.model.slo_list_widget_definition_type
+   :members:
+   :show-inheritance:
+
+slo\_list\_widget\_query
+------------------------
+
+.. automodule:: datadog_api_client.v1.model.slo_list_widget_query
+   :members:
+   :show-inheritance:
+
+slo\_list\_widget\_request
+--------------------------
+
+.. automodule:: datadog_api_client.v1.model.slo_list_widget_request
+   :members:
+   :show-inheritance:
+
+slo\_list\_widget\_request\_type
+--------------------------------
+
+.. automodule:: datadog_api_client.v1.model.slo_list_widget_request_type
+   :members:
+   :show-inheritance:
+
+slo\_overall\_statuses
+----------------------
+
+.. automodule:: datadog_api_client.v1.model.slo_overall_statuses
+   :members:
+   :show-inheritance:
+
+slo\_raw\_error\_budget\_remaining
+----------------------------------
+
+.. automodule:: datadog_api_client.v1.model.slo_raw_error_budget_remaining
    :members:
    :show-inheritance:
 
@@ -3249,10 +3417,45 @@ synthetics\_assertion\_type
    :members:
    :show-inheritance:
 
+synthetics\_assertion\_x\_path\_operator
+----------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_assertion_x_path_operator
+   :members:
+   :show-inheritance:
+
+synthetics\_assertion\_x\_path\_target
+--------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_assertion_x_path_target
+   :members:
+   :show-inheritance:
+
+synthetics\_assertion\_x\_path\_target\_target
+----------------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_assertion_x_path_target_target
+   :members:
+   :show-inheritance:
+
 synthetics\_basic\_auth
 -----------------------
 
 .. automodule:: datadog_api_client.v1.model.synthetics_basic_auth
+   :members:
+   :show-inheritance:
+
+synthetics\_basic\_auth\_digest
+-------------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_basic_auth_digest
+   :members:
+   :show-inheritance:
+
+synthetics\_basic\_auth\_digest\_type
+-------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_basic_auth_digest_type
    :members:
    :show-inheritance:
 
@@ -3267,6 +3470,41 @@ synthetics\_basic\_auth\_ntlm\_type
 -----------------------------------
 
 .. automodule:: datadog_api_client.v1.model.synthetics_basic_auth_ntlm_type
+   :members:
+   :show-inheritance:
+
+synthetics\_basic\_auth\_oauth\_client
+--------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_basic_auth_oauth_client
+   :members:
+   :show-inheritance:
+
+synthetics\_basic\_auth\_oauth\_client\_type
+--------------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_basic_auth_oauth_client_type
+   :members:
+   :show-inheritance:
+
+synthetics\_basic\_auth\_oauth\_rop
+-----------------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_basic_auth_oauth_rop
+   :members:
+   :show-inheritance:
+
+synthetics\_basic\_auth\_oauth\_rop\_type
+-----------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_basic_auth_oauth_rop_type
+   :members:
+   :show-inheritance:
+
+synthetics\_basic\_auth\_oauth\_token\_api\_authentication
+----------------------------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_basic_auth_oauth_token_api_authentication
    :members:
    :show-inheritance:
 
@@ -3564,6 +3802,13 @@ synthetics\_global\_variable\_attributes
    :members:
    :show-inheritance:
 
+synthetics\_global\_variable\_options
+-------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_global_variable_options
+   :members:
+   :show-inheritance:
+
 synthetics\_global\_variable\_parse\_test\_options
 --------------------------------------------------
 
@@ -3582,6 +3827,13 @@ synthetics\_global\_variable\_parser\_type
 ------------------------------------------
 
 .. automodule:: datadog_api_client.v1.model.synthetics_global_variable_parser_type
+   :members:
+   :show-inheritance:
+
+synthetics\_global\_variable\_totp\_parameters
+----------------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_global_variable_totp_parameters
    :members:
    :show-inheritance:
 
@@ -3746,6 +3998,13 @@ synthetics\_step\_type
    :members:
    :show-inheritance:
 
+synthetics\_test\_call\_type
+----------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_test_call_type
+   :members:
+   :show-inheritance:
+
 synthetics\_test\_ci\_options
 -----------------------------
 
@@ -3830,6 +4089,20 @@ synthetics\_test\_options\_retry
    :members:
    :show-inheritance:
 
+synthetics\_test\_options\_scheduling
+-------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_test_options_scheduling
+   :members:
+   :show-inheritance:
+
+synthetics\_test\_options\_scheduling\_timeframe
+------------------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_test_options_scheduling_timeframe
+   :members:
+   :show-inheritance:
+
 synthetics\_test\_pause\_status
 -------------------------------
 
@@ -3848,6 +4121,13 @@ synthetics\_test\_request
 -------------------------
 
 .. automodule:: datadog_api_client.v1.model.synthetics_test_request
+   :members:
+   :show-inheritance:
+
+synthetics\_test\_request\_body\_type
+-------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_test_request_body_type
    :members:
    :show-inheritance:
 
@@ -4058,6 +4338,48 @@ toplist\_widget\_request
 ------------------------
 
 .. automodule:: datadog_api_client.v1.model.toplist_widget_request
+   :members:
+   :show-inheritance:
+
+topology\_map\_widget\_definition
+---------------------------------
+
+.. automodule:: datadog_api_client.v1.model.topology_map_widget_definition
+   :members:
+   :show-inheritance:
+
+topology\_map\_widget\_definition\_type
+---------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.topology_map_widget_definition_type
+   :members:
+   :show-inheritance:
+
+topology\_query
+---------------
+
+.. automodule:: datadog_api_client.v1.model.topology_query
+   :members:
+   :show-inheritance:
+
+topology\_query\_data\_source
+-----------------------------
+
+.. automodule:: datadog_api_client.v1.model.topology_query_data_source
+   :members:
+   :show-inheritance:
+
+topology\_request
+-----------------
+
+.. automodule:: datadog_api_client.v1.model.topology_request
+   :members:
+   :show-inheritance:
+
+topology\_request\_type
+-----------------------
+
+.. automodule:: datadog_api_client.v1.model.topology_request_type
    :members:
    :show-inheritance:
 
@@ -4919,6 +5241,13 @@ widget\_formula\_limit
 ----------------------
 
 .. automodule:: datadog_api_client.v1.model.widget_formula_limit
+   :members:
+   :show-inheritance:
+
+widget\_formula\_style
+----------------------
+
+.. automodule:: datadog_api_client.v1.model.widget_formula_style
    :members:
    :show-inheritance:
 
